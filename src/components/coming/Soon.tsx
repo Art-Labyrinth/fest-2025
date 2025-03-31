@@ -9,7 +9,9 @@ function ComingSoon() {
                 <h1 className="text-4xl font-bold mb-4">Summer Festival Art-Labyrinth</h1>
                 <h2 className="text-2xl font-semibold mb-4">Five Hands, One Rhythm | 10 - 13 july 2025 | Poiana, Șoldănești</h2>
                 <p className="text-lg">Сайт находится в разработке. Скоро будет доступен!</p>
-                <p className="mt-4 text-sm">Следите за обновлениями.</p>
+                <p className="text-lg">Under construction. It will be available soon!</p>
+                <p className="mt-4 text-sm">Следите за обновлениями</p>
+                <p className="text-sm">Stay tuned</p>
             </div>
         </main>
     );
