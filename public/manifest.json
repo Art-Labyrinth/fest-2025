@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Art Lab",
+  "name": "Art-Labyrinth 2025 Summer Festival",
+  "description": "Art-Labyrinth 2025 Summer Festival - Five Hands, One Heart",
   "icons": [
     {
       "src": "favicon.ico",
