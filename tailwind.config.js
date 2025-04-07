@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Evolventa', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        sans: ['RocaOne', 'sans-serif'],
+        deledda: ['Deledda', 'sans-serif'],
       },
       colors: {
         orange: {
@@ -32,7 +32,6 @@ module.exports = {
           hover: '#BE6010',
           disabled: '#F6D8B4',
         },
-
       },
     },
   },

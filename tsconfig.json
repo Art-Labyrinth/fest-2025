@@ -4,10 +4,6 @@
         "esModuleInterop": true,
         "strict": true,
         "jsx": "react-jsx",
-        "moduleResolution": "node",
-        "baseUrl": "./",
-        "paths": {
-            "*": ["src/*"]
-        }
+        "baseUrl": "./"
     }
 }
