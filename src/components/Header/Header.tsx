@@ -14,28 +14,23 @@ export function Header() {
         <Logo fill="#000" />
       </a>
 
-      <div className="flex flex-wrap gap-20 w-full sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
+      <div className="flex flex-wrap gap-x-20 gap-y-4 w-full sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
         <div
-          className="self-stretch my-auto whitespace-nowrap cursor-pointer relative"
+          className=" whitespace-nowrap cursor-pointer relative"
           onClick={() => handleTooltip("about")}
         >
           О ФЕСТИВАЛЕ
           {activeTooltip === "about" && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-gray-300 font-medium text-sm p-2 rounded shadow-lg">
-              Здесь пока ничего нет, но скоро будет! Следите за обновлениями!
+            <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-gray-400 font-medium text-sm p-2 rounded shadow-lg">
+              Здесь пока ничего нет, но скоро будет! <br />Следите за обновлениями!
             </div>
           )}
         </div>
         <div
-          className="self-stretch my-auto whitespace-nowrap cursor-pointer relative"
-          onClick={() => handleTooltip("join")}
+          className=" whitespace-nowrap cursor-pointer relative"
+          onClick={() => {window.location.href = "https://join.art-labyrinth.org";}}
         >
           СТАТЬ ЧАСТЬЮ ФЕСТИВАЛЯ
-          {activeTooltip === "join" && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-gray-300 font-medium text-sm p-2 rounded shadow-lg">
-              Здесь пока ничего нет, но скоро будет! Следите за обновлениями!
-            </div>
-          )}
         </div>
       </div>
 
