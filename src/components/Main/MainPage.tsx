@@ -1,5 +1,3 @@
-import React from "react";
-import { Header } from "../Header/Header";
 import { Sun } from "../Svg/Sun";
 import { UpArrow } from "../Svg/UpArrow";
 import { DownArrow } from "../Svg/DownArrow";
@@ -14,9 +12,7 @@ import { Divider } from "../Svg/Divider";
 
 function MainPage() {
   return (
-    <main className="min-h-screen h-full min-w-screen w-full">
-      <Header />
-
+    <>
       <Sun />
       <UpArrow />
       <DownArrow />
@@ -53,15 +49,15 @@ function MainPage() {
             </div>
             <Divider />
             <div>
-               <a href="tel:+37379601910">+37379601910</a>
+              <a href="tel:+37379601910">+373 79 601 910</a>
               <br />
               fest.art-labyrinth.org
             </div>
           </div>
         </div>
       </div>
+    </>
 
-    </main>
   );
 }
 
