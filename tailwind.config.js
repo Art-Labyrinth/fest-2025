@@ -13,6 +13,7 @@ module.exports = {
         orange: {
           50: '#fff7ed',
           100: '#ffedd5',
+          150: '#F4E4C3',
           200: '#fed7aa',
           300: '#fdba74',
           400: '#fb923c',
