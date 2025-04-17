@@ -1,14 +1,14 @@
 import React from "react";
-export function Logo({width = 60, height = 60, fill="#FFF9EC"}) {
+export function Logo() {
 
     return (
         <svg
             version="1.1"
             id="svg2"
-            width={width}
-            height={height}
+            width="60"
+            height="60"
             viewBox="0 0 570.26666 518.52002"
-            fill={fill}
+            fill="#000"
             xmlns="http://www.w3.org/2000/svg"
         >
             <g transform="matrix(1.3333333,0,0,-1.3333333,0,518.52)">
