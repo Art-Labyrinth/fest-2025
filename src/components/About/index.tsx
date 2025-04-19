@@ -6,7 +6,7 @@ export default function About() {
         <>
             <div className="flex flex-col">
                 <div className="relative w-full">
-                    <div className="absolute inset-0 bg-[url('/public/img/about/header.png')] bg-cover bg-[0_30%]"></div>
+                    <div className="absolute inset-0 bg-[url('/public/img/about/md_header.webp')] bg-cover bg-[0_30%]"></div>
                     <div className="flex flex-col bg-[#35190499]/60 w-full relative p-10 items-center text-orange-150">
                         <h1 className="text-4xl mb-4 uppercase text-center">Art-Labyrinth<br />Summer Festival 2025</h1>
                         <p className="text-lg max-w-2xl text-center mb-10">
@@ -53,7 +53,7 @@ export default function About() {
                 </div>
 
                 <div className="flex flex-col items-center relative w-full">
-                    <div className="absolute inset-0 bg-[url('/public/img/about/Art-Labyrinth.png')] bg-cover bg-center"></div>
+                    <div className="absolute inset-0 bg-[url('/public/img/about/md_Art-Labyrinth.webp')] bg-cover bg-center"></div>
                     <div className="flex flex-col bg-[#35190499]/70 w-full relative items-center text-orange-150 text-center p-20">
                         <p className="text-lg max-w-2xl mb-2">
                             Art Labyrinth — это место, где исчезают границы между искусством и жизнью, между человеком и природой, между прошлым и будущим. Это пространство для создания, вдохновения и самовыражения.
