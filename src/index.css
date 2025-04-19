@@ -38,7 +38,7 @@
 }
 
 main {
-  background-image: url('/public/img/back-main-page.png');
+  background-image: url('/public/img/2xl_back-main-page.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,25 +46,25 @@ main {
 
 @media (max-width: 1280px) {
   main {
-    background-image: url('/public/img/back-main-page-xl.png');
+    background-image: url('/public/img/xl_back-main-page.webp');
   }
 }
 
 @media (max-width: 1024px) {
   main {
-    background-image: url('/public/img/back-main-page-lg.png');
+    background-image: url('/public/img/lg_back-main-page.webp');
   }
 }
 
 @media (max-width: 768px) {
   main {
-    background-image: url('/public/img/back-main-page-md.png');
+    background-image: url('/public/img/md_back-main-page.webp');
   }
 }
 
 @media (max-width: 640px) {
   main {
-    background-image: url('/public/img/back-main-page-sm.png');
+    background-image: url('/public/img/sm_back-main-page.webp');
   }
 }
 
