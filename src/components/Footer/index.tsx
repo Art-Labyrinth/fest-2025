@@ -5,12 +5,12 @@ import SocialFacebook from "../Svg/SocialFacebook";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col sm:flex-row px-16 pt-12 pb-8 w-full min-h-48 max-md:px-5 max-md:max-w-full gap-5 bg-main">
-            <a href="/" className="relative 2xl:left-56 lg:left-36 md:left-16 sm:left-5 py-6">
+        <footer className="flex flex-wrap px-16 pt-12 pb-8 w-full min-h-48 max-md:px-5 max-md:max-w-full gap-5 bg-main">
+            <a href="/" className="hidden sm:block relative 2xl:left-56 lg:left-36 md:left-16 sm:left-5 py-6">
                 <Logo />
             </a>
             <div className="flex flex-wrap gap-5 w-full sm:w-7/12 justify-start py-2 max-md:px-5 max-md:max-w-full mx-auto">
-                <div className="flex flex-col justify-center items-start">
+                <div className="flex flex-col justify-center items-start px-10">
                     <div className="font-bold text-yellow-950">
                         Контакты
                     </div>
