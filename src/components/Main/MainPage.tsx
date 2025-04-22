@@ -63,19 +63,17 @@ function MainPage() {
               <span className="px-3">#culture</span>
             </div>
           </div>
-          <div className="flex justify-center items-center text-lg sm:text-2xl font-black leading-none h-[15%]">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-10 text-center sm:text-left">
-              <div className="flex items-end gap-3 ">
-                <Map />
+          <div className="flex flex-col sm:flex-row justify-center items-center text-lg sm:text-2xl font-black gap-5 sm:gap-10 leading-none h-[15%]">
+              <div className="flex items-center gap-3">
+                <div className="w-10"><Map /></div>
                 <div>Poiana<br />Șoldănești</div>
               </div>
-              <Divider />
-              <div>
+              <div className="absolute sm:relative w-1 transform rotate-90 sm:rotate-0"><Divider /></div>
+              <div className="text-center sm:text-left">
                 <a href="tel:+37379601910">+373 79 601 910</a>
                 <br />
                 fest.art-labyrinth.org
               </div>
-            </div>
           </div>
         </div>
       </div>
