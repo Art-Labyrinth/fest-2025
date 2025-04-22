@@ -43,22 +43,22 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         '.bg-main': {
-          '@screen 2xl': {
-            backgroundImage: "url('/public/img/2xl_back-main-page.webp')",
-          },
-          '@screen xl': {
-            backgroundImage: "url('/public/img/xl_back-main-page.webp')",
-          },
-          '@screen lg': {
-            backgroundImage: "url('/public/img/lg_back-main-page.webp')",
-          },
-          '@screen md': {
-            backgroundImage: "url('/public/img/md_back-main-page.webp')",
-          },
-          backgroundImage: "url('/public/img/sm_back-main-page.webp')",
+          backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('/public/img/sm_back-main-page.webp')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
+          '@screen md': {
+            backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('/public/img/md_back-main-page.webp')",
+          },
+          '@screen lg': {
+            backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('/public/img/lg_back-main-page.webp')",
+          },
+          '@screen xl': {
+            backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('/public/img/xl_back-main-page.webp')",
+          },
+          '@screen 2xl': {
+            backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('/public/img/2xl_back-main-page.webp')",
+          },
         },
       });
     },

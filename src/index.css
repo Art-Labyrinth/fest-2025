@@ -4,6 +4,13 @@
 
 @font-face {
   font-family: 'Deledda';
+  src: url('/public/Deledda/Deledda-Open-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: swap;
+}
+
+@font-face {
+  font-family: 'Deledda';
   src: url('/public/Deledda/Deledda-Open-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: swap;
