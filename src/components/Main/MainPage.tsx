@@ -5,8 +5,6 @@ import { Mountains } from "../Svg/Mountains";
 import { Map } from "../Svg/Map";
 import { FiveHands } from "../Svg/FiveHands";
 import { Divider } from "../Svg/Divider";
-import Moon from "../Svg/Moon";
-import Arrow from "../Svg/Arrow";
 
 import About from "../About";
 import Footer from "../Footer";
@@ -22,17 +20,17 @@ function MainPage() {
           <Sun />
         </div>
         <div className="absolute left-[5%] bottom-[3%] w-56 max-w-[30%]">
-          <Arrow />
+          <img src="/img/svg/arrow.svg" alt="" />
         </div>
         <div className="absolute left-[14%] top-[17%] w-56 max-w-[30%] transform rotate-180">
-          <Arrow />
+          <img src="/img/svg/arrow.svg" alt="" />
         </div>
 
         <div className="absolute right-[17%] top-[18%] w-44 max-w-[25%]">
-          <Moon />
+          <img src="/img/svg/moon.svg" alt="" />
         </div>
         <div className="absolute right-[6%] top-[22%] w-44 max-w-[25%] transform rotate-180">
-          <Moon />
+          <img src="/img/svg/moon.svg" alt="" />
         </div>
 
         <div className="absolute right-[10%] top-[18%] w-32 max-w-[20%]">
@@ -65,19 +63,17 @@ function MainPage() {
               <span className="px-3">#culture</span>
             </div>
           </div>
-          <div className="flex justify-center items-center text-lg sm:text-2xl font-black leading-none h-[15%]">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-10 text-center sm:text-left">
-              <div className="flex items-end gap-3 ">
-                <Map />
+          <div className="flex flex-col sm:flex-row justify-center items-center text-lg sm:text-2xl font-black gap-5 sm:gap-10 leading-none h-[15%]">
+              <div className="flex items-center gap-3">
+                <div className="w-10"><Map /></div>
                 <div>Poiana<br />Șoldănești</div>
               </div>
-              <Divider />
-              <div>
+              <div className="absolute sm:relative w-1 transform rotate-90 sm:rotate-0"><Divider /></div>
+              <div className="text-center sm:text-left">
                 <a href="tel:+37379601910">+373 79 601 910</a>
                 <br />
                 fest.art-labyrinth.org
               </div>
-            </div>
           </div>
         </div>
       </div>

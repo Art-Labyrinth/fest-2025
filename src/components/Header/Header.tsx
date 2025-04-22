@@ -11,11 +11,11 @@ export function Header() {
 
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a href="/" className="relative left-3 md:left-16 lg:left-36 2xl:left-56 py-5">
+      <a href="/" className="relative left-[10%] py-5 w-12">
         <Logo />
       </a>
 
-      <div className="flex flex-wrap gap-x-20 gap-y-4 w-8/12 sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
+      <div className="flex flex-wrap gap-x-20 gap-y-4 w-[60%] justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 mx-auto">
         <div className="whitespace-nowrap cursor-pointer relative uppercase">
           {isLoading ? (
             <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
