@@ -1,6 +1,4 @@
-import React from "react";
 import { FiveHands } from "../Svg/FiveHands";
-import Moon from "../Svg/Moon";
 import Squiggle from "../Svg/Squiggle";
 import ThreeDashes from "../Svg/ThreeDashes";
 import Zodiac from "../Svg/Zodiac";
@@ -35,7 +33,7 @@ export default function About() {
                 </div>
                 <div className="flex-1 flex flex-col items-center justify-center px-5 py-5">
                     <div className="flex items-center w-24 max-w-[30%] transform -rotate-90 h-0">
-                        <Moon />
+                        <img src="/img/svg/moon.svg" alt="" />
                     </div>
 
                     <div className="bg-about-md-tema-goda bg-cover bg-[0_20%] w-11/12 mt-14 mx-auto">
@@ -47,7 +45,7 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-stretch px-5 sm:px-20 py-20 bg-main gap-10">
                 <div className="flex-1 flex py-5 px-0">
                     <div className="w-32 hidden lg:flex justify-center">
-                        <Moon />
+                        <img src="/img/svg/moon.svg" alt="" />
                     </div>
                     <div className="w-full lg:w-10/12 h-full bg-about-sm-o-festivale bg-cover">
                         <div className="w-full h-full bg-[#F19C5533]/20 min-h-96"></div>
@@ -72,7 +70,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className="w-32 flex justify-center">
-                        <Moon />
+                        <img src="/img/svg/moon.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -114,7 +112,7 @@ export default function About() {
                     </div>
 
                     <div className="hidden lg:flex justify-center items-center w-28 mx-auto">
-                        <Moon />
+                        <img src="/img/svg/moon.svg" alt="" />
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="w-48 h-72 bg-about-md-ecology bg-cover bg-[50%] rounded-full">
@@ -129,7 +127,7 @@ export default function About() {
                         <p className="mt-2 text-center">Осознанные практики и медитации</p>
                     </div>
                     <div className="hidden lg:flex justify-center items-center w-28 mx-auto">
-                        <Moon />
+                        <img src="/img/svg/moon.svg" alt="" />
                     </div>
                 </div>
             </div>

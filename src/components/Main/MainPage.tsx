@@ -5,8 +5,6 @@ import { Mountains } from "../Svg/Mountains";
 import { Map } from "../Svg/Map";
 import { FiveHands } from "../Svg/FiveHands";
 import { Divider } from "../Svg/Divider";
-import Moon from "../Svg/Moon";
-import Arrow from "../Svg/Arrow";
 
 import About from "../About";
 import Footer from "../Footer";
@@ -22,17 +20,17 @@ function MainPage() {
           <Sun />
         </div>
         <div className="absolute left-[5%] bottom-[3%] w-56 max-w-[30%]">
-          <Arrow />
+          <img src="/img/svg/arrow.svg" alt="" />
         </div>
         <div className="absolute left-[14%] top-[17%] w-56 max-w-[30%] transform rotate-180">
-          <Arrow />
+          <img src="/img/svg/arrow.svg" alt="" />
         </div>
 
         <div className="absolute right-[17%] top-[18%] w-44 max-w-[25%]">
-          <Moon />
+          <img src="/img/svg/moon.svg" alt="" />
         </div>
         <div className="absolute right-[6%] top-[22%] w-44 max-w-[25%] transform rotate-180">
-          <Moon />
+          <img src="/img/svg/moon.svg" alt="" />
         </div>
 
         <div className="absolute right-[10%] top-[18%] w-32 max-w-[20%]">
