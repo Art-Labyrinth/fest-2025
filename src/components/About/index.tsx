@@ -9,7 +9,7 @@ export default function About() {
     return (
         <div className="flex flex-col">
             <div className="relative w-full">
-                <div className="absolute inset-0 bg-[url('/public/img/about/md_header.webp')] bg-cover bg-[0_30%]"></div>
+                <div className="absolute inset-0 bg-about-md-header bg-cover bg-[0_30%]"></div>
                 <div className="flex flex-col bg-[#35190499]/60 relative p-10 items-center text-orange-150 w-full">
                     <h1 className="text-4xl mb-4 uppercase text-center">Art-Labyrinth<br />Summer Festival 2025</h1>
                     <p className="text-lg max-w-2xl text-center mb-10">
@@ -38,7 +38,7 @@ export default function About() {
                         <Moon />
                     </div>
 
-                    <div className="bg-[url('/public/img/about/md_tema-goda.webp')] bg-cover bg-[0_20%] w-11/12 mt-14 mx-auto">
+                    <div className="bg-about-md-tema-goda bg-cover bg-[0_20%] w-11/12 mt-14 mx-auto">
                         <div className="bg-[#F19C5533]/20 w-full h-full min-h-96"></div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ export default function About() {
                     <div className="w-32 hidden lg:flex justify-center">
                         <Moon />
                     </div>
-                    <div className="w-full lg:w-10/12 h-full bg-[url('/public/img/about/sm_o-festivale.webp')] bg-cover">
+                    <div className="w-full lg:w-10/12 h-full bg-about-sm-o-festivale bg-cover">
                         <div className="w-full h-full bg-[#F19C5533]/20 min-h-96"></div>
                     </div>
                 </div>
@@ -89,25 +89,25 @@ export default function About() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl pb-20">
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_live-music.webp')] bg-cover bg-[50%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-live-music bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Живая музыка и выступления местных и зарубежных артистов</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_card-performance.webp')] bg-cover bg-[90%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-card-performance bg-cover bg-[90%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Театральные и огненные перформансы</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_installation.webp')] bg-cover bg-[93%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-installation bg-cover bg-[93%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Лэнд-арт и инсталляции</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_workshops.webp')] bg-cover bg-[50%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-workshops bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Мастер-классы и творческие воркшопы</p>
@@ -117,13 +117,13 @@ export default function About() {
                         <Moon />
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_ecologu.webp')] bg-cover bg-[50%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-ecology bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Экологические инициативы и жизнь в гармонии с природой</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-[url('/public/img/about/md_meditations.webp')] bg-cover bg-[50%] rounded-full">
+                        <div className="w-48 h-72 bg-about-md-meditations bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Осознанные практики и медитации</p>
@@ -135,7 +135,7 @@ export default function About() {
             </div>
 
             <div className="flex flex-col items-center relative w-full">
-                <div className="absolute inset-0 bg-[url('/public/img/about/md_Art-Labyrinth.webp')] bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-about-md-art-labyrinth bg-cover bg-center"></div>
                 <div className="flex flex-col bg-[#35190499]/70 w-full relative items-center text-orange-150 text-center p-5 sm:p-28">
                     <p className="font-deledda font-light max-w-2xl mb-5">
                         Art Labyrinth — это место, где исчезают границы между искусством и жизнью, между человеком и природой, между прошлым и будущим. Это пространство для создания, вдохновения и самовыражения.
