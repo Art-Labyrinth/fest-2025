@@ -15,7 +15,7 @@ export function Header() {
         <Logo />
       </a>
 
-      <div className="flex flex-wrap gap-x-20 gap-y-4 w-9/12 sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
+      <div className="flex flex-wrap gap-x-20 gap-y-4 w-8/12 sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
         <div className="whitespace-nowrap cursor-pointer relative uppercase">
           {isLoading ? (
             <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
