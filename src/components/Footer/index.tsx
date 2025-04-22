@@ -1,4 +1,3 @@
-import React from "react";
 import { Logo } from "../Svg/Logo";
 import SocialTelegram from "../Svg/SocialTelegram";
 import SocialInstagram from "../Svg/SocialInstagram";
@@ -6,8 +5,7 @@ import SocialFacebook from "../Svg/SocialFacebook";
 
 export default function Footer() {
     return (
-        // flex flex-col sm:flex-row p-6 max-md:px-8 max-sm:px-5 justify-between items-center text-brown font-deledda relative
-        <footer className="flex flex-col sm:flex-row px-16 pt-12 pb-8 w-full min-h-48 max-md:px-5 max-md:max-w-full gap-5 relative">
+        <footer className="flex flex-col sm:flex-row px-16 pt-12 pb-8 w-full min-h-48 max-md:px-5 max-md:max-w-full gap-5 bg-main">
             <a href="/" className="relative 2xl:left-56 lg:left-36 md:left-16 sm:left-5 py-6">
                 <Logo />
             </a>

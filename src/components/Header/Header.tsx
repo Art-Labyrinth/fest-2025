@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Logo } from "../Svg/Logo";
-import { useNavigate } from "react-router-dom";
 
 export function Header() {
-  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleJoinClick = () => {
+    setIsLoading(true);
+    window.location.href = "https://join.art-labyrinth.org";
+  };
 
   return (
     <header className="flex flex-col sm:flex-row p-6 max-md:px-8 max-sm:px-5 justify-between items-center text-brown font-deledda relative">
@@ -12,10 +16,14 @@ export function Header() {
       </a>
 
       <div className="flex flex-wrap gap-x-20 gap-y-4 w-full sm:w-7/12 justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 max-md:px-5 max-md:max-w-full mx-auto">
-        <div className=" whitespace-nowrap cursor-pointer relative" onClick={() => navigate('/about')}>О ФЕСТИВАЛЕ</div>
-        <a href="https://join.art-labyrinth.org">
-          <div className=" whitespace-nowrap cursor-pointer relative">СТАТЬ ЧАСТЬЮ ФЕСТИВАЛЯ</div>
-        </a>
+        <div className="whitespace-nowrap cursor-pointer relative uppercase">
+          {isLoading ? (
+            <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
+          ) : (
+            <span onClick={handleJoinClick}>Стать частью фестиваля</span>
+          )}
+        </div>
+        <div className="whitespace-nowrap cursor-not-allowed relative uppercase text-gray-500">Контакты</div>
       </div>
 
       {/* <LanguageSelector /> */}

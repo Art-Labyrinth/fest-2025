@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -34,8 +34,34 @@ module.exports = {
           disabled: '#F6D8B4',
         },
       },
+      backgroundImage: {
+        'custom-red-black': 'linear-gradient(to bottom, rgba(241, 156, 85, 0.3), rgba(241, 156, 85, 0.3) 60%, #0F0809)',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.bg-main': {
+          '@screen 2xl': {
+            backgroundImage: "url('/public/img/2xl_back-main-page.webp')",
+          },
+          '@screen xl': {
+            backgroundImage: "url('/public/img/xl_back-main-page.webp')",
+          },
+          '@screen lg': {
+            backgroundImage: "url('/public/img/lg_back-main-page.webp')",
+          },
+          '@screen md': {
+            backgroundImage: "url('/public/img/md_back-main-page.webp')",
+          },
+          backgroundImage: "url('/public/img/sm_back-main-page.webp')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        },
+      });
+    },
+  ],
 };
 
