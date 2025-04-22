@@ -11,7 +11,7 @@ export function Header() {
 
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a href="/" className="relative 2xl:left-56 lg:left-36 md:left-16 sm:left-5 py-6">
+      <a href="/" className="relative left-3 md:left-16 lg:left-36 2xl:left-56 py-5">
         <Logo />
       </a>
 

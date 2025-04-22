@@ -1,4 +1,6 @@
 import React from "react";
+import { FiveHands } from "../Svg/FiveHands";
+import Moon from "../Svg/Moon";
 
 export default function About() {
     return (
@@ -15,13 +17,25 @@ export default function About() {
 
             <div className="flex flex-col md:flex-row items-stretch px-5 sm:px-20 py-20 bg-[#F4E4C3]">
                 <div className="flex-1 px-5 py-5">
-                    <h1 className="text-3xl font-bold mb-4 uppercase">Тема этого года: <br /> Five Hands, One Rhythm</h1>
-                    <p className="my-5">
-                        Five Hands, One Rhythm — это не просто название. Это символ единства, творчества и общности. В мире, полном уникальных индивидуумов, только вместе мы можем создать нечто большее.
-                    </p>
+                    <div className="flex">
+                        <h1 className="text-3xl font-bold mb-4 uppercase w-4/6">Тема этого года: <br /> Five Hands, One Rhythm</h1>
+                        <div className="mx-auto h-0 w-2/6 px-5"><FiveHands /></div>
+                    </div>
+                    <div className="pr-5 sm:pr-32">
+                        <p className="my-5">
+                            Five Hands, One Rhythm — это не просто название. Это символ единства, творчества и общности. В мире, полном уникальных индивидуумов, только вместе мы можем создать нечто большее. Пять рук — это символ коллективного действия, сплетающего различные энергии и направления в одну гармоничную и мощную силу. Пять рук — это художники, музыканты, мастера, мечтатели, те, кто приходит, чтобы внести свою часть в общую картину, создавая мир, где не существует разделений.
+                        </p>
+                        <p className="my-5">
+                            Один ритм — это сердце фестиваля. Это биение, которое объединяет нас всех, давая пространство для творчества и осознанности. Это ритм жизни, который отражается в каждом моменте, в каждой мелодии и в каждом движении. Это наша цель — осознанное созидание, в котором каждый участник становится частью чего-то большего, чем он сам.
+                        </p>
+                    </div>
                 </div>
                 <div className="flex-1 px-5 py-5">
-                    <div className="bg-[url('/public/img/about/md_tema-goda.webp')] bg-cover bg-[0_20%] w-full h-full">
+                    <div className="flex items-center justify-center">
+                        <Moon className="absolute transform -rotate-90 h-80 w-full" />
+                    </div>
+
+                    <div className="bg-[url('/public/img/about/md_tema-goda.webp')] bg-cover bg-[0_20%] w-11/12 mt-20 mx-auto">
                         <div className="bg-[#F19C5533]/20 w-full h-full min-h-96"></div>
                     </div>
                 </div>
@@ -36,7 +50,13 @@ export default function About() {
                 <div className="flex-1 px-5 py-5">
                     <h1 className="text-3xl font-bold mb-4 uppercase">О фестивале</h1>
                     <p className="my-5">
-                        Art Labyrinth Summer Festival — это ежегодное событие, которое было основано в 2008 году и с тех пор стало значимой вехой в культурной жизни Молдовы.
+                        Art Labyrinth Summer Festival — это ежегодное событие, которое было основано в 2008 году и с тех пор стало значимой вехой в культурной жизни Молдовы. Каждый год мы выбираем новое место, чтобы создать уникальную атмосферу и соединить людей через искусство и музыку. Но наше место — Пояна, на берегу Днестра — стало нашим особенным уголком, местом силы, где встречаются природа и творчество.
+                    </p>
+                    <p className="my-5">
+                        Мы верим, что фестиваль — это не просто собрание людей. Это пространство для преобразования, обмена идеями и вдохновения. На Art Labyrinth каждый может раскрыть свой потенциал, стать частью сообщества, внести свой вклад в общую цель и стать созидателем.
+                    </p>
+                    <p className="my-5">
+                        Наш фестиваль объединяет разных людей — художников, музыкантов, мастеров, волонтеров, мечтателей — все те, кто готов работать в едином ритме и создавать что-то великое. Мы приглашаем вас в путешествие, где каждый шаг наполнен осознанностью, каждый момент — гармонией, а каждый человек имеет значение.
                     </p>
                 </div>
             </div>
