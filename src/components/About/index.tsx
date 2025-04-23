@@ -82,7 +82,9 @@ export default function About() {
                         <img src="https://files.art-labyrinth.org/fest2025/svg/three-dashes.svg" alt="" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl pb-20">
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-full max-w-7xl pb-20">
+
                     <div className="flex flex-col items-center">
                         <div className="w-48 h-72 bg-about-md-live-music bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
@@ -126,7 +128,9 @@ export default function About() {
                     <div className="hidden lg:flex justify-center items-center w-28 mx-auto">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
+
                 </div>
+
             </div>
 
             <div className="flex flex-col items-center relative w-full">
