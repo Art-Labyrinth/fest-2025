@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Logo } from "../Svg/Logo";
 
 export function Header() {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +11,7 @@ export function Header() {
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
       <a href="/" className="relative left-[10%] py-5 w-12">
-        <Logo />
+        <img src="https://files.art-labyrinth.org/logo-black.svg" alt="" />
       </a>
 
       <div className="flex flex-wrap gap-x-20 gap-y-4 w-[60%] justify-center py-2 leading-none text-center font-bold border-stone-600 border-y-2 mx-auto">
