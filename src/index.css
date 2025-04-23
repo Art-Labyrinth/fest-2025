@@ -4,42 +4,42 @@
 
 @font-face {
   font-family: 'Deledda';
-  src: url('/public/Deledda/Deledda-Open-Light.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: swap;
 }
 
 @font-face {
   font-family: 'Deledda';
-  src: url('/public/Deledda/Deledda-Open-Regular.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: swap;
 }
 
 @font-face {
   font-family: 'Deledda';
-  src: url('/public/Deledda/Deledda-Open-Semibold.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Semibold.ttf') format('truetype');
   font-weight: 700;
   font-style: swap;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('/public/RocaOne/Roca-Regular.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/RocaOne/Roca-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: swap;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('/public/RocaOne/Roca-Bold.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/RocaOne/Roca-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: swap;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('/public/RocaOne/Roca-Black.ttf') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/RocaOne/Roca-Black.ttf') format('truetype');
   font-weight: 700;
   font-style: swap;
 }
