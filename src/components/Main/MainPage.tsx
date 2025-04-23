@@ -3,7 +3,6 @@ import { UpStars } from "../Svg/UpStars";
 import { DownStars } from "../Svg/DownStars";
 import { Mountains } from "../Svg/Mountains";
 import { Map } from "../Svg/Map";
-import { FiveHands } from "../Svg/FiveHands";
 import { Divider } from "../Svg/Divider";
 
 import About from "../About";
@@ -20,17 +19,17 @@ function MainPage() {
           <Sun />
         </div>
         <div className="absolute left-[5%] bottom-[3%] w-56 max-w-[30%]">
-          <img src="/img/svg/arrow.svg" alt="" />
+          <img src="https://files.art-labyrinth.org/fest2025/svg/arrow.svg" alt="" />
         </div>
         <div className="absolute left-[14%] top-[17%] w-56 max-w-[30%] transform rotate-180">
-          <img src="/img/svg/arrow.svg" alt="" />
+          <img src="https://files.art-labyrinth.org/fest2025/svg/arrow.svg" alt="" />
         </div>
 
         <div className="absolute right-[17%] top-[18%] w-44 max-w-[25%]">
-          <img src="/img/svg/moon.svg" alt="" />
+          <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
         </div>
         <div className="absolute right-[6%] top-[22%] w-44 max-w-[25%] transform rotate-180">
-          <img src="/img/svg/moon.svg" alt="" />
+          <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
         </div>
 
         <div className="absolute right-[10%] top-[18%] w-32 max-w-[20%]">
@@ -48,7 +47,7 @@ function MainPage() {
           <div className="flex justify-center items-center text-xl sm:text-3xl font-bold h-[10%]">July 10–13, 2025</div>
           <div className="flex justify-center items-center text-xl sm:text-3xl h-[10%]">14 Art Labyrinth Summer Festival</div>
           <div className="flex justify-center items-center mx-auto w-1/2 md:w-1/4 h-[20%]">
-            <FiveHands />
+            <img src="https://files.art-labyrinth.org/fest2025/svg/five-hands.svg" alt="" />
           </div>
           <div className="flex justify-center items-center text-4xl sm:text-6xl font-black h-[15%]">Five Hands<br />One Rhythm</div>
           <div className="flex justify-center items-center text-sm sm:text-lg font-bold leading-none h-[15%]">
