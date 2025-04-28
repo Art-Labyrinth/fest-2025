@@ -1,23 +1,43 @@
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
     const navigate = useNavigate();
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <footer className="flex flex-wrap px-16 pt-12 pb-8 w-full min-h-48 max-md:px-5 max-md:max-w-full gap-5 bg-main" onClick={() => navigate('/')}>
-            <div className="relative left-[10%] py-5 w-12">
+        <footer className="flex flex-wrap items-center sm:px-16 sm:pt-12 sm:pb-8 w-full sm:min-h-48 gap-5 bg-main">
+            <div className="relative left-[5%] sm:left-[10%] py-5 w-12" onClick={() => navigate('/')}>
                 <img src="https://files.art-labyrinth.org/logo.svg" alt="" />
             </div>
-            <div className="flex flex-wrap gap-5 w-full sm:w-7/12 justify-start py-2 max-md:px-5 max-md:max-w-full mx-auto">
-                <div className="flex flex-col justify-center items-start px-10">
+            <div className="flex flex-wrap gap-5 w-[80%] sm:w-7/12 justify-start py-5 sm:py-2 px-5 mx-auto">
+                <div className="flex flex-col justify-center items-start sm:px-10">
                     <div className="font-bold text-yellow-950">
                         Контакты
                     </div>
-                    <div className="text-sm text-yellow-950 mt-3">
+                    <div className="text-sm text-yellow-950 mt-2 sm:mt-3">
                         +373 XXX-XXX-XXX
                     </div>
                     <div className="text-sm text-yellow-950">
-                        xxx@gmail.com
+                        {isMobile ? (
+                            "xxxxxxxxxxx@gmail.com"
+                        ) : (
+                            "xxx@gmail.com"
+                        )}
                     </div>
                     <div className="flex gap-3 items-center mt-3">
                         <img src="https://files.art-labyrinth.org/icons/tg.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
