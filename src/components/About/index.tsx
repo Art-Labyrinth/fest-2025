@@ -4,22 +4,22 @@ export default function About() {
             <div className="relative w-full">
                 <div className="absolute inset-0 bg-about-md-header bg-cover bg-[0_30%]"></div>
                 <div className="flex flex-col bg-[#35190499]/60 relative p-10 items-center text-orange-150 w-full">
-                    <h1 className="text-4xl mb-4 uppercase text-center">Art-Labyrinth<br />Summer Festival 2025</h1>
-                    <p className="text-lg max-w-2xl text-center mb-10">
+                    <h1 className="text-3xl sm:text-4xl mb-4 uppercase text-center">Art-Labyrinth<br />Summer Festival 2025</h1>
+                    <p className="sm:text-lg max-w-2xl text-center font-deledda font-light mb-10">
                         Каждый год Art Labyrinth Summer Festival собирает людей, готовых объединиться в поисках вдохновения, творчества и осознанности. В 2025 году фестиваль пройдет с 10 по 13 июля на живописных берегах реки Днестр в селе Пояна, Молдова, в нашем самом любимом и солнечном месте. Мы возвращаемся сюда, чтобы снова создать пространство, где искусство, музыка и природа сливаются в едином потоке.
                     </p>
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-stretch px-5 sm:px-20 py-20 bg-[#F4E4C3]">
-                <div className="flex-1 px-5 py-5">
-                    <div className="flex">
-                        <h1 className="text-3xl font-bold mb-4 uppercase">Тема этого года: <br /> Five Hands, One Rhythm</h1>
+            <div className="flex flex-col md:flex-row items-stretch sm:px-20 pt-5 sm:pt-20 pb-0 sm:pb-20 bg-[#FFF9EC] sm:bg-[#F4E4C3]">
+                <div className="flex-1 px-2 sm:px-5 py-5">
+                    <div className="flex flex-col sm:flex-row items-center ">
+                        <h1 className="text-3xl font-bold mb-4 uppercase text-center sm:text-left">Тема этого года: <br /> Five Hands, One Rhythm</h1>
                         <div className="relative w-32">
                             <img src="https://files.art-labyrinth.org/fest2025/svg/five-hands.svg" alt="" />
                         </div>
                     </div>
-                    <div className="pr-5 max-w-lg">
+                    <div className="pr-5 max-w-lg px-5 sm:px-0">
                         <p className="my-5">
                             Five Hands, One Rhythm — это не просто название. Это символ единства, творчества и общности. В мире, полном уникальных индивидуумов, только вместе мы можем создать нечто большее. Пять рук — это символ коллективного действия, сплетающего различные энергии и направления в одну гармоничную и мощную силу. Пять рук — это художники, музыканты, мастера, мечтатели, те, кто приходит, чтобы внести свою часть в общую картину, создавая мир, где не существует разделений.
                         </p>
@@ -28,19 +28,19 @@ export default function About() {
                         </p>
                     </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center justify-center px-5 py-5">
-                    <div className="flex items-center w-24 max-w-[30%] transform -rotate-90 h-0">
+                <div className="flex-1 flex flex-col items-center justify-center sm:px-5 sm:py-5">
+                    <div className="hidden sm:flex items-center w-24 max-w-[30%] transform -rotate-90 h-0">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
 
-                    <div className="bg-about-md-tema-goda bg-cover bg-[0_20%] w-11/12 mt-14 mx-auto">
+                    <div className="bg-about-md-tema-goda bg-cover bg-[0_20%] w-full sm:w-11/12 mt-14 mx-auto">
                         <div className="bg-[#F19C5533]/20 w-full h-full min-h-96"></div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-stretch px-5 sm:px-20 py-20 bg-main gap-10">
-                <div className="flex-1 flex py-5 px-0">
+            <div className="flex flex-col-reverse md:flex-row items-stretch sm:px-20 pt-5 sm:pt-20 pb-0 sm:pb-20 bg-main gap-10">
+                <div className="flex-1 flex sm:py-5 px-0">
                     <div className="w-32 hidden lg:flex justify-center">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
@@ -49,8 +49,8 @@ export default function About() {
                     </div>
                 </div>
                 <div className="flex-1 flex py-5">
-                    <div className="w-10/12">
-                        <div className="flex items-start justify-start">
+                    <div className="sm:w-10/12 px-5 sm:px-0">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-start justify-start">
                             <h1 className="text-3xl font-bold mb-4 uppercase whitespace-nowrap">О фестивале</h1>
                             <div className="w-3/12 pl-5">
                                 <img src="https://files.art-labyrinth.org/fest2025/svg/squiggle.svg" alt="" />
@@ -66,43 +66,45 @@ export default function About() {
                             Наш фестиваль объединяет разных людей — художников, музыкантов, мастеров, волонтеров, мечтателей — все те, кто готов работать в едином ритме и создавать что-то великое. Мы приглашаем вас в путешествие, где каждый шаг наполнен осознанностью, каждый момент — гармонией, а каждый человек имеет значение.
                         </p>
                     </div>
-                    <div className="w-32 flex justify-center">
+                    <div className="w-32 hidden sm:flex justify-center">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col items-center bg-[#F4E4C3] px-5 sm:px-20">
-                <div className="absolute w-3/12 left-0">
+            <div className="flex flex-col items-center bg-[#FFF9EC] sm:bg-[#F4E4C3] px-5 sm:px-20">
+                <div className="hidden sm:block absolute w-3/12 left-0">
                     <img src="https://files.art-labyrinth.org/fest2025/svg/zodiac.svg" alt="" />
                 </div>
                 <div className="flex justify-center items-center w-full gap-5 mb-7 pt-20">
                     <h1 className="text-3xl font-bold uppercase">Что вас ждёт?</h1>
-                    <div className="w-11">
+                    <div className="hidden sm:block w-11">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/three-dashes.svg" alt="" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-7xl pb-20">
+
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 w-full max-w-7xl pb-20 px-10 sm:px-0">
+
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-live-music bg-cover bg-[50%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-live-music bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Живая музыка и выступления местных и зарубежных артистов</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-card-performance bg-cover bg-[90%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-card-performance bg-cover bg-[90%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Театральные и огненные перформансы</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-installation bg-cover bg-[93%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-installation bg-cover bg-[93%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Лэнд-арт и инсталляции</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-workshops bg-cover bg-[50%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-workshops bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-[#F19C5533]/20 rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Мастер-классы и творческие воркшопы</p>
@@ -112,13 +114,13 @@ export default function About() {
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-ecology bg-cover bg-[50%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-ecology bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Экологические инициативы и жизнь в гармонии с природой</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <div className="w-48 h-72 bg-about-md-meditations bg-cover bg-[50%] rounded-full">
+                        <div className="w-36 sm:w-48 h-60 sm:h-72 bg-about-md-meditations bg-cover bg-[50%] rounded-full">
                             <div className="w-full h-full bg-custom-red-black rounded-full"></div>
                         </div>
                         <p className="mt-2 text-center">Осознанные практики и медитации</p>
@@ -126,7 +128,9 @@ export default function About() {
                     <div className="hidden lg:flex justify-center items-center w-28 mx-auto">
                         <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
                     </div>
+
                 </div>
+
             </div>
 
             <div className="flex flex-col items-center relative w-full">
