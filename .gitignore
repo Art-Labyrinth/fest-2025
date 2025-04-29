@@ -160,4 +160,6 @@ dist
 .pnp.*
 
 
-/scripts/*
+# /scripts/*
+.vscode
+sitemap.xml
