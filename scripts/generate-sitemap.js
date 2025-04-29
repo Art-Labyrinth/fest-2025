@@ -1,37 +1,26 @@
 const { SitemapStream } = require('sitemap');
 const { createWriteStream } = require('fs');
 const path = require('path');
-const { parse } = require('@babel/parser');
-const fs = require('fs');
-const traverse = require('@babel/traverse').default;
 const { pipeline } = require('stream');
 
-// Read routes dynamically from src/index.js
-const filePath = path.resolve(__dirname, '../src/index.js');
-const fileContent = fs.readFileSync(filePath, 'utf-8');
-const ast = parse(fileContent, { sourceType: 'module', plugins: ['jsx'] });
-
-const links = [];
-
-// Traverse the AST to extract routes
-traverse(ast, {
-    JSXElement(path) {
-        const openingElement = path.node.openingElement;
-        if (openingElement.name.name === 'Route') {
-            const pathAttr = openingElement.attributes.find(
-                (attr) => attr.name.name === 'path'
-            );
-            if (pathAttr) {
-                console.log('Opening Element:', pathAttr);
-                links.push({
-                    url: pathAttr.value.value,
-                    changefreq: 'daily',
-                    priority: pathAttr.value.value === '/' ? 1 : 0.8,
-                });
-            }
-        }
+const links = [
+    {
+        url: '/',
+        changefreq: 'daily',
+        priority: 1.0,
     },
-});
+    {
+        url: '/about',
+        changefreq: 'daily',
+        priority: 0.8,
+    },
+    {
+        url: '/contact',
+        changefreq: 'daily',
+        priority: 0.8,
+    },
+];
+
 
 const sitemap = new SitemapStream({ hostname: 'https://fest.art-labyrinth.org/' });
 const writeStream = createWriteStream(

@@ -15,9 +15,18 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (document.referrer && new URL(document.referrer).pathname === "/") {
+        navigate(-1);
+    } else {
+        navigate("/");
+    }
+};
+
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a href="/" className="relative left-[10%] py-5 w-12">
+      <a href="/" onClick={handleBackClick}  className="relative left-[10%] py-5 w-12">
         <img src="https://files.art-labyrinth.org/logo-black.svg" alt="" />
       </a>
 

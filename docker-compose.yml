@@ -2,6 +2,8 @@ services:
   art-lab-fest-2025:
     build: .
     container_name: art-lab-fest-2025
+    restart: on-failure:5
+
     ports:
       - 127.0.0.1:3025:80
     networks:
