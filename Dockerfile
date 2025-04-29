@@ -1,10 +1,11 @@
-FROM node:22 AS build
+FROM node:22-bookworm-slim AS build
 
 WORKDIR /code
 COPY *.json ./
 COPY *.js ./
 COPY ./src ./src
 COPY ./public ./public
+COPY ./scripts ./scripts
 
 ENV GENERATE_SOURCEMAP=false
 RUN npm install
