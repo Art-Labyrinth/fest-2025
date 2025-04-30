@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import About from "../About";
 import Footer from "../Footer";
 import { Header } from "../Header/Header";
+import { useTranslation } from 'react-i18next';
 
 function MainPage() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,22 +45,20 @@ function MainPage() {
         <img className="h-[20%] sm:h-auto sm:w-[80%] sm:left-[10%] absolute bottom-0" src="https://files.art-labyrinth.org/fest2025/svg/mountains.svg" alt="" />
 
         <div className="h-full">
-          <div className="flex justify-center items-center text-2xl sm:text-3xl font-bold h-[7%]">July 10–13, 2025</div>
-          <div className="flex justify-center items-center text-2xl sm:text-3xl text-center h-[10%]">14 Art-Labyrinth Summer Festival</div>
+          <div className="flex justify-center items-center text-2xl sm:text-3xl font-bold h-[7%]">{t("main.festival_dates")}</div>
+          <div className="flex flex-wrap justify-center items-center text-2xl sm:text-3xl text-center h-[10%] max-w-[90%] mx-auto gap-1">
+            <span>{t("main.14th_festival")}</span>
+            <span>{t("main.summer_fest")}</span>
+          </div>
           <div className="flex justify-center items-center mx-auto w-4/6 md:w-1/4 h-[20%]">
             <img src="https://files.art-labyrinth.org/fest2025/svg/five-hands.svg" alt="" />
           </div>
-          <div className="flex justify-center items-center text-center text-5xl sm:text-6xl font-black h-[12%]">Five Hands<br />One Rhythm</div>
+          <div className="flex justify-center items-center text-center text-5xl sm:text-6xl font-black h-[12%]">{t("main.five_hands")}<br />{t("main.one_rhythm")}</div>
           <div className="flex justify-center items-center text-sm sm:text-lg font-bold leading-none h-[15%]">
             <div className="flex flex-wrap justify-center gap-2">
-              <span className="px-3">#community</span>
-              <span className="px-3">#art</span>
-              <span className="px-3">#eco-life</span>
-              <span className="px-3">#no alcohol</span>
-              <span className="px-3">#music</span>
-              <span className="px-3">#no drugs</span>
-              <span className="px-3">#non aggressive</span>
-              <span className="px-3">#culture</span>
+              {(t("main.hashtags", { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                <span key={index} className="px-3">{item}</span>
+              ))}
             </div>
           </div>
           <div className="flex flex-row justify-center items-center text-sm sm:text-2xl font-black gap-5 sm:gap-10 leading-none h-[10%]">
@@ -65,15 +66,15 @@ function MainPage() {
               <div className="w-10">
                 <img src="https://files.art-labyrinth.org/fest2025/svg/map.svg" alt="" />
               </div>
-              <div className="text-center sm:text-left">Poiana<br />Șoldănești</div>
+              <div className="text-center sm:text-left">{t("main.loc_city")}<br />{t("main.loc_region")}</div>
             </div>
             <div className="hidden sm:block w-1">
               <img src="https://files.art-labyrinth.org/fest2025/svg/divider.svg" alt="" />
             </div>
             <div className="text-center sm:text-left">
-              <a href="tel:+37379601910">+373 79 601 910</a>
+              <a href={`tel:${t("main.info_tel_url")}`}>{t("main.info_tel")}</a>
               <br />
-              fest.art-labyrinth.org
+              {t("main.info_url")}
             </div>
           </div>
           <div className="flex justify-center items-center text-sm sm:text-lg font-bold leading-none h-[5%]">

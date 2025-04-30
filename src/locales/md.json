@@ -1,0 +1,98 @@
+{
+  "main": {
+    "festival_dates": "10–13 iulie 2025",
+    "14th_festival": "14th Art-Labyrinth",
+    "summer_fest": "Summer Festival",
+    "five_hands": "Five Hands",
+    "one_rhythm": "One Rhythm",
+    "hashtags": [
+      "#comunitate",
+      "#artă",
+      "#viață-eco",
+      "#fără alcool",
+      "#muzică",
+      "#fără droguri",
+      "#nonviolență",
+      "#cultură"
+    ],
+    "loc_city": "Poiana",
+    "loc_region": "Șoldănești",
+    "info_tel": "+373 79 601 910",
+    "info_tel_url": "+37379601910",
+    "info_url": "fest.art-labyrinth.org"
+  },
+  "about": {
+    "header": {
+      "art_lab": "Art-Labyrinth",
+      "summer_fest": "Festivalul de Vară 2025",
+      "text": "În fiecare an, Festivalul de Vară Art Labyrinth adună oameni gata să se unească în căutarea inspirației, creativității și conștientizării. În 2025, festivalul va avea loc între 10 și 13 iulie pe malurile pitorești ale râului Nistru, în satul Poiana, Moldova, cel mai drag și însorit loc al nostru. Ne întoarcem aici pentru a crea din nou un spațiu unde arta, muzica și natura se îmbină într-un singur flux."
+    },
+    "theme": {
+      "header_1": "Tema acestui an:",
+      "header_2": "Cinci Mâini, Un Ritm",
+      "text_1": "Cinci Mâini, Un Ritm nu este doar un nume. Este un simbol al unității, creativității și comunității. Într-o lume plină de indivizi unici, doar împreună putem crea ceva mai mare. Cinci mâini simbolizează acțiunea colectivă, împletind diverse energii și direcții într-o forță armonioasă și puternică. Cinci mâini sunt artiști, muzicieni, meșteșugari, visători, cei care vin să contribuie cu partea lor la imaginea de ansamblu, creând o lume fără diviziuni."
+    },
+    "about": {
+      "header": "Despre Festival",
+      "text_1": "Festivalul de Vară Art Labyrinth este un eveniment anual fondat în 2008 și de atunci a devenit un reper semnificativ în viața culturală a Moldovei. În fiecare an, alegem o locație nouă pentru a crea o atmosferă unică și pentru a conecta oamenii prin artă și muzică. Dar locul nostru — Poiana, pe malurile Nistrului — a devenit colțul nostru special, un loc de putere unde natura și creativitatea se întâlnesc."
+    },
+    "what": {
+      "header": "Ce vă așteaptă?",
+      "text_1": "Muzică live și spectacole ale artiștilor locali și internaționali",
+      "text_2": "Spectacole teatrale și de foc",
+      "text_3": "Artă de peisaj și instalații",
+      "text_4": "Ateliere și cursuri creative",
+      "text_5": "Inițiative ecologice și viață în armonie cu natura",
+      "text_6": "Practici conștiente și meditații"
+    },
+    "end": {
+      "text_1": "Art Labyrinth este un loc unde granițele dintre artă și viață, dintre om și natură, dintre trecut și viitor dispar. Este un spațiu pentru creație, inspirație și exprimare de sine.",
+      "text_2": "Alăturați-vă nouă, deveniți parte a festivalului, descoperiți ritmul unității și creativității care va rezona în fiecare dintre noi."
+    }
+  },
+  "footer": {
+    "contacts": "Contacte",
+    "tel": "+373 XXX-XXX-XXX",
+    "email": "xxx@gmail.com",
+    "email_mob": "xxxxxxxxxxx@gmail.com"
+  },
+  "contacts": {
+    "header": {
+      "title_1": "Contact",
+      "title_2": "Informații"
+    },
+    "hero": {
+      "tel_title": "Telefon",
+      "tel_text": "+373-XXX-XX-XX",
+      "email_title": "Email",
+      "email_text": "xxxxxxxxxxxxx@gmail.com",
+      "social_title": "Rețele Sociale",
+      "social_tg": "TG",
+      "social_fb": "FB",
+      "social_ig": "IG"
+    },
+    "form": {
+      "header_1": "Să scriem împreună povestea festivalului!",
+      "header_2": "Puteți să ne puneți o întrebare sau să lăsați o sugestie",
+      "name": "Numele dvs.",
+      "phone": "Număr de telefon",
+      "email": "Email",
+      "message": "Mesaj",
+      "send": "Trimiteți",
+      "success": {
+        "title": "Mesajul dvs. a fost trimis!",
+        "text": "Vă vom contacta în curând."
+      },
+      "error": {
+        "title": "Eroare la trimiterea mesajului",
+        "text": "Vă rugăm să verificați datele introduse și să încercați din nou."
+      }
+    }
+  },
+  "menu": {
+    "home": "Acasă",
+    "about": "Despre Festival",
+    "participation": "Participă la Festival",
+    "contacts": "Contacte"
+  }
+}

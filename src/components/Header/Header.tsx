@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export function Header() {
   const [isLoading, setIsLoading] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
 
   const handleJoinClick = () => {
     setIsLoading(true);
@@ -17,12 +19,18 @@ export function Header() {
 
   const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+    console.log(document.referrer);
+
     if (document.referrer && new URL(document.referrer).pathname === "/") {
         navigate(-1);
     } else {
         navigate("/");
     }
-};
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
@@ -57,7 +65,7 @@ export function Header() {
           {isLoading ? (
             <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
           ) : (
-            <span onClick={handleJoinClick}>Стать частью фестиваля</span>
+            <span onClick={handleJoinClick}>{t("menu.participation")}</span>
           )}
         </div>
         <hr className="border-[#774E3866] sm:hidden border border-1" />
@@ -65,11 +73,15 @@ export function Header() {
           className="whitespace-nowrap cursor-pointer relative uppercase"
           onClick={() => navigate("/contacts")}
         >
-          Контакты
+          {t("menu.contacts")}
         </div>
       </div>
 
-      {/* <LanguageSelector /> */}
+      <div className="flex mx-auto sm:mx-0 pr-10 sm:p-0 relative sm:right-[5%] font-sans gap-2 text-[#F4E4C3]">
+        <span onClick={() => changeLanguage('ru')} className={`cursor-pointer ${i18n.language === "ru" ? "text-[#C2410C]" : ""}`}>RU</span>
+        <span onClick={() => changeLanguage('md')} className={`cursor-pointer ${i18n.language === "md" ? "text-[#C2410C]" : ""}`}>RO</span>
+        <span onClick={() => changeLanguage('en')} className={`cursor-pointer ${i18n.language === "en" ? "text-[#C2410C]" : ""}`}>ENG</span>
+      </div>
     </header>
   );
 }
