@@ -7,6 +7,7 @@ import Contacts from "./components/Contacts";
 import { fetchCsrfToken } from "./utils";
 
 import "./index.css";
+import './config/i18n';
 
 const router = createBrowserRouter([
     {

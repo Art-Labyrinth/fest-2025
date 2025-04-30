@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
     const navigate = useNavigate();
+
+    const { t } = useTranslation();
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -27,17 +30,13 @@ export default function Footer() {
             <div className="flex flex-wrap gap-5 w-[80%] sm:w-9/12 justify-start py-5 sm:py-2 px-5 mx-auto">
                 <div className="flex flex-col justify-center items-start sm:px-10">
                     <div className="font-bold text-yellow-950">
-                        Контакты
+                        {t("footer.contacts")}
                     </div>
                     <div className="text-sm text-yellow-950 mt-2 sm:mt-3">
-                        +373 XXX-XXX-XXX
+                        {t("footer.tel")}
                     </div>
                     <div className="text-sm text-yellow-950">
-                        {isMobile ? (
-                            "xxxxxxxxxxx@gmail.com"
-                        ) : (
-                            "xxx@gmail.com"
-                        )}
+                        {isMobile ? t("footer.email_mob") : t("footer.email")}
                     </div>
                     <div className="flex gap-3 items-center mt-3">
                         <img src="https://files.art-labyrinth.org/icons/tg.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />

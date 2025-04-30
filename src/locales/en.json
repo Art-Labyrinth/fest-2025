@@ -1,0 +1,101 @@
+{
+  "main": {
+    "festival_dates": "July 10–13, 2025",
+    "14th_festival": "14th Art-Labyrinth",
+    "summer_fest": "Summer Festival",
+    "five_hands": "Five Hands",
+    "one_rhythm": "One Rhythm",
+    "hashtags": [
+      "#community",
+      "#art",
+      "#eco-life",
+      "#no alcohol",
+      "#music",
+      "#no drugs",
+      "#non aggressive",
+      "#culture"
+    ],
+    "loc_city": "Poiana",
+    "loc_region": "Șoldănești",
+    "info_tel": "+373 79 601 910",
+    "info_tel_url": "+37379601910",
+    "info_url": "fest.art-labyrinth.org"
+  },
+  "about": {
+    "header": {
+      "art_lab": "Art-Labyrinth",
+      "summer_fest": "Summer Festival 2025",
+      "text": "Every year, the Art Labyrinth Summer Festival gathers people ready to unite in search of inspiration, creativity, and mindfulness. In 2025, the festival will take place from July 10 to 13 on the picturesque banks of the Dniester River in the village of Poiana, Moldova, our most beloved and sunny place. We return here to once again create a space where art, music, and nature merge into one flow."
+    },
+    "theme": {
+      "header_1": "This year's theme:",
+      "header_2": "Five Hands, One Rhythm",
+      "text_1": "Five Hands, One Rhythm is not just a name. It is a symbol of unity, creativity, and community. In a world full of unique individuals, only together can we create something greater. Five hands symbolize collective action, weaving various energies and directions into one harmonious and powerful force. Five hands are artists, musicians, craftsmen, dreamers, those who come to contribute their part to the big picture, creating a world without divisions.",
+      "text_2": "One rhythm is the heart of the festival. It is the beat that unites us all, providing space for creativity and mindfulness. It is the rhythm of life, reflected in every moment, every melody, and every movement. It is our goal — conscious creation, where every participant becomes part of something greater than themselves."
+    },
+    "about": {
+      "header": "About the Festival",
+      "text_1": "The Art Labyrinth Summer Festival is an annual event founded in 2008 and has since become a significant milestone in Moldova's cultural life. Every year, we choose a new location to create a unique atmosphere and connect people through art and music. But our place — Poiana, on the banks of the Dniester — has become our special corner, a place of power where nature and creativity meet.",
+      "text_2": "We believe that the festival is not just a gathering of people. It is a space for transformation, exchange of ideas, and inspiration. At Art Labyrinth, everyone can unlock their potential, become part of a community, contribute to a common goal, and become a creator.",
+      "text_3": "Our festival brings together different people — artists, musicians, craftsmen, volunteers, dreamers — all those ready to work in one rhythm and create something great. We invite you on a journey where every step is filled with mindfulness, every moment is harmony, and every person matters."
+    },
+    "what": {
+      "header": "What to expect?",
+      "text_1": "Live music and performances by local and international artists",
+      "text_2": "Theatrical and fire performances",
+      "text_3": "Land art and installations",
+      "text_4": "Workshops and creative masterclasses",
+      "text_5": "Ecological initiatives and living in harmony with nature",
+      "text_6": "Mindful practices and meditations"
+    },
+    "end": {
+      "text_1": "Art Labyrinth is a place where the boundaries between art and life, between man and nature, between past and future disappear. It is a space for creation, inspiration, and self-expression.",
+      "text_2": "Join us, become part of the festival, discover the rhythm of unity and creativity that will resonate in each of us."
+    }
+  },
+  "footer": {
+    "contacts": "Contacts",
+    "tel": "+373 XXX-XXX-XXX",
+    "email": "xxx@gmail.com",
+    "email_mob": "xxxxxxxxxxx@gmail.com"
+  },
+  "contacts": {
+    "header": {
+      "title_1": "Contact",
+      "title_2": "Information"
+    },
+    "hero": {
+      "tel_title": "Phone",
+      "tel_text": "+373-XXX-XX-XX",
+      "email_title": "Email",
+      "email_text": "xxxxxxxxxxxxx@gmail.com",
+      "social_title": "Social Media",
+      "social_tg": "TG",
+      "social_fb": "FB",
+      "social_ig": "IG"
+    },
+    "form": {
+      "header_1": "Let's write the festival's story together!",
+      "header_2": "You can ask us a question or leave a suggestion",
+      "name": "Your name",
+      "phone": "Phone number",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "success": {
+        "title": "Your message has been sent!",
+        "text": "We will contact you shortly."
+      },
+      "error": {
+        "title": "Message sending error",
+        "text": "Please check the entered data and try again."
+      }
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About the Festival",
+    "participation": "Join the Festival",
+    "contacts": "Contacts"
+  }
+}
