@@ -94,5 +94,113 @@
     "about": "Despre Festival",
     "participation": "Participă la Festival",
     "contacts": "Contacte"
+  },
+  "participants": {
+    "hero": {
+      "header": "PARTICIPANȚILOR",
+      "text": "Art Labyrinth nu este doar un festival, ci un spațiu de co-creație vie. Aici nu există spectatori sau organizatori - fiecare persoană care ajunge la festival devine automat participant. Participarea la festival este deschisă tuturor și poate fi exprimată în diverse forme: contribuția la programul cultural, oferirea de ajutor festivalului prin abilități fizice sau intelectuale sau susținerea financiară prin donații."
+    },
+    "popups": {
+      "rules": {
+        "button": "REGULI",
+        "header_1": "SUNT BINEVENITE:",
+        "header_2": "NU SUNT PERMISE!",
+        "text_1": "Curățenia și sortarea deșeurilor\nPrezența atentă și respectuoasă\nLiniștea la răsărit și noaptea\nAjutorul reciproc și pentru festival\nAcceptarea și susținerea diferențelor\nInițiativa, deschiderea, bunătatea\nCreativitatea ca mod de conectare",
+        "text_2": "Consumul de alcool sau substanțe interzise de lege\nFumatul în spațiile publice\nComportamentul sub influența alcoolului sau agresiv\nGătirea cărnii pe foc deschis\nDeteriorarea naturii: tăierea crengilor, tufișurilor sau copacilor\nAprinderea focului în afara zonelor desemnate\nFolosirea substanțelor chimice în apropierea surselor de apă\nAruncarea deșeurilor nesortate\nTulburarea liniștii pe timp de noapte\nDistrugerea oricăror ființe vii"
+      },
+      "traditions": {
+        "button": "TRADIȚII",
+        "header": "VALORI ȘI TRADIȚII",
+        "title_1": "Viața în ritmul naturii",
+        "title_2": "Locul ca și co-creator",
+        "title_3": "Sustenabilitate și respect față de Pământ",
+        "title_4": "Prezență conștientă",
+        "title_5": "Creativitate și participare",
+        "title_6": "Artă și muncă interioară",
+        "title_7": "Puterea comunității",
+        "text_1": "Art Labyrinth este mai mult decât un festival. Este un spațiu viu unde natura, arta, calea interioară și comunitatea se întâlnesc.",
+        "text_2": "Festivalul are loc în zile astronomice speciale - lună plină sau solstițiu. Aceste momente amplifică profunzimea energetică și simbolică a experienței.",
+        "text_3": "Alegem peisaje sălbatice, neatinse. Nu există infrastructură obișnuită, iar asta face parte din experiență - viața în cort, sub stele, lângă foc. Ne îndepărtăm de ritmul urban, zgomote și poluare vizuală pentru a ne întoarce la simplitate.",
+        "text_4": "Festivalul se bazează pe principii de prezență sustenabilă și atentă:\n— sortăm deșeurile și nu lăsăm urme,\n— folosim materiale naturale,\n— evităm plasticul,\n— consumăm hrană vegetariană,\n— tratăm cu grijă toate ființele vii.",
+        "text_5": "Festivalul promovează sobrietatea - fără alcool sau substanțe psihoactive. Este un spațiu al clarității, profunzimii și al momentului prezent. Aici ne întâlnim cu noi înșine și cu ceilalți - în mod autentic.",
+        "text_6": "Nu există o separare între „organizatori” și „spectatori” - fiecare contribuie. Toată infrastructura este creată de participanți: scene, instalații artistice, bucătării, ateliere. Poți face parte din asta.",
+        "text_7": "Programul este plin de forme vii: muzică, teatru, ateliere, artă ambientală, performance-uri. Labirintul este, de asemenea, un spațiu pentru descoperiri personale, inspirație și reconectarea cu sinele.",
+        "text_8": "Festivalul există datorită oamenilor care cred în valoarea unității, artei și naturii. Este un proiect non-profit, creat prin eforturi comune - timp, acțiuni și susținere."
+      }
+    },
+    "guest": {
+      "header": "VIZITATORILOR",
+      "text": "Fă o contribuție și află mai multe despre modalitățile de susținere a festivalului.",
+      "button": "CUMPĂRĂ BILET",
+      "titles": {
+        "slider_1": "Unde are loc festivalul? Cum ajung acolo?",
+        "slider_2": "Ce trebuie să iau cu mine?",
+        "slider_3": "Va fi mâncare sau trebuie să gătesc singur?",
+        "slider_4": "Pot veni cu mașina? Va fi parcare?",
+        "slider_5": "Va fi un loc pentru încărcarea telefoanelor?",
+        "slider_6": "Va fi semnal sau internet pe teritoriu?",
+        "slider_7": "Trebuie să cumpăr bilete separate pentru concerte și ateliere?",
+        "slider_8": "Există toalete și dușuri?",
+        "slider_9": "Va fi apă potabilă?",
+        "slider_10": "Cum va fi organizată siguranța pe teritoriu?",
+        "slider_11": "Ce fac dacă am nevoie de asistență medicală?",
+        "slider_12": "Pot aduce alcool?",
+        "slider_13": "Pot fuma la festival?",
+        "slider_14": "Pot aduce animale de companie?",
+        "slider_15": "Pot veni cu copilul?"
+      },
+      "texts": {
+        "text_1": "În fiecare an alegem o nouă locație pentru festival. Anul acesta, evenimentul va avea loc în raionul Șoldănești, lângă satul Poiana. Puteți ajunge acolo în mai multe moduri. Vă rugăm să consultați secțiunea „Cum să ajungeți” pentru informații detaliate.",
+        "text_2": "Ar trebui să aduceți: haine confortabile pentru activități, obiecte personale, repellent pentru insecte, cort, sac de dormit sau saltea, veselă pentru mâncare dacă intenționați să gătiți singuri și orice altceva este necesar pentru o ședere confortabilă în natură.",
+        "text_3": "La festival vor fi organizate mai multe puncte de masă, adaptate diferitelor preferințe:\nBucătărie principală - mâncare simplă de casă, gătită pe foc.\nBucătărie vedică - preparate tradiționale indiene fără ceapă, usturoi sau ciuperci.\nBucătărie raw - mâncare sănătoasă, fără procesare termică.\nCeainărie - un spațiu atmosferic cu ceaiuri de plante delicioase, cafea și dulciuri naturale.\n\nDe asemenea, puteți găti independent în tabăra dumneavoastră.",
+        "text_4": "Da, puteți veni cu mașina, dar nu veți putea intra pe teritoriul festivalului. Va fi organizată o parcare plătită și păzită.",
+        "text_5": "Telefoanele vor putea fi încărcate în locuri special amenajate, folosind electricitate de la un generator.",
+        "text_6": "Semnalul de internet poate fi limitat din cauza locației izolate, dar semnalul de telefonie mobilă va fi disponibil în anumite zone.",
+        "text_7": "Nu, contribuția pentru festival include participarea la toate atelierele, concertele și performance-urile.",
+        "text_8": "Da, festivalul va avea cabine de duș și toalete ecologice.",
+        "text_9": "Da, la festival va fi disponibilă apă curată de izvor.",
+        "text_10": "În timpul festivalului, poliția va fi de serviciu, iar echipa Art Labyrinth va supraveghea ordinea și respectarea tradițiilor.",
+        "text_11": "La festival va fi disponibil un medic de gardă și o trusă de prim ajutor, amplasate lângă centrul de informații.",
+        "text_12": "Nu, aducerea sau consumul de alcool nu este în conformitate cu tradițiile festivalului.",
+        "text_13": "Fumatul este interzis în spațiile publice și în zonele principale ale festivalului.",
+        "text_14": "Da, puteți aduce animale de companie, dar acestea trebuie să fie sub controlul dumneavoastră.",
+        "text_15": "Desigur! Art Labyrinth acordă o mare atenție familiilor și copiilor. Pentru cei mici va fi amenajată o zonă mare pentru copii, cu un program variat."
+      }
+    },
+    "org": {
+      "header": "VOLUNTARILOR ȘI ORGANIZATORILOR",
+      "text": "Vrei să faci parte din echipă și să contribui? Completează formularul și alătură-te nouă!",
+      "button": "COMPLETEAZĂ FORMULARUL",
+      "titles": {
+        "slider_1": "Cine poate aplica pentru participare?",
+        "slider_2": "Cum pot aplica?",
+        "slider_3": "Pot propune mai multe formate?",
+        "slider_4": "Cum decurge selecția?",
+        "slider_5": "Când primesc răspuns?",
+        "slider_6": "Trebuie să plătesc o contribuție?",
+        "slider_7": "Ce oferă festivalul?",
+        "slider_8": "Pot veni cu un asistent?",
+        "slider_9": "Ce se întâmplă cu echipamentul?",
+        "slider_10": "Pot organiza ceva în afara programului?",
+        "slider_11": "Pot vinde produsele mele?"
+      },
+      "texts": {
+        "text_1": "Orice maestru, artist, muzician sau profesor care dorește să împărtășească cunoștințe, artă sau inspirație. Esențial este să fie în armonie cu spiritul festivalului: respect, sustenabilitate, profunzime și creativitate.",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": "",
+        "text_6": "",
+        "text_7": "",
+        "text_8": "",
+        "text_9": "",
+        "text_10": "",
+        "text_11": ""
+      },
+      "master": {
+        "header": "MAEȘTRILOR ȘI ARTIȘTILOR",
+        "text": "Vrei să faci parte din magia festivalului? Completează formularul și exprimă-ți creativitatea la Art Labyrinth!"
+      }
+    }
   }
 }

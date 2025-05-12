@@ -97,5 +97,113 @@
     "about": "About the Festival",
     "participation": "Join the Festival",
     "contacts": "Contacts"
+  },
+  "participants": {
+    "hero": {
+      "header": "FOR PARTICIPANTS",
+      "text": "Art Labyrinth is not just a festival, but a space for live co-creation. There are no spectators or organizers here—everyone who attends the festival automatically becomes a participant. Participation is open to all and can take various forms: contributing to the cultural program, providing help to the festival with physical or intellectual skills, or offering financial support through donations."
+    },
+    "popups": {
+      "rules": {
+        "button": "RULES",
+        "header_1": "WELCOMED:",
+        "header_2": "NOT ALLOWED!",
+        "text_1": "Cleanliness and waste sorting\nMindful and respectful presence\nSilence at dawn and night\nHelping each other and the festival\nAcceptance and support of differences\nInitiative, openness, kindness\nCreativity as a way of connection",
+        "text_2": "Consumption of alcohol or substances prohibited by law\nSmoking in public areas\nDrunken or aggressive behavior\nCooking meat over an open fire\nHarming nature: cutting branches, bushes, or trees\nLighting fires outside designated areas\nUsing chemicals near water sources\nLittering or unsorted waste\nDisturbing the peace at night\nHarming any living beings"
+      },
+      "traditions": {
+        "button": "TRADITIONS",
+        "header": "VALUES AND TRADITIONS",
+        "title_1": "Living in harmony with nature",
+        "title_2": "The place as a co-creator",
+        "title_3": "Sustainability and respect for the Earth",
+        "title_4": "Mindful presence",
+        "title_5": "Creativity and participation",
+        "title_6": "Art and inner work",
+        "title_7": "The power of community",
+        "text_1": "Art Labyrinth is more than just a festival. It’s a living space where nature, art, inner journeys, and community come together.",
+        "text_2": "The festival takes place on special astronomical days—full moon or solstice. These moments enhance the energetic and symbolic depth of the experience.",
+        "text_3": "We choose untouched, wild landscapes. There’s no conventional infrastructure, and that’s part of the experience—living in a tent, under the stars, by a campfire. We step away from urban rhythms, noise, and visual clutter to return to simplicity.",
+        "text_4": "The festival is built on principles of sustainable and mindful presence:\n— sorting waste and leaving no trace,\n— using natural materials,\n— avoiding plastic,\n— eating vegetarian food,\n— treating all living things with care.",
+        "text_5": "The festival promotes sobriety—no alcohol or psychoactive substances. This is a space of clarity, depth, and presence. Here, we meet ourselves and others authentically.",
+        "text_6": "There’s no division between 'organizers' and 'spectators'—everyone contributes. All infrastructure is created by participants: stages, art installations, kitchens, workshops. You can be part of this.",
+        "text_7": "The program is filled with vibrant forms: music, theater, workshops, land art, performances. The Labyrinth is also a space for personal discoveries, inspiration, and reconnecting with yourself.",
+        "text_8": "The festival exists thanks to people who believe in the value of unity, art, and nature. It’s a non-profit project created through collective efforts—time, actions, and support."
+      }
+    },
+    "guest": {
+      "header": "FOR GUESTS",
+      "text": "Make a contribution and learn more about ways to support the festival.",
+      "button": "BUY A TICKET",
+      "titles": {
+        "slider_1": "Where is the festival held? How to get there?",
+        "slider_2": "What to bring?",
+        "slider_3": "Will food be provided, or should I cook myself?",
+        "slider_4": "Can I come by car? Will there be parking?",
+        "slider_5": "Will there be a place to charge phones?",
+        "slider_6": "Will there be mobile service or internet at the site?",
+        "slider_7": "Do I need to buy separate tickets for concerts and workshops?",
+        "slider_8": "Are there toilets and showers?",
+        "slider_9": "Will drinking water be available?",
+        "slider_10": "How will safety be organized at the site?",
+        "slider_11": "What should I do if I need medical assistance?",
+        "slider_12": "Can I bring alcohol?",
+        "slider_13": "Can I smoke at the festival?",
+        "slider_14": "Can I bring pets?",
+        "slider_15": "Can I bring children?"
+      },
+      "texts": {
+        "text_1": "Each year, we choose a new location for the festival. This year, it will take place in the Șoldănești District, near the village of Poiana. You can get there in several ways. Please see the 'How to Get There' section for detailed information.",
+        "text_2": "You should bring: comfortable clothing for activities, personal items, insect repellent, a tent, a sleeping bag or mat, eating utensils if you plan to cook for yourself, and anything else needed for a comfortable stay in nature.",
+        "text_3": "The festival will have several food points catering to different preferences:\nMain kitchen—simple home-cooked meals prepared over a fire.\nVedic kitchen—traditional Indian dishes without onion, garlic, or mushrooms.\nRaw food kitchen—healthy food without thermal processing.\nTea house—an atmospheric space with delicious herbal teas, coffee, and natural sweets.\n\nYou can also cook independently at your camp.",
+        "text_4": "Yes, you can arrive by car, but vehicles cannot enter the festival grounds. There will be a paid, guarded parking area.",
+        "text_5": "Phones can be charged at designated spots using electricity from a generator.",
+        "text_6": "Internet signal may be limited due to the remote location, but mobile service will be available in some areas.",
+        "text_7": "No, the festival contribution includes participation in all workshops, concerts, and performances.",
+        "text_8": "Yes, the festival will have shower cabins and eco-toilets.",
+        "text_9": "Yes, clean spring water will be available at the festival.",
+        "text_10": "During the festival, police will be on duty, and the Art Labyrinth team will ensure order and adherence to traditions.",
+        "text_11": "A duty medic and first aid kit will be available near the information center.",
+        "text_12": "No, bringing or consuming alcohol is not in line with the festival’s traditions.",
+        "text_13": "Smoking is prohibited in public areas and at main festival sites.",
+        "text_14": "Yes, you can bring pets, but they must remain under your control.",
+        "text_15": "Of course! Art Labyrinth places great emphasis on families and children. A large children’s area with a varied program will be provided for kids."
+      }
+    },
+    "org": {
+      "header": "FOR VOLUNTEERS AND ORGANIZERS",
+      "text": "Want to join the team and make a contribution? Fill out the form and join us!",
+      "button": "FILL THE FORM",
+      "titles": {
+        "slider_1": "Who can apply to participate?",
+        "slider_2": "How to apply?",
+        "slider_3": "Can I submit multiple formats?",
+        "slider_4": "How does the selection process work?",
+        "slider_5": "When can I expect a response?",
+        "slider_6": "Do I need to pay a contribution?",
+        "slider_7": "What does the festival provide?",
+        "slider_8": "Can I bring an assistant?",
+        "slider_9": "What about equipment?",
+        "slider_10": "Can I hold something outside the program?",
+        "slider_11": "Can I sell my products?"
+      },
+      "texts": {
+        "text_1": "Any master, artist, musician, or teacher who wants to share knowledge, art, or inspiration. The key is alignment with the festival’s spirit: respect, sustainability, depth, and creativity.",
+        "text_2": "",
+        "text_3": "",
+        "text_4": "",
+        "text_5": "",
+        "text_6": "",
+        "text_7": "",
+        "text_8": "",
+        "text_9": "",
+        "text_10": "",
+        "text_11": ""
+      },
+      "master": {
+        "header": "FOR MASTERS AND ARTISTS",
+        "text": "Want to be part of the festival’s magic? Fill out the form and showcase your creativity at Art Labyrinth!"
+      }
+    }
   }
 }

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./components/Main/MainPage";
 import About from "./components/About";
 import Contacts from "./components/Contacts";
+import Participants from "./components/Participants/Participants";
 import { fetchCsrfToken } from "./utils";
 
 import "./index.css";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: "/contacts",
         element: <Contacts />,
         loader: () => { fetchCsrfToken(); },
+    },
+    {
+        path: "/participants",
+        element: <Participants />,
     },
 ]);
 

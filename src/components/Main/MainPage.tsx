@@ -86,7 +86,7 @@ function MainPage() {
       </div>
 
       <About />
-      <Footer />
+      <Footer/>
     </main>
   );
 }

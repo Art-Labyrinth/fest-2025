@@ -62,11 +62,14 @@ export function Header() {
           py-32 sm:py-2 sm:leading-none text-center sm:font-bold sm:border-stone-600 sm:border-y-2 sm:mx-auto`}
       >
         <div className="whitespace-nowrap cursor-pointer relative uppercase">
-          {isLoading ? (
-            <div className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin"></div>
-          ) : (
-            <span onClick={handleJoinClick}>{t("menu.participation")}</span>
-          )}
+          
+            <div 
+              className="whitespace-nowrap cursor-pointer relative uppercase"
+              onClick={() => navigate("/participants")}
+            >
+              {t("menu.participation")}
+            </div>
+          
         </div>
         <hr className="border-[#774E3866] sm:hidden border border-1" />
         <div
