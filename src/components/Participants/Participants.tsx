@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Header } from "../Header/Header";
 import Footer from "../Footer";
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from "react-router-dom";
 
 function Participants() {
 const { t } = useTranslation<'translation'>();
+const navigate = useNavigate();
 const [isRulesPopupOpen, setIsRulesPopupOpen] = useState(false);
 const [isTraditionsPopupOpen, setIsTraditionsPopupOpen] = useState(false);
 
@@ -286,7 +288,11 @@ useEffect(() => {
             <div className="md:w-1/2 flex flex-col items-left justify-center h-full">
               <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.guest.header")}</h2>
               <p className="text-brown mb-6">{t("participants.guest.text")}</p>
-              <a href="https://join.art-labyrinth.org/" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.guest.button")}</a>
+              <button 
+                 className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" 
+                 onClick={() => navigate("/contribute")}>
+                  {t("participants.guest.button")}
+                  </button>
             </div>
 
             {/* Правая часть: слайдеры */}
