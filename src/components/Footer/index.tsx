@@ -41,9 +41,30 @@ export default function Footer({ backgroundColor = "bg-main" }) {
                         {isMobile ? t("footer.email_mob") : t("footer.email")}
                     </div>
                     <div className="flex gap-3 items-center mt-3">
-                        <img src="https://files.art-labyrinth.org/icons/tg.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
-                        <img src="https://files.art-labyrinth.org/icons/fb.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
-                        <img src="https://files.art-labyrinth.org/icons/in.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                        <a
+                            href="https://t.me/+wpqpF2uV3-IzZTQ6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <img src="https://files.art-labyrinth.org/icons/tg.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                        </a>
+                        <a
+                            href="https://www.facebook.com/ArtLabyrinthFestival/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <img src="https://files.art-labyrinth.org/icons/fb.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/artlabsummerfestival"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <img src="https://files.art-labyrinth.org/icons/in.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                        </a>
                     </div>
                 </div>
 

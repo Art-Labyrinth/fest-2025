@@ -62,16 +62,23 @@ function MainPage() {
             </div>
           </div>
           <div className="flex flex-row justify-center items-center text-sm sm:text-2xl font-black gap-5 sm:gap-10 leading-none h-[10%]">
-            <div className="flex items-center gap-3 sm:pl-16">
-              <div className="w-10">
-                <img src="https://files.art-labyrinth.org/fest2025/svg/map.svg" alt="" />
+            <a
+              href="https://maps.app.goo.gl/1vBPMhBe9KXDNgNb9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <div className="flex items-center gap-3 sm:pl-16 hover:contrast-50">
+                <div className="w-10">
+                  <img src="https://files.art-labyrinth.org/fest2025/svg/map.svg" alt="" />
+                </div>
+                <div className="text-center sm:text-left">{t("main.loc_city")}<br />{t("main.loc_region")}</div>
               </div>
-              <div className="text-center sm:text-left">{t("main.loc_city")}<br />{t("main.loc_region")}</div>
-            </div>
+            </a>
             <div className="hidden sm:block w-1">
               <img src="https://files.art-labyrinth.org/fest2025/svg/divider.svg" alt="" />
             </div>
-            <div className="text-center sm:text-left">
+            <div className="text-center sm:text-left hover:contrast-50">
               <a href={`tel:${t("main.info_tel_url")}`}>{t("main.info_tel")}</a>
               <br />
               {t("main.info_url")}
