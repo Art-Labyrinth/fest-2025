@@ -339,7 +339,7 @@ useEffect(() => {
             <div className="md:w-1/2 flex flex-col items-left justify-center h-full">
               <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.org.header")}</h2>
               <p className="text-brown mb-6">{t("participants.org.text")}</p>
-              <a href="https://join.art-labyrinth.org/" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.org.button")}</a>
+              <a href="https://join.art-labyrinth.org/volunteer" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.org.button")}</a>
             </div>
 
             {/* Правая часть: слайдеры */}
@@ -382,7 +382,7 @@ useEffect(() => {
             <div className="md:w-1/2 flex flex-col items-left">
               <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.org.master.header")}</h2>
               <p className="text-brown mb-6">{t("participants.org.master.text")}</p>
-              <a href="https://join.art-labyrinth.org/" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.org.button")}</a>
+              <a href="https://join.art-labyrinth.org/master" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.org.button")}</a>
             </div>
 
             {/* Правая часть: слайдеры */}
