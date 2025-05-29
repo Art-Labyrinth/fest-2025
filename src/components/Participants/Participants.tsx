@@ -356,6 +356,8 @@ useEffect(() => {
                 { title: 'participants.org.titles.slider_9', text: 'participants.org.texts.text_9' },
                 { title: 'participants.org.titles.slider_10', text: 'participants.org.texts.text_10' },
                 { title: 'participants.org.titles.slider_11', text: 'participants.org.texts.text_11' },
+                { title: 'participants.org.titles.slider_12', text: 'participants.org.texts.text_12' },
+                { title: 'participants.org.titles.slider_13', text: 'participants.org.texts.text_13' },
               ].map((slider, index) => (
                 <div key={index} className="border-t border-[#774E384D] py-4">
                   <button className="w-full text-left text-xl font-semibold text-brown flex justify-between items-center" onClick={() => toggleOrgSlider(index)}>
@@ -380,25 +382,25 @@ useEffect(() => {
           <div className="container mx-auto px-4 flex flex-col md:flex-row gap-8 items-center">
             {/* Левая часть */}
             <div className="md:w-1/2 flex flex-col items-left">
-              <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.org.master.header")}</h2>
-              <p className="text-brown mb-6">{t("participants.org.master.text")}</p>
+              <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.master.header")}</h2>
+              <p className="text-brown mb-6">{t("participants.master.text")}</p>
               <a href="https://join.art-labyrinth.org/master" className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" target="_blank" rel="noopener noreferrer">{t("participants.org.button")}</a>
             </div>
 
             {/* Правая часть: слайдеры */}
             <div className="md:w-1/2">
               {[
-                { title: 'participants.org.titles.slider_1', text: 'participants.org.texts.text_1' },
-                { title: 'participants.org.titles.slider_2', text: 'participants.org.texts.text_2' },
-                { title: 'participants.org.titles.slider_3', text: 'participants.org.texts.text_3' },
-                { title: 'participants.org.titles.slider_4', text: 'participants.org.texts.text_4' },
-                { title: 'participants.org.titles.slider_5', text: 'participants.org.texts.text_5' },
-                { title: 'participants.org.titles.slider_6', text: 'participants.org.texts.text_6' },
-                { title: 'participants.org.titles.slider_7', text: 'participants.org.texts.text_7' },
-                { title: 'participants.org.titles.slider_8', text: 'participants.org.texts.text_8' },
-                { title: 'participants.org.titles.slider_9', text: 'participants.org.texts.text_9' },
-                { title: 'participants.org.titles.slider_10', text: 'participants.org.texts.text_10' },
-                { title: 'participants.org.titles.slider_11', text: 'participants.org.texts.text_11' },
+                { title: 'participants.master.titles.slider_1', text: 'participants.master.texts.text_1' },
+                { title: 'participants.master.titles.slider_2', text: 'participants.master.texts.text_2' },
+                { title: 'participants.master.titles.slider_3', text: 'participants.master.texts.text_3' },
+                { title: 'participants.master.titles.slider_4', text: 'participants.master.texts.text_4' },
+                { title: 'participants.master.titles.slider_5', text: 'participants.master.texts.text_5' },
+                { title: 'participants.master.titles.slider_6', text: 'participants.master.texts.text_6' },
+                { title: 'participants.master.titles.slider_7', text: 'participants.master.texts.text_7' },
+                { title: 'participants.master.titles.slider_8', text: 'participants.master.texts.text_8' },
+                { title: 'participants.master.titles.slider_9', text: 'participants.master.texts.text_9' },
+                { title: 'participants.master.titles.slider_10', text: 'participants.master.texts.text_10' },
+                { title: 'participants.master.titles.slider_11', text: 'participants.master.texts.text_11' },
               ].map((slider, index) => (
                 <div key={index} className="border-t border-[#774E384D] py-4">
                   <button className="w-full text-left text-xl font-semibold text-brown flex justify-between items-center" onClick={() => toggleMasterSlider(index)}>
