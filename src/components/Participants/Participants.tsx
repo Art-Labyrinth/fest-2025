@@ -68,8 +68,12 @@ useEffect(() => {
 
         {/* 2. Hero блок с собственным фоном */}
         <section
-          className="relative bg-cover bg-top sm:bg-[center_28%]  py-[5%] w-full"
-          style={{ backgroundImage: "url('/Participants/hero_bg.jpg')" }}
+          className="relative bg-cover bg-top sm:bg-[center_28%] py-[5%] w-full
+            bg-[url('https://files.art-labyrinth.org/fest2025/participants/sm_hero_bg.webp')]
+            md:bg-[url('https://files.art-labyrinth.org/fest2025/participants/md_hero_bg.webp')]
+            lg:bg-[url('https://files.art-labyrinth.org/fest2025/participants/lg_hero_bg.webp')]
+            xl:bg-[url('https://files.art-labyrinth.org/fest2025/participants/xl_hero_bg.webp')]
+            2xl:bg-[url('https://files.art-labyrinth.org/fest2025/participants/2xl_hero_bg.webp')]"
         >
           <div className="flex flex-col relative container mx-auto px-4 text-center z-10">
             <h1 className="text-4xl md:text-5xl font-bold text-brown font-deledda mb-4 text-[#F4E4C3]">
@@ -288,8 +292,8 @@ useEffect(() => {
             <div className="md:w-1/2 flex flex-col items-left justify-center h-full">
               <h2 className="text-3xl font-bold text-brown font-deledda mb-4">{t("participants.guest.header")}</h2>
               <p className="text-brown mb-6">{t("participants.guest.text")}</p>
-              <button 
-                 className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit" 
+              <button
+                 className="bg-[#F07B17] text-white py-2 px-6 rounded-lg hover:bg-opacity-70 w-fit"
                  onClick={() => navigate("/contribute")}>
                   {t("participants.guest.button")}
                   </button>
@@ -422,7 +426,7 @@ useEffect(() => {
       </div>
       <div className="bg-[#F4E4C3]">
         <Footer backgroundColor="bg-[#F4E4C3]"/>
-      </div> 
+      </div>
     </main>
   );
 }
