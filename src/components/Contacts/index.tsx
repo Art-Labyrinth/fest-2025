@@ -2,12 +2,12 @@ import React from "react";
 import { Header } from "../Header/Header";
 import Footer from "../Footer";
 import { API_URL } from "src/config";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 export default function Contacts() {
-    const navigate = useNavigate();
     const [isLoading, setIsLoading] = React.useState(false);
+    const [success, setSuccess] = React.useState(false);
+    const [error, setError] = React.useState(false);
     const [formData, setFormData] = React.useState({
         dest: "fest2025",
         name: "",
@@ -45,10 +45,9 @@ export default function Contacts() {
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
-                alert(t("contacts.form.success.title") + " " + t("contacts.form.success.text"));
-                navigate("/");
+                setSuccess(true);
             } else {
-                alert(t("contacts.form.error.title") + " " + t("contacts.form.error.text"));
+                setError(true);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -80,7 +79,7 @@ export default function Contacts() {
                             <p className="font-bold font-deledda">{t("contacts.hero.tel_title")}</p>
                             <p className="font-light font-deledda">{t("contacts.hero.tel_text")}</p>
                         </div>
-                        <div>
+                        <div className="hidden md:block">
                             <div className="w-1">
                                 <img src="https://files.art-labyrinth.org/fest2025/svg/divider.svg" alt="" />
                             </div>
@@ -88,9 +87,9 @@ export default function Contacts() {
                         <div className="flex flex-col items-center">
                             <img className="h-20" src="https://files.art-labyrinth.org/fest2025/svg/email.svg" alt="" />
                             <p className="font-bold font-deledda">{t("contacts.hero.email_title")}</p>
-                            <p className="font-light font-deledda">{t("contacts.hero.email_text")}</p>
+                            <a href={`mailto:{t("contacts.hero.email_text")}`}><p className="font-light font-deledda">{t("contacts.hero.email_text")}</p></a>
                         </div>
-                        <div>
+                        <div className="hidden md:block">
                             <div className="w-1">
                                 <img src="https://files.art-labyrinth.org/fest2025/svg/divider.svg" alt="" />
                             </div>
@@ -98,7 +97,26 @@ export default function Contacts() {
                         <div className="flex flex-col items-center">
                             <img className="h-20" src="https://files.art-labyrinth.org/fest2025/svg/web.svg" alt="" />
                             <p className="font-bold font-deledda">{t("contacts.hero.social_title")}</p>
-                            <p className="font-light font-deledda">{t("contacts.hero.social_tg")} {t("contacts.hero.social_fb")} {t("contacts.hero.social_ig")}</p>
+                            <div className="flex flex-row gap-5 font-light font-deledda">
+                                <a href="https://t.me/+wpqpF2uV3-IzZTQ6" target="_blank" rel="noopener noreferrer">
+                                    <p className="flex flex-row gap-2">
+                                        {t("contacts.hero.social_tg")}
+                                        <img src="https://files.art-labyrinth.org/icons/tg.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                                    </p>
+                                </a>
+                                <a href="https://www.facebook.com/ArtLabyrinthFestival/" target="_blank" rel="noopener noreferrer">
+                                    <p className="flex flex-row gap-2">
+                                        {t("contacts.hero.social_fb")}
+                                        <img src="https://files.art-labyrinth.org/icons/fb.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                                    </p>
+                                </a>
+                                <a href="https://www.instagram.com/artlabsummerfestival" target="_blank" rel="noopener noreferrer">
+                                    <p className="flex flex-row gap-2">
+                                        {t("contacts.hero.social_ig")}
+                                        <img src="https://files.art-labyrinth.org/icons/in.svg" alt="" className="w-5 contrast-75 hover:contrast-50 active:contrast-100" />
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -160,15 +178,26 @@ export default function Contacts() {
                                         required
                                     ></textarea>
                                 </div>
+                                {error && (
+                                    <div className="text-red-500 mb-4">
+                                        {t("contacts.form.error.title")} {t("contacts.form.error.text")}
+                                    </div>
+                                )}
                                 <div className="flex items-center justify-center">
-                                    <button
-                                        className={`${isLoading ? "bg-gray-500" : "bg-orange-500 hover:bg-orange-700"} text-[#FFF9EC] py-2 px-10 rounded font-light font-deledda text-sm focus:outline-none focus:shadow-outline`}
-                                        type="button"
-                                        onClick={handleSubmit}
-                                        disabled={isLoading}
-                                    >
-                                        {t("contacts.form.send")}
-                                    </button>
+                                    {success ? (
+                                        <div className="text-green-500 mb-4">
+                                            {t("contacts.form.success.title")} {t("contacts.form.success.text")}
+                                        </div>
+                                    ) : (
+                                        <button
+                                            className={`${isLoading ? "bg-gray-500" : "bg-orange-500 hover:bg-orange-700"} text-[#FFF9EC] py-2 px-10 rounded font-light font-deledda text-sm focus:outline-none focus:shadow-outline`}
+                                            type="button"
+                                            onClick={handleSubmit}
+                                            disabled={isLoading}
+                                        >
+                                            {t("contacts.form.send")}
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </div>
