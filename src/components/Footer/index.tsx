@@ -1,31 +1,12 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 export default function Footer({ backgroundColor = "bg-main" }) {
     const navigate = useNavigate();
-
     const { t } = useTranslation();
 
-    const [isMobile, setIsMobile] = useState(false);
-
-    const backgroundClass = backgroundColor || "bg-main";
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 640);
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
     return (
-        <footer className={`flex flex-wrap items-center sm:px-16 sm:pt-12 sm:pb-8 w-full sm:min-h-48 gap-5 ${backgroundClass}`}>
+        <footer className={`flex flex-wrap items-center sm:px-16 sm:pt-12 sm:pb-8 w-full sm:min-h-48 gap-5 ${backgroundColor}`}>
             <div className="relative left-[5%] sm:left-[10%] py-5 w-12" onClick={() => navigate('/')}>
                 <img src="https://files.art-labyrinth.org/logo.svg" alt="" />
             </div>
@@ -38,7 +19,7 @@ export default function Footer({ backgroundColor = "bg-main" }) {
                         {t("footer.tel")}
                     </div>
                     <div className="text-sm text-yellow-950">
-                        {isMobile ? t("footer.email_mob") : t("footer.email")}
+                        {t("footer.email")}
                     </div>
                     <div className="flex gap-3 items-center mt-3">
                         <a

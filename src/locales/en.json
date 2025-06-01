@@ -1,10 +1,6 @@
 {
   "main": {
     "festival_dates": "July 10–13, 2025",
-    "14th_festival": "14th Art-Labyrinth",
-    "summer_fest": "Summer Festival",
-    "five_hands": "Five Hands",
-    "one_rhythm": "One Rhythm",
     "hashtags": [
       "#community",
       "#art",
@@ -16,14 +12,10 @@
       "#culture"
     ],
     "loc_city": "Poiana",
-    "loc_region": "Șoldănești",
-    "info_tel": "+373 79 601 910",
-    "info_tel_url": "+37379601910",
-    "info_url": "fest.art-labyrinth.org"
+    "loc_region": "Șoldănești"
   },
   "about": {
     "header": {
-      "art_lab": "Art-Labyrinth",
       "summer_fest": "Summer Festival 2025",
       "text": "Every year, the Art Labyrinth Summer Festival gathers people ready to unite in search of inspiration, creativity, and mindfulness. In 2025, the festival will take place from July 10 to 13 on the picturesque banks of the Dniester River in the village of Poiana, Moldova, our most beloved and sunny place. We return here to once again create a space where art, music, and nature merge into one flow."
     },
@@ -54,10 +46,7 @@
     }
   },
   "footer": {
-    "contacts": "Contacts",
-    "tel": "+373 XXX-XXX-XXX",
-    "email": "xxx@gmail.com",
-    "email_mob": "xxxxxxxxxxx@gmail.com"
+    "contacts": "Contacts"
   },
   "contacts": {
     "header": {
@@ -66,20 +55,13 @@
     },
     "hero": {
       "tel_title": "Phone",
-      "tel_text": "+373-XXX-XX-XX",
-      "email_title": "Email",
-      "email_text": "xxxxxxxxxxxxx@gmail.com",
-      "social_title": "Social Media",
-      "social_tg": "TG",
-      "social_fb": "FB",
-      "social_ig": "IG"
+      "social_title": "Social Media"
     },
     "form": {
       "header_1": "Let's write the festival's story together!",
       "header_2": "You can ask us a question or leave a suggestion",
       "name": "Your name",
       "phone": "Phone number",
-      "email": "Email",
       "message": "Message",
       "send": "Send",
       "success": {
@@ -175,35 +157,128 @@
       "text": "Want to join the team and make a contribution? Fill out the form and join us!",
       "button": "FILL THE FORM",
       "titles": {
-        "slider_1": "Who can apply to participate?",
-        "slider_2": "How to apply?",
-        "slider_3": "Can I submit multiple formats?",
-        "slider_4": "How does the selection process work?",
-        "slider_5": "When can I expect a response?",
-        "slider_6": "Do I need to pay a contribution?",
-        "slider_7": "What does the festival provide?",
-        "slider_8": "Can I bring an assistant?",
-        "slider_9": "What about equipment?",
-        "slider_10": "Can I hold something outside the program?",
-        "slider_11": "Can I sell my products?"
+        "slider_1": "Who can become a volunteer?",
+        "slider_2": "How to apply for volunteering?",
+        "slider_3": "What roles are available for volunteers?",
+        "slider_4": "Do I need to pay to participate as a volunteer?",
+        "slider_5": "What does the festival provide for volunteers?",
+        "slider_6": "How many hours do I need to work?",
+        "slider_7": "Can I volunteer for just one day?",
+        "slider_8": "Can I change roles during the festival?",
+        "slider_9": "What should I bring with me?",
+        "slider_10": "Is food provided for volunteers?",
+        "slider_11": "Can I come with a friend who also wants to help?",
+        "slider_12": "When will I know if I have been accepted?",
+        "slider_13": "Who should I contact if I have questions?"
       },
       "texts": {
-        "text_1": "Any master, artist, musician, or teacher who wants to share knowledge, art, or inspiration. The key is alignment with the festival’s spirit: respect, sustainability, depth, and creativity.",
-        "text_2": "",
-        "text_3": "",
-        "text_4": "",
-        "text_5": "",
-        "text_6": "",
-        "text_7": "",
-        "text_8": "",
-        "text_9": "",
-        "text_10": "",
-        "text_11": ""
+        "text_1": "Anyone who sincerely wants to help the festival! Anyone can become a volunteer, especially those who cannot pay the contribution but are ready to invest their time and effort.",
+        "text_2": "Fill out the form on the website, and we will contact you.",
+        "text_3": "The application includes a list of main tasks and functions. During the festival, there are also one-time tasks such as:\n– meeting and registering participants,\n– helping in the kitchen,\n– maintaining cleanliness and order,\n– assisting masters and artists,\n– supporting the children's area,\n– photo/video documentation,\n– fire watch duties,\n– helping in the tea house,\n– technical assistance on stages, and much more.\nA complete list of tasks is available in the application and discussed individually.",
+        "text_4": "No. Volunteering is your contribution to the festival.",
+        "text_5": "The festival provides:\n– entry to the festival,\n– food and rewards for deeper involvement.",
+        "text_6": "A minimum of 4 hours per day.",
+        "text_7": "To gain entry to the festival, you need to volunteer for at least 2 days.",
+        "text_8": "Yes, just contact your volunteer coordinator.",
+        "text_9": "Personal items for living in wild conditions (tent, sleeping bag, and everything necessary).",
+        "text_10": "Yes, food is provided for deeper involvement.",
+        "text_11": "Yes, but please fill out the application in advance for each of you.",
+        "text_12": "Your coordinator will contact you after submitting the application.",
+        "text_13": "Contact your volunteer coordinator."
       },
       "master": {
         "header": "FOR MASTERS AND ARTISTS",
         "text": "Want to be part of the festival’s magic? Fill out the form and showcase your creativity at Art Labyrinth!"
       }
+    },
+    "master": {
+      "header": "FOR MASTERS AND ARTISTS",
+      "text": "Want to be part of the festival’s magic? Fill out the form and showcase your creativity at Art Labyrinth!",
+      "titles": {
+        "slider_1": "Who can apply to participate?",
+        "slider_2": "How to apply?",
+        "slider_3": "Can I submit multiple formats?",
+        "slider_4": "How is the selection process?",
+        "slider_5": "When can I expect a response?",
+        "slider_6": "Is there an entry fee?",
+        "slider_7": "What does the festival provide?",
+        "slider_8": "Can I bring an assistant?",
+        "slider_9": "What about equipment?",
+        "slider_10": "Can I conduct something outside the program?",
+        "slider_11": "Can I sell my products?"
+      },
+      "texts": {
+        "text_1": "Any master, artist, musician, or teacher who wants to share knowledge, art, or inspiration. The main thing is to align with the spirit of the festival: respect, eco-friendliness, depth, and creativity.",
+        "text_2": "Fill out the form on the website, and a coordinator will contact you.",
+        "text_3": "Yes, you can! If you offer several different formats (for example, yoga and a lecture, or a musical workshop and a dance), you need to fill out a separate form for each. If the workshop is repeated, it is enough to indicate that number in one form.",
+        "text_4": "The cultural program is formed according to the concept, traditions, spirit, and values of the festival.",
+        "text_5": "Within 3 days after submitting the application, the coordinator will contact you.",
+        "text_6": "There is no entry fee for participants in the cultural program. This is your contribution to the festival.",
+        "text_7": "Participation conditions for creators:\n🔹 Masters and lecturers\n\nBeginners and enthusiasts — free entry to the festival, food on the day of the workshop, support in our media.\nExperienced masters — free entry, food for all festival days, promotion and announcements.\n\n🔹 Musicians, artists, performers\n\nYoung and promising — free entry, food on the day of performance, promotion in media.\nFamous artists — free entry, food, advertising and support.\nHeadliners — free entry, food, reimbursement of travel expenses, fee (by prior agreement and if resources are available).\n\n✨ Important: The festival is not a commercial project. We strive to share resources honestly and fairly so that everyone who invests their heart receives feedback and support. If you have special needs, please write to us — we will find a solution together.",
+        "text_8": "Yes, but please notify your coordinator in advance.",
+        "text_9": "Fill out the form with your technical rider — we will try to accommodate your requests.",
+        "text_10": "Yes! There are experimental venues for this purpose, but the program still needs to be agreed upon with the coordinator.",
+        "text_11": "Yes, we have a Masters' Shop where you can present and sell your products."
+      }
     }
+  },
+  "contribute": {
+    "hero_1": {
+      "header": "MAKE A CONTRIBUTION",
+      "text_1": "Together we create a miracle.",
+      "text_2": "The festival exists thanks to mutual support. Here you will find all the ways to do it."
+    },
+    "hero_2": {
+      "text": "The festival is not a product, but a joint creation. Every participation of yours is part of a living mosaic. Thank you for your support."
+    },
+    "pricing": {
+      "header": "PARTICIPATION CONTRIBUTION",
+      "motto": "I make a contribution and become part of the creation",
+      "text": "The contribution is an investment in the common reality. We do not sell tickets - we support the space we create together. Your contribution can be made in cash at the festival or online by card.",
+      "button": "MAKE A CONTRIBUTION",
+      "column_1": {
+        "title": "I go to the festival",
+        "text": "Free entry for children under 14 years old"
+      },
+      "column_2": {
+        "title": "Discounted",
+        "text": "-50% contribution for pensioners."
+      },
+      "column_3": {
+        "title": "Family",
+        "text": "-25% contribution for families, minimum 1 parent + child"
+      },
+      "column_4": {
+        "title": "Complex situation",
+        "text": "If you have a special case and would like to contribute less - briefly and clearly state your situation.",
+        "button": "CONTACT US"
+      }
+    },
+    "help_us": {
+      "header": "SUPPORT AS A PATRON / DONOR",
+      "text_1": "Want such events to continue? You can simply make a contribution. We will be grateful for any support.",
+      "text_2": "You can also contact the festival coordinator for a personal meeting or cash support.",
+      "button": "COPY",
+      "copied": "Copied!"
+    },
+    "our_needs": {
+      "header_1": "WE NEED…",
+      "header_2": "For sponsors and partners",
+      "text_1": "What we especially need right now:",
+      "text_2": "We are looking for partners ready to support the festival with resources, goods, advertising, or participation. We offer transparency, recognition, and a creative promotion format.",
+      "text_3": "If you can share something — write to us, we will be very grateful!",
+      "text_4": "Always open to partnership and collaboration",
+      "button": "FOR SPONSORS",
+      "list": {
+        "item_1": "Fabrics for decoration, pillows, ribbons, paints",
+        "item_2": "Acoustic equipment",
+        "item_3": "Large cauldrons, pots",
+        "item_4": "Tools: saws, axes, ladders, shovels, rakes.",
+        "item_5": "Electricity",
+        "item_6": "Generators 5 kW and 3 kW",
+        "item_7": "Boards, OSB. Pallets."
+      }
+    },
+    "contact_button": "CONTACT US"
   }
 }

@@ -87,7 +87,7 @@ export default function Contacts() {
                         <div className="flex flex-col items-center">
                             <img className="h-20" src="https://files.art-labyrinth.org/fest2025/svg/email.svg" alt="" />
                             <p className="font-bold font-deledda">{t("contacts.hero.email_title")}</p>
-                            <a href={`mailto:{t("contacts.hero.email_text")}`}><p className="font-light font-deledda">{t("contacts.hero.email_text")}</p></a>
+                            <a href={`mailto:${t("contacts.hero.email_text")}`}><p className="font-light font-deledda">{t("contacts.hero.email_text")}</p></a>
                         </div>
                         <div className="hidden md:block">
                             <div className="w-1">
