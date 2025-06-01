@@ -185,36 +185,36 @@
         "text_11": "Da, dar te rugăm să completezi aplicația în prealabil pentru fiecare dintre voi.",
         "text_12": "Coordonatorul tău te va contacta după ce ai trimis aplicația.",
         "text_13": "Contactează coordonatorul tău de voluntari."
+      }
+    },
+    "master": {
+      "header": "MAEȘTRILOR ȘI ARTIȘTILOR",
+      "text": "Vrei să faci parte din magia festivalului? Completează formularul și exprimă-ți creativitatea la Art Labyrinth!",
+      "titles": {
+        "slider_1": "Cine poate aplica pentru a participa?",
+        "slider_2": "Cum să aplic?",
+        "slider_3": "Pot trimite mai multe formate?",
+        "slider_4": "Cum se desfășoară procesul de selecție?",
+        "slider_5": "Când pot aștepta un răspuns?",
+        "slider_6": "Există o taxă de intrare?",
+        "slider_7": "Ce oferă festivalul?",
+        "slider_8": "Pot aduce un asistent?",
+        "slider_9": "Ce este cu echipamentul?",
+        "slider_10": "Pot desfășura ceva în afara programului?",
+        "slider_11": "Pot vinde produsele mele?"
       },
-      "master": {
-        "header": "MAEȘTRILOR ȘI ARTIȘTILOR",
-        "text": "Vrei să faci parte din magia festivalului? Completează formularul și exprimă-ți creativitatea la Art Labyrinth!",
-        "titles": {
-          "slider_1": "Cine poate aplica pentru a participa?",
-          "slider_2": "Cum să aplic?",
-          "slider_3": "Pot trimite mai multe formate?",
-          "slider_4": "Cum se desfășoară procesul de selecție?",
-          "slider_5": "Când pot aștepta un răspuns?",
-          "slider_6": "Există o taxă de intrare?",
-          "slider_7": "Ce oferă festivalul?",
-          "slider_8": "Pot aduce un asistent?",
-          "slider_9": "Ce este cu echipamentul?",
-          "slider_10": "Pot desfășura ceva în afara programului?",
-          "slider_11": "Pot vinde produsele mele?"
-        },
-        "texts": {
-          "text_1": "Orice meșteșugar, artist, muzician sau profesor care dorește să împărtășească cunoștințe, artă sau inspirație. Principalul lucru este să te aliniezi cu spiritul festivalului: respect, ecologie, profunzime și creativitate.",
-          "text_2": "Completează formularul de pe site, iar un coordonator te va contacta.",
-          "text_3": "Da, poți! Dacă oferi mai multe formate diferite (de exemplu, yoga și o prelegere sau un atelier muzical și un dans), trebuie să completezi un formular separat pentru fiecare. Dacă atelierul se repetă, este suficient să indici acel număr într-un singur formular.",
-          "text_4": "Programul cultural se formează conform conceptului, tradițiilor, spiritului și valorilor festivalului.",
-          "text_5": "În termen de 3 zile după trimiterea aplicației, coordonatorul te va contacta.",
-          "text_6": "Nu există taxă de intrare pentru participanții la programul cultural. Aceasta este contribuția ta la festival.",
-          "text_7": "Condițiile de participare pentru creatori:\n🔹 Maeștri și profesori\n\nÎncepători și entuziaști — intrare gratuită la festival, mâncare în ziua atelierului, suport în media.\nMaeștri experimentați — intrare gratuită, mâncare pentru toate zilele festivalului, promovare și anunțuri.\n\n🔹 Muzicieni, artiști, performeri\n\nTineri și promițători — intrare gratuită, mâncare în ziua performanței, promovare în media.\nArtiști cunoscuți — intrare gratuită, mâncare, publicitate și suport.\nHeadlineri — intrare gratuită, mâncare, rambursarea cheltuielilor de călătorie, onorariu (prin acord prealabil și dacă resursele permit).",
-          "text_8": "Da, dar te rugăm să notifici coordonatorul tău în prealabil.",
-          "text_9": "Completează formularul cu cerințele tehnice — vom încerca să ne adaptăm solicitările tale.",
-          "text_10": "Da! Există locații experimentale pentru acest scop, dar programul trebuie să fie convenit cu coordonatorul.",
-          "text_11": "Da, avem un Târg al Maeștrilor unde poți prezenta și vinde produsele tale."
-        }
+      "texts": {
+        "text_1": "Orice meșteșugar, artist, muzician sau profesor care dorește să împărtășească cunoștințe, artă sau inspirație. Principalul lucru este să te aliniezi cu spiritul festivalului: respect, ecologie, profunzime și creativitate.",
+        "text_2": "Completează formularul de pe site, iar un coordonator te va contacta.",
+        "text_3": "Da, poți! Dacă oferi mai multe formate diferite (de exemplu, yoga și o prelegere sau un atelier muzical și un dans), trebuie să completezi un formular separat pentru fiecare. Dacă atelierul se repetă, este suficient să indici acel număr într-un singur formular.",
+        "text_4": "Programul cultural se formează conform conceptului, tradițiilor, spiritului și valorilor festivalului.",
+        "text_5": "În termen de 3 zile după trimiterea aplicației, coordonatorul te va contacta.",
+        "text_6": "Nu există taxă de intrare pentru participanții la programul cultural. Aceasta este contribuția ta la festival.",
+        "text_7": "Condițiile de participare pentru creatori:\n🔹 Maeștri și profesori\n\nÎncepători și entuziaști — intrare gratuită la festival, mâncare în ziua atelierului, suport în media.\nMaeștri experimentați — intrare gratuită, mâncare pentru toate zilele festivalului, promovare și anunțuri.\n\n🔹 Muzicieni, artiști, performeri\n\nTineri și promițători — intrare gratuită, mâncare în ziua performanței, promovare în media.\nArtiști cunoscuți — intrare gratuită, mâncare, publicitate și suport.\nHeadlineri — intrare gratuită, mâncare, rambursarea cheltuielilor de călătorie, onorariu (prin acord prealabil și dacă resursele permit).",
+        "text_8": "Da, dar te rugăm să notifici coordonatorul tău în prealabil.",
+        "text_9": "Completează formularul cu cerințele tehnice — vom încerca să ne adaptăm solicitările tale.",
+        "text_10": "Da! Există locații experimentale pentru acest scop, dar programul trebuie să fie convenit cu coordonatorul.",
+        "text_11": "Da, avem un Târg al Maeștrilor unde poți prezenta și vinde produsele tale."
       }
     }
   },
