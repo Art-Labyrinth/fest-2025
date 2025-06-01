@@ -20,10 +20,14 @@ SIZES = {
 # Поддерживаемые форматы
 SUPPORTED_FORMATS = ('.jpg', '.jpeg', '.png', '.webp')
 
+# Маска для имени файла. Используйте {index} для подстановки.
+FILENAME_MASK = None  # Например: 'img_{index}.webp'
+# FILENAME_MASK = "gallery_{index:04d}"
+
 # Создание выходной папки при необходимости
 os.makedirs(RESULT_DIR, exist_ok=True)
 
-for filename in os.listdir(SOURCE_DIR):
+for idx, filename in enumerate(os.listdir(SOURCE_DIR)):
     if not filename.lower().endswith(SUPPORTED_FORMATS):
         continue
 
@@ -34,10 +38,13 @@ for filename in os.listdir(SOURCE_DIR):
                 # Сохраняем пропорции
                 ratio = width / img.width
                 height = int(img.height * ratio)
-                resized_img = img.resize((width, height), Image.LANCZOS)
+                resized_img = img.resize((width, height), Image.Resampling.LANCZOS)
 
                 # Формируем имя и путь
-                name, ext = os.path.splitext(filename)
+                if FILENAME_MASK:
+                    name = str(FILENAME_MASK).format(index=idx + 1)
+                else:
+                    name, ext = os.path.splitext(filename)
                 new_filename = f"{prefix}_{name}.webp"  # сохраняем как .webp
                 dest_path = os.path.join(RESULT_DIR, new_filename)
 
@@ -47,3 +54,5 @@ for filename in os.listdir(SOURCE_DIR):
                 print(f"Saved {dest_path}")
     except Exception as e:
         print(f"Error processing {filename}: {e}")
+
+    # break # for debugging, remove to process all files

@@ -163,3 +163,5 @@ dist
 # /scripts/*
 .vscode
 sitemap.xml
+/scripts/source/*
+/scripts/result/*
