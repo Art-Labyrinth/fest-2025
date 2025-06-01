@@ -1,10 +1,6 @@
 {
   "main": {
     "festival_dates": "10–13 iulie 2025",
-    "14th_festival": "14th Art-Labyrinth",
-    "summer_fest": "Summer Festival",
-    "five_hands": "Five Hands",
-    "one_rhythm": "One Rhythm",
     "hashtags": [
       "#comunitate",
       "#artă",
@@ -16,25 +12,24 @@
       "#cultură"
     ],
     "loc_city": "Poiana",
-    "loc_region": "Șoldănești",
-    "info_tel": "+373 79 601 910",
-    "info_tel_url": "+37379601910",
-    "info_url": "fest.art-labyrinth.org"
+    "loc_region": "Șoldănești"
   },
   "about": {
     "header": {
-      "art_lab": "Art-Labyrinth",
       "summer_fest": "Festivalul de Vară 2025",
       "text": "În fiecare an, Festivalul de Vară Art Labyrinth adună oameni gata să se unească în căutarea inspirației, creativității și conștientizării. În 2025, festivalul va avea loc între 10 și 13 iulie pe malurile pitorești ale râului Nistru, în satul Poiana, Moldova, cel mai drag și însorit loc al nostru. Ne întoarcem aici pentru a crea din nou un spațiu unde arta, muzica și natura se îmbină într-un singur flux."
     },
     "theme": {
       "header_1": "Tema acestui an:",
       "header_2": "Cinci Mâini, Un Ritm",
-      "text_1": "Cinci Mâini, Un Ritm nu este doar un nume. Este un simbol al unității, creativității și comunității. Într-o lume plină de indivizi unici, doar împreună putem crea ceva mai mare. Cinci mâini simbolizează acțiunea colectivă, împletind diverse energii și direcții într-o forță armonioasă și puternică. Cinci mâini sunt artiști, muzicieni, meșteșugari, visători, cei care vin să contribuie cu partea lor la imaginea de ansamblu, creând o lume fără diviziuni."
+      "text_1": "Cinci Mâini, Un Ritm nu este doar un nume. Este un simbol al unității, creativității și comunității. Într-o lume plină de indivizi unici, doar împreună putem crea ceva mai mare. Cinci mâini simbolizează acțiunea colectivă, împletind diverse energii și direcții într-o forță armonioasă și puternică. Cinci mâini sunt artiști, muzicieni, meșteșugari, visători, cei care vin să contribuie cu partea lor la imaginea de ansamblu, creând o lume fără diviziuni.",
+      "text_2": "Un singur ritm este inima festivalului. Este bătăile inimii care ne unește pe toți, oferind spațiu pentru creativitate și conștientizare. Este ritmul vieții, care se reflectă în fiecare moment, în fiecare melodie și în fiecare mișcare. Aceasta este scopul nostru - creație conștientă, în care fiecare participant devine parte a ceva mai mare decât el însuși."
     },
     "about": {
       "header": "Despre Festival",
-      "text_1": "Festivalul de Vară Art Labyrinth este un eveniment anual fondat în 2008 și de atunci a devenit un reper semnificativ în viața culturală a Moldovei. În fiecare an, alegem o locație nouă pentru a crea o atmosferă unică și pentru a conecta oamenii prin artă și muzică. Dar locul nostru — Poiana, pe malurile Nistrului — a devenit colțul nostru special, un loc de putere unde natura și creativitatea se întâlnesc."
+      "text_1": "Festivalul de Vară Art Labyrinth este un eveniment anual fondat în 2008 și de atunci a devenit un reper semnificativ în viața culturală a Moldovei. În fiecare an, alegem o locație nouă pentru a crea o atmosferă unică și pentru a conecta oamenii prin artă și muzică. Dar locul nostru — Poiana, pe malurile Nistrului — a devenit colțul nostru special, un loc de putere unde natura și creativitatea se întâlnesc.",
+      "text_2": "Credem că festivalul nu este doar o adunare de oameni. Este un spațiu pentru transformare, schimb de idei și inspirație. La Art Labyrinth, fiecare poate să-și deblocheze potențialul, să devină parte a unei comunități, să contribuie la un scop comun și să devină creator.",
+      "text_3": "Festivalul nostru reunește oameni diferiți — artiști, muzicieni, meșteșugari, voluntari, visători — toți cei care sunt gata să lucreze într-un singur ritm și să creeze ceva măreț. Vă invităm într-o călătorie unde fiecare pas este plin de conștientizare, fiecare moment este armonie, iar fiecare persoană contează."
     },
     "what": {
       "header": "Ce vă așteaptă?",
@@ -51,10 +46,7 @@
     }
   },
   "footer": {
-    "contacts": "Contacte",
-    "tel": "+373 XXX-XXX-XXX",
-    "email": "xxx@gmail.com",
-    "email_mob": "xxxxxxxxxxx@gmail.com"
+    "contacts": "Contacte"
   },
   "contacts": {
     "header": {
@@ -63,20 +55,13 @@
     },
     "hero": {
       "tel_title": "Telefon",
-      "tel_text": "+373-XXX-XX-XX",
-      "email_title": "Email",
-      "email_text": "xxxxxxxxxxxxx@gmail.com",
-      "social_title": "Rețele Sociale",
-      "social_tg": "TG",
-      "social_fb": "FB",
-      "social_ig": "IG"
+      "social_title": "Rețele Sociale"
     },
     "form": {
       "header_1": "Să scriem împreună povestea festivalului!",
       "header_2": "Puteți să ne puneți o întrebare sau să lăsați o sugestie",
       "name": "Numele dvs.",
       "phone": "Număr de telefon",
-      "email": "Email",
       "message": "Mesaj",
       "send": "Trimiteți",
       "success": {
@@ -172,35 +157,124 @@
       "text": "Vrei să faci parte din echipă și să contribui? Completează formularul și alătură-te nouă!",
       "button": "COMPLETEAZĂ FORMULARUL",
       "titles": {
-        "slider_1": "Cine poate aplica pentru participare?",
-        "slider_2": "Cum pot aplica?",
-        "slider_3": "Pot propune mai multe formate?",
-        "slider_4": "Cum decurge selecția?",
-        "slider_5": "Când primesc răspuns?",
-        "slider_6": "Trebuie să plătesc o contribuție?",
-        "slider_7": "Ce oferă festivalul?",
-        "slider_8": "Pot veni cu un asistent?",
-        "slider_9": "Ce se întâmplă cu echipamentul?",
-        "slider_10": "Pot organiza ceva în afara programului?",
-        "slider_11": "Pot vinde produsele mele?"
+        "slider_1": "Cine poate deveni voluntar?",
+        "slider_2": "Cum să aplic pentru voluntariat?",
+        "slider_3": "Ce roluri sunt disponibile pentru voluntari?",
+        "slider_4": "Trebuie să plătesc pentru a participa ca voluntar?",
+        "slider_5": "Ce oferă festivalul voluntarilor?",
+        "slider_6": "Câte ore trebuie să lucrez?",
+        "slider_7": "Pot fi voluntar doar pentru o zi?",
+        "slider_8": "Pot schimba rolurile în timpul festivalului?",
+        "slider_9": "Ce ar trebui să aduc cu mine?",
+        "slider_10": "Mâncarea este oferită voluntarilor?",
+        "slider_11": "Pot veni cu un prieten care vrea să ajute?",
+        "slider_12": "Când voi ști dacă am fost acceptat?",
+        "slider_13": "Cu cine să iau legătura dacă am întrebări?"
       },
       "texts": {
-        "text_1": "Orice maestru, artist, muzician sau profesor care dorește să împărtășească cunoștințe, artă sau inspirație. Esențial este să fie în armonie cu spiritul festivalului: respect, sustenabilitate, profunzime și creativitate.",
-        "text_2": "",
-        "text_3": "",
-        "text_4": "",
-        "text_5": "",
-        "text_6": "",
-        "text_7": "",
-        "text_8": "",
-        "text_9": "",
-        "text_10": "",
-        "text_11": ""
+        "text_1": "Oricine dorește sincer să ajute festivalul! Oricine poate deveni voluntar, în special cei care nu pot plăti contribuția, dar sunt gata să investească timpul și efortul lor.",
+        "text_2": "Completează formularul de pe site, iar noi te vom contacta.",
+        "text_3": "Aplicația include o listă de sarcini și funcții principale. În timpul festivalului, există și sarcini unice, cum ar fi:\n– întâmpinarea și înregistrarea participanților,\n– ajutor în bucătărie,\n– menținerea curățeniei și ordinii,\n– asistență pentru maeștri și artiști,\n– sprijin pentru zona copiilor,\n– documentare foto/video,\n– îndatoriri de supraveghere a focului,\n– ajutor în ceainărie,\n– asistență tehnică pe scene și multe altele.\nO listă completă a sarcinilor este disponibilă în aplicație și discutată individual.",
+        "text_4": "Nu. Voluntariatul este contribuția ta la festival.",
+        "text_5": "Festivalul oferă:\n– intrare la festival,\n– mâncare și recompense pentru implicarea mai profundă.",
+        "text_6": "Un minim de 4 ore pe zi.",
+        "text_7": "Pentru a avea acces la festival, trebuie să fii voluntar timp de cel puțin 2 zile.",
+        "text_8": "Da, doar contactează coordonatorul tău de voluntari.",
+        "text_9": "Obiecte personale pentru a trăi în condiții sălbatice (cort, sac de dormit și tot ce este necesar).",
+        "text_10": "Da, mâncarea este oferită pentru implicarea mai profundă.",
+        "text_11": "Da, dar te rugăm să completezi aplicația în prealabil pentru fiecare dintre voi.",
+        "text_12": "Coordonatorul tău te va contacta după ce ai trimis aplicația.",
+        "text_13": "Contactează coordonatorul tău de voluntari."
       },
       "master": {
         "header": "MAEȘTRILOR ȘI ARTIȘTILOR",
-        "text": "Vrei să faci parte din magia festivalului? Completează formularul și exprimă-ți creativitatea la Art Labyrinth!"
+        "text": "Vrei să faci parte din magia festivalului? Completează formularul și exprimă-ți creativitatea la Art Labyrinth!",
+        "titles": {
+          "slider_1": "Cine poate aplica pentru a participa?",
+          "slider_2": "Cum să aplic?",
+          "slider_3": "Pot trimite mai multe formate?",
+          "slider_4": "Cum se desfășoară procesul de selecție?",
+          "slider_5": "Când pot aștepta un răspuns?",
+          "slider_6": "Există o taxă de intrare?",
+          "slider_7": "Ce oferă festivalul?",
+          "slider_8": "Pot aduce un asistent?",
+          "slider_9": "Ce este cu echipamentul?",
+          "slider_10": "Pot desfășura ceva în afara programului?",
+          "slider_11": "Pot vinde produsele mele?"
+        },
+        "texts": {
+          "text_1": "Orice meșteșugar, artist, muzician sau profesor care dorește să împărtășească cunoștințe, artă sau inspirație. Principalul lucru este să te aliniezi cu spiritul festivalului: respect, ecologie, profunzime și creativitate.",
+          "text_2": "Completează formularul de pe site, iar un coordonator te va contacta.",
+          "text_3": "Da, poți! Dacă oferi mai multe formate diferite (de exemplu, yoga și o prelegere sau un atelier muzical și un dans), trebuie să completezi un formular separat pentru fiecare. Dacă atelierul se repetă, este suficient să indici acel număr într-un singur formular.",
+          "text_4": "Programul cultural se formează conform conceptului, tradițiilor, spiritului și valorilor festivalului.",
+          "text_5": "În termen de 3 zile după trimiterea aplicației, coordonatorul te va contacta.",
+          "text_6": "Nu există taxă de intrare pentru participanții la programul cultural. Aceasta este contribuția ta la festival.",
+          "text_7": "Condițiile de participare pentru creatori:\n🔹 Maeștri și profesori\n\nÎncepători și entuziaști — intrare gratuită la festival, mâncare în ziua atelierului, suport în media.\nMaeștri experimentați — intrare gratuită, mâncare pentru toate zilele festivalului, promovare și anunțuri.\n\n🔹 Muzicieni, artiști, performeri\n\nTineri și promițători — intrare gratuită, mâncare în ziua performanței, promovare în media.\nArtiști cunoscuți — intrare gratuită, mâncare, publicitate și suport.\nHeadlineri — intrare gratuită, mâncare, rambursarea cheltuielilor de călătorie, onorariu (prin acord prealabil și dacă resursele permit).",
+          "text_8": "Da, dar te rugăm să notifici coordonatorul tău în prealabil.",
+          "text_9": "Completează formularul cu cerințele tehnice — vom încerca să ne adaptăm solicitările tale.",
+          "text_10": "Da! Există locații experimentale pentru acest scop, dar programul trebuie să fie convenit cu coordonatorul.",
+          "text_11": "Da, avem un Târg al Maeștrilor unde poți prezenta și vinde produsele tale."
+        }
       }
     }
+  },
+  "contribute": {
+    "hero_1": {
+      "header": "FAI O CONTRIBUTIE",
+      "text_1": "Împreună creăm o minune.",
+      "text_2": "Festivalul există datorită sprijinului reciproc. Aici vei găsi toate modalitățile de a contribui."
+    },
+    "hero_2": {
+      "text": "Festivalul nu este un produs, ci o creație comună. Fiecare participare a ta este parte dintr-o mozaică vie. Îți mulțumim pentru sprijin."
+    },
+    "pricing": {
+      "header": "CONTRIBUȚIA LA PARTICIPARE",
+      "motto": "Fac o contribuție și devin parte din creație",
+      "text": "Contribuția este o investiție în realitatea comună. Nu vindem bilete - susținem spațiul pe care îl creăm împreună. Contribuția ta poate fi făcută în numerar la festival sau online cu cardul.",
+      "button": "FAC O CONTRIBUȚIE",
+      "column_1": {
+        "title": "Merg la festival",
+        "text": "Intrare gratuită pentru copii sub 14 ani"
+      },
+      "column_2": {
+        "title": "Reducere",
+        "text": "-50% contribuție pentru pensionari."
+      },
+      "column_3": {
+        "title": "Familie",
+        "text": "-25% contribuție pentru familii, minim 1 părinte + copil"
+      },
+      "column_4": {
+        "title": "Situație complexă",
+        "text": "Dacă ai un caz special și dorești să contribui mai puțin - descrie pe scurt și clar situația ta.",
+        "button": "CONTACTEAZĂ-NE"
+      }
+    },
+    "help_us": {
+      "header": "SUSȚINE CA PATRON / DONATOR",
+      "text_1": "Vrei ca astfel de evenimente să continue? Poți face pur și simplu o contribuție. Vom fi recunoscători pentru orice sprijin.",
+      "text_2": "De asemenea, poți contacta coordonatorul festivalului pentru o întâlnire personală sau sprijin financiar.",
+      "button": "COPIAZĂ",
+      "copied": "Copiat!"
+    },
+    "our_needs": {
+      "header_1": "AVEM NEVOIE DE…",
+      "header_2": "Pentru sponsori și parteneri",
+      "text_1": "Ce avem nevoie în special acum:",
+      "text_2": "Căutăm parteneri gata să susțină festivalul cu resurse, bunuri, publicitate sau participare. Oferim transparență, recunoaștere și un format creativ de promovare.",
+      "text_3": "Dacă poți oferi ceva — scrie-ne, vom fi foarte recunoscători!",
+      "text_4": "Întotdeauna deschiși la parteneriate și colaborări",
+      "button": "PENTRU SPONSORI",
+      "list": {
+        "item_1": "Țesături pentru decorare, perne, panglici, vopsele",
+        "item_2": "Echipament acustic",
+        "item_3": "Vase mari, oale",
+        "item_4": "Unelte: ferăstraie, topoare, scări, lopeți, greble.",
+        "item_5": "Electricitate",
+        "item_6": "Generatoare 5 kW și 3 kW",
+        "item_7": "Plăci, OSB. Paleti."
+      }
+    },
+    "contact_button": "CONTACTEAZĂ-NE"
   }
 }
