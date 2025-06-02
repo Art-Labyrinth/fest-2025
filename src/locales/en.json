@@ -258,6 +258,8 @@
       "warning_2": "Tickets can be purchased at current prices from June 5 to June 11, 2025, inclusive.",
       "coming_soon": "Coming soon",
       "coming_description": "We are actively working on the contribution system. It will be available soon!",
+      "guest": "Guest",
+      "note": "Select the type of contribution that suits you below. If you cannot afford the contribution, choose the 'Complex situation' option and briefly describe your situation in the form.",
       "column_1": {
         "title": "I go to the festival",
         "text": "Free entry for children under 14 years old"

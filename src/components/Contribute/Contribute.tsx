@@ -64,7 +64,7 @@ function Contribute() {
 
             {/* Pricing Block */}
             <section className="bg-[#F4E4C3] py-12">
-                <div className="container px-4 max-w-6xl mx-auto">
+                <div className="container px-4 max-w-6xl mx-auto ">
 
                     {/* Upper Part */}
                     <div className="text-left mb-12">
@@ -82,6 +82,9 @@ function Contribute() {
                                 {t("contribute.pricing.warning_1")} <br /> {t("contribute.pricing.warning_2")}
                             </p>
                         )}
+                        <p className="font-deledda">
+                            {t("contribute.pricing.note")}
+                        </p>
                     </div>
 
                     {/* Lower Part */}
@@ -193,6 +196,13 @@ function Contribute() {
                         </form>
                         {/* Right part: Sum and button */}
                         <div className="flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 min-w-[220px] shadow-lg">
+                            <span className="text-brown text-lg italic mb-2 font-sans font-bold">
+                                {newTicket.category === "basic"
+                                    ? t("contribute.pricing.guest")
+                                    : newTicket.category === "preferential"
+                                        ? t("contribute.pricing.column_2.title")
+                                        : t("contribute.pricing.column_3.title")}
+                            </span>
                             <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
                             <span className="text-3xl font-bold text-[#4A6218] mb-4">
                                 {((newTicket.count || 1) * newTicket.price).toLocaleString()} MDL
