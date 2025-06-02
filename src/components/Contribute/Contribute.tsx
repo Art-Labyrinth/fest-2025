@@ -8,6 +8,61 @@ function Contribute() {
     const [activePopup, setActivePopup] = useState<string | null>(null);
     const [isCopied, setIsCopied] = useState(false);
 
+    interface Ticket {
+        id: number;
+        category: "basic" | "family" | "child" | "discount"; // Новые категории
+        name: string;
+        surname?: string; // Необязательно для детей
+        email?: string; // Необязательно для детей и льготного
+        isParent?: boolean; // Для семейной категории
+    }
+    const [tickets, setTickets] = useState<Ticket[]>([]);
+    const [newTicket, setNewTicket] = useState<Ticket>({ id: 0, category: "basic", name: "", surname: "", email: "", isParent: false });
+    const [familyMembers, setFamilyMembers] = useState<{ adults: number; children: number }>({ adults: 1, children: 1 });
+    const [email, setEmail] = useState<string>("");
+    const [familySurname, setFamilySurname] = useState<string>("");
+
+    const addTicket = () => {
+        if (
+            newTicket.name &&
+            (newTicket.category !== "family" || (newTicket.isParent ? newTicket.email : true)) &&
+            (newTicket.category !== "discount" || email || true) &&
+            (newTicket.category !== "child" || !newTicket.email)
+        ) {
+            const ticketToAdd = { ...newTicket, id: Date.now(), surname: newTicket.category === "family" ? familySurname : newTicket.surname };
+            if (newTicket.category === "family" && newTicket.isParent) ticketToAdd.email = email;
+            setTickets([...tickets, ticketToAdd]);
+            setNewTicket({ id: 0, category: "basic", name: "", surname: "", email: "", isParent: false });
+        }
+    };
+
+    const addAdult = () => familyMembers.adults < 2 && setFamilyMembers({ ...familyMembers, adults: familyMembers.adults + 1 });
+    const addChild = () => familyMembers.children < 10 && setFamilyMembers({ ...familyMembers, children: familyMembers.children + 1 });
+
+    const calculateTicketPrice = (ticket: Ticket) => {
+        const basePrices = {
+            basic: 500,
+            family: 375,
+            child: 0,
+            discount: 250
+        };
+        const basicTicketsCount = tickets.filter(t => t.category === "basic").length;
+        if (ticket.category === "basic" && basicTicketsCount >= 6) {
+            return basePrices.basic * 0.9; // 10% скидка
+        }
+        return basePrices[ticket.category];
+    };
+
+const calculateTotal = () => {
+    return tickets.reduce((total, ticket) => total + calculateTicketPrice(ticket), 0);
+};
+
+    const isPaymentEnabled = () => {
+        const hasAdult = tickets.some(t => t.isParent);
+        const hasChild = tickets.some(t => !t.isParent && t.category === "family");
+        return hasAdult && hasChild && tickets.every(t => t.name && (t.isParent ? t.email : true));
+    };
+
     const openPopup = (popupId: string) => {
         setActivePopup(popupId);
     };
@@ -74,8 +129,8 @@ function Contribute() {
                             {t("contribute.pricing.column_1.text")}
                         </p>
                         <button
-                            className="md:w-4/5 w-1/2 bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75 mt-auto"
-                            onClick={() => openPopup('popup1')}
+                            className="md:w-4/5 w-1/2 bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 mt-auto"
+                            onClick={() => openPopup('ticket')}
                         >
                             {t("contribute.pricing.button")}
                         </button>
@@ -136,24 +191,210 @@ function Contribute() {
                 </div>
 
                 {/* Popup Modals (Placeholder) */}
-                {activePopup && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                        <div className="bg-white p-6 rounded-lg max-w-md w-full">
-                            <h3 className="text-xl font-bold mb-4">
-                                {t(`contribute.pricing.${activePopup}.title`)}
-                            </h3>
-                            <p className="text-gray-600 mb-4">
-                                {t(`contribute.pricing.${activePopup}.description`)}
-                            </p>
+                {activePopup && activePopup === 'ticket' && (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-[#F4E4C3] p-6 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button
+                className="absolute left-4 top-4 text-black text-2xl font-bold"
+                onClick={closePopup}
+            >
+                &times;
+            </button>
+            <h3 className="text-2xl font-bold text-black mb-4">
+                {t("contribute.ticket_form.title")}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Left Column - Ticket Selection */}
+                <div className="space-y-4">
+                    <div>
+                        <select
+                            className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded"
+                            value={newTicket.category}
+                            onChange={(e) => {
+                                const category = e.target.value as "basic" | "family" | "child" | "discount";
+                                setNewTicket({ ...newTicket, category, isParent: category === "family" ? true : false });
+                            }}
+                        >
+                            <option value="basic">{t("contribute.ticket_form.basic")}</option>
+                            <option value="family">{t("contribute.ticket_form.family")}</option>
+                            <option value="child">{t("contribute.ticket_form.child")}</option>
+                            <option value="discount">{t("contribute.ticket_form.discount")}</option>
+                        </select>
+                    </div>
+                    {newTicket.category === "family" ? (
+                        <>
+                            <div className="border border-black p-4 rounded">
+                                <input
+                                    type="text"
+                                    className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded"
+                                    value={familySurname}
+                                    onChange={(e) => setFamilySurname(e.target.value)}
+                                    placeholder={t("contribute.ticket_form.surname_placeholder")}
+                                />
+                            </div>
+                            {Array.from({ length: familyMembers.adults }).map((_, index) => (
+                                <div key={index} className="border border-black p-4 rounded">
+                                    <input
+                                        type="text"
+                                        className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded mb-2"
+                                        value={tickets.find(t => t.isParent && tickets.indexOf(t) === index)?.name || ""}
+                                        onChange={(e) => {
+                                            const newTickets = [...tickets];
+                                            if (!newTickets[index]) newTickets[index] = { id: Date.now(), category: "family", name: "", surname: familySurname, email: "", isParent: true };
+                                            newTickets[index].name = e.target.value;
+                                            setTickets(newTickets);
+                                        }}
+                                        placeholder={t("contribute.ticket_form.name_placeholder")}
+                                    />
+                                    <input
+                                        type="email"
+                                        className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded"
+                                        value={tickets.find(t => t.isParent && tickets.indexOf(t) === index)?.email || ""}
+                                        onChange={(e) => {
+                                            const newTickets = [...tickets];
+                                            if (!newTickets[index]) newTickets[index] = { id: Date.now(), category: "family", name: "", surname: familySurname, email: "", isParent: true };
+                                            newTickets[index].email = e.target.value;
+                                            setTickets(newTickets);
+                                        }}
+                                        placeholder={t("contribute.ticket_form.email_placeholder")}
+                                    />
+                                </div>
+                            ))}
+                            {Array.from({ length: familyMembers.children }).map((_, index) => (
+                                <div key={index + familyMembers.adults} className="border border-black p-4 rounded">
+                                    <input
+                                        type="text"
+                                        className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded"
+                                        value={tickets.find(t => !t.isParent && tickets.indexOf(t) === index + familyMembers.adults)?.name || ""}
+                                        onChange={(e) => {
+                                            const newTickets = [...tickets];
+                                            if (!newTickets[index + familyMembers.adults]) newTickets[index + familyMembers.adults] = { id: Date.now(), category: "family", name: "", surname: familySurname, email: "", isParent: false };
+                                            newTickets[index + familyMembers.adults].name = e.target.value;
+                                            setTickets(newTickets);
+                                        }}
+                                        placeholder={t("contribute.ticket_form.name_placeholder")}
+                                    />
+                                </div>
+                            ))}
+                            <div className="flex space-x-4">
+                                <button
+                                    className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75"
+                                    onClick={addAdult}
+                                    disabled={familyMembers.adults >= 2}
+                                >
+                                    {t("contribute.ticket_form.add_parent")}
+                                </button>
+                                <button
+                                    className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75"
+                                    onClick={addChild}
+                                    disabled={familyMembers.children >= 10}
+                                >
+                                    {t("contribute.ticket_form.add_child")}
+                                </button>
+                                <button
+                                    className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75"
+                                    onClick={() => {
+                                        if (familySurname && tickets.every(t => t.name && (t.isParent ? t.email : true))) {
+                                            setTickets([...tickets]);
+                                            setFamilyMembers({ adults: 1, children: 1 });
+                                            setFamilySurname("");
+                                        }
+                                    }}
+                                >
+                                    {t("contribute.ticket_form.add_ticket")}
+                                </button>
+                            </div>
+                        </>
+                    ) : (
+                        <div className="border border-black p-4 rounded">
+                            <input
+                                type="text"
+                                className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded mb-2"
+                                value={newTicket.name}
+                                onChange={(e) => setNewTicket({ ...newTicket, name: e.target.value })}
+                                placeholder={t("contribute.ticket_form.name_placeholder")}
+                            />
+                            <input
+                                type="text"
+                                className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded mb-2"
+                                value={newTicket.surname}
+                                onChange={(e) => setNewTicket({ ...newTicket, surname: e.target.value })}
+                                placeholder={t("contribute.ticket_form.surname_placeholder")}
+                            />
+                            {newTicket.category !== "child" && (
+                                <input
+                                    type="email"
+                                    className="w-full bg-[#C0CCA4]/25 text-black p-2 rounded mb-2"
+                                    value={newTicket.category === "discount" ? email : newTicket.email || ""}
+                                    onChange={(e) => {
+                                        if (newTicket.category === "discount") setEmail(e.target.value);
+                                        else setNewTicket({ ...newTicket, email: e.target.value });
+                                    }}
+                                    placeholder={t("contribute.ticket_form.email_placeholder")}
+                                    disabled={newTicket.category === "discount" && email === ""}
+                                />
+                            )}
                             <button
-                                className="bg-brown text-white px-4 py-2 rounded hover:bg-brown-600"
-                                onClick={closePopup}
+                                className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75 mt-4"
+                                onClick={addTicket}
                             >
-                                {t("contribute.pricing.close_button")}
+                                {t("contribute.ticket_form.add_ticket")}
                             </button>
                         </div>
+                    )}
+                </div>
+
+                {/* Right Column - Cart */}
+                <div className="space-y-4">
+                    <h4 className="text-lg font-semibold text-black">
+                        {t("contribute.ticket_form.cart")}
+                    </h4>
+                    <ul className="space-y-2">
+                        {tickets.map((ticket) => (
+                            <li key={ticket.id} className="border border-black p-2 rounded text-black flex justify-between items-center">
+                                <span>
+                                    {t(`contribute.ticket_form.${ticket.category}`)} - {ticket.name}
+                                </span>
+                                <span>
+                                    {calculateTicketPrice(ticket)} лей
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="text-black font-bold mt-4">
+                        {t("contribute.ticket_form.total")}: {calculateTotal()} лей
+                    </p>
+                    <div className="flex space-x-4">
+                        <button
+                            className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75"
+                            onClick={() => console.log("Proceed to payment with total:", calculateTotal(), "Email:", email)}
+                            disabled={!isPaymentEnabled()}
+                        >
+                            {t("contribute.ticket_form.pay")}
+                        </button>
+                        <button
+                            className="bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75"
+                            onClick={() => {
+                                setTickets([]);
+                                setFamilyMembers({ adults: 1, children: 1 });
+                                setFamilySurname("");
+                                setEmail("");
+                            }}
+                        >
+                            {t("contribute.ticket_form.clear_cart")}
+                        </button>
                     </div>
-                )}
+                    {tickets.some(t => t.category === "discount") && (
+                        <p className="text-black mt-4">
+                            {t("contribute.ticket_form.contact_for_special_case")}:
+                            Contact: example@email.com
+                        </p>
+                    )}
+                </div>
+            </div>
+        </div>
+    </div>
+)}
             </div>
         </section>
 

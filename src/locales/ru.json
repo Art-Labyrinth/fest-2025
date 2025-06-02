@@ -285,6 +285,29 @@
         "button": "СВЯЗАТЬСЯ"
       }
     },
+    "ticket_form": {
+      "title": "Buy Festival Tickets",
+      "category": "Select Ticket Category",
+      "basic": "Basic",
+      "family": "Family",
+      "child": "Child",
+      "discount": "Discount",
+      "family_surname": "Family Surname",
+      "name": "Name",
+      "name_placeholder": "Enter name",
+      "surname": "Surname",
+      "surname_placeholder": "Enter surname",
+      "email": "Email",
+      "email_placeholder": "Enter email",
+      "parent": "Parent",
+      "add_ticket": "Add Ticket",
+      "add_parent": "Add Parent",
+      "add_child": "Add Child",
+      "cart": "Cart",
+      "total": "Total",
+      "pay": "Pay Now",
+      "clear_cart": "Clear Cart"
+    },
     "help_us": {
       "header": "Поддержать как меценат / даритель",
       "text_1": "Хочешь, чтобы такие события продолжались — можно просто сделать посильный вклад. Мы будем благодарны любой поддержке. ",
