@@ -45,11 +45,9 @@
       "text_2": "Alăturați-vă nouă, deveniți parte a festivalului, descoperiți ritmul unității și creativității care va rezona în fiecare dintre noi."
     }
   },
-  "footer": {
-    "contacts": "Contacte"
-  },
   "contacts": {
     "header": {
+      "name": "Contacte",
       "title_1": "Contact",
       "title_2": "Informații"
     },
@@ -90,8 +88,27 @@
         "button": "REGULI",
         "header_1": "SUNT BINEVENITE:",
         "header_2": "NU SUNT PERMISE!",
-        "text_1": "Curățenia și sortarea deșeurilor\nPrezența atentă și respectuoasă\nLiniștea la răsărit și noaptea\nAjutorul reciproc și pentru festival\nAcceptarea și susținerea diferențelor\nInițiativa, deschiderea, bunătatea\nCreativitatea ca mod de conectare",
-        "text_2": "Consumul de alcool sau substanțe interzise de lege\nFumatul în spațiile publice\nComportamentul sub influența alcoolului sau agresiv\nGătirea cărnii pe foc deschis\nDeteriorarea naturii: tăierea crengilor, tufișurilor sau copacilor\nAprinderea focului în afara zonelor desemnate\nFolosirea substanțelor chimice în apropierea surselor de apă\nAruncarea deșeurilor nesortate\nTulburarea liniștii pe timp de noapte\nDistrugerea oricăror ființe vii"
+        "texts_1": [
+          "Curățenia și sortarea deșeurilor",
+          "Prezența atentă și respectuoasă",
+          "Liniștea la răsărit și noaptea",
+          "Ajutorul reciproc și pentru festival",
+          "Acceptarea și susținerea diferențelor",
+          "Inițiativa, deschiderea, bunătatea",
+          "Creativitatea ca mod de conectare"
+        ],
+        "texts_2": [
+          "Consumul de alcool sau substanțe interzise de lege",
+          "Fumatul în spațiile publice",
+          "Comportamentul sub influența alcoolului sau agresiv",
+          "Gătirea cărnii pe foc deschis",
+          "Deteriorarea naturii: tăierea crengilor, tufișurilor sau copacilor",
+          "Aprinderea focului în afara zonelor desemnate",
+          "Folosirea substanțelor chimice în apropierea surselor de apă",
+          "Aruncarea deșeurilor nesortate",
+          "Tulburarea liniștii pe timp de noapte",
+          "Distrugerea oricăror ființe vii"
+        ]
       },
       "traditions": {
         "button": "TRADIȚII",
