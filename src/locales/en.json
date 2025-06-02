@@ -254,6 +254,10 @@
       "motto": "I make a contribution and become part of the creation",
       "text": "The contribution is an investment in the common reality. We do not sell tickets - we support the space we create together. Your contribution can be made in cash at the festival or online by card.",
       "button": "MAKE A CONTRIBUTION",
+      "warning_1": "Attention! Ticket contributions will change from June 12, 2025.",
+      "warning_2": "Tickets can be purchased at current prices from June 5 to June 11, 2025, inclusive.",
+      "coming_soon": "Coming soon",
+      "coming_description": "We are actively working on the contribution system. It will be available soon!",
       "column_1": {
         "title": "I go to the festival",
         "text": "Free entry for children under 14 years old"
@@ -272,6 +276,15 @@
         "button": "CONTACT US"
       }
     },
+    "form": {
+      "name": "Your name",
+      "lastname": "Last name (Please provide your real last name so we can identify you)",
+      "tickets": "Select the number of tickets",
+      "count": "Quantity",
+      "email": "Email",
+      "total": "Total to pay",
+      "submit": "Make a contribution"
+    },
     "help_us": {
       "header": "SUPPORT AS A PATRON / DONOR",
       "text_1": "Want such events to continue? You can simply make a contribution. We will be grateful for any support.",
@@ -282,20 +295,21 @@
     "our_needs": {
       "header_1": "WE NEED…",
       "header_2": "For sponsors and partners",
+      "header_3": "What we especially need right now",
       "text_1": "What we especially need right now:",
       "text_2": "We are looking for partners ready to support the festival with resources, goods, advertising, or participation. We offer transparency, recognition, and a creative promotion format.",
       "text_3": "If you can share something — write to us, we will be very grateful!",
       "text_4": "Always open to partnership and collaboration",
       "button": "FOR SPONSORS",
-      "list": {
-        "item_1": "Fabrics for decoration, pillows, ribbons, paints",
-        "item_2": "Acoustic equipment",
-        "item_3": "Large cauldrons, pots",
-        "item_4": "Tools: saws, axes, ladders, shovels, rakes.",
-        "item_5": "Electricity",
-        "item_6": "Generators 5 kW and 3 kW",
-        "item_7": "Boards, OSB. Pallets."
-      }
+      "list": [
+        "Fabrics for decoration, cushions, ribbons, paints",
+        "Acoustic equipment",
+        "Large cauldrons, pots",
+        "Tools: saws, axes, ladders, shovels, rakes",
+        "Electricity supplies",
+        "Generators (5 kW and 3 kW)",
+        "Boards, OSB sheets, pallets"
+      ]
     },
     "contact_button": "CONTACT US"
   }

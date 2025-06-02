@@ -3,15 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 export function Header() {
-  const [isLoading, setIsLoading] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-
-  const handleJoinClick = () => {
-    setIsLoading(true);
-    window.location.href = "https://join.art-labyrinth.org";
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -22,9 +16,9 @@ export function Header() {
     console.log(document.referrer);
 
     if (document.referrer && new URL(document.referrer).pathname === "/") {
-        navigate(-1);
+      navigate(-1);
     } else {
-        navigate("/");
+      navigate("/");
     }
   };
 
@@ -32,9 +26,15 @@ export function Header() {
     i18n.changeLanguage(lng);
   };
 
+  const menuItems = [
+    { path: "/participants", label: t("menu.participation") },
+    { path: "/contacts", label: t("menu.contacts") },
+    { path: "/contribute", label: t("contribute.hero_1.header") },
+  ];
+
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a href="/" onClick={handleBackClick}  className="relative left-[10%] py-5 w-12">
+      <a href="/" onClick={handleBackClick} className="relative left-[10%] py-5 w-12">
         <img src="https://files.art-labyrinth.org/logo-black.svg" alt="" />
       </a>
 
@@ -61,23 +61,19 @@ export function Header() {
           flex flex-col sm:flex-row flex-wrap sm:gap-x-20 gap-y-4 sm:w-[60%] sm:justify-center
           py-32 sm:py-2 sm:leading-none text-center sm:font-bold sm:border-stone-600 sm:border-y-2 sm:mx-auto`}
       >
-        <div className="whitespace-nowrap cursor-pointer relative uppercase">
-          
-            <div 
+        {menuItems.map((item, idx) => (
+          <React.Fragment key={item.path}>
+            <div
               className="whitespace-nowrap cursor-pointer relative uppercase"
-              onClick={() => navigate("/participants")}
+              onClick={() => navigate(item.path)}
             >
-              {t("menu.participation")}
+              {item.label}
             </div>
-          
-        </div>
-        <hr className="border-[#774E3866] sm:hidden border border-1" />
-        <div
-          className="whitespace-nowrap cursor-pointer relative uppercase"
-          onClick={() => navigate("/contacts")}
-        >
-          {t("menu.contacts")}
-        </div>
+            {idx < menuItems.length - 1 && (
+              <hr className="border-[#774E3866] sm:hidden border border-1" />
+            )}
+          </React.Fragment>
+        ))}
       </div>
 
       <div className="flex mx-auto sm:mx-0 pr-10 sm:p-0 relative sm:right-[5%] font-sans gap-2 text-[#F4E4C3]">
