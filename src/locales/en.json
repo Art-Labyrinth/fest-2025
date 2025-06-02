@@ -45,11 +45,9 @@
       "text_2": "Join us, become part of the festival, discover the rhythm of unity and creativity that will resonate in each of us."
     }
   },
-  "footer": {
-    "contacts": "Contacts"
-  },
   "contacts": {
     "header": {
+      "name": "Contacts",
       "title_1": "Contact",
       "title_2": "Information"
     },
@@ -90,8 +88,28 @@
         "button": "RULES",
         "header_1": "WELCOMED:",
         "header_2": "NOT ALLOWED!",
-        "text_1": "Cleanliness and waste sorting\nMindful and respectful presence\nSilence at dawn and night\nHelping each other and the festival\nAcceptance and support of differences\nInitiative, openness, kindness\nCreativity as a way of connection",
-        "text_2": "Consumption of alcohol or substances prohibited by law\nSmoking in public areas\nDrunken or aggressive behavior\nCooking meat over an open fire\nHarming nature: cutting branches, bushes, or trees\nLighting fires outside designated areas\nUsing chemicals near water sources\nLittering or unsorted waste\nDisturbing the peace at night\nHarming any living beings"
+        "texts_1": [
+          "Cleanliness and waste sorting",
+          "Mindful and respectful presence",
+          "Silence at dawn and night",
+          "Helping each other and the festival",
+          "Acceptance and support of differences",
+          "Initiative, openness, kindness",
+          "Creativity as a way of connection"
+        ],
+        "texts_2": [
+          "Consumption of alcohol or substances prohibited by law",
+          "Smoking in public areas",
+          "Drunken or aggressive behavior",
+          "Cooking meat over an open fire",
+          "Harming nature: cutting branches, bushes, or trees",
+          "Lighting fires outside designated areas",
+          "Using chemicals near water sources",
+          "Littering or unsorted waste",
+          "Disturbing the peace at night",
+          "Harming any living beings"
+        ]
+
       },
       "traditions": {
         "button": "TRADITIONS",

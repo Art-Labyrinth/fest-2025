@@ -13,13 +13,13 @@ export default function Footer({ backgroundColor = "bg-main" }) {
             <div className="flex flex-wrap gap-5 w-[80%] sm:w-9/12 justify-start py-5 sm:py-2 px-5 mx-auto">
                 <div className="flex flex-col justify-center items-start sm:px-10">
                     <div className="font-bold text-yellow-950">
-                        {t("footer.contacts")}
+                        {t("contacts.header.name")}
                     </div>
                     <div className="text-sm text-yellow-950 mt-2 sm:mt-3">
-                        {t("footer.tel")}
+                        {t("contacts.hero.tel_text")}
                     </div>
                     <div className="text-sm text-yellow-950">
-                        {t("footer.email")}
+                        {t("contacts.hero.email_text")}
                     </div>
                     <div className="flex gap-3 items-center mt-3">
                         <a
