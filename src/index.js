@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Participants from "./components/Participants/Participants";
 import Contribute from "./components/Contribute/Contribute";
+import Gallery from "./components/Gallery/Gallery";
 import { fetchCsrfToken } from "./utils";
 
 import "./index.css";
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "/contribute",
         element: <Contribute />,
     },
+    {
+        path: "/gallery",
+        element: <Gallery />,
+    }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
