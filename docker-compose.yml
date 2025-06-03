@@ -9,10 +9,10 @@ services:
     networks:
       - main
 
-    # debug
-    volumes:
-      - ./build:/usr/share/nginx/html
-      - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    # # debug
+    # volumes:
+    #   - ./build:/usr/share/nginx/html
+    #   - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
 
 networks:
   main:
