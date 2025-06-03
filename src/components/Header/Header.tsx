@@ -27,10 +27,10 @@ export function Header() {
   };
 
   const menuItems = [
-    { path: "/participants", label: t("menu.participation") },
-    { path: "/contacts", label: t("menu.contacts") },
-    { path: "/gallery", label: t("menu.gallery") },
-    { path: "/contribute", label: t("contribute.hero_1.header") },
+    { path: "/participants/", label: t("menu.participation") },
+    { path: "/contacts/", label: t("menu.contacts") },
+    { path: "/gallery/", label: t("menu.gallery") },
+    { path: "/contribute/", label: t("contribute.hero_1.header") },
   ];
 
   return (
