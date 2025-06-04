@@ -257,8 +257,6 @@
       "button": "MAKE A CONTRIBUTION",
       "warning_1": "Attention! Ticket contributions will change from June 12, 2025.",
       "warning_2": "Tickets can be purchased at current prices from June 5 to June 11, 2025, inclusive.",
-      "coming_soon": "Coming soon",
-      "coming_description": "We are actively working on the contribution system. It will be available soon!",
       "guest": "Guest",
       "note": "Select the type of contribution that suits you below. If you cannot afford the contribution, choose the 'Complex situation' option and briefly describe your situation in the form.",
       "column_1": {
@@ -281,12 +279,21 @@
     },
     "form": {
       "name": "Your name",
-      "lastname": "Last name (Please provide your real last name so we can identify you)",
-      "tickets": "Select the number of tickets",
+      "lastname": "Last name (Please provide your family's real last name)",
+      "tickets": "Select the number of tickets (temporarily unavailable due to technical reasons)",
       "count": "Quantity",
       "email": "Email",
       "total": "Total to pay",
       "submit": "Make a contribution"
+    },
+    "post_form": {
+      "thank_you": "Thank you for your contribution!",
+      "grateful": "We are grateful for your support and participation in creating the festival.",
+      "number": "Your unique number:",
+      "link_text": "To pay for the ticket, use the link below:",
+      "terminal": "Or pay in cash through any Bpay terminal",
+      "detail": "An email has been sent to you with your order ID and instructions for cash payment through Bpay terminals.",
+      "spam": "If the email did not arrive — check your 'Spam' folder or contact us."
     },
     "help_us": {
       "header": "SUPPORT AS A PATRON / DONOR",

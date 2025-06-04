@@ -252,8 +252,6 @@
       "button": "FAC O CONTRIBUȚIE",
       "warning_1": "Atenție! Contribuțiile pentru bilete vor fi modificate începând cu 12 iunie 2025.",
       "warning_2": "Biletele pot fi cumpărate la prețul actual între 5 și 11 iunie 2025 inclusiv.",
-      "coming_soon": "ÎN CURÂND",
-      "coming_description": "Lucrăm activ la sistemul de contribuții. În curând totul va fi funcțional!",
       "guest": "Vizitator",
       "note": "Alege mai jos tipul de contribuție care ți se potrivește. Dacă nu îți permiți să contribui, alege opțiunea „Situație complexă” și descrie pe scurt situația ta în formular.",
       "column_1": {
@@ -276,12 +274,21 @@
     },
     "form": {
       "name": "Numele și prenumele tău",
-      "lastname": "Prenumele (Indică numele real pentru a putea fi identificat)",
-      "tickets": "Alege numărul de bilete",
+      "lastname": "Prenumele și numele de familie",
+      "tickets": "Selectează numărul de bilete (temporar indisponibil din motive tehnice)",
       "count": "Număr",
       "email": "Email",
       "total": "Total de plată",
       "submit": "Fă o contribuție"
+    },
+    "post_form": {
+      "thank_you": "Mulțumim pentru contribuția ta!",
+      "grateful": "Suntem recunoscători pentru sprijinul tău și participarea la crearea festivalului.",
+      "number": "Numărul tău unic:",
+      "link_text": "Pentru a plăti biletul, folosește linkul de mai jos:",
+      "terminal": "Sau plătește în numerar prin orice terminal",
+      "detail": "Ți-am trimis un email cu ID-ul comenzii tale și instrucțiuni pentru plata în numerar prin terminalele Bpay.",
+      "spam": "Dacă emailul nu a ajuns — verifică folderul „Spam” sau contactează-ne."
     },
     "help_us": {
       "header": "SUSȚINE CA PATRON / DONATOR",
