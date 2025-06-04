@@ -50,9 +50,11 @@ function Contribute() {
         setIsLoading(true);
         if (formRef.current) {
             if (!formRef.current.reportValidity()) {
+                setIsLoading(false);
                 return;
             }
         } else {
+            setIsLoading(false);
             return;
         }
         const response = await fetch(`${API_URL}/bpay/create_order`, {
@@ -78,9 +80,36 @@ function Contribute() {
             });
         } else {
             console.error("Failed to create order:", response.statusText);
-            setIsLoading(false);
         }
+        setIsLoading(false);
     }
+
+    const handleChangeType = (category: Ticket["category"], price: Ticket["price"]) => {
+        setNewTicket({ ...newTicket, category: category, price: price });
+        formBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    }
+
+    const ticketTypes = [
+        {
+            key: "basic",
+            title: t("contribute.pricing.column_1.title"),
+            price: ticketPrices.basic,
+            text: t("contribute.pricing.column_1.text"),
+        },
+        {
+            key: "preferential",
+            title: t("contribute.pricing.column_2.title"),
+            price: ticketPrices.preferential,
+            text: t("contribute.pricing.column_2.text"),
+        },
+        {
+            key: "family",
+            title: t("contribute.pricing.column_3.title"),
+            price: ticketPrices.family,
+            text: t("contribute.pricing.column_3.text"),
+        },
+    ];
 
     return (
         <main>
@@ -90,8 +119,13 @@ function Contribute() {
 
             {/*Hero Top */}
             <section
-                className="relative bg-cover bg-top sm:bg-[center_50%] py-[5%] w-full"
-                style={{ backgroundImage: "url('/contribute_hero_1.jpg')" }}
+                className="relative bg-cover bg-top sm:bg-[center_50%] py-[5%] w-full
+                    bg-[url('https://files.art-labyrinth.org/fest2025/contribute/sm_contribute_hero_1.webp')]
+                    md:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/md_contribute_hero_1.webp')]
+                    lg:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/lg_contribute_hero_1.webp')]
+                    xl:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/xl_contribute_hero_1.webp')]
+                    2xl:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/2xl_contribute_hero_1.webp')]"
+
             >
                 <div className="flex flex-col relative px-4 text-center z-10">
                     <h1 className="text-4xl md:text-5xl font-bold text-brown font-deledda mb-4 text-[#F4E4C3] uppercase">
@@ -127,13 +161,13 @@ function Contribute() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center bg-[#4A6218]/10 hover:bg-[#4A6218]/20 rounded-lg px-6 py-3 mb-4 transition-colors"
                     >
-                        <img src="/contribute/BPay495x167.svg" alt="BPay" className="h-12" />
+                        <img src="https://files.art-labyrinth.org/fest2025/contribute/BPay495x167.svg" alt="BPay" className="h-12" />
                     </a>
                     <div className="mb-2 text-brown">
-                        {t("contribute.post_form.terminal")} <span className="font-bold">Bpay</span>.<br/>
+                        {t("contribute.post_form.terminal")} <span className="font-bold">Bpay</span>.<br />
                     </div>
                     <div className="mt-4 text-brown">
-                        {t("contribute.post_form.detail")}<br/>
+                        {t("contribute.post_form.detail")}<br />
                         {t("contribute.post_form.spam")}
                     </div>
                 </section>
@@ -155,9 +189,11 @@ function Contribute() {
                                     {t("contribute.pricing.text")}
                                 </p>
                                 {(new Date() < priceChangeDate) && (
-                                    <p className="text-brown bg-[#F6D8B4] border-l-4 border-[#F07B17] p-4 my-4 font-semibold shadow-md rounded">
-                                        {t("contribute.pricing.warning_1")} <br /> {t("contribute.pricing.warning_2")}
-                                    </p>
+                                    <div className="text-brown bg-[#F6D8B4] border-l-4 border-[#F07B17] p-4 my-4 font-semibold shadow-md rounded">
+                                        {(t("contribute.pricing.warnings", { returnObjects: true }) as String[]).map((warning, index) => (
+                                            <p key={index}>{warning}</p>
+                                        ))}
+                                    </div>
                                 )}
                                 <p className="font-deledda">
                                     {t("contribute.pricing.note")}
@@ -166,68 +202,17 @@ function Contribute() {
 
                             {/* Lower Part */}
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:h-full">
-                                {/* Column 1 */}
-                                <div
-                                    className={`p-5 md:flex flex-col text-left cursor-pointer border-2 transition-all ${newTicket.category === "basic" ? "border-[#2B390E] bg-[#F6D8B4]/60" : "border-transparent"}`}
-                                    onClick={() => {
-                                        setNewTicket({ ...newTicket, category: "basic", price: ticketPrices.basic });
-                                        setTimeout(() => {
-                                            formBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                        }, 100);
-                                    }}
-                                >
-                                    <h3 className="text-xl font-bold text-brown mb-2">
-                                        {t("contribute.pricing.column_1.title")}
-                                    </h3>
-                                    <p className="text-2xl font-semibold text-[#4A6218] mb-2">
-                                        {ticketPrices.basic} mdl
-                                    </p>
-                                    <p className="text-brown mb-4">
-                                        {t("contribute.pricing.column_1.text")}
-                                    </p>
-                                </div>
-
-                                {/* Column 2 */}
-                                <div
-                                    className={`p-5 md:flex flex-col text-left cursor-pointer border-2 transition-all ${newTicket.category === "preferential" ? "border-[#2B390E] bg-[#F6D8B4]/60" : "border-transparent"}`}
-                                    onClick={() => {
-                                        setNewTicket({ ...newTicket, category: "preferential", price: ticketPrices.preferential });
-                                        setTimeout(() => {
-                                            formBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                        }, 100);
-                                    }}
-                                >
-                                    <h3 className="text-xl font-bold text-brown mb-2">
-                                        {t("contribute.pricing.column_2.title")}
-                                    </h3>
-                                    <p className="text-2xl font-semibold text-[#4A6218] mb-2">
-                                        {ticketPrices.preferential} mdl
-                                    </p>
-                                    <p className="text-brown mb-4">
-                                        {t("contribute.pricing.column_2.text")}
-                                    </p>
-                                </div>
-
-                                {/* Column 3 */}
-                                <div
-                                    className={`p-5 md:flex flex-col text-left cursor-pointer border-2 transition-all ${newTicket.category === "family" ? "border-[#2B390E] bg-[#F6D8B4]/60" : "border-transparent"}`}
-                                    onClick={() => {
-                                        setNewTicket({ ...newTicket, category: "family", price: ticketPrices.family });
-                                        setTimeout(() => {
-                                            formBlockRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                        }, 100);
-                                    }}
-                                >
-                                    <h3 className="text-xl font-bold text-brown mb-2">
-                                        {t("contribute.pricing.column_3.title")}
-                                    </h3>
-                                    <p className="text-2xl font-semibold text-[#4A6218] mb-2">
-                                        {ticketPrices.family} mdl
-                                    </p>
-                                    <p className="text-brown mb-4">
-                                        {t("contribute.pricing.column_3.text")}
-                                    </p>
-                                </div>
+                                {ticketTypes.map((type) => (
+                                    <div
+                                        key={type.key}
+                                        className={`p-5 md:flex flex-col text-left cursor-pointer border-2 transition-all ${newTicket.category === type.key ? "border-[#2B390E] rounded-xl bg-[#F6D8B4]/60" : "border-transparent shadow-lg"}`}
+                                        onClick={() => handleChangeType(type.key as Ticket["category"], type.price)}
+                                    >
+                                        <h3 className="text-xl font-bold text-brown mb-2">{type.title}</h3>
+                                        <p className="text-2xl font-semibold text-[#4A6218] mb-2">{type.price} mdl</p>
+                                        <p className="text-brown mb-4">{type.text}</p>
+                                    </div>
+                                ))}
 
                                 {/* Column 4 */}
                                 <div className="md:flex flex-col text-left">
@@ -246,10 +231,21 @@ function Contribute() {
                                 </div>
                             </div>
 
+                            <div className="my-8 h-0.5 bg-[#4A6218] opacity-40 rounded w-full" />
+
                             {/* Submit Form */}
                             <div ref={formBlockRef} className="p-6 max-w-5xl w-full mx-auto flex flex-col md:flex-row gap-8 rounded-lg shadow-lg mt-10">
                                 {/* Left part: Form */}
                                 <form ref={formRef} className="flex-1 flex flex-col gap-4">
+                                    <h2 className="text-2xl font-bold text-brown mb-2 text-center">
+                                        {/* {t("contribute.pricing.column_1.title")} */}
+                                        {newTicket.category === "basic"
+                                            ? t("contribute.pricing.column_1.title")
+                                            : newTicket.category === "preferential"
+                                                ? t("contribute.pricing.column_2.title")
+                                                : t("contribute.pricing.column_3.title")}
+                                    </h2>
+
                                     <label className="text-brown font-semibold">
                                         {newTicket.category === "basic" ? t("contribute.form.name") : t("contribute.form.lastname")}
                                         <input
@@ -286,13 +282,13 @@ function Contribute() {
                                 </form>
                                 {/* Right part: Sum and button */}
                                 <div className="flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 min-w-[220px] shadow-lg">
-                                    <span className="text-brown text-lg italic mb-2 font-sans font-bold">
+                                    {/* <span className="text-brown text-lg italic mb-2 font-sans font-bold">
                                         {newTicket.category === "basic"
                                             ? t("contribute.pricing.guest")
                                             : newTicket.category === "preferential"
                                                 ? t("contribute.pricing.column_2.title")
                                                 : t("contribute.pricing.column_3.title")}
-                                    </span>
+                                    </span> */}
                                     <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
                                     <span className="text-3xl font-bold text-[#4A6218] mb-4">
                                         {((newTicket.count || 1) * newTicket.price).toLocaleString()} MDL
@@ -439,8 +435,12 @@ function Contribute() {
 
             {/*Hero Bottom */}
             <section
-                className="relative bg-cover bg-top sm:bg-[center_70%]  py-[5%] w-full"
-                style={{ backgroundImage: "url('/contribute_hero_2.jpg')" }}
+                className="relative bg-cover bg-top sm:bg-[center_70%]  py-[5%] w-full
+                    bg-[url('https://files.art-labyrinth.org/fest2025/contribute/sm_contribute_hero_2.webp')]
+                    md:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/md_contribute_hero_2.webp')]
+                    lg:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/lg_contribute_hero_2.webp')]
+                    xl:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/xl_contribute_hero_2.webp')]
+                    2xl:bg-[url('https://files.art-labyrinth.org/fest2025/contribute/2xl_contribute_hero_2.webp')]"
             >
                 <div className="flex flex-col relative container mx-auto px-4 text-center z-10">
                     <div className="sm:w-full sm:max-w-[50%] mx-auto p-6 text-[#FFF9EC] whitespace-pre-line">

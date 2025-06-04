@@ -255,8 +255,12 @@
       "motto": "I make a contribution and become part of the creation",
       "text": "The contribution is an investment in the common reality. We do not sell tickets - we support the space we create together. Your contribution can be made in cash at the festival or online by card.",
       "button": "MAKE A CONTRIBUTION",
-      "warning_1": "Attention! Ticket contributions will change from June 12, 2025.",
-      "warning_2": "Tickets can be purchased at current prices from June 5 to June 11, 2025, inclusive.",
+      "warnings": [
+        "The current contribution amount is 500 lei, valid until June 12, 2025.",
+        "From June 13 to June 30, the contribution will be 650 lei.",
+        "From July 1, the contribution can only be made at the festival entrance — 800 lei.",
+        "Discounts for certain categories of participants are available throughout all periods."
+      ],
       "guest": "Guest",
       "note": "Select the type of contribution that suits you below. If you cannot afford the contribution, choose the 'Complex situation' option and briefly describe your situation in the form.",
       "column_1": {
