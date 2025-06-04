@@ -17,6 +17,8 @@ function Contribute() {
         bpay_url: "",
     });
 
+    const [error, setError] = useState<string | null>(null);
+
     interface Ticket {
         category: "basic" | "preferential" | "family";
         name: string;
@@ -42,7 +44,7 @@ function Contribute() {
         preferential: 325,
         family: 485,
     };
-    const priceChangeDate = new Date('2025-06-12');
+    const priceChangeDate = new Date('2025-06-13');
     const ticketPrices = (new Date() < priceChangeDate) ? ticketPricesCurrent : ticketPricesFuture;
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -67,7 +69,7 @@ function Contribute() {
                 price: newTicket.price,
                 email: newTicket.email,
                 phone: "",
-                lang: i18n.language,
+                lang: i18n.language === "md" ? "ro" : i18n.language,
             }),
         });
 
@@ -79,6 +81,7 @@ function Contribute() {
                 bpay_url: responseData?.redirect_url,
             });
         } else {
+            setError("Failed to create order. Please try again later.");
             console.error("Failed to create order:", response.statusText);
         }
         setIsLoading(false);
@@ -282,6 +285,7 @@ function Contribute() {
                                 </form>
                                 {/* Right part: Sum and button */}
                                 <div className="flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 min-w-[220px] shadow-lg">
+                                    {error && <p className="text-red-500 mb-4 text-lg font-bold max-w-48">{error}</p>}
                                     {/* <span className="text-brown text-lg italic mb-2 font-sans font-bold">
                                         {newTicket.category === "basic"
                                             ? t("contribute.pricing.guest")
