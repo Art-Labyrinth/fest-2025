@@ -42,7 +42,7 @@ function Contribute() {
         preferential: 325,
         family: 485,
     };
-    const priceChangeDate = new Date('2025-06-12');
+    const priceChangeDate = new Date('2025-06-13');
     const ticketPrices = (new Date() < priceChangeDate) ? ticketPricesCurrent : ticketPricesFuture;
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -67,7 +67,7 @@ function Contribute() {
                 price: newTicket.price,
                 email: newTicket.email,
                 phone: "",
-                lang: i18n.language,
+                lang: i18n.language === "md" ? "ro" : i18n.language,
             }),
         });
 
