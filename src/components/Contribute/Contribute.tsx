@@ -268,7 +268,6 @@ function Contribute() {
                                             value={newTicket.count}
                                             onChange={e => setNewTicket({ ...newTicket, count: Number(e.target.value) })}
                                             className="w-full accent-[#4A6218]"
-                                            disabled
                                         />
                                         <span className="text-brown">{t("contribute.form.count")}: <b>{newTicket.count || 1}</b></span>
                                     </label>

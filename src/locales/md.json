@@ -279,7 +279,7 @@
     "form": {
       "name": "Numele și prenumele tău",
       "lastname": "Prenumele și numele de familie",
-      "tickets": "Selectează numărul de bilete (temporar indisponibil din motive tehnice)",
+      "tickets": "Selectează numărul de bilete",
       "count": "Număr",
       "email": "Email",
       "total": "Total de plată",

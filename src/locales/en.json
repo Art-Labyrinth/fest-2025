@@ -284,7 +284,7 @@
     "form": {
       "name": "Your name",
       "lastname": "Last name (Please provide your family's real last name)",
-      "tickets": "Select the number of tickets (temporarily unavailable due to technical reasons)",
+      "tickets": "Select the number of tickets",
       "count": "Quantity",
       "email": "Email",
       "total": "Total to pay",
