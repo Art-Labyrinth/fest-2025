@@ -6,6 +6,8 @@ import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Participants from "./components/Participants/Participants";
 import Contribute from "./components/Contribute/Contribute";
+import Success from "./components/Contribute/Success";
+import Fail from "./components/Contribute/Fail";
 import Gallery from "./components/Gallery/Gallery";
 import NotFound from "./components/NotFound";
 import { fetchCsrfToken } from "./utils";
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
     {
         path: "/gallery",
         element: <Gallery />,
+    },
+    {
+        path: "/success",
+        element: <Success />,
+    },
+    {
+        path: "/fail",
+        element: <Fail />,
     },
     {
         path: "*",
