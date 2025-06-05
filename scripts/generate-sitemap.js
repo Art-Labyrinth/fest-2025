@@ -4,21 +4,12 @@ const path = require('path');
 const { pipeline } = require('stream');
 
 const links = [
-    {
-        url: '/',
-        changefreq: 'daily',
-        priority: 1.0,
-    },
-    {
-        url: '/about',
-        changefreq: 'daily',
-        priority: 0.8,
-    },
-    {
-        url: '/contact',
-        changefreq: 'daily',
-        priority: 0.8,
-    },
+    { url: '/',            changefreq: 'daily',    priority: 1.0 },
+    { url: '/contact/',    changefreq: 'weekly',   priority: 0.9 },
+
+    { url: '/about/',      changefreq: 'monthly',  priority: 0.5 },
+    { url: '/gallery/',    changefreq: 'monthly',  priority: 0.5 },
+    { url: '/contribute/', changefreq: 'monthly',  priority: 0.5 },
 ];
 
 

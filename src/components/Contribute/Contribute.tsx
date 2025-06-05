@@ -6,7 +6,7 @@ import { API_URL } from "src/config";
 import i18n from "src/config/i18n";
 
 function Contribute() {
-    const { t } = useTranslation<'translation'>();
+    const { t } = useTranslation();
     const [isCopied, setIsCopied] = useState(false);
     const formRef = useRef<HTMLFormElement>(null);
     const formBlockRef = useRef<HTMLDivElement>(null);
