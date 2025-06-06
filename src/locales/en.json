@@ -288,7 +288,11 @@
       "count": "Quantity",
       "email": "Email",
       "total": "Total to pay",
-      "submit": "Make a contribution"
+      "submit": "Make a contribution",
+      "phone": "Phone number",
+      "telegram": "Telegram",
+      "message": "Briefly and clearly describe your situation.",
+      "special_submit": "Send request"
     },
     "post_form": {
       "thank_you": "Thank you for your contribution!",
@@ -297,7 +301,8 @@
       "link_text": "To pay online, use the link below:",
       "terminal": "Or pay in cash through any Bpay terminal",
       "detail": "An email has been sent to you with your order ID and instructions for cash payment through Bpay terminals.",
-      "spam": "If the email did not arrive — check your 'Spam' folder or contact us."
+      "spam": "If the email did not arrive — check your 'Spam' folder or contact us.",
+      "special_text": "We will contact you shortly."
     },
     "help_us": {
       "header": "SUPPORT AS A PATRON / DONOR",
