@@ -320,14 +320,6 @@
       "text_2": "Вы также можете связаться с координатором фестиваля для личной встрече или поддержки наличными ",
       "button": "Копировать",
       "copied": "Скопировано!",
-      "credentials": {
-        "bank_name": "BC Victoriabank SA",
-        "swift": "VICBMD2X",
-        "address": "31 August str.141, MD 2004 Chisinau, Republic of Moldova",
-        "account_name": "ART-LABYRINTH UNIUNEA DE CREATIE AO",
-        "fisc": "1014620001302",
-        "iban": "MD10VI000002224211643MDL"
-      },
       "credentials_list": [
         "BC Victoriabank SA",
         "SWIFT-ul Bancii: VICBMD2X",
