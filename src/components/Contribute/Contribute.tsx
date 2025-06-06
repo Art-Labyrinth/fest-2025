@@ -12,7 +12,7 @@ function Contribute() {
     const formBlockRef = useRef<HTMLDivElement>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [orderData, setOrderData] = useState<any>({
-        is_paied: true,
+        is_paied: false,
         order_id: 0,
         bpay_url: "",
     });
