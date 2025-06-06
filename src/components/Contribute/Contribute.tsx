@@ -12,7 +12,7 @@ function Contribute() {
     const formBlockRef = useRef<HTMLDivElement>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [orderData, setOrderData] = useState<any>({
-        is_paied: false,
+        is_paied: true,
         order_id: 0,
         bpay_url: "",
     });
@@ -162,9 +162,11 @@ function Contribute() {
                         href={orderData.bpay_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center bg-[#4A6218]/10 hover:bg-[#4A6218]/20 rounded-lg px-6 py-3 mb-4 transition-colors"
+                        className="bg-[#4A6218]/10 hover:bg-[#4A6218]/20 rounded-lg px-6 py-3 mb-4"
                     >
-                        <img src="https://files.art-labyrinth.org/fest2025/contribute/BPay495x167.svg" alt="BPay" className="h-12" />
+                        <span className="text-5xl text-black font-deledda">O</span>
+                        <span className="text-5xl text-[#ffae00] font-deledda">nline</span>
+                        {/* <img src="https://files.art-labyrinth.org/fest2025/contribute/BPay495x167.svg" alt="BPay" className="h-12" /> */}
                     </a>
                     <div className="mb-2 text-brown">
                         {t("contribute.post_form.terminal")} <span className="font-bold">Bpay</span>.<br />
