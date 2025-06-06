@@ -175,7 +175,7 @@ function Contribute() {
                 <section className="flex flex-col bg-[#F4E4C3] py-12 items-center justify-center rounded-lg shadow-lg text-center">
                     {newTicket.category === "special" ? (
                         <>
-                            <div className="text-lg mb-2 font-semibold">
+                            <div className="text-lg mb-2 font-semibold max-w-3xl px-5">
                                 {t("contribute.post_form.special_text")}
                             </div>
                         </>
