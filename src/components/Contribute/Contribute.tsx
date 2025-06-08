@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import { useTranslation } from 'react-i18next';
 import { API_URL } from "src/config";
 import i18n from "src/config/i18n";
+// import { useLocation } from "react-router-dom";
 
 function Contribute() {
     const { t } = useTranslation();
@@ -18,6 +19,10 @@ function Contribute() {
     });
 
     const [error, setError] = useState<string | null>(null);
+    // const location = useLocation();
+    // const params = new URLSearchParams(location.search);
+    // const debug = params.get("debug");
+    // const fbclid = params.get("fbclid");
 
     interface Ticket {
         category: "basic" | "preferential" | "family" | "special";
@@ -54,6 +59,11 @@ function Contribute() {
     };
     const priceChangeDate = new Date('2025-06-13');
     const ticketPrices = (new Date() < priceChangeDate) ? ticketPricesCurrent : ticketPricesFuture;
+
+    const totalPrice = (newTicket.count || 1) * newTicket.price * (newTicket.count >= 6 && newTicket.category === "basic" ? 0.9 : 1);
+    const strikethroughPrice = (newTicket.count || 1) * ticketPrices.basic;
+
+
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -175,7 +185,7 @@ function Contribute() {
                 <section className="flex flex-col bg-[#F4E4C3] py-12 items-center justify-center rounded-lg shadow-lg text-center">
                     {newTicket.category === "special" ? (
                         <>
-                            <div className="text-lg mb-2 font-semibold">
+                            <div className="text-lg mb-2 font-semibold max-w-3xl px-5">
                                 {t("contribute.post_form.special_text")}
                             </div>
                         </>
@@ -348,8 +358,16 @@ function Contribute() {
                                     {newTicket.category !== "special" && (
                                         <>
                                             <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
+                                            {(strikethroughPrice !== totalPrice && newTicket.category === "basic") && (
+                                                <div className="flex flex-row gap-2">
+                                                    <span className="line-through text-red-500">
+                                                        {strikethroughPrice.toLocaleString()} mdl
+                                                    </span>
+                                                    {/* <span className="text-lg  -500 mb-2">-10 %</span> */}
+                                                </div>
+                                            )}
                                             <span className="text-3xl font-bold text-[#4A6218] mb-4">
-                                                {((newTicket.count || 1) * newTicket.price).toLocaleString()} MDL
+                                                {totalPrice.toLocaleString()} MDL
                                             </span>
                                         </>
                                     )}
