@@ -35,11 +35,25 @@ function Contribute() {
         tg?: string;
         message?: string;
     }
+    const ticketPricesCurrent = {
+        basic: 650,
+        preferential: 325,
+        family: 485,
+    };
+    const ticketPricesFuture = {
+        basic: 0,
+        preferential: 0,
+        family: 0,
+    };
+    const priceChangeDate = new Date('2025-07-1');
+    const ticketPrices = (new Date() < priceChangeDate) ? ticketPricesCurrent : ticketPricesFuture;
+
+
     const [newTicket, setNewTicket] = useState<Ticket>({
         category: "basic",
         name: "",
         count: 1,
-        price: 500,
+        price: ticketPrices.basic,
         email: "",
 
         phone: "",
@@ -47,20 +61,8 @@ function Contribute() {
         message: "",
     });
 
-    const ticketPricesCurrent = {
-        basic: 500,
-        preferential: 250,
-        family: 375,
-    };
-    const ticketPricesFuture = {
-        basic: 650,
-        preferential: 325,
-        family: 485,
-    };
-    const priceChangeDate = new Date('2025-06-13');
-    const ticketPrices = (new Date() < priceChangeDate) ? ticketPricesCurrent : ticketPricesFuture;
-
-    const totalPrice = (newTicket.count || 1) * newTicket.price * (newTicket.count >= 6 && newTicket.category === "basic" ? 0.9 : 1);
+    const discountCount = new Date() < priceChangeDate ? 6 : 11;
+    const totalPrice = (newTicket.count || 1) * newTicket.price * (newTicket.count >= discountCount && newTicket.category === "basic" ? 0.9 : 1);
     const strikethroughPrice = (newTicket.count || 1) * ticketPrices.basic;
 
 
@@ -238,13 +240,11 @@ function Contribute() {
                                 <p className="text-brown md:w-2/5">
                                     {t("contribute.pricing.text")}
                                 </p>
-                                {(new Date() < priceChangeDate) && (
-                                    <div className="text-brown bg-[#F6D8B4] border-l-4 border-[#F07B17] p-4 my-4 font-semibold shadow-md rounded">
-                                        {(t("contribute.pricing.warnings", { returnObjects: true }) as String[]).map((warning, index) => (
-                                            <p key={index}>{warning}</p>
-                                        ))}
-                                    </div>
-                                )}
+                                <div className="text-brown bg-[#F6D8B4] border-l-4 border-[#F07B17] p-4 my-4 font-semibold shadow-md rounded">
+                                    {(t("contribute.pricing.warnings", { returnObjects: true }) as String[]).map((warning, index) => (
+                                        <p key={index}>{warning}</p>
+                                    ))}
+                                </div>
                                 <p className="font-deledda">
                                     {t("contribute.pricing.note")}
                                 </p>
@@ -358,7 +358,7 @@ function Contribute() {
                                     {newTicket.category !== "special" && (
                                         <>
                                             <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
-                                            {(strikethroughPrice !== totalPrice && newTicket.category === "basic") && (
+                                            {(newTicket.count >= discountCount && newTicket.category === "basic") && (
                                                 <div className="flex flex-row gap-2">
                                                     <span className="line-through text-red-500">
                                                         {strikethroughPrice.toLocaleString()} mdl
@@ -375,7 +375,7 @@ function Contribute() {
                                         type="button"
                                         className="w-full bg-[#4A6218] text-white px-6 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] transition-colors"
                                         onClick={handleSubmit}
-                                        disabled={isLoading}
+                                        disabled={isLoading || (new Date() > priceChangeDate)}
                                     >
                                         {newTicket.category === "special" ? t("contribute.form.special_submit") : t("contribute.form.submit")}
                                     </button>
