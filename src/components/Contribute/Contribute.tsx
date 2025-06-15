@@ -3,7 +3,7 @@ import { Header } from "../Header/Header";
 import Footer from "../Footer";
 import { useTranslation } from 'react-i18next';
 import { API_URL } from "src/config";
-import i18n from "src/config/i18n";
+import i18n from "src/i18n";
 import { useLocation } from "react-router-dom";
 
 function Contribute() {

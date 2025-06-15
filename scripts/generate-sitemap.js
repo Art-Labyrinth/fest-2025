@@ -9,6 +9,7 @@ const links = [
 
     { url: '/about/',      changefreq: 'monthly',  priority: 0.5 },
     { url: '/gallery/',    changefreq: 'monthly',  priority: 0.5 },
+    { url: '/program/',    changefreq: 'monthly',  priority: 0.5 },
     { url: '/contribute/', changefreq: 'monthly',  priority: 0.5 },
 ];
 
@@ -26,9 +27,9 @@ links.forEach((link) => {
         changefreq: link.changefreq,
         priority: link.priority,
         links: [
-            { lang: 'en', url: `https://fest.art-labyrinth.org${link.url}` },
-            { lang: 'ru', url: `https://fest.art-labyrinth.org${link.url}` },
-            { lang: 'ro', url: `https://fest.art-labyrinth.org${link.url}` },
+            { lang: 'en', url: `https://fest.art-labyrinth.org${link.url}?lng=en` },
+            { lang: 'ru', url: `https://fest.art-labyrinth.org${link.url}?lng=ru` },
+            { lang: 'ro', url: `https://fest.art-labyrinth.org${link.url}?lng=ro` },
         ],
         img: [
             {

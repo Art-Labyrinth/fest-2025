@@ -76,6 +76,7 @@
     "home": "Acasă",
     "about": "Despre Festival",
     "participation": "Participă la Festival",
+    "program": "Program",
     "contacts": "Contacte",
     "gallery": "Galerie"
   },
@@ -265,7 +266,7 @@
       },
       "column_3": {
         "title": "Familie",
-        "text": "-25% contribuție pentru familii, minim 1 părinte + copil"
+        "text": "-25% contribuție pentru familii, minimum 1 părinte + copil până la 18 ani (copiii sub 14 ani intră gratuit)."
       },
       "column_4": {
         "title": "Situație complexă",
