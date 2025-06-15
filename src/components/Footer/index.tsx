@@ -18,9 +18,9 @@ export default function Footer({ backgroundColor = "bg-main" }) {
                     <div className="text-sm text-yellow-950 mt-2 sm:mt-3">
                         {t("contacts.hero.tel_text")}
                     </div>
-                    <div className="text-sm text-yellow-950">
+                    <a href={`mailto:${t("contacts.hero.email_text")}`} className="text-sm text-yellow-950 hover:text-yellow-700">
                         {t("contacts.hero.email_text")}
-                    </div>
+                    </a>
                     <div className="flex gap-3 items-center mt-3">
                         <a
                             href="https://t.me/+wpqpF2uV3-IzZTQ6"

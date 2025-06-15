@@ -432,12 +432,20 @@ function Contribute() {
                                     <p className="mb-4">
                                         {t("contribute.help_us.text_2")}
                                     </p>
-                                    <button
+                                    <p className="flex flex-col md:flex-row gap-3">
+                                        <a href="tel:+37379601910" className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] w-fit">
+                                            +373 79 601 910
+                                        </a>
+                                        <a href={`mailto:${t("contacts.hero.email_text")}`} className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] w-fit">
+                                            {t("contacts.hero.email_text")}
+                                        </a>
+                                    </p>
+                                    {/* <button
                                         className="md:w-2/5 w-1/2 bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] mt-auto"
                                         disabled
                                     >
                                         {t("contribute.contact_button")}
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>
@@ -468,18 +476,26 @@ function Contribute() {
                                         <p className="text-brown mx-4">
                                             {t("contribute.our_needs.text_3")}
                                         </p>
-                                        <button
+                                        <p className="flex flex-col md:flex-row gap-3">
+                                            <a href="tel:+37379601910" className="bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto w-fit">
+                                                +373 79 601 910
+                                            </a>
+                                            <a href={`mailto:${t("contacts.hero.email_text")}`} className="bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto w-fit">
+                                                {t("contacts.hero.email_text")}
+                                            </a>
+                                        </p>
+
+                                        {/* <button
                                             className="md:w-2/5 w-1/2 bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto"
-                                            disabled
                                         >
                                             {t("contribute.contact_button")}
-                                        </button>
+                                        </button> */}
                                     </div>
                                 </div>
                             </div>
 
                             {/* Lower Row */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 max-w-6xl mx-auto text-[#351904]">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 max-w-6xl mx-auto text-[#351904] px-5">
                                 {/* Lower Left Cell */}
                                 <div className="flex flex-col text-left">
                                     <h3 className="text-xl font-bold text-brown mb-2 uppercase">
