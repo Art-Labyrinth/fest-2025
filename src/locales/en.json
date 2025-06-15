@@ -76,6 +76,7 @@
     "home": "Home",
     "about": "About the Festival",
     "participation": "Join the Festival",
+    "program": "Program",
     "contacts": "Contacts",
     "gallery": "Gallery"
   },
@@ -110,7 +111,6 @@
           "Disturbing the peace at night",
           "Harming any living beings"
         ]
-
       },
       "traditions": {
         "button": "TRADITIONS",
@@ -270,7 +270,7 @@
       },
       "column_3": {
         "title": "Family",
-        "text": "-25% contribution for families, minimum 1 parent + child"
+        "text": "Families (minimum 1 parent and child up to 18 years old) receive a 25% discount on the contribution. Children under 14 years old enter for free."
       },
       "column_4": {
         "title": "Complex situation",
