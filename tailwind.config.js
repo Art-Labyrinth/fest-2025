@@ -224,11 +224,15 @@ module.exports = {
           position: 'relative',
         },
         '.workshop-section-title': {
-          fontSize: 36,
+          fontSize: 30,
           lineHeight: 1.3,
           letterSpacing: '0.05em',
           textTransform: 'uppercase',
-          margin: '100px 0 80px',
+          margin: '50px 0 40px',
+          '@screen sm': {
+            fontSize: 36,
+            margin: '100px 0 80px',
+          }
         },
         '.workshop-section-name': {
           fontSize: 26,
