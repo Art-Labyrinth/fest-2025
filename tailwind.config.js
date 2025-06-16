@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['RocaOne', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['RocaOne', 'serif'],
         deledda: ['Deledda', 'sans-serif'],
       },
       colors: {
@@ -40,7 +41,7 @@ module.exports = {
     },
   },
   plugins: [
-    function ({ addComponents }) {
+    function ({addComponents}) {
       addComponents({
         '.bg-main': {
           backgroundImage: "linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('https://files.art-labyrinth.org/fest2025/sm_back-main-page.webp')",
@@ -210,8 +211,95 @@ module.exports = {
             backgroundImage: "url('https://files.art-labyrinth.org/fest2025/about/2xl_meditations.webp')",
           },
         },
+
+        /* Page Programma */
+
+        '.tracking-widest-text': {
+          letterSpacing: '0.3em',
+        },
+        '.workshop-section': {
+          marginBottom: 60,
+          fontFamily: 'Inter, sans-serif',
+          letterSpacing: '.05em',
+          position: 'relative',
+        },
+        '.workshop-section-title': {
+          fontSize: 36,
+          lineHeight: 1.3,
+          letterSpacing: '0.05em',
+          textTransform: 'uppercase',
+          margin: '100px 0 80px',
+        },
+        '.workshop-section-name': {
+          fontSize: 26,
+          lineHeight: 1.3,
+          textTransform: 'uppercase',
+          color: 'rgba(53, 25, 4, 0.42)',
+          paddingBottom: 20,
+          marginBottom: 20,
+          borderBottom: '1px solid rgba(53, 25, 4, 0.4)',
+          wordBreak: 'break-word',
+          '@screen sm': {
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            bottom: 0,
+            height: '100%',
+            width: 72,
+            writingMode: 'sideways-lr',
+            textAlign: 'right',
+            lineHeight: '72px',
+            borderBottom: 0,
+            borderRight: '1px solid rgba(53, 25, 4, 0.4)',
+            marginBottom: 0,
+            paddingBottom: 0,
+            fontSize: 40,
+          },
+        },
+        '.workshop-item': {
+          marginBottom: 28,
+          marginLeft: 0,
+          '@screen sm': {
+            marginLeft: 126,
+          }
+        },
+        '.workshop-title': {
+          textTransform: 'uppercase',
+          fontWeight: 700,
+          fontSize: 20,
+          lineHeight: 1.3,
+          marginBottom: 6,
+          wordBreak: 'break-word',
+          '@screen sm': {
+            fontSize: 24,
+          }
+        },
+        '.workshop-author': {
+          fontSize: 18,
+          lineHeight: 1.3,
+          textTransform: 'uppercase',
+          marginBottom: 8,
+          '@screen sm': {
+            fontSize: 20,
+          }
+        },
+        '.workshop-description': {
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 300,
+          fontSize: 16,
+          lineHeight: 1.3,
+        },
       });
     },
+    function ({addBase}) {
+      addBase({
+        'body': {
+          '-webkit-font-smoothing': 'antialiased',
+          '-moz-osx-font-smoothing': 'grayscale',
+          'background-color': '#F4E4C3',
+        },
+      });
+    }
   ],
 };
 

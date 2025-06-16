@@ -82,7 +82,7 @@ export function Header() {
         ))}
       </div>
 
-      <div className="flex mx-auto sm:mx-0 pr-10 sm:p-0 relative sm:right-[5%] font-sans gap-2 text-[#F4E4C3]">
+      <div className="flex mx-auto sm:mx-0 pr-10 sm:p-0 relative sm:right-[5%] font-serif gap-2 text-[#F4E4C3]">
         <span
           onClick={() => changeLanguage("ru")}
           className={`cursor-pointer ${i18n.language === "ru" ? "text-[#C2410C]" : ""}`}
