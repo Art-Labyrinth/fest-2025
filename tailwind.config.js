@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['RocaOne', 'serif'],
+        sans: ['RocaOne', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
         deledda: ['Deledda', 'sans-serif'],
       },
       colors: {
