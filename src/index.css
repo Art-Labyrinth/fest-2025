@@ -4,36 +4,36 @@
 
 @font-face {
   font-family: 'Deledda';
-  src: url('../public/fonts/Deledda-Open-Light.woff2') format('woff2');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda-Open-Light.woff2') format('woff2');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Deledda';
-  src: url('../public/fonts/Deledda-Open-Regular.woff2') format('woff2');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda-Open-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Deledda';
-  src: url('../public/fonts/Deledda-Open-Semibold.woff2') format('woff2');
+  src: url('https://files.art-labyrinth.org/fonts/Deledda-Open-Semibold.woff2') format('woff2');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('../public/fonts/roca-one-regular.woff2') format('woff2');
+  src: url('https://files.art-labyrinth.org/fonts/roca-one-regular.woff2') format('woff2');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('../public/fonts/roca-one-bold.woff2') format('woff2');
+  src: url('https://files.art-labyrinth.org/fonts/roca-one-bold.woff2') format('woff2');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('../public/fonts/roca-one-black.woff2') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/roca-one-black.woff2') format('truetype');
   font-weight: 700;
 }
