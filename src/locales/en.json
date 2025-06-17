@@ -151,7 +151,8 @@
         "slider_12": "Can I bring alcohol?",
         "slider_13": "Can I smoke at the festival?",
         "slider_14": "Can I bring pets?",
-        "slider_15": "Can I bring children?"
+        "slider_15": "Can I bring children?",
+        "slider_16": "Pot solicita returnarea contribuției? Cum funcționează politica de returnare?"
       },
       "texts": {
         "text_1": "Each year, we choose a new location for the festival. This year, it will take place in the Șoldănești District, near the village of Poiana. You can get there in several ways. Please see the 'How to Get There' section for detailed information.",
@@ -168,7 +169,8 @@
         "text_12": "No, bringing or consuming alcohol is not in line with the festival’s traditions.",
         "text_13": "Smoking is prohibited in public areas and at main festival sites.",
         "text_14": "Yes, you can bring pets, but they must remain under your control.",
-        "text_15": "Of course! Art Labyrinth places great emphasis on families and children. A large children’s area with a varied program will be provided for kids."
+        "text_15": "Of course! Art Labyrinth places great emphasis on families and children. A large children’s area with a varied program will be provided for kids.",
+        "text_16": "The contribution can be refunded under the following conditions: 80% refund if requested 3 weeks before the festival, 50% refund if requested 2 weeks before, no refund for requests made less than 2 weeks before. Refunds will be processed after the festival once all documentation is completed."
       }
     },
     "org": {
