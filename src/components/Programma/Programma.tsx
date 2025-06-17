@@ -168,6 +168,9 @@ export default function Programma() {
           </div>
 
           <div className="font-serif mt-[70px] sm:mt-[140px] mb-[28px] uppercase leading-[1.3] tracking-wider text-2xl sm:text-4xl">
+            {t('programma.note_3')}
+          </div>
+          <div className="font-serif mt-[28px] mb-[28px] uppercase leading-[1.3] tracking-wider text-2xl sm:text-4xl">
             {t('programma.note_1')}
           </div>
           <div className="font-sans mb-[60px] sm:mb-[124px] tracking-wider font-bold text-2xl sm:text-[32px] leading-[1.3]">
