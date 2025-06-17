@@ -151,7 +151,8 @@
         "slider_12": "Pot aduce alcool?",
         "slider_13": "Pot fuma la festival?",
         "slider_14": "Pot aduce animale de companie?",
-        "slider_15": "Pot veni cu copilul?"
+        "slider_15": "Pot veni cu copilul?",
+        "slider_16": "Pot solicita returnarea contribuției? Cum funcționează politica de returnare?"
       },
       "texts": {
         "text_1": "În fiecare an alegem o nouă locație pentru festival. Anul acesta, evenimentul va avea loc în raionul Șoldănești, lângă satul Poiana. Puteți ajunge acolo în mai multe moduri. Vă rugăm să consultați secțiunea „Cum să ajungeți” pentru informații detaliate.",
@@ -168,7 +169,8 @@
         "text_12": "Nu, aducerea sau consumul de alcool nu este în conformitate cu tradițiile festivalului.",
         "text_13": "Fumatul este interzis în spațiile publice și în zonele principale ale festivalului.",
         "text_14": "Da, puteți aduce animale de companie, dar acestea trebuie să fie sub controlul dumneavoastră.",
-        "text_15": "Desigur! Art Labyrinth acordă o mare atenție familiilor și copiilor. Pentru cei mici va fi amenajată o zonă mare pentru copii, cu un program variat."
+        "text_15": "Desigur! Art Labyrinth acordă o mare atenție familiilor și copiilor. Pentru cei mici va fi amenajată o zonă mare pentru copii, cu un program variat.",
+        "text_16": "Contribuția poate fi returnată cu următoarele condiții: cu 3 săptămâni înainte de festival - 80%, cu 2 săptămâni înainte - 50%, mai puțin de 2 săptămâni - nu se returnează. Banii vor fi returnați după finalizarea festivalului, odată ce toate documentele sunt procesate."
       }
     },
     "org": {
@@ -253,6 +255,12 @@
       "button": "FAC O CONTRIBUȚIE",
       "warnings": [
         "De la 1 iulie, contribuția poate fi făcută doar la intrarea în festival — 800 lei."
+      ],
+      "tiraspol": [
+        "Locuitorii din Transnistria: Loznîskaia Liubov Viktorovna",
+        "Serviciul de transfer APB \"Clover\": +373(778)18-505",
+        "Numărul cardului: 9104 0160 4700 4918",
+        "În comentariul transferului — indică numele și emailul tău (sau trimite aceste date Liubei în Telegram)"
       ],
       "guest": "Vizitator",
       "note": "Alege mai jos tipul de contribuție care ți se potrivește. Dacă nu îți permiți să contribui, alege opțiunea „Situație complexă” și descrie pe scurt situația ta în formular.",

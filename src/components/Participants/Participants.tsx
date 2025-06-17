@@ -142,7 +142,7 @@ function Participants() {
             {/* Right part: sliders */}
             <div className="md:w-1/2">
               <AccordionSlider
-                items={Array.from({ length: 15 }, (_, i) => ({
+                items={Array.from({ length: 16 }, (_, i) => ({
                   title: `participants.guest.titles.slider_${i + 1}`,
                   text: `participants.guest.texts.text_${i + 1}`,
                 }))}

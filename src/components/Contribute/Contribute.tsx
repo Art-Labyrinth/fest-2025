@@ -253,6 +253,11 @@ function Contribute() {
                                         <p key={index}>{warning}</p>
                                     ))}
                                 </div>
+                                <div className="text-brown p-4 my-4 font-semibold shadow-md rounded">
+                                    {(t("contribute.pricing.tiraspol", { returnObjects: true }) as String[]).map((warning, index) => (
+                                        <p key={index}>{warning}</p>
+                                    ))}
+                                </div>
                                 <p className="font-deledda">
                                     {t("contribute.pricing.note")}
                                 </p>
