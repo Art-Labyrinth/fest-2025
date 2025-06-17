@@ -10,9 +10,13 @@ export default function Programma() {
       <div className="bg-main">
         <Header/>
       </div>
-      <div className="content-workshops px-4 w-[1730px] max-w-[100%] mt-0 mb-0 ml-auto mr-auto">
-        <div className="text-center text-3xl sm:text-4xl tracking-widest-text font-serif mt-[50px] sm:mt-[95px] mb-[40px] sm:mb-[80px] ml-auto mr-auto break-all">
-          {t("programma.header")}
+      <div className="flex align-middle justify-center w-[100%] max-w-[100%] h-[37vw] md:h-[29vw] ml-auto mr-auto bg-cover" style={{backgroundImage: "url(/Programma/banner.jpg)"}}>
+        <h1 className="text-[#F4E4C3] self-center text-3xl sm:text-[40px] font-serif uppercase font-bold">{t("programma.header")}</h1>
+      </div>
+      <div className="px-4 w-[1730px] max-w-[100%] mt-0 mb-0 ml-auto mr-auto">
+
+        <div className="uppercase text-center text-3xl sm:text-4xl tracking-widest-text font-serif mt-[50px] sm:mt-[95px] mb-[40px] sm:mb-[80px] ml-auto mr-auto break-all">
+          {t("programma.header_1")}
         </div>
 
         <div className="columns-1 lg:columns-2 gap-[40px]">
