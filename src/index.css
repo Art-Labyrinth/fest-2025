@@ -34,6 +34,32 @@
 
 @font-face {
   font-family: 'RocaOne';
-  src: url('https://files.art-labyrinth.org/fonts/RocaOne/roca-one-black.woff2') format('truetype');
+  src: url('https://files.art-labyrinth.org/fonts/RocaOne/roca-one-black.woff2') format('woff2');
   font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: url('https://files.art-labyrinth.org/fonts/Evolventa/Evolventa-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: url('https://files.art-labyrinth.org/fonts/Evolventa/Evolventa-Oblique.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: url('https://files.art-labyrinth.org/fonts/Evolventa/Evolventa-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: url('https://files.art-labyrinth.org/fonts/Evolventa/Evolventa-BoldOblique.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
 }
