@@ -177,7 +177,9 @@ export default function Programma() {
             {t('programma.note_4')}
           </div>
 
-          <div className="font-sans mb-[60px] sm:mb-[124px] tracking-wider font-bold text-2xl sm:text-[32px] leading-[1.3]">
+
+          <div className="font-evolventa mb-[60px] sm:mb-[124px] tracking-wider font-bold text-2xl sm:text-[32px] leading-[1.3]">
+
             {t('programma.note_2')}
           </div>
 

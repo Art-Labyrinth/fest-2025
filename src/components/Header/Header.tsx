@@ -31,6 +31,7 @@ export function Header() {
     { path: "/gallery/", label: t("menu.gallery") },
     { path: "/program/", label: t("menu.program") },
     { path: "/contribute/", label: t("contribute.hero_1.header") },
+    { path: "/gettingthere/", label: t("gettingthere.header") },
     { path: "/contacts/", label: t("menu.contacts") },
   ];
 
