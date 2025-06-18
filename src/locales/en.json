@@ -338,10 +338,13 @@
     "contact_button": "CONTACT US"
   },
   "programma": {
-    "header": "WORKSHOPS",
+    "header": "Program",
+    "header_1": "WORKSHOPS",
     "header_2": "Stage Programs",
-    "note_1": "+KIDS AREA, TEA AND SPORTS ZONE",
-    "note_2": "*The program is subject to additions and changes!",
+    "note_1": "+ KIDS AREA, TEA AND SPORTS ZONE",
+    "note_2": "* The program is subject to additions and changes!",
+    "note_3": "+ Temazcal (Mexican herbal steam bath)",
+    "note_4": "+ Fantasy zone (for fans of myths and fairytale worlds)",
     "workshop_section_name_1": "Yoga and body practices",
     "workshop_section_name_2": "Massage and body techniques",
     "workshop_section_name_3": "CONCERTS",

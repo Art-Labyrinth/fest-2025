@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "../Header/Header";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import { API_URL } from "src/config";
 import { useTranslation } from 'react-i18next';
 

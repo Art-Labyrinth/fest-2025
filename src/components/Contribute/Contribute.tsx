@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Header } from "../Header/Header";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import { useTranslation } from 'react-i18next';
 import { API_URL } from "src/config";
 import i18n from "src/i18n";

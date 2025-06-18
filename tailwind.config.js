@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['RocaOne', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        serif: ['RocaOne', 'serif'],
+        sans: ['Inter', 'sans-serif'],
         deledda: ['Deledda', 'sans-serif'],
       },
       colors: {
@@ -301,6 +301,7 @@ module.exports = {
           '-webkit-font-smoothing': 'antialiased',
           '-moz-osx-font-smoothing': 'grayscale',
           'background-color': '#F4E4C3',
+          'font-family': 'RocaOne, serif',
         },
       });
     }

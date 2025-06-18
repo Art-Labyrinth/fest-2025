@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="17d65181-d17e-4c38-b7f4-7347a6a4e58f" name="Changes" comment="Changes in content of Programma">
+      <change afterPath="$PROJECT_DIR$/public/Footer/numina.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Footer/shanti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contacts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contacts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contribute/Contribute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contribute/Contribute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contribute/Fail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contribute/Fail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contribute/Success.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contribute/Success.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Gallery/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery/Gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Participants/Participants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Participants/Participants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Programma/Programma.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Programma/Programma.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.2.7/bin/php" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ybBIjgR6X4dEwFdBlN1mQX6bLf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/oce4ka/Documents/work/fest-2025/public/Footer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/oce4ka/Documents/work/fest-2025/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/Footer" />
+      <recent name="$PROJECT_DIR$/public/Main" />
+      <recent name="$PROJECT_DIR$/public/Programma" />
+      <recent name="$PROJECT_DIR$/public/fonts" />
+      <recent name="$PROJECT_DIR$/public/assets/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14475.35" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17d65181-d17e-4c38-b7f4-7347a6a4e58f" name="Changes" comment="" />
+      <created>1750093314567</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750093314567</updated>
+      <workItem from="1750093315995" duration="23631000" />
+      <workItem from="1750118006329" duration="970000" />
+      <workItem from="1750118989831" duration="23438000" />
+    </task>
+    <task id="LOCAL-00001" summary="Page Programma, new responsive styles have been added. &#10;Body background has been corrected.&#10;Fonts have been converted to woff2 and added to &quot;public&quot;. &#10;Attention! src: url('../public/fonts/roca-one-bold.woff2') instead of https://files.art-labyrinth.org/fonts/ (Can cause 404 error)&#10;Sans-serif has been corrected to sans in tailwind config and in the header (font-sans, font-serif).">
+      <option name="closed" value="true" />
+      <created>1750108393398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750108393398</updated>
+    </task>
+    <task id="LOCAL-00002" summary="The translations for romanian and english have been added (should be checked by content manager).&#10;Small fix in header responsiveness.">
+      <option name="closed" value="true" />
+      <created>1750116692697</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750116692697</updated>
+    </task>
+    <task id="LOCAL-00003" summary="The translations for romanian and english have been added (should be checked by content manager).&#10;Small fix in header responsiveness.">
+      <option name="closed" value="true" />
+      <created>1750119046625</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750119046625</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Font URLs have been changed, new fonts have been uploaded to file manager, old font files have been removed from src/fonts.">
+      <option name="closed" value="true" />
+      <created>1750157033140</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750157033140</updated>
+    </task>
+    <task id="LOCAL-00005" summary="The top banner for page &quot;Programma&quot; has been added.">
+      <option name="closed" value="true" />
+      <created>1750159394182</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750159394182</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Small fix in font URLs.">
+      <option name="closed" value="true" />
+      <created>1750160492228</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750160492228</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Small fix in fonts.">
+      <option name="closed" value="true" />
+      <created>1750167117879</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750167117879</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Small fix in Programma.tsx.">
+      <option name="closed" value="true" />
+      <created>1750167158295</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750167158295</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Small fix in Fonts.">
+      <option name="closed" value="true" />
+      <created>1750168155036</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750168155036</updated>
+    </task>
+    <task id="LOCAL-00010" summary="header background WIP">
+      <option name="closed" value="true" />
+      <created>1750247482834</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750247482834</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Changes in content of Programma">
+      <option name="closed" value="true" />
+      <created>1750262771136</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1750262771136</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Page Programma, new responsive styles have been added. &#10;Body background has been corrected.&#10;Fonts have been converted to woff2 and added to &quot;public&quot;. &#10;Attention! src: url('../public/fonts/roca-one-bold.woff2') instead of https://files.art-labyrinth.org/fonts/ (Can cause 404 error)&#10;Sans-serif has been corrected to sans in tailwind config and in the header (font-sans, font-serif)." />
+    <MESSAGE value="The translations for romanian and english have been added (should be checked by content manager).&#10;Small fix in header responsiveness." />
+    <MESSAGE value="Font URLs have been changed, new fonts have been uploaded to file manager, old font files have been removed from src/fonts." />
+    <MESSAGE value="The top banner for page &quot;Programma&quot; has been added." />
+    <MESSAGE value="Small fix in font URLs." />
+    <MESSAGE value="Small fix in fonts." />
+    <MESSAGE value="Small fix in Programma.tsx." />
+    <MESSAGE value="Small fix in Fonts." />
+    <MESSAGE value="header background WIP" />
+    <MESSAGE value="Changes in content of Programma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in content of Programma" />
+  </component>
+</project>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../Header/Header";
 import { useTranslation } from "react-i18next";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 
 export default function Success() {
     const { t } = useTranslation();
