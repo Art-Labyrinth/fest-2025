@@ -9,6 +9,7 @@ module.exports = {
         serif: ['RocaOne', 'serif'],
         sans: ['Inter', 'sans-serif'],
         deledda: ['Deledda', 'sans-serif'],
+        evolventa: ['Evolventa', 'sans-serif'],
       },
       colors: {
         orange: {
@@ -292,6 +293,36 @@ module.exports = {
           fontWeight: 300,
           fontSize: 16,
           lineHeight: 1.3,
+        },
+
+        // Page Getting There
+
+        '.ride-day': {
+          fontFamily: 'Evolventa, sans-serif',
+          fontWeight: 700,
+          fontSize: 22,
+          lineHeight: 1.4,
+          marginBottom: 8,
+          '@screen sm': {
+            fontSize: 28,
+          }
+        },
+        '.ride-list': {
+          marginBottom: 30,
+          listStyle: 'disc',
+          listStylePosition: 'inside',
+          marginLeft: 15,
+          '@screen sm': {
+            marginBottom: 40,
+          }
+        },
+        '.ride-time': {
+          fontFamily: 'Evolventa, sans-serif',
+          fontSize: 22,
+          lineHeight: 1.4,
+          '@screen sm': {
+            fontSize: 28,
+          }
         },
       });
     },

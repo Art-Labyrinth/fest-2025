@@ -620,6 +620,9 @@
     "workshop_description_806": "Exploring the four elements through movement",
     "workshop_title_901": "Firewalking / Nail Standing",
     "workshop_author_901": "Gennady Porubin",
-    "workshop_description_901": "Powerful practices for transformation and acceptance"
+    "workshop_description_901": "Powerful practices for transformation and acceptance",
+    "gettingthere": {
+      "header": "Getting there"
+    }
   }
 }

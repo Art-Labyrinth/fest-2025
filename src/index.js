@@ -10,6 +10,7 @@ import Success from "./components/Contribute/Success";
 import Fail from "./components/Contribute/Fail";
 import Gallery from "./components/Gallery/Gallery";
 import Programma from "./components/Programma/Programma";
+import GettingThere from "./components/GettingThere/GettingThere";
 import NotFound from "./components/NotFound";
 import { fetchCsrfToken } from "./utils";
 
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/success",
     element: <Success />,
+  },
+  {
+    path: "/gettingthere",
+    element: <GettingThere />,
   },
   {
     path: "/fail",

@@ -616,6 +616,9 @@
     "workshop_description_806": "Explorarea celor patru elemente prin mișcare",
     "workshop_title_901": "Mers pe foc / Stat pe cuie",
     "workshop_author_901": "Ghenadi Porubin",
-    "workshop_description_901": "Practici puternice pentru transformare și acceptare"
+    "workshop_description_901": "Practici puternice pentru transformare și acceptare",
+    "gettingthere": {
+      "header": "Cum ajungi"
+    }
   }
 }
