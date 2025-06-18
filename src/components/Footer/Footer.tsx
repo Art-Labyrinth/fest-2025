@@ -51,8 +51,8 @@ export default function Footer({backgroundColor = "bg-main"}) {
           </div>
         </div>
         <div className="flex ms-[12px] sm:ms-[14px] gap-[12px] sm:gap-[14px] justify-items-end justify-self-end flex-shrink-0 justify-end align-middle">
-          <a className="flex-shrink-0 self-center" href="https://numina.md/"><img className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px]" src="/Footer/numina.jpg" alt="Numina"/></a>
-          <a className="flex-shrink-0 self-center" href="https://www.instagram.com/shanti.space.md"><img className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px]" src="/Footer/shanti.png" alt="Shanti"/></a>
+          <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://numina.md/"><img className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px]" src="/Footer/numina.jpg" alt="Numina"/></a>
+          <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.instagram.com/shanti.space.md"><img className="w-[50px] sm:w-[150px] h-[50px] sm:h-[150px]" src="/Footer/shanti.png" alt="Shanti"/></a>
         </div>
       </div>
     </footer>
