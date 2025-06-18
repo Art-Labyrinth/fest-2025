@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Header } from "../Header/Header";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 
 const verticalPhotos = [
     3, 4, 5, 6, 9, 11, 15, 18,

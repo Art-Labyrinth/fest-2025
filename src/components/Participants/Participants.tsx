@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Header } from "../Header/Header";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from "react-router-dom";
 import AccordionSlider from "./AccordionSlider";
