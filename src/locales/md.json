@@ -1,4 +1,10 @@
 {
+  "common": {
+    "price_label": "Prețul biletului",
+    "price_label_short": "Preț",
+    "to": "Dus",
+    "back": "Întors"
+  },
   "main": {
     "festival_dates": "10–13 iulie 2025",
     "hashtags": [
@@ -616,9 +622,108 @@
     "workshop_description_806": "Explorarea celor patru elemente prin mișcare",
     "workshop_title_901": "Mers pe foc / Stat pe cuie",
     "workshop_author_901": "Ghenadi Porubin",
-    "workshop_description_901": "Practici puternice pentru transformare și acceptare",
-    "gettingthere": {
-      "header": "Cum ajungi"
+    "workshop_description_901": "Practici puternice pentru transformare și acceptare"
+  },
+  "gettingthere": {
+    "header": "Cum să ajungi",
+    "our_transport_title": "Cursele noastre",
+    "our_transport_subtitle": "Chișinău - Art Labirint",
+    "pmr_transport_title": "Cursele noastre",
+    "pmr_transport_subtitle": "Tiraspol - Art Labirint",
+    "public_transport_title": "Curse publice",
+    "public_transport_subtitle": "Autogara de Nord",
+    "by_car_title": "Cu propriile forțe",
+    "by_car_subtitle": "Mașină sau autostop",
+    "our_transport": {
+      "title": "Cursele noastre (Circus Chișinău - Art Labyrinth)",
+      "subtitle": "(Capacitate - 20 locuri pe scaune + câteva pe bârne)",
+      "days": {
+        "Mi 09.06.25": [
+          "18:00 Chișinău → Art Labyrinth"
+        ],
+        "Jo 10.06.25": [
+          "12:00 Chișinău → Art Labyrinth",
+          "18:00 Chișinău → Art Labyrinth",
+          "15:00 Art Labyrinth → Chișinău"
+        ],
+        "Vi 11.06.25": [
+          "07:00, 13:00, 18:00 Chișinău → Art Labyrinth",
+          "10:00, 16:00 Art Labyrinth → Chișinău"
+        ],
+        "Sâ 12.06.25": [
+          "07:00, 13:00 Chișinău → Art Labyrinth",
+          "10:00, 16:00, 20:00 Art Labyrinth → Chișinău"
+        ],
+        "Du 13.06.25": [
+          "07:00-11:00 Art Labyrinth → Chișinău",
+          "19:00-21:00 Art Labyrinth → Chișinău"
+        ],
+        "Lu 14.06.25": [
+          "07:00 Art Labyrinth → Chișinău"
+        ]
+      },
+      "price": "150 lei, copii sub 12 ani gratuit."
+    },
+    "tiraspol_transport": {
+      "title": "Cursele noastre Tiraspol - Art Labyrinth",
+      "subtitle": "(Vezi în ordinea completării microbuzului)",
+      "days": {
+        "Vi 09.06.25": [
+          "9:00 Tiraspol → Art Labyrinth"
+        ],
+        "Du 13.06.25": [
+          "12:00 Art Labyrinth → Tiraspol"
+        ]
+      },
+      "price": "350 ruble dus-întors.",
+      "prepaymentInfo": "Pre-vânzarea se face pe baza unui avans 100% prin telefon (telefon) până la 8 iulie!",
+      "paymentMethodsTitle": "Metode de plată:",
+      "methodCard": "-Transfer pe card, (datele curatorului)",
+      "methodCash": "-Cash la NXNHouse, joi, vineri și sâmbătă între 18:00 și 23:00, str. Eminescu 36, Chișinău",
+      "questionsTitle": "Pentru întrebări",
+      "questionsDesc": "despre achiziționarea biletelor și circulația transportului nostru:",
+      "telegramCoordinator": "-(Telegram coordonator)",
+      "telegramChannel": "-Înscrierea se face și în canalul nostru de Telegram pentru curse! ",
+      "telegramLinkText": "https://t.me/routes_artlab2025",
+      "telegramLinkHref": "https://t.me/routes_artlab2025"
+    },
+    "public_transport": {
+      "title": "Curse publice",
+      "subtitle": "(Autogara Nord)",
+      "forward": [
+        "Chișinău → Poiana: 12:50, 14:30",
+        "Chișinău → Șoldănești: 6:50 - 18:05 la fiecare 20-30 min",
+        "Șoldănești → Poiana: 11:00 sau taxi ~100 lei",
+        "Șoldănești → Țarevca: în jurul orei 19:00"
+      ],
+      "back": [
+        "Poiana → Chișinău: 5:45, 6:15",
+        "Poiana → Șoldănești: 6:30",
+        "Șoldănești → Chișinău: 5:15 - 16:30 la fiecare 20-30 min (ultimele la 15:40 și 16:30)"
+      ],
+      "price": "aproximativ 80-100 lei."
+    },
+    "by_car": {
+      "title": "Cu mașina personală sau autostopul",
+      "subtitle": "Traseu: Chișinău → Orhei → Rezina → Șoldănești → Alcedar → Poiana.",
+      "directions": [
+        "După Orhei, la bifurcație, stânga spre Șoldănești",
+        "La capătul Șoldănești, dreapta (spre Șestaci, Vadul-Rașcov, Cămenca)",
+        "Țineți drumul principal, prin Alcedar la stânga spre Poiana, încă 3 km",
+        "La intrarea în Poiana, reper — desene cu lebede și căprioare, virați dreapta"
+      ],
+      "parking_prefix": "Parcare: ",
+      "parking_link_href": "https://maps.app.goo.gl/Fo7jLr3JaDoKtQJX6",
+      "festival_prefix": "Festival: ",
+      "festival_link_href": "https://maps.app.goo.gl/X1GE81ZTqvUYxY928",
+      "parking": "La locul festivalului va fi parcare pazită cu plată, cu permanență 24/7!",
+      "price": "50 lei - pe zi; 75 lei - 2 zile; 100 lei - 3 zile."
+    },
+    "rideshare": {
+      "title": "Călătorii comune și împărțirea mașinii",
+      "telegram": "Grup Telegram:",
+      "telegram_href": "https://t.me/+wpqpF2uV3-IzZTQ6",
+      "note": "Scrieți clar și concis: câți sunteți, când plecați. Șoferii să evidențieze anunțurile lor cu caractere aldine."
     }
   }
 }
