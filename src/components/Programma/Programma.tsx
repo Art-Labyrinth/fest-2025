@@ -173,9 +173,15 @@ export default function Programma() {
           <div className="font-serif mt-[28px] mb-[28px] uppercase leading-[1.3] tracking-wider text-2xl sm:text-4xl">
             {t('programma.note_1')}
           </div>
+          <div className="font-serif mt-[28px] mb-[28px] uppercase leading-[1.3] tracking-wider text-2xl sm:text-4xl">
+            {t('programma.note_4')}
+          </div>
+
           <div className="font-sans mb-[60px] sm:mb-[124px] tracking-wider font-bold text-2xl sm:text-[32px] leading-[1.3]">
             {t('programma.note_2')}
           </div>
+
+
           <img className="width-[692px] max-w-[100%] ml-auto mr-auto" src="/Programma/tree.png" alt=""/>
 
         </div>
