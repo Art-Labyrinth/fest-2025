@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import { useTranslation } from 'react-i18next';
 import { API_URL } from "src/config";
 import i18n from "src/i18n";
-import { useLocation } from "react-router-dom";
+import { SendFacebookEvent } from "./SendFacebookEvent";
 
 function Contribute() {
     const { t } = useTranslation();
@@ -19,10 +19,6 @@ function Contribute() {
     });
 
     const [error, setError] = useState<string | null>(null);
-    const location = useLocation();
-    const params = new URLSearchParams(location.search);
-    const debug = params.get("debug");
-    // const fbclid = params.get("fbclid");
 
     interface Ticket {
         category: "basic" | "preferential" | "family" | "special";
@@ -105,6 +101,22 @@ function Contribute() {
                     order_id: responseData?.order_id,
                     bpay_url: responseData?.redirect_url,
                 });
+                SendFacebookEvent({
+                    pixelId: "1220572229100482",
+                    eventName: "Lead",
+                    value: totalPrice,
+                    currency: "MDL",
+                    contentName: newTicket.category,
+                    contentIds: String(newTicket.count),
+                    externalId: String(responseData?.order_id),
+                    userData: {
+                        email: newTicket.email,
+                        phone: newTicket.phone,
+                        firstName: newTicket.name.trim().split(" ")[0] || "",
+                        lastName: newTicket.name.trim().split(" ")[1] || "",
+                        externalId: String(responseData?.order_id),
+                    },
+                });
             } else {
                 throw new Error(`HTTP error! status: ${response.statusText}`);
             }
@@ -172,14 +184,6 @@ function Contribute() {
                         {t("contribute.hero_1.header")}
                     </h1>
                     <div className="max-w-xl mx-auto p-6 text-[#F4E4C3]">
-                        {debug && (
-                            <p className="text-lg font-extrabold text-red-500 bg-white">
-                                Debug mode is ON:
-                                <br /> {(new Date()).toLocaleDateString()} {(new Date()).toLocaleTimeString()}
-                                <br /> {priceChangeDate.toLocaleDateString()} {priceChangeDate.toLocaleTimeString()}
-                                <br /> {new Date() < priceChangeDate ? "True" : "False"}
-                            </p>
-                        )}
                         <p className="text-lg font-extrabold">
                             {t("contribute.hero_1.text_1")}
                         </p>
