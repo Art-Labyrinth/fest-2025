@@ -17,6 +17,11 @@ import { fetchCsrfToken } from "./utils";
 import "./index.css";
 import "./i18n";
 
+const fbclid = (new URLSearchParams(window.location.search)).get("fbclid");
+if (fbclid) {
+  localStorage.setItem("fbclid", fbclid);
+}
+
 const router = createBrowserRouter([
   {
     path: "/",
