@@ -1,7 +1,9 @@
+name: al-fest-2025
+
 services:
-  art-lab-fest-2025:
+  al-fest-2025:
     build: .
-    container_name: art-lab-fest-2025
+    container_name: al-fest-2025
     restart: on-failure:5
 
     ports:

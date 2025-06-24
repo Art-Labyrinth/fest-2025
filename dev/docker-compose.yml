@@ -1,7 +1,9 @@
+name: al-fest-2025-dev
+
 services:
-  dev-al-fest-2025:
+  al-fest-2025-dev:
     build: ..
-    container_name: dev-al-fest-2025
+    container_name: al-fest-2025-dev
     restart: on-failure:5
 
     ports:
