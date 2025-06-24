@@ -646,17 +646,11 @@
           "18:00 Chisinau → Art Labyrinth"
         ],
         "Thu 10.07.25": [
-          "12:00 Chisinau → Art Labyrinth",
-          "18:00 Chisinau → Art Labyrinth",
-          "15:00 Art Labyrinth → Chisinau"
+          "17:00 Chisinau → Art Labyrinth"
         ],
         "Fri 11.07.25": [
           "10:00, 14:00 Chisinau → Art Labyrinth",
           "14:00, 18:00 Art Labyrinth → Chisinau"
-        ],
-        "Sat 12.07.25": [
-          "07:00, 13:00 Chisinau → Art Labyrinth",
-          "10:00, 16:00, 20:00 Art Labyrinth → Chisinau"
         ],
         "Sun 13.07.25": [
           "10:00 Art Labyrinth → Chisinau",
@@ -681,13 +675,19 @@
         ]
       },
       "price": "350 rubles round trip.",
-      "prepaymentInfo": "Pre-sale is made based on 100% prepayment by phone (Polina +373 79 388 145) until July 8!",
+      "prepaymentInfo": "Pre-sale is based on 100% prepayment by phone (Palina ",
+      "prepaymentInfoTelSpaces": "+373 79 388 145",
+      "prepaymentInfoTel": "+37379388145",
+      "prepaymentInfoEnd": ") until July 8!",
       "paymentMethodsTitle": "Payment methods:",
-      "methodCard": "-Bank transfer via MIA (+373 79 388 145)",
-      "methodCash": "-Cash at NXNHouse, on Thursday, Friday and Saturday from 18:00 to 23:00, 36 Eminescu St., Chisinau",
+      "methodCard": "-Bank transfer via MIA, ",
+      "methodCardPhoneSpace": "+373 79 388 145",
+      "methodCardPhone": "+37379388145",
+      "methodCash": "-Cash at NXNHouse, on Thursday, Friday, and Saturday from 18:00 to 23:00, 36 Eminescu St., Chișinău",
       "questionsTitle": "For questions",
-      "questionsDesc": "about ticket purchase and our transport schedule:",
-      "telegramCoordinator": "-@palinaaaaaaaa",
+      "questionsDesc": "about ticket purchase and our transportation:",
+      "telegramCoordinator": "@palinaaaaaaaa",
+      "telegramCoordinatorLink": "https://t.me/palinaaaaaaaa",
       "telegramChannel": "-Registration is also done in our routes Telegram channel! ",
       "telegramLinkText": "https://t.me/routes_artlab2025",
       "telegramLinkHref": "https://t.me/routes_artlab2025"

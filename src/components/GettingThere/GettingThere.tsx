@@ -84,6 +84,7 @@ export default function GettingThere() {
               </ul>
             </React.Fragment>
           ))}
+          <br/>
         </div>
 
         <div className="font-evolventa italic text-[22px] sm:text-[28px] mb-[30px] sm:mb-[60px]">
@@ -93,6 +94,14 @@ export default function GettingThere() {
         <div className="p-[20px] sm:p-[30px] border-[2px] border-black mb-[40px] sm:mb-[65px]">
           <p className="text-[22px] sm:text-[28px] font-evolventa mb-[8px]">
             {t("gettingthere.tiraspol_transport.prepaymentInfo")}
+            <a
+              className="underline hover:no-underline break-all"
+              target="_blank"
+              rel="noreferrer noopener"
+              href={`tel:${t("gettingthere.tiraspol_transport.prepaymentInfoTel")}`}>
+              {t("gettingthere.tiraspol_transport.prepaymentInfoTelSpaces")}
+            </a>
+            {t("gettingthere.tiraspol_transport.prepaymentInfoEnd")}
           </p>
 
           <p className="text-[22px] sm:text-[28px] font-evolventa">
@@ -101,6 +110,13 @@ export default function GettingThere() {
 
           <p className="text-[22px] sm:text-[28px] font-evolventa">
             {t("gettingthere.tiraspol_transport.methodCard")}
+            <a
+              className="underline hover:no-underline break-all"
+              target="_blank"
+              rel="noreferrer noopener"
+              href={`tel:${t("gettingthere.tiraspol_transport.methodCardPhone")}`}>
+              ({t("gettingthere.tiraspol_transport.methodCardPhoneSpace")})
+            </a>
           </p>
 
           <p className="text-[22px] sm:text-[28px] font-evolventa mb-[8px]">
@@ -113,19 +129,14 @@ export default function GettingThere() {
           </p>
 
           <p className="text-[22px] sm:text-[28px] font-evolventa">
+            -Telegram: <a
+            className="underline hover:no-underline break-all"
+            target="_blank"
+            rel="noreferrer noopener"
+            href={t("gettingthere.tiraspol_transport.telegramCoordinatorLink")}
+          >
             {t("gettingthere.tiraspol_transport.telegramCoordinator")}
-          </p>
-
-          <p className="text-[22px] sm:text-[28px] font-evolventa">
-            {t("gettingthere.tiraspol_transport.telegramChannel")}
-            <a
-              className="underline hover:no-underline break-all"
-              target="_blank"
-              rel="noreferrer noopener"
-              href={t("gettingthere.tiraspol_transport.telegramLinkHref")}
-            >
-              {t("gettingthere.tiraspol_transport.telegramLinkText")}
-            </a>
+          </a>
           </p>
         </div>
 
