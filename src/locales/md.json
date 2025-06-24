@@ -638,51 +638,52 @@
       "title": "Cursele noastre (Circus Chișinău - Art Labyrinth)",
       "subtitle": "(Capacitate - 20 locuri pe scaune + câteva pe bârne)",
       "days": {
-        "Mi 09.06.25": [
+        "Mi 09.07.25": [
           "18:00 Chișinău → Art Labyrinth"
         ],
-        "Jo 10.06.25": [
+        "Jo 10.07.25": [
           "12:00 Chișinău → Art Labyrinth",
           "18:00 Chișinău → Art Labyrinth",
           "15:00 Art Labyrinth → Chișinău"
         ],
-        "Vi 11.06.25": [
-          "07:00, 13:00, 18:00 Chișinău → Art Labyrinth",
-          "10:00, 16:00 Art Labyrinth → Chișinău"
+        "Vi 11.07.25": [
+          "10:00, 14:00 Chișinău → Art Labyrinth",
+          "14:00, 18:00 Art Labyrinth → Chișinău"
         ],
-        "Sâ 12.06.25": [
+        "Sâ 12.07.25": [
           "07:00, 13:00 Chișinău → Art Labyrinth",
           "10:00, 16:00, 20:00 Art Labyrinth → Chișinău"
         ],
-        "Du 13.06.25": [
-          "07:00-11:00 Art Labyrinth → Chișinău",
-          "19:00-21:00 Art Labyrinth → Chișinău"
+        "Du 13.07.25": [
+          "10:00 Art Labyrinth → Chișinău",
+          "14:00 Art Labyrinth → Chișinău",
+          "19:00 Art Labyrinth → Chișinău"
         ],
-        "Lu 14.06.25": [
-          "07:00 Art Labyrinth → Chișinău"
+        "Lu 14.07.25": [
+          "08:00 Art Labyrinth → Chișinău"
         ]
       },
-      "price": "150 lei, copii sub 12 ani gratuit."
+      "price": "175 MDL (300 MDL dus-întors), gratuit pentru copiii sub 12 ani."
     },
     "tiraspol_transport": {
       "title": "Cursele noastre Tiraspol - Art Labyrinth",
       "subtitle": "(Vezi în ordinea completării microbuzului)",
       "days": {
-        "Vi 09.06.25": [
+        "Vi 09.07.25": [
           "9:00 Tiraspol → Art Labyrinth"
         ],
-        "Du 13.06.25": [
+        "Du 13.07.25": [
           "12:00 Art Labyrinth → Tiraspol"
         ]
       },
       "price": "350 ruble dus-întors.",
-      "prepaymentInfo": "Pre-vânzarea se face pe baza unui avans 100% prin telefon (telefon) până la 8 iulie!",
+      "prepaymentInfo": "Pre-vânzarea se face pe baza unei plăți în avans de 100% prin telefon (Polina +373 79 388 145) până pe 8 iulie!",
       "paymentMethodsTitle": "Metode de plată:",
-      "methodCard": "-Transfer pe card, (datele curatorului)",
-      "methodCash": "-Cash la NXNHouse, joi, vineri și sâmbătă între 18:00 și 23:00, str. Eminescu 36, Chișinău",
+      "methodCard": "-Transfer pe card prin MIA, (+373 79 388 145)",
+      "methodCash": "-Cash la NXNHouse, joi, vineri și sâmbătă între orele 18:00 și 23:00, str. Eminescu 36, Chișinău",
       "questionsTitle": "Pentru întrebări",
       "questionsDesc": "despre achiziționarea biletelor și circulația transportului nostru:",
-      "telegramCoordinator": "-(Telegram coordonator)",
+      "telegramCoordinator": "-@palinaaaaaaaa",
       "telegramChannel": "-Înscrierea se face și în canalul nostru de Telegram pentru curse! ",
       "telegramLinkText": "https://t.me/routes_artlab2025",
       "telegramLinkHref": "https://t.me/routes_artlab2025"

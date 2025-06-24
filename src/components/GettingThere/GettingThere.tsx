@@ -90,30 +90,6 @@ export default function GettingThere() {
           <strong>{t("common.price_label")}</strong> - {t("gettingthere.our_transport.price")}
         </div>
 
-        <hr className="h-px my-8 bg-[#35190466] border-0 dark:bg-[#35190466]"/>
-
-        <h2 id="our-transport-pmr" className="font-bold text-[30px] sm:text-[40px] leading-[1.08] mt-[34px] sm:mt-[54px] mb-[3px] sm:mb-[3px]">
-          {t("gettingthere.tiraspol_transport.title")}
-        </h2>
-        <h3 className="text-[22px] sm:text-[28px] font-evolventa mb-[25px] sm:mb-[40px]">
-          {t("gettingthere.tiraspol_transport.subtitle")}
-        </h3>
-
-        {Object.entries(t("gettingthere.tiraspol_transport.days", {returnObjects: true})).map(([day, rides]) => (
-          <React.Fragment key={day}>
-            <h6 className="ride-day">{day}</h6>
-            <ul className="ride-list">
-              {rides.map((ride: string, index: number) => (
-                <li key={index} className="ride-time">{ride}</li>
-              ))}
-            </ul>
-          </React.Fragment>
-        ))}
-
-        <div className="font-evolventa italic text-[22px] sm:text-[28px] mb-[30px] sm:mb-[60px]">
-          <strong>{t("common.price_label")}</strong> - {t("gettingthere.tiraspol_transport.price")}
-        </div>
-
         <div className="p-[20px] sm:p-[30px] border-[2px] border-black mb-[40px] sm:mb-[65px]">
           <p className="text-[22px] sm:text-[28px] font-evolventa mb-[8px]">
             {t("gettingthere.tiraspol_transport.prepaymentInfo")}
@@ -151,6 +127,30 @@ export default function GettingThere() {
               {t("gettingthere.tiraspol_transport.telegramLinkText")}
             </a>
           </p>
+        </div>
+
+        <hr className="h-px my-8 bg-[#35190466] border-0 dark:bg-[#35190466]"/>
+
+        <h2 id="our-transport-pmr" className="font-bold text-[30px] sm:text-[40px] leading-[1.08] mt-[34px] sm:mt-[54px] mb-[3px] sm:mb-[3px]">
+          {t("gettingthere.tiraspol_transport.title")}
+        </h2>
+        <h3 className="text-[22px] sm:text-[28px] font-evolventa mb-[25px] sm:mb-[40px]">
+          {t("gettingthere.tiraspol_transport.subtitle")}
+        </h3>
+
+        {Object.entries(t("gettingthere.tiraspol_transport.days", {returnObjects: true})).map(([day, rides]) => (
+          <React.Fragment key={day}>
+            <h6 className="ride-day">{day}</h6>
+            <ul className="ride-list">
+              {rides.map((ride: string, index: number) => (
+                <li key={index} className="ride-time">{ride}</li>
+              ))}
+            </ul>
+          </React.Fragment>
+        ))}
+
+        <div className="font-evolventa italic text-[22px] sm:text-[28px] mb-[30px] sm:mb-[60px]">
+          <strong>{t("common.price_label")}</strong> - {t("gettingthere.tiraspol_transport.price")}
         </div>
 
         <hr className="h-px my-8 bg-[#35190466] border-0 dark:bg-[#35190466]"/>
