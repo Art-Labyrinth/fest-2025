@@ -642,51 +642,52 @@
       "title": "Our Routes (Circus Chisinau - Art Labyrinth)",
       "subtitle": "(Capacity - 20 seats + a few on perches)",
       "days": {
-        "Wed 09.06.25": [
+        "Wed 09.07.25": [
           "18:00 Chisinau → Art Labyrinth"
         ],
-        "Thu 10.06.25": [
-          "12:00 Chisinau → Art Labyrinth",
-          "18:00 Chisinau → Art Labyrinth",
-          "15:00 Art Labyrinth → Chisinau"
+        "Thu 10.07.25": [
+          "17:00 Chisinau → Art Labyrinth"
         ],
-        "Fri 11.06.25": [
-          "07:00, 13:00, 18:00 Chisinau → Art Labyrinth",
-          "10:00, 16:00 Art Labyrinth → Chisinau"
+        "Fri 11.07.25": [
+          "10:00, 14:00 Chisinau → Art Labyrinth",
+          "14:00, 18:00 Art Labyrinth → Chisinau"
         ],
-        "Sat 12.06.25": [
-          "07:00, 13:00 Chisinau → Art Labyrinth",
-          "10:00, 16:00, 20:00 Art Labyrinth → Chisinau"
+        "Sun 13.07.25": [
+          "10:00 Art Labyrinth → Chisinau",
+          "14:00 Art Labyrinth → Chisinau",
+          "19:00 Art Labyrinth → Chisinau"
         ],
-        "Sun 13.06.25": [
-          "07:00-11:00 Art Labyrinth → Chisinau",
-          "19:00-21:00 Art Labyrinth → Chisinau"
-        ],
-        "Mon 14.06.25": [
-          "07:00 Art Labyrinth → Chisinau"
+        "Mon 14.07.25": [
+          "08:00 Art Labyrinth → Chisinau"
         ]
       },
-      "price": "150 lei, free for children under 12."
+      "price": "175 MDL (300 MDL round trip), free for children under 12."
     },
     "tiraspol_transport": {
       "title": "Our Routes Tiraspol - Art Labyrinth",
       "subtitle": "(See in order of filling the van)",
       "days": {
-        "Fri 09.06.25": [
+        "Fri 09.07.25": [
           "9:00 Tiraspol → Art Labyrinth"
         ],
-        "Sun 13.06.25": [
+        "Sun 13.07.25": [
           "12:00 Art Labyrinth → Tiraspol"
         ]
       },
       "price": "350 rubles round trip.",
-      "prepaymentInfo": "Presale is carried out on the basis of 100% prepayment by phone (phone number) until July 8!",
+      "prepaymentInfo": "Pre-sale is based on 100% prepayment by phone (Palina ",
+      "prepaymentInfoTelSpaces": "+373 79 388 145",
+      "prepaymentInfoTel": "+37379388145",
+      "prepaymentInfoEnd": ") until July 8!",
       "paymentMethodsTitle": "Payment methods:",
-      "methodCard": "-Transfer to card, (curator’s details)",
-      "methodCash": "-Cash at NXNHouse, Thursday, Friday and Saturday from 18:00 to 23:00, 36 Eminescu St., Chisinau",
+      "methodCard": "-Bank transfer via MIA, ",
+      "methodCardPhoneSpace": "+373 79 388 145",
+      "methodCardPhone": "+37379388145",
+      "methodCash": "-Cash at NXNHouse, on Thursday, Friday, and Saturday from 18:00 to 23:00, 36 Eminescu St., Chișinău",
       "questionsTitle": "For questions",
-      "questionsDesc": "about ticket purchase and use of our transport:",
-      "telegramCoordinator": "-(Telegram coordinator)",
+      "questionsDesc": "about ticket purchase and our transportation:",
+      "telegramCoordinator": "@palinaaaaaaaa",
+      "telegramCoordinatorLink": "https://t.me/palinaaaaaaaa",
       "telegramChannel": "-Registration is also done in our routes Telegram channel! ",
       "telegramLinkText": "https://t.me/routes_artlab2025",
       "telegramLinkHref": "https://t.me/routes_artlab2025"
