@@ -757,5 +757,148 @@
       "telegram_href": "https://t.me/+wpqpF2uV3-IzZTQ6",
       "note": "Пишите кратко и понятно: сколько вас, когда едете. Водителям лучше выделять свои объявления жирным."
     }
-  }
+  },
+  "schedule": [
+    {
+      "title": "MAIN STAGE",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    },
+    {
+      "title": "YOGA SPACE",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    },
+    {
+      "title": "ЧАЙНАЯ",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    }
+  ]
 }
