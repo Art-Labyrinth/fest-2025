@@ -10,6 +10,7 @@ import Success from "./components/Contribute/Success";
 import Fail from "./components/Contribute/Fail";
 import Gallery from "./components/Gallery/Gallery";
 import Programma from "./components/Programma/Programma";
+import ProgrammaWithSchedule from "./components/ProgrammaWithSchedule/ProgrammaWithSchedule";
 import GettingThere from "./components/GettingThere/GettingThere";
 import NotFound from "./components/NotFound";
 import { fetchCsrfToken } from "./utils";
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
   {
     path: "/program",
     element: <Programma />,
+  },
+  {
+    path: "/schedule",
+    element: <ProgrammaWithSchedule />,
   },
   {
     path: "/success",

@@ -295,6 +295,28 @@ module.exports = {
           lineHeight: 1.3,
         },
 
+        '.schedule-section': {
+          marginBottom: 65,
+          '.workshop-item': {
+            display: 'flex',
+            marginLeft: 0,
+          },
+          '.workshop-time': {
+            width: 190,
+            fontSize: 28,
+            lineHeight: 1.3,
+            color: '#351904',
+            fontFamily: 'RocaOne, serif',
+            borderRight: '1px solid rgba(53, 25, 4, 0.4)',
+            marginRight: 14,
+          },
+          '.workshop-section-title': {
+            fontFamily: 'RocaOne, serif',
+            margin: '0 0 25px',
+          }
+
+        },
+
         // Page Getting There
 
         '.ride-day': {

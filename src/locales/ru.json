@@ -694,14 +694,14 @@
       "title": "Наши рейсы Тирасполь - Арт Лабиринт",
       "subtitle": "(Смотри в порядке заполнения бусика)",
       "days": {
-        "Пт 09.07.25": [
+        "Пт 11.07.25": [
           "9:00 Тирасполь → Арт Лабиринт"
         ],
         "Вс 13.07.25": [
           "12:00 Арт Лабиринт → Тирасполь"
         ]
       },
-      "price": "350 руб туда-обратно.",
+      "price": "450 руб туда-обратно.",
       "prepaymentInfo": "Предпродажа осуществляется на основании 100% предоплаты по телефону (Палина ",
       "prepaymentInfoTelSpaces": "+373 79 388 145",
       "prepaymentInfoTel": "+37379388145",
@@ -757,5 +757,148 @@
       "telegram_href": "https://t.me/+wpqpF2uV3-IzZTQ6",
       "note": "Пишите кратко и понятно: сколько вас, когда едете. Водителям лучше выделять свои объявления жирным."
     }
-  }
+  },
+  "schedule": [
+    {
+      "title": "MAIN STAGE",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    },
+    {
+      "title": "YOGA SPACE",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    },
+    {
+      "title": "ЧАЙНАЯ",
+      "events": [
+        {
+          "event_time": "5:00-6:30",
+          "event_title": "Раджахиралжа йога",
+          "event_author": "Тоня",
+          "event_description": "Практика"
+        },
+        {
+          "event_time": "10:15-12:15",
+          "event_title": "Extatic Dance",
+          "event_author": "Max Malina",
+          "event_description": "-"
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        },
+        {
+          "event_time": "",
+          "event_title": "",
+          "event_author": "",
+          "event_description": ""
+        }
+      ]
+    }
+  ]
 }
