@@ -60,13 +60,16 @@ export default function Programma() {
             {[...Array(20)].map((_, i) => {
               const index = i + 301;
               return (
-                <div key={index} className="workshop-item">
-                  <div className="workshop-title">{t(`programma.workshop_title_${index}`)}</div>
-                  <div className="workshop-author">{t(`programma.workshop_author_${index}`)}</div>
-                  {t(`workshop_description_${index}`) && (
-                    <div className="workshop-description">{t(`programma.workshop_description_${index}`)}</div>
-                  )}
-                </div>
+                <>
+                  {index !== 315 && index !== 319 &&
+                    <div key={index} className="workshop-item">
+                      <div className="workshop-title">{t(`programma.workshop_title_${index}`)}</div>
+                      <div className="workshop-author">{t(`programma.workshop_author_${index}`)}</div>
+                      {t(`workshop_description_${index}`) && (
+                        <div className="workshop-description">{t(`programma.workshop_description_${index}`)}</div>
+                      )}
+                    </div>}
+                </>
               );
             })}
           </div>
