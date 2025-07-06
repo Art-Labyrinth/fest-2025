@@ -730,5 +730,1241 @@
       "telegram_href": "https://t.me/+wpqpF2uV3-IzZTQ6",
       "note": "Write briefly and clearly: how many of you, when you’re going. Drivers should highlight their posts in bold."
     }
-  }
+  },
+  "schedule_thursday": [
+    {
+      "title": "Opening Ceremony",
+      "events": [
+        {
+          "event_time": "20:00",
+          "event_title": "Fire show by the Om Ram Fire and Light Performance Theater"
+        }
+      ]
+    }
+  ],
+  "schedule_friday": [
+    {
+      "title": "Main Stage",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Rajadhiraja Yoga with Tonya"
+        },
+        {
+          "event_time": "17:00 - 18:00",
+          "event_title": "Concert by Barbarossa"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Concert by Denys Balykhin"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert by Sofia Zadar"
+        },
+        {
+          "event_time": "20:00 - 21:30",
+          "event_title": "Concert by Funky Flamingo Fiasco"
+        },
+        {
+          "event_time": "21:30 - 22:30",
+          "event_title": "Concert by Selma"
+        },
+        {
+          "event_time": "22:30 - 23:45",
+          "event_title": "Concert by Tricottage"
+        },
+        {
+          "event_time": "00:00 - 02:00",
+          "event_title": "Other event with Petru Vinari"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad"
+    },
+    {
+      "title": "Mastergrad Carpet",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Lecture \"Mindfulness Meditation, Satipatthana\" with Sergey Molenta"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Lecture \"Instincts in Personal Relationships\" with Roman"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Lecture \"Runes – Theory and Practical Application\" with Dan Balkhmat"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Lecture \"Voice of the Shadow\" with Dionysius"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Lecture \"Vegan and Vegetarian Healthy Nutrition!\" with Irina Cheban"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Lecture \"Introduction to Ayurveda\" with Yan Fanin"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Lecture \"Bridge to Trust: Healing Trauma through Creativity\" with Anna Viktorovna Slobodyenyuk"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Gazebo",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Workshop on making beeswax candles with herbs with Aigul"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Workshop \"Forest Mask\" with Paulina aka Pulya (Estonia)"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Workshop \"The Art of Mehndi\" with Elizaveta Lopushnyanova"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Workshop on national culture, embroidery, traditions with Natalia (Yaroslava)"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Art Therapy \"Sacred Pysanka\" with Yulia Kirtoka"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Art Therapy \"Sacred Pysanka\" with Yulia Kirtoka"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Workshop \"Soap Making for the Soul: Natural and with Love\" with Lyudmila"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Kundalini Yoga with Inna Kozlovskaya"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Connected Conscious Breathing with Mihaela Taranu"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Yoga Nidra and Sound Healing with Milla"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Pranayama and Dhyana with Pogrebneac Petr"
+        },
+        {
+          "event_time": "16:00 - 18:00",
+          "event_title": "Quantum Family Constellations with Svetlana Turchaninova"
+        },
+        {
+          "event_time": "18:15 - 19:45",
+          "event_title": "Practice \"Inside Yourself\" with Artina"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Relaxation and Body Reconnection through Sound Healing with În cocon"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Surya Namaskar with Andrey Liu"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Vinyasa Yoga with Pogrebneac Petr"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Hatha Yoga: Spine Arc with Dan Minenco"
+        },
+        {
+          "event_time": "12:30 - 13:30",
+          "event_title": "Tai Chi-Qigong: Path Within with Sergey Kioresku"
+        },
+        {
+          "event_time": "13:45 - 15:15",
+          "event_title": "Yoga Practice: Mindful Flow Work with Kamala (Katerina)"
+        },
+        {
+          "event_time": "15:30 - 17:00",
+          "event_title": "Dao Yoga with Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "Iyengar Yoga with Olesya Shishkina"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Tai Chi 24 Forms Yang Style with Serge Natarov"
+        },
+        {
+          "event_time": "20:00 - 21:30",
+          "event_title": "Masculinity Workshop with Marian Petrea"
+        }
+      ]
+    },
+    {
+      "title": "Tea House",
+      "events": [
+        {
+          "event_time": "9:30 - 11:30",
+          "event_title": "Handcraft Workshop with Sergey Natarov"
+        },
+        {
+          "event_time": "11:45 - 15:00",
+          "event_title": "Transformational Game \"Lila\" with Valmiki Rama (Vladimir Rabey)"
+        },
+        {
+          "event_time": "15:15 - 17:15",
+          "event_title": "Lecture \"Introduction and Permaculture Circle\" with Cristina Colis"
+        },
+        {
+          "event_time": "17:30 - 19:00",
+          "event_title": "Field Satsang and Q&A with Saidar Orbo"
+        },
+        {
+          "event_time": "19:15 - 20:30",
+          "event_title": "Workshop \"Inner Strength\" with Denis Kuzhba"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Lecture \"Being Happy Today and Always\" with Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Small Stage",
+      "events": [
+        {
+          "event_time": "9:30 - 11:15",
+          "event_title": "Workshop \"The 4 Elements - Earth, Water, Air, and Fire\" with Denisa"
+        },
+        {
+          "event_time": "11:30 - 13:00",
+          "event_title": "Workshop \"Divine Alignment of the Energy Body\" with Juliana"
+        },
+        {
+          "event_time": "13:15 - 14:30",
+          "event_title": "Practice \"Dynamic Meditations in the Osho Style\" with Ma Prem Sagara"
+        },
+        {
+          "event_time": "14:45 - 17:00",
+          "event_title": "Practice \"White Practice: Masculine and Feminine\" with Natalia Senin"
+        },
+        {
+          "event_time": "17:15 - 18:00",
+          "event_title": "Concert Alex Hang"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Concert Alise Gardner"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert Lo"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Jam session, concert by Kas with Denis Martin"
+        }
+      ]
+    },
+    {
+      "title": "Sports Zone",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Warm-up game with acrobatics elements and water run with Leon and Alisa"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Games: Football, Volleyball, Badminton, Frisbee with Alisa-Leon"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practice \"Tibetan Hormonal Gymnastics\" with Nina Trifonova"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practice \"AlfaGravity\" with Alexander Stryapko"
+        },
+        {
+          "event_time": "17:45 - 18:30",
+          "event_title": "Street performance \"Field of Fools\" by Tuk-Tuk Street Theater"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "Fun circle-dance transformational program with Leleya"
+        }
+      ]
+    },
+    {
+      "title": "Main Bonfire",
+      "events": [
+        {
+          "event_time": "10:00 (Gathering)",
+          "event_title": "Kite launching on the hills with Nikita Fugger"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Practice \"Nail Standing and Nail Lying\" with Gennady Porubin"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "Other \"Male and Female Yogic Dances\" with Tonya"
+        },
+        {
+          "event_time": "19:00 - 20:15",
+          "event_title": "Sound Healing with Oduvan, Nazar, Shushvalyuk"
+        },
+        {
+          "event_time": "20:30 - 21:15",
+          "event_title": "Improvisational Performance \"Poetry of the Present. Time to Breathe\" by Voices Dance Company - poems/music by Stan Potoku"
+        }
+      ]
+    },
+    {
+      "title": "Bedouin Tent",
+      "events": [
+        {
+          "event_time": "10:15 - 11:15",
+          "event_title": "Lecture \"Information-Digital Addiction – Myth or Reality? How Modern Technologies Affect Creativity?\" with Ella"
+        },
+        {
+          "event_time": "11:30 - 13:45",
+          "event_title": "Workshop on creating a Sacred Geometry symbol with Anastasia Sinitsyna"
+        },
+        {
+          "event_time": "14:00 - 15:45",
+          "event_title": "Lecture \"What is Yoga According to the Vedic Scriptures\" with Thomas Rohnke"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practice \"State of Joy and Unity\" with Andrey Fedoreev"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Astral Tea Ceremony with Sergey, Ceremony Master"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Lecture \"Conscious Parenting\" with Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Children's Zone"
+    },
+    {
+      "title": "Children's Zone, Creativity",
+      "events": [
+        {
+          "event_time": "9:00",
+          "event_title": "Yoga with Ekaterina Rabey"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Workshop \"Drawing Your Morning\" with Marianna Ivanenko"
+        },
+        {
+          "event_time": "11:00 - 11:40",
+          "event_title": "Concert \"Singing Together: Guitar Music\" with Elena Lisnik"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Lecture \"Lessons on Human Values for Younger School Age\" with Natalia Stavnicii (Taly)"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "Lecture \"Lessons on Human Values for Teenagers\" with Natalia Stavnicii (Taly)"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Workshop \"Making Dolls from Grass\" with Galina Tokar"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Theatrical Performance \"Fairy Tale World: Play\" with Galina Tokar"
+        },
+        {
+          "event_time": "16:00",
+          "event_title": "Concert \"Magic & IQPuzzles workshop\" with Liviu Tverdostup"
+        },
+        {
+          "event_time": "17:00",
+          "event_title": "Lecture \"How Cats Influenced Civilization\" with Marina Nika"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "Workshop \"Mandala Drawing\" with Sofia Koneeva"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "Workshop \"Clay Modeling\" with Sofia Koneeva"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Theatrical Performance \"Visiting the Theater\" with Valentina Sevostyanova"
+        }
+      ]
+    },
+    {
+      "title": "Children's Zone, Activities",
+      "events": [
+        {
+          "event_time": "10:00",
+          "event_title": "Lecture \"Raising Free People: Education without Coercion\" with Max Lee"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "Hike \"Towards Adventures\" with Ion Ursati"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "Theatrical Training with Ekaterina Rabey"
+        }
+      ]
+    }
+  ],
+  "schedule_saturday": [
+    {
+      "title": "Main Stage",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Rajadhiraja Yoga with Tonya"
+        },
+        {
+          "event_time": "9:30 - 11:00",
+          "event_title": "Ecstatic Dance with Inna Kozlovskaya"
+        },
+        {
+          "event_time": "16:00 - 17:00",
+          "event_title": "Barbarossa Concert"
+        },
+        {
+          "event_time": "17:00 - 18:00",
+          "event_title": "Neolai Concert"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Aleksandra Daraż Concert"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Kwathula Concert"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Faye Shapiro Concert"
+        },
+        {
+          "event_time": "21:00 - 22:30",
+          "event_title": "SWEET MAMA JAMMA'S MOJO JUICE Concert"
+        },
+        {
+          "event_time": "22:30 - 23:30",
+          "event_title": "Ramwong Concert"
+        },
+        {
+          "event_time": "23:30 - 00:30",
+          "event_title": "Les Biologists Marins Concert"
+        },
+        {
+          "event_time": "00:30 - 02:00",
+          "event_title": "Sound Healing with Max Malina"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Carpet"
+    },
+    {
+      "title": "Mastergrad Carpet",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "\"7 Levels of Love\" Masterclass with Maria S. using MAC cards"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "MAC Cards Workshop with Tahmina"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "\"Rebozo Massage\" Practice with Alina Onova"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "\"Runes - Lecture and Practical Application\" with Dan Balkhmat"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "\"Journey to Mother and Father – in the Space of Family Constellations\" Practice with Victoria Priscu"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "\"Healing Yumeiho Therapy\" Lecture with Yan Fanin"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "\"Am I Happy\" Lecture with Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Gazebo",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Sketching Masterclass with Lena"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Lula Weaving Workshop with Alina Onova"
+        },
+        {
+          "event_time": "12:30 - 14:30",
+          "event_title": "Sacred Geometry Symbol Creation Workshop with Anastasia Sinitsyna"
+        },
+        {
+          "event_time": "14:45 - 16:15",
+          "event_title": "\"Applied Aromatherapy - Natural and Effective Approach to Body Healing\" Workshop with Tatyana Lazareva"
+        },
+        {
+          "event_time": "16:30 - 18:30",
+          "event_title": "\"Clay Sculpting\" Workshop with Inna Sadovnikova"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "\"Mandala Weaving\" Workshop with Alla Regina"
+        },
+        {
+          "event_time": "20:45 - 22:15",
+          "event_title": "\"Sensory Wax Ritual\" Practice with waxplay.md"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Oven",
+      "events": [
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "\"Clay Ocarina Sculpting\" Workshop with Vladimir / Ocarina Salbatica"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "9:00 - 11:30",
+          "event_title": "\"Integration of Shadows and Self-Acceptance\" Practice with Mihaela Taranu"
+        },
+        {
+          "event_time": "11:45 - 13:30",
+          "event_title": "\"Dream Master\" Workshop with Anna"
+        },
+        {
+          "event_time": "13:45 - 15:15",
+          "event_title": "\"Pranayama and Dhyana\" Practice with Pogrebneac Petr"
+        },
+        {
+          "event_time": "15:30 - 17:00",
+          "event_title": "\"Body-Sound Practice 'Voice of the Body'\" with Margarita Dushevna"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "\"Mindfulness Practice\" with Yana Korshak"
+        },
+        {
+          "event_time": "19:00 - 20:30",
+          "event_title": "\"The Body Knows: The Path to Self Through Body Therapy Practices\" with Riya Rai"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Masculinity Workshop with Marian Petrea"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Surya Namaskar with Andrey Liu"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Confu Dao with Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Hatha Yoga with Lesnichaya Irina"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Qigong with Igor Rudkovskiy"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Kundalini Yoga with Andrei Sclearov"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Partner Yoga - Acroyoga with Andrey Skrupskiy"
+        },
+        {
+          "event_time": "18:00 - 19:15",
+          "event_title": "Purna Yoga - Path to Wholeness, Harmony, and Beauty with Yana Troian"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Tai Chi 24 Forms Yang Style with Serge Natarov"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "\"Dance Class. Argentine Folklore\" Workshop with Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Tea House",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Psychological Practice \"Love Is...\" with Vadim Grabchuk"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "\"Introduction to Western Astrology\" Lecture with Vasman Ivanov"
+        },
+        {
+          "event_time": "12:30 - 14:30",
+          "event_title": "Transformational Game \"Divergent\" with Anna Slobodyenyuk"
+        },
+        {
+          "event_time": "14:45 - 16:15",
+          "event_title": "\"How to Awaken Self-Love\" Lecture with Denis Kuzhba"
+        },
+        {
+          "event_time": "16:30 - 17:30",
+          "event_title": "\"Somatics and Conscious Movement\" Practice with Alena Bespalenko"
+        },
+        {
+          "event_time": "17:45 - 20:30",
+          "event_title": "\"New Lila\" Game with Margarita Dushevna"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "\"Sexuality is About You\" Lecture with Tatyana Zhurba"
+        }
+      ]
+    },
+    {
+      "title": "Small Stage",
+      "events": [
+        {
+          "event_time": "8:00 - 9:00",
+          "event_title": "\"Dynamic Meditations in Osho Style\" Practice with Ma Prem Sagara"
+        },
+        {
+          "event_time": "9:00 - 10:45",
+          "event_title": "\"Art Psychology\" Masterclass with Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "11:00 - 12:15",
+          "event_title": "\"Contact Improvisation Class 'The Art of Touch'\" with Alexandra Soshnkova and Sergey Golovney"
+        },
+        {
+          "event_time": "12:30 - 13:30",
+          "event_title": "\"Author's Songs\" Concert with Alena \"Olli\" Bespalenko"
+        },
+        {
+          "event_time": "13:30 - 15:30",
+          "event_title": "\"Vocal Workshops Joy\" Masterclass with Aleksandra Daraz"
+        },
+        {
+          "event_time": "15:30 - 16:30",
+          "event_title": "KinnaYana Embodiment Music Artist Concert (Acoustic)"
+        },
+        {
+          "event_time": "16:30 - 17:30",
+          "event_title": "Immersive Concert \"Twin Flames\" with Maria S and Oleg Hereseu"
+        },
+        {
+          "event_time": "17:30 - 19:00",
+          "event_title": "Theatrical Performance - Playback Theatre \"Ink\" based on audience stories by Natalia Slyonkina"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "\"Raga River\" Concert with Sergey Parfenov (Sarod), Maya Parfenova (Tanpura)"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "\"Indian Ragas on Sitar\" Concert with Andrey Ivasyuk"
+        }
+      ]
+    },
+    {
+      "title": "Sports",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "\"Thai Visceral Massage\" Practice with Evgeny Nemchenko and Nata Bond"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "\"Improvisation Movements - Body Balance - Capture the Flag\" Game with Alisa-Leon"
+        },
+        {
+          "event_time": "9:00 - 10:00",
+          "event_title": "\"Tai Chi\" Practice with Ilya Abramenko"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "\"Games: Football, Volleyball, Badminton, Frisbee\" with Leon-Alisa"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "\"Playfight\" Practice with Dan Bogdan Răcășan"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "\"Relay Races - Obstacle Course\" Game with Leon-Alisa"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "\"FRESH Yoga\" Practice with Mikhail Bartkovsky (Odessa)"
+        },
+        {
+          "event_time": "16:00 - 19:00",
+          "event_title": "\"AlfaGravity\" Practice with Alexander Stryapko"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "\"Knife Throwing\" Practice with Ilya Abramenko"
+        },
+        {
+          "event_time": "19:15 - 21:15",
+          "event_title": "\"Actor’s Art, Stage Movement and Speech Art\" Practice with Eugen Matcovschi"
+        }
+      ]
+    },
+    {
+      "title": "Main Bonfire",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "\"Surya Namaskar\" Practice with Tatyana Rudkovskaya"
+        },
+        {
+          "event_time": "10:00 - 11:00",
+          "event_title": "\"Tai Chi-Qigong: Path Inward\" Practice with Sergey Kioresku"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Kite Flying on the Hills with Nikita Fugger"
+        },
+        {
+          "event_time": "11:15 - 13:15",
+          "event_title": "\"Nail Standing and Nail Lying\" Practice with Gennady Porubin"
+        },
+        {
+          "event_time": "13:30 - 14:30",
+          "event_title": "\"Rain Gods: Water and Nature Game\" with Cristina Colis"
+        },
+        {
+          "event_time": "14:45 - 15:45",
+          "event_title": "\"Natural Healing Remedies\" Lecture with Ruxandra"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "\"Hip Hop / House Dance\" Workshop with Alex Voicu (Sunny)"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "\"Brazilian Zouk\" Workshop with Ksenia Free"
+        },
+        {
+          "event_time": "19:15 - 20:15",
+          "event_title": "\"Family Power\" Practice with Denis Kuzhba"
+        },
+        {
+          "event_time": "20:30",
+          "event_title": "\"Firewalking\" Practice with Gennady Porubin"
+        }
+      ]
+    },
+    {
+      "title": "Bedouin Tent",
+      "events": [
+        {
+          "event_time": "9:00 - 11:00",
+          "event_title": "\"Neurographica - Harmony of Masculine and Feminine\" Practice with Natalia Senin"
+        },
+        {
+          "event_time": "11:00 - 12:30",
+          "event_title": "\"Poetry Lab 'Meetings with the Depth'\" with Stan Potoku"
+        },
+        {
+          "event_time": "12:45 - 14:30",
+          "event_title": "\"Presentation of IT BRAIN app and 'Family Unity' project\" Lecture with Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "14:45 - 16:30",
+          "event_title": "\"Inward\" Practice with Artina"
+        },
+        {
+          "event_time": "16:45 - 18:30",
+          "event_title": "\"Lecture on Devanagari and Sanskrit letters\" with Thomas Rohnke"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "\"Fairy Tale Therapy. Ritual - 'Return of Female Power and Energy. The Wolf Woman's Path'\" with Olga Osinski"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Astral Tea Ceremony with Sergey, Ceremony Master"
+        }
+      ]
+    },
+    {
+      "title": "Kids Zone"
+    },
+    {
+      "title": "Kids Zone, Creativity",
+      "events": [
+        {
+          "event_time": "9:00 - 10:30",
+          "event_title": "Acroyoga for Kids and Parents with Andrey Skrupskiy"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "\"At the Theater\" Theatrical Performance with Valentina Sevostyanova"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "\"Origami\" Workshop with David and Yasna Onovy"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "\"Harmonious Birth\" Lecture with Alina Onova"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "\"Making a Motorboat\" Workshop with Kirill Nika"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "\"Raising Free People: Education Without Coercion\" Lecture with Max Lee"
+        },
+        {
+          "event_time": "15:15 - 17:00",
+          "event_title": "\"Wood Crafts\" Workshop with Maxim Alekseev"
+        },
+        {
+          "event_time": "17:00",
+          "event_title": "Interactive Play about Water and Sand with Galina Tokar"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "\"How to Sculpt a Smesharik from Plasticine\" Workshop with Daria Selivanov"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "\"Magic & IQPuzzles Workshop\" Concert with Liviu Tverdostup"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "\"In the World of Fairy Tales: Performance\" with Galina Tokar"
+        }
+      ]
+    },
+    {
+      "title": "Kids Zone, Activities",
+      "events": [
+        {
+          "event_time": "9:00",
+          "event_title": "\"Drawing Your Morning\" Workshop with Marianna Ivanenko"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "\"Top 10 Parenting Mistakes that Delay Speech Development\" Lecture with Irina Fursa"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "\"Health Gymnastics for Adults and Children from 12\" Workshop with Irina Cheban"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "\"Costume Preparation for Water Spirit Day\" with Natalia Slyonkina"
+        },
+        {
+          "event_time": "13:40",
+          "event_title": "\"Songs about Seas and Rivers\" Concert with Elena Lisnik"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "\"Motorboat Launch and River Splashing Game - Rafts and Sprayers\" with Kirill Nika and Daria Selivanov"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Robotics - Water Rocket Launch with Vadim Grabchuk (Robotica Lab)"
+        },
+        {
+          "event_time": "15:30",
+          "event_title": "\"Sea Wonders\" Quest with Ekaterina and Alexander Zhaliuk, Tatyana Voloshina"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "\"Zip Line\" Game with Igor Burdienko"
+        }
+      ]
+    }
+  ],
+  "schedule_sunday": [
+    {
+      "title": "Main Stage",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Rajadhiraja Yoga with Tonya"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Qigong with Igor Rudkovskiy"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Ecstatic Dance with Sarmigetusa"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Plexus - Grief/Life ritual"
+        },
+        {
+          "event_time": "18:00 - 19:30",
+          "event_title": "Closing Ceremony (at Mayfair zone) – with Barbarossa and Fire Show by the Fire and Light Performance Theater “Om Ram”"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Festival Closing"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad"
+    },
+    {
+      "title": "Mastergrad Carpet",
+      "events": [
+        {
+          "event_time": "8:30 - 10:30",
+          "event_title": "Practice \"Neurographica with the Energy of the Color of Life\" with Oksana Ra-Svet"
+        },
+        {
+          "event_time": "10:45 - 12:15",
+          "event_title": "Practice \"Somatics and Conscious Movement\" with Alena Bespalenko"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practice \"Healing Massage and Self-Massage\" with Irina Cheban"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Lecture \"Runes – Lecture and Practical Application\" with Dan Balkhmat"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Lecture \"Mirror Psychology, Theory and Practice\" with Saidar Orbo"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Pavilion",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Watercolor Masterclass (Landscape Painting) with Lena"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Tree of Life Weaving Masterclass with Margarita Dushevna"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Masterclass \"Weaving the Sacred Merkaba Symbol\" with Olga Starikova"
+        },
+        {
+          "event_time": "14:15 - 16:45",
+          "event_title": "Sacred Geometry Symbol Creation Masterclass with Anastasia Sinitsyna"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Oven",
+      "events": [
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Masterclass \"Clay Ocarina Modeling\" with Vladimir / Ocarina Salbatica"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Lecture \"Visceral Practices\" with Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Practice \"Theory and Practice of Sacred Groves\" with Saidar Orbo"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practice \"Reiki, Self-Healing Session\" with Ekaterina Tishchenko"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practice \"Pranayama and Dhyana\" with Pogrebneac Petr"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practice \"Regression into Past Lives\" with Anna Selivanova"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Sukshma Vyayam + Sthula Vyayam with Stanislav Kysa"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Vinyasa Yoga with Pogrebneac Petr"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Functional Yoga with Ksenia Slonova"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Partner Yoga - Acroyoga with Andrey Skrupskiy"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "FRESH Yoga with Mikhail Bartkovsky"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "FYSM YOGA - (Fresh Yoga) with Irina Boiko"
+        }
+      ]
+    },
+    {
+      "title": "Tea House",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Masterclass \"Hand Finishing of Products\" with Sergey Natarov"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Masterclass \"Reiki System as a Spiritual Path\" with Marina Zaretskaya"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Lecture \"Sexuality is About You\" with Tatyana Zhurba"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Lecture \"Mindfulness Meditation, Satipatthana\" with Sergey Molenta"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Masterclass \"Inner Strength\" with Denis Kuzhba"
+        }
+      ]
+    },
+    {
+      "title": "Small Stage",
+      "events": [
+        {
+          "event_time": "8:45 - 9:45",
+          "event_title": "Practice \"Tai Chi-Qigong: The Path Within\" with Sergey Kioresku"
+        },
+        {
+          "event_time": "10:00 - 12:30",
+          "event_title": "Masterclass on Playback, Improvisation, Adaptability, Attunement, Conscious Listening by Natalia Slyonkina / Playback Theatre “Ink”"
+        },
+        {
+          "event_time": "12:45 - 14:15",
+          "event_title": "Lecture \"Relationship with Self and the World\" with Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "14:30 - 16:00",
+          "event_title": "Practice \"Diagnosis and Correction of Energy-Informational Disorders by Dowsing (Biolocation)\" with Marina Zaretskaya"
+        },
+        {
+          "event_time": "16:15 - 17:45",
+          "event_title": "Lecture \"Basics of Healthy Lifestyle or Principles of Rational Nutrition\" with Angela"
+        }
+      ]
+    },
+    {
+      "title": "Sport",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practice \"Thai Visceral Massage\" with Evgeny Nemchenko and Nata Bond"
+        },
+        {
+          "event_time": "9:00 - 10:00",
+          "event_title": "Practice \"Tai Chi\" with Ilya Abramenko"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Game \"Treasure Hunt - Forest Quest\" with Alisa-Leon"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practice \"Playfight\" with Dan Bogdan Răcășan"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practice \"AlfaGravity\" with Alexander Stryapko"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Games \"Football, Volleyball, Badminton, Frisbee\" with Leon-Alisa"
+        }
+      ]
+    },
+    {
+      "title": "Main Bonfire",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practice \"Surya Namaskar\" with Tatyana Rudkovskaya"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Gathering: Kite Flying on the Hills with Nikita Fugger"
+        },
+        {
+          "event_time": "10:15 - 11:30",
+          "event_title": "Practice \"Dynamic Meditations in Osho Style\" with Ma Prem Sagara"
+        }
+      ]
+    },
+    {
+      "title": "Bedouin Tent",
+      "events": [
+        {
+          "event_time": "9:00 - 10:30",
+          "event_title": "Practice \"The Body Knows: The Path to Self through Body Therapy Practices\" with Riya Rai"
+        },
+        {
+          "event_time": "10:45 - 12:15",
+          "event_title": "Practice \"Authentic Relationship Workshop\" with Victoria Priscu"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practice \"Within Yourself\" with Artina"
+        },
+        {
+          "event_time": "14:15 - 15:30",
+          "event_title": "Astral Tea Ceremony with Sergey, Ceremony Master"
+        },
+        {
+          "event_time": "15:45 - 17:15",
+          "event_title": "Practice \"From Doubt to Action\" with Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Children's Zone"
+    },
+    {
+      "title": "Children's Zone, Creativity",
+      "events": [
+        {
+          "event_time": "10:00",
+          "event_title": "Masterclass \"Shurikens and Animals from Origami\" with Lev Tomilov"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Communication Training/Masterclass for Teenagers with Buzenco Iulia"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "Masterclass \"Fun Crafts\" with Kirill Nika"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Game \"Team Games\" with Igor Burdienko"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "Concert \"Magic & IQPuzzles Workshop\" with Liviu Tverdostup"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Lecture \"Story about Dogs\" with Marina Nika"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Lecture \"Lessons on Moral Values for Younger School Age\" with Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Children's Zone, Activities",
+      "events": [
+        {
+          "event_time": "9:00 - 12:00",
+          "event_title": "Hiking with Anna Voronyuk"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Lecture \"Top 10 Parenting Mistakes That Delay Child’s Speech\" with Irina Fursa"
+        }
+      ]
+    }
+  ],
+  "tab_thursday": "Thursday, July 10, 2025",
+  "tab_friday": "Friday, July 11, 2025",
+  "tab_saturday": "Saturday, July 12, 2025",
+  "tab_sunday": "Sunday, July 13, 2025",
+  "zones_label": "Total Number of Festival Zones",
+  "zones": "11 zones including Main Stage, Small Stage, Mastergrad, Yoga Zone, Shambala, Sport Zone, Tea House, Mayfair, Bedouin Tent, Children's Art Gallery.",
+  "temaskal": "+ Temazcal (Mexican herbal sauna)",
+  "womens_space": "+ Sacred Femininity Space (for women)",
+  "fantacy_space": "+ Fantasy Zone (for fans of myths and fairy worlds)",
+  "kitchens": "+ Vegetarian, Raw Food, and Indian cuisines",
+  "changes": "Minor changes possible and can be found in the festival schedule."
 }

@@ -297,24 +297,45 @@ module.exports = {
 
         '.schedule-section': {
           marginBottom: 65,
+          breakInside: 'avoid',
           '.workshop-item': {
             display: 'flex',
             marginLeft: 0,
           },
           '.workshop-time': {
-            width: 190,
             fontSize: 28,
             lineHeight: 1.3,
             color: '#351904',
             fontFamily: 'RocaOne, serif',
             borderRight: '1px solid rgba(53, 25, 4, 0.4)',
             marginRight: 14,
+            width: 100,
+            minWidth: 100,
+            whiteSpace: 'normal',
+            '@screen sm': {
+              width: 190,
+              minWidth: 190,
+              whiteSpace: 'nowrap',
+            }
+          },
+          '.workshop-title': {
+            fontSize: 18,
+            lineHeight: 1.3,
+            textTransform: 'uppercase',
+            marginBottom: 0,
+            fontWeight: 400,
+            wordBreak: 'break-word',
+            '@screen sm': {
+              fontSize: 20,
+            }
+          },
+          '.workshop-author': {
+            marginBottom: 0,
           },
           '.workshop-section-title': {
             fontFamily: 'RocaOne, serif',
             margin: '0 0 25px',
           }
-
         },
 
         // Page Getting There
