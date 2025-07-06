@@ -726,5 +726,1241 @@
       "telegram_href": "https://t.me/+wpqpF2uV3-IzZTQ6",
       "note": "Scrieți clar și concis: câți sunteți, când plecați. Șoferii să evidențieze anunțurile lor cu caractere aldine."
     }
-  }
+  },
+  "schedule_thursday": [
+    {
+      "title": "Ceremonia de Deschidere",
+      "events": [
+        {
+          "event_time": "20:00",
+          "event_title": "Spectacol de foc de la teatrul de performanță cu foc și lumină „Om Ram”"
+        }
+      ]
+    }
+  ],
+  "schedule_friday": [
+    {
+      "title": "Scena Principală",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Yoga Rajadhiraja cu Tonya"
+        },
+        {
+          "event_time": "17:00 - 18:00",
+          "event_title": "Concert Barbarossa"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Concert Denys Balykhin"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert Sofia Zadar"
+        },
+        {
+          "event_time": "20:00 - 21:30",
+          "event_title": "Concert Funky Flamingo Fiasco"
+        },
+        {
+          "event_time": "21:30 - 22:30",
+          "event_title": "Concert Selma"
+        },
+        {
+          "event_time": "22:30 - 23:45",
+          "event_title": "Concert Tricottage"
+        },
+        {
+          "event_time": "00:00 - 02:00",
+          "event_title": "Alt eveniment cu Petru Vinari"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad"
+    },
+    {
+      "title": "Covor Mastergrad",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Prelegere „Meditația Mindfulness, Satipatthana” cu Sergey Molenta"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Prelegere „Instinctele în relațiile personale” cu Roman"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Prelegere „Rune – Teorie și Aplicare Practică” cu Dan Balkhmat"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Prelegere „Vocea umbrei” cu Dionisiu"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Prelegere „Nutriție sănătoasă vegană și vegetariană!” cu Irina Cheban"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Prelegere „Introducere în Ayurveda” cu Yan Fanin"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Prelegere „Podul către încredere: vindecarea traumei prin creativitate” cu Anna Viktorovna Slobodyenyuk"
+        }
+      ]
+    },
+    {
+      "title": "Foișor Mastergrad",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Atelier de confecționat lumânări din ceară de albine cu plante cu Aigul"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Atelier „Masca pădurii” cu Paulina aka Pulya (Estonia)"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Atelier „Arta mehndi” cu Elizaveta Lopushnyanova"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Atelier despre cultura națională, broderie și tradiții cu Natalia (Yaroslava)"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Art-terapie „Pysanka sacră” cu Yulia Kirtoka"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Art-terapie „Pysanka sacră” cu Yulia Kirtoka"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Atelier „Fabricarea săpunului pentru suflet: natural și cu dragoste” cu Lyudmila"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Kundalini Yoga cu Inna Kozlovskaia"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Respirație Conștientă Conectată cu Mihaela Taranu"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Yoga Nidra și Sound Healing cu Milla"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Pranayama și Dhyana cu Pogrebneac Petr"
+        },
+        {
+          "event_time": "16:00 - 18:00",
+          "event_title": "Constelații cuantice cu Svetlana Turchaninova"
+        },
+        {
+          "event_time": "18:15 - 19:45",
+          "event_title": "Practica „În interiorul tău” cu Artina"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Relaxare și reconectare cu corpul prin sound healing cu În cocon"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Surya Namaskar cu Andrey Liu"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Vinyasa Yoga cu Pogrebneac Petr"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Hatha Yoga: Arcul coloanei vertebrale cu Dan Minenco"
+        },
+        {
+          "event_time": "12:30 - 13:30",
+          "event_title": "Tai Chi-Qigong: Calea spre interior cu Sergey Kioresku"
+        },
+        {
+          "event_time": "13:45 - 15:15",
+          "event_title": "Practica yoga: Lucru conștient în flux cu Kamala (Katerina)"
+        },
+        {
+          "event_time": "15:30 - 17:00",
+          "event_title": "Dao Yoga cu Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "Iyengar Yoga cu Olesya Shishkina"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Tai Chi 24 forme stil Yang cu Serge Natarov"
+        },
+        {
+          "event_time": "20:00 - 21:30",
+          "event_title": "Workshop despre Masculinitate cu Marian Petrea"
+        }
+      ]
+    },
+    {
+      "title": "Casa de Ceai",
+      "events": [
+        {
+          "event_time": "9:30 - 11:30",
+          "event_title": "Atelier de prelucrare manuală cu Sergey Natarov"
+        },
+        {
+          "event_time": "11:45 - 15:00",
+          "event_title": "Joc transformațional „Lila” cu Valmiki Rama (Vladimir Rabey)"
+        },
+        {
+          "event_time": "15:15 - 17:15",
+          "event_title": "Prelegere „Introducere și cerc de permacultură” cu Cristina Colis"
+        },
+        {
+          "event_time": "17:30 - 19:00",
+          "event_title": "Satsang pe câmp și sesiune de întrebări și răspunsuri cu Saidar Orbo"
+        },
+        {
+          "event_time": "19:15 - 20:30",
+          "event_title": "Atelier „Forța interioară” cu Denis Kuzhba"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Prelegere „A fi fericit azi și mereu” cu Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Scena Mică",
+      "events": [
+        {
+          "event_time": "9:30 - 11:15",
+          "event_title": "Atelier „Cele 4 elemente – pământ, apă, aer și foc” cu Denisa"
+        },
+        {
+          "event_time": "11:30 - 13:00",
+          "event_title": "Atelier „Alinierea divină a corpului energetic” cu Juliana"
+        },
+        {
+          "event_time": "13:15 - 14:30",
+          "event_title": "Practică „Meditații dinamice în stil Osho” cu Ma Prem Sagara"
+        },
+        {
+          "event_time": "14:45 - 17:00",
+          "event_title": "Practică „Practica albă: Masculin și Feminin” cu Natalia Senin"
+        },
+        {
+          "event_time": "17:15 - 18:00",
+          "event_title": "Concert Alex Hang"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Concert Alise Gardner"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert Lo"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Jam session, concert Kas cu Denis Martin"
+        }
+      ]
+    },
+    {
+      "title": "Zona Sportivă",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Joc de încălzire cu elemente de acrobație și cursă pentru apă cu Leon și Alisa"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Jocuri: Fotbal, Volei, Badminton, Frisbee cu Alisa-Leon"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practică „Gimnastică hormonală tibetană” cu Nina Trifonova"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practică „AlfaGravity” cu Alexander Stryapko"
+        },
+        {
+          "event_time": "17:45 - 18:30",
+          "event_title": "Spectacol stradal „Câmpul nebunilor” de la Teatrul Stradal „Tuk-Tuk”"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "Program vesel transformativ cu dans și cerc cu Leleya"
+        }
+      ]
+    },
+    {
+      "title": "Focul Principal",
+      "events": [
+        {
+          "event_time": "10:00 (Adunare)",
+          "event_title": "Lansare de zmee pe dealuri cu Nikita Fugger"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Practică „Statul pe cuie și culcatul pe cuie” cu Gennady Porubin"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "Alt eveniment „Dansuri yogice masculine și feminine” cu Tonya"
+        },
+        {
+          "event_time": "19:00 - 20:15",
+          "event_title": "Sound Healing cu Oduvan, Nazar, Shushvalyuk"
+        },
+        {
+          "event_time": "20:30 - 21:15",
+          "event_title": "Performanță improvizată „Poezia prezentului. Timp să respiri” de Voices Dance Company – poezii/muzică de Stan Potoku"
+        }
+      ]
+    },
+    {
+      "title": "Cort Beduin",
+      "events": [
+        {
+          "event_time": "10:15 - 11:15",
+          "event_title": "Prelegere „Dependența informațional-digitală – mit sau realitate? Cum influențează tehnologiile moderne creativitatea?” cu Ella"
+        },
+        {
+          "event_time": "11:30 - 13:45",
+          "event_title": "Atelier pentru crearea simbolului Geometriei Sacre cu Anastasia Sinitsyna"
+        },
+        {
+          "event_time": "14:00 - 15:45",
+          "event_title": "Prelegere „Ce este yoga conform scripturilor vedice” cu Thomas Rohnke"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practică „Starea de bucurie și unitate” cu Andrey Fedoreev"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Ceremonie de ceai astral cu Sergey, maestru ceremonii"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Prelegere „Parenting conștient” cu Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Zona pentru Copii"
+    },
+    {
+      "title": "Zona pentru Copii, Creativitate",
+      "events": [
+        {
+          "event_time": "9:00",
+          "event_title": "Yoga cu Ekaterina Rabey"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Atelier „Desenul dimineții tale” cu Marianna Ivanenko"
+        },
+        {
+          "event_time": "11:00 - 11:40",
+          "event_title": "Concert „Cântăm împreună: muzică cu chitară” cu Elena Lisnik"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Prelegere „Lecții despre valori umane pentru vârsta școlară mică” cu Natalia Stavnicii (Taly)"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "Prelegere „Lecții despre valori umane pentru adolescenți” cu Natalia Stavnicii (Taly)"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Atelier „Crearea păpușilor din iarbă” cu Galina Tokar"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Spectacol teatral „Lumea poveștii: piesă de teatru” cu Galina Tokar"
+        },
+        {
+          "event_time": "16:00",
+          "event_title": "Concert „Magic & IQPuzzles workshop” cu Liviu Tverdostup"
+        },
+        {
+          "event_time": "17:00",
+          "event_title": "Prelegere „Cum au influențat pisicile civilizația” cu Marina Nika"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "Atelier „Desenarea mandalelor” cu Sofia Koneeva"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "Atelier „Modelaj din lut” cu Sofia Koneeva"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Spectacol teatral „În vizită la teatru” cu Valentina Sevostyanova"
+        }
+      ]
+    },
+    {
+      "title": "Zona pentru Copii, Activități",
+      "events": [
+        {
+          "event_time": "10:00",
+          "event_title": "Prelegere „Crestem oameni liberi: educație fără constrângere” cu Max Lee"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "Drumeție „Spre aventuri” cu Ion Ursati"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "Antrenament teatral cu Ekaterina Rabey"
+        }
+      ]
+    }
+  ],
+  "schedule_saturday": [
+    {
+      "title": "Scena Principală",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Yoga Rajadhiraja cu Tonya"
+        },
+        {
+          "event_time": "9:30 - 11:00",
+          "event_title": "Dans Extatic cu Inna Kozlovskaya"
+        },
+        {
+          "event_time": "16:00 - 17:00",
+          "event_title": "Concert Barbarossa"
+        },
+        {
+          "event_time": "17:00 - 18:00",
+          "event_title": "Concert Neolai"
+        },
+        {
+          "event_time": "18:00 - 19:00",
+          "event_title": "Concert Aleksandra Daraż"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert Kwathula"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Concert Faye Shapiro"
+        },
+        {
+          "event_time": "21:00 - 22:30",
+          "event_title": "Concert SWEET MAMA JAMMA'S MOJO JUICE"
+        },
+        {
+          "event_time": "22:30 - 23:30",
+          "event_title": "Concert Ramwong"
+        },
+        {
+          "event_time": "23:30 - 00:30",
+          "event_title": "Concert Les Biologists Marins"
+        },
+        {
+          "event_time": "00:30 - 02:00",
+          "event_title": "Vindecare Sonoră cu Max Malina"
+        }
+      ]
+    },
+    {
+      "title": "Covorul Mastergrad"
+    },
+    {
+      "title": "Covorul Mastergrad",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Masterclass „7 Niveluri ale Iubirii” cu Maria S. folosind cărțile MAC"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Atelier de cărți MAC cu Tahmina"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „Masaj Rebozo” cu Alina Onova"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Prelegere și practică „Rune” cu Dan Balkhmat"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practică „Călătorie către Mamă și Tată – în Spațiul Constelațiilor Familiale” cu Victoria Priscu"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Prelegere „Terapia Yumeiho de Vindecare” cu Yan Fanin"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Prelegere „Sunt Fericit(ă)?” cu Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Foișorul Mastergrad",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Masterclass de Schițare cu Lena"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Atelier de țesut Lula cu Alina Onova"
+        },
+        {
+          "event_time": "12:30 - 14:30",
+          "event_title": "Atelier de creare a simbolurilor geometriei sacre cu Anastasia Sinitsyna"
+        },
+        {
+          "event_time": "14:45 - 16:15",
+          "event_title": "Atelier „Aromaterapie aplicată – Abordare naturală și eficientă pentru vindecarea corpului” cu Tatyana Lazareva"
+        },
+        {
+          "event_time": "16:30 - 18:30",
+          "event_title": "Atelier „Modelaj în lut” cu Inna Sadovnikova"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "Atelier „Țesut Mandala” cu Alla Regina"
+        },
+        {
+          "event_time": "20:45 - 22:15",
+          "event_title": "Practică „Ritual cu Ceară senzorială” cu waxplay.md"
+        }
+      ]
+    },
+    {
+      "title": "Cuptorul Mastergrad",
+      "events": [
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Atelier „Modelaj Ocarină din lut” cu Vladimir / Ocarina Salbatica"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "9:00 - 11:30",
+          "event_title": "Practică „Integrarea umbrelor și acceptarea sinelui” cu Mihaela Taranu"
+        },
+        {
+          "event_time": "11:45 - 13:30",
+          "event_title": "Atelier „Maestrul Viselor” cu Anna"
+        },
+        {
+          "event_time": "13:45 - 15:15",
+          "event_title": "Practică „Pranayama și Dhyana” cu Pogrebneac Petr"
+        },
+        {
+          "event_time": "15:30 - 17:00",
+          "event_title": "Practică corp-sunet „Vocea corpului” cu Margarita Dushevna"
+        },
+        {
+          "event_time": "17:15 - 18:45",
+          "event_title": "Practică „Mindfulness” cu Yana Korshak"
+        },
+        {
+          "event_time": "19:00 - 20:30",
+          "event_title": "Practică „Corpul știe: calea către sine prin terapii corporale” cu Riya Rai"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Atelier de Masculinitate cu Marian Petrea"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Surya Namaskar cu Andrey Liu"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Confu Dao cu Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Hatha Yoga cu Lesnichaya Irina"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Qigong cu Igor Rudkovskiy"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Kundalini Yoga cu Andrei Sclearov"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Yoga în perechi – Acroyoga cu Andrey Skrupskiy"
+        },
+        {
+          "event_time": "18:00 - 19:15",
+          "event_title": "Purna Yoga – Drumul către întregime, armonie și frumusețe cu Yana Troian"
+        },
+        {
+          "event_time": "19:30 - 20:30",
+          "event_title": "Tai Chi 24 forme stil Yang cu Serge Natarov"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Atelier de dans „Folclor argentinian” cu Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Casa de Ceai",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practică psihologică „Dragostea este...” cu Vadim Grabchuk"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Prelegere „Introducere în astrologia occidentală” cu Vasman Ivanov"
+        },
+        {
+          "event_time": "12:30 - 14:30",
+          "event_title": "Joc transformațional „Divergent” cu Anna Slobodyenyuk"
+        },
+        {
+          "event_time": "14:45 - 16:15",
+          "event_title": "Prelegere „Cum să trezești iubirea de sine” cu Denis Kuzhba"
+        },
+        {
+          "event_time": "16:30 - 17:30",
+          "event_title": "Practică „Somatică și mișcare conștientă” cu Alena Bespalenko"
+        },
+        {
+          "event_time": "17:45 - 20:30",
+          "event_title": "Joc „New Lila” cu Margarita Dushevna"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Prelegere „Sexualitatea e despre tine” cu Tatyana Zhurba"
+        }
+      ]
+    },
+    {
+      "title": "Scena Mică",
+      "events": [
+        {
+          "event_time": "8:00 - 9:00",
+          "event_title": "Practică „Meditații dinamice în stil Osho” cu Ma Prem Sagara"
+        },
+        {
+          "event_time": "9:00 - 10:45",
+          "event_title": "Masterclass „Psihologia artei” cu Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "11:00 - 12:15",
+          "event_title": "Curs „Contact Improvisation - Arta Atingerii” cu Alexandra Soshnkova și Sergey Golovney"
+        },
+        {
+          "event_time": "12:30 - 13:30",
+          "event_title": "Concert „Cântece proprii” cu Alena „Olli” Bespalenko"
+        },
+        {
+          "event_time": "13:30 - 15:30",
+          "event_title": "Masterclass „Ateliere vocale Bucurie” cu Aleksandra Daraz"
+        },
+        {
+          "event_time": "15:30 - 16:30",
+          "event_title": "Concert KinnaYana – muzică de întrupare (acustic)"
+        },
+        {
+          "event_time": "16:30 - 17:30",
+          "event_title": "Concert imersiv „Flăcări Gemene” cu Maria S și Oleg Hereseu"
+        },
+        {
+          "event_time": "17:30 - 19:00",
+          "event_title": "Spectacol teatral – Playback Theatre „Ink” pe povești din public cu Natalia Slyonkina"
+        },
+        {
+          "event_time": "19:00 - 20:00",
+          "event_title": "Concert „Raga River” cu Sergey Parfenov (Sarod) și Maya Parfenova (Tanpura)"
+        },
+        {
+          "event_time": "20:00 - 21:00",
+          "event_title": "Concert „Raga indiană la sitar” cu Andrey Ivasyuk"
+        }
+      ]
+    },
+    {
+      "title": "Sport",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practică „Masaj visceral thailandez” cu Evgeny Nemchenko și Nata Bond"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Joc „Mișcări de improvizație – Echilibrul corpului – Capturează steagul” cu Alisa-Leon"
+        },
+        {
+          "event_time": "9:00 - 10:00",
+          "event_title": "Practică „Tai Chi” cu Ilya Abramenko"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Jocuri: fotbal, volei, badminton, frisbee cu Leon-Alisa"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „Playfight” cu Dan Bogdan Răcășan"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Joc „Ștafete – Parcurs cu obstacole” cu Leon-Alisa"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practică „Yoga FRESH” cu Mikhail Bartkovsky (Odesa)"
+        },
+        {
+          "event_time": "16:00 - 19:00",
+          "event_title": "Practică „AlfaGravity” cu Alexander Stryapko"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Practică „Aruncarea cu cuțitul” cu Ilya Abramenko"
+        },
+        {
+          "event_time": "19:15 - 21:15",
+          "event_title": "Practică „Arta actorului, mișcare scenică și arta vorbirii” cu Eugen Matcovschi"
+        }
+      ]
+    },
+    {
+      "title": "Focul Principal",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practică „Surya Namaskar” cu Tatyana Rudkovskaya"
+        },
+        {
+          "event_time": "10:00 - 11:00",
+          "event_title": "Practică „Tai Chi-Qigong: Drumul în interior” cu Sergey Kioresku"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Zbor cu zmeul pe dealuri cu Nikita Fugger"
+        },
+        {
+          "event_time": "11:15 - 13:15",
+          "event_title": "Practică „Stat pe cuie și culcat pe cuie” cu Gennady Porubin"
+        },
+        {
+          "event_time": "13:30 - 14:30",
+          "event_title": "Joc „Zeii ploii: apă și natură” cu Cristina Colis"
+        },
+        {
+          "event_time": "14:45 - 15:45",
+          "event_title": "Prelegere „Remedii naturale de vindecare” cu Ruxandra"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Atelier „Hip Hop / House Dance” cu Alex Voicu (Sunny)"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Atelier „Brazilian Zouk” cu Ksenia Free"
+        },
+        {
+          "event_time": "19:15 - 20:15",
+          "event_title": "Practică „Puterea familiei” cu Denis Kuzhba"
+        },
+        {
+          "event_time": "20:30",
+          "event_title": "Practică „Mers pe foc” cu Gennady Porubin"
+        }
+      ]
+    },
+    {
+      "title": "Cortul Beduin",
+      "events": [
+        {
+          "event_time": "9:00 - 11:00",
+          "event_title": "Practică „Neurographica – Armonia masculinului și femininului” cu Natalia Senin"
+        },
+        {
+          "event_time": "11:00 - 12:30",
+          "event_title": "Laborator de poezie „Întâlniri cu adâncul” cu Stan Potoku"
+        },
+        {
+          "event_time": "12:45 - 14:30",
+          "event_title": "Prezentarea aplicației IT BRAIN și a proiectului „Unitatea Familiei” cu Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "14:45 - 16:30",
+          "event_title": "Practică „În interior” cu Artina"
+        },
+        {
+          "event_time": "16:45 - 18:30",
+          "event_title": "Prelegere despre literele devanagari și sanscrită cu Thomas Rohnke"
+        },
+        {
+          "event_time": "18:45 - 20:30",
+          "event_title": "Terapie prin poveste. Ritual – „Întoarcerea puterii și energiei feminine. Calea femeii lup” cu Olga Osinski"
+        },
+        {
+          "event_time": "20:30 - 21:30",
+          "event_title": "Ceremonie de ceai astral cu Sergey, maestru de ceremonii"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor"
+    },
+    {
+      "title": "Zona Copiilor, Creativitate",
+      "events": [
+        {
+          "event_time": "9:00 - 10:30",
+          "event_title": "Acroyoga pentru copii și părinți cu Andrey Skrupskiy"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Spectacol teatral „La teatru” cu Valentina Sevostyanova"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "Atelier „Origami” cu David și Yasna Onovy"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Prelegere „Naștere armonioasă” cu Alina Onova"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "Atelier „Fabricarea unei șalupe” cu Kirill Nika"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Prelegere „Educația copiilor liberi: educație fără constrângeri” cu Max Lee"
+        },
+        {
+          "event_time": "15:15 - 17:00",
+          "event_title": "Atelier „Lucru în lemn” cu Maxim Alekseev"
+        },
+        {
+          "event_time": "17:00",
+          "event_title": "Joc interactiv despre apă și nisip cu Galina Tokar"
+        },
+        {
+          "event_time": "18:00",
+          "event_title": "Atelier „Cum să modelezi un Smesharik din plastilină” cu Daria Selivanov"
+        },
+        {
+          "event_time": "19:00",
+          "event_title": "Concert „Magic & IQPuzzles Workshop” cu Liviu Tverdostup"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Spectacol „În lumea basmelor” cu Galina Tokar"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor, Activități",
+      "events": [
+        {
+          "event_time": "9:00",
+          "event_title": "Atelier „Desenează dimineața ta” cu Marianna Ivanenko"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Prelegere „Top 10 greșeli în parenting care întârzie dezvoltarea vorbirii” cu Irina Fursa"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "Gimnastică de sănătate pentru adulți și copii de peste 12 ani cu Irina Cheban"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Pregătirea costumului pentru Ziua Spiritului Apei cu Natalia Slyonkina"
+        },
+        {
+          "event_time": "13:40",
+          "event_title": "Concert „Cântece despre mări și râuri” cu Elena Lisnik"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Lansarea șalupei și joc cu apă pe râu – plute și pulverizatoare cu Kirill Nika și Daria Selivanov"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Robotică – lansare rachetă de apă cu Vadim Grabchuk (Robotica Lab)"
+        },
+        {
+          "event_time": "15:30",
+          "event_title": "Quest „Minunile Mării” cu Ekaterina și Alexander Zhaliuk, Tatyana Voloshina"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Joc „Zip Line” cu Igor Burdienko"
+        }
+      ]
+    }
+  ],
+  "schedule_sunday": [
+    {
+      "title": "Scena Principală",
+      "events": [
+        {
+          "event_time": "5:00 - 6:30",
+          "event_title": "Yoga Rajadhiraja cu Tonya"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Qigong cu Igor Rudkovskiy"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Dans Extatic cu Sarmigetusa"
+        },
+        {
+          "event_time": "17:45 - 19:15",
+          "event_title": "Plexus - Ritual de Durere/Viață"
+        },
+        {
+          "event_time": "18:00 - 19:30",
+          "event_title": "Ceremonia de Închidere (în zona Mayfair) – cu Barbarossa și Spectacol de Foc al Teatrului de Performanțe de Foc și Lumină „Om Ram”"
+        },
+        {
+          "event_time": "20:00",
+          "event_title": "Încheierea Festivalului"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad"
+    },
+    {
+      "title": "Mastergrad Covor",
+      "events": [
+        {
+          "event_time": "8:30 - 10:30",
+          "event_title": "Practică „Neurografica cu energia Culorii Vieții” cu Oksana Ra-Svet"
+        },
+        {
+          "event_time": "10:45 - 12:15",
+          "event_title": "Practică „Somatică și Mișcare Conștientă” cu Alena Bespalenko"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „Masaj Vindecător și Auto-masaj” cu Irina Cheban"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Prelegere „Rune – Prelegere și Aplicare Practică” cu Dan Balkhmat"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Prelegere „Psihologia Oglindă, Teorie și Practică” cu Saidar Orbo"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Foișor",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Masterclass de acuarelă (pictură peisagistică) cu Lena"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Masterclass de împletire a Arborelui Vieții cu Margarita Dushevna"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Masterclass „Împletirea simbolului sacru Merkaba” cu Olga Starikova"
+        },
+        {
+          "event_time": "14:15 - 16:45",
+          "event_title": "Masterclass pentru crearea simbolului Geometriei Sacre cu Anastasia Sinitsyna"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Cuptor",
+      "events": [
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Masterclass „Modelarea ocarinei din lut” cu Vladimir / Ocarina Salbatica"
+        }
+      ]
+    },
+    {
+      "title": "Shambala",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Prelegere „Practici viscerale” cu Anatoly DaoAnhoral"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Practică „Teoria și practica pădurilor sacre” cu Saidar Orbo"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „Reiki, sesiune de auto-vindecare” cu Ekaterina Tishchenko"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practică „Pranayama și Dhyana” cu Pogrebneac Petr"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Practică „Regresie în vieți anterioare” cu Anna Selivanova"
+        }
+      ]
+    },
+    {
+      "title": "Yoga",
+      "events": [
+        {
+          "event_time": "6:45 - 8:15",
+          "event_title": "Sukshma Vyayam + Sthula Vyayam cu Stanislav Kysa"
+        },
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Vinyasa Yoga cu Pogrebneac Petr"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Yoga funcțională cu Ksenia Slonova"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Yoga în pereche - Acroyoga cu Andrey Skrupskiy"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "FRESH Yoga cu Mikhail Bartkovsky"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "FYSM YOGA - (Fresh Yoga) cu Irina Boiko"
+        }
+      ]
+    },
+    {
+      "title": "Casa de Ceai",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Masterclass „Finisarea manuală a produselor” cu Sergey Natarov"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Masterclass „Sistemul Reiki ca drum spiritual” cu Marina Zaretskaya"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Prelegere „Sexualitatea e despre tine” cu Tatyana Zhurba"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Prelegere „Meditația Mindfulness, Satipatthana” cu Sergey Molenta"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Masterclass „Puterea interioară” cu Denis Kuzhba"
+        }
+      ]
+    },
+    {
+      "title": "Scena Mică",
+      "events": [
+        {
+          "event_time": "8:45 - 9:45",
+          "event_title": "Practică „Tai Chi-Qigong: Drumul către sine” cu Sergey Kioresku"
+        },
+        {
+          "event_time": "10:00 - 12:30",
+          "event_title": "Masterclass de playback, improvizație, adaptabilitate, armonizare, ascultare conștientă de Natalia Slyonkina / Teatrul Playback „Cerneală”"
+        },
+        {
+          "event_time": "12:45 - 14:15",
+          "event_title": "Prelegere „Relația cu sine și lumea” cu Atlanta / Alena Kumanova"
+        },
+        {
+          "event_time": "14:30 - 16:00",
+          "event_title": "Practică „Diagnosticarea și corectarea tulburărilor energetico-informaționale prin radiestezie (biolocație)” cu Marina Zaretskaya"
+        },
+        {
+          "event_time": "16:15 - 17:45",
+          "event_title": "Prelegere „Bazele unui stil de viață sănătos sau principiile nutriției raționale” cu Angela"
+        }
+      ]
+    },
+    {
+      "title": "Sport",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practică „Masaj visceral thailandez” cu Evgeny Nemchenko și Nata Bond"
+        },
+        {
+          "event_time": "9:00 - 10:00",
+          "event_title": "Practică „Tai Chi” cu Ilya Abramenko"
+        },
+        {
+          "event_time": "10:15 - 12:15",
+          "event_title": "Joc „Vânătoare de comori - Quest în pădure” cu Alisa-Leon"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „Playfight” cu Dan Bogdan Răcășan"
+        },
+        {
+          "event_time": "14:15 - 15:45",
+          "event_title": "Practică „AlfaGravity” cu Alexander Stryapko"
+        },
+        {
+          "event_time": "16:00 - 17:30",
+          "event_title": "Jocuri „Fotbal, Volei, Badminton, Frisbee” cu Leon-Alisa"
+        }
+      ]
+    },
+    {
+      "title": "Focul Principal",
+      "events": [
+        {
+          "event_time": "8:30 - 10:00",
+          "event_title": "Practică „Surya Namaskar” cu Tatyana Rudkovskaya"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Adunare: Lansarea zmeielor pe dealuri cu Nikita Fugger"
+        },
+        {
+          "event_time": "10:15 - 11:30",
+          "event_title": "Practică „Meditații dinamice în stil Osho” cu Ma Prem Sagara"
+        }
+      ]
+    },
+    {
+      "title": "Cort Beduin",
+      "events": [
+        {
+          "event_time": "9:00 - 10:30",
+          "event_title": "Practică „Corpul știe: drumul către sine prin terapii corporale” cu Riya Rai"
+        },
+        {
+          "event_time": "10:45 - 12:15",
+          "event_title": "Practică „Atelier de relaționare autentică” cu Victoria Priscu"
+        },
+        {
+          "event_time": "12:30 - 14:00",
+          "event_title": "Practică „În interiorul sinelui” cu Artina"
+        },
+        {
+          "event_time": "14:15 - 15:30",
+          "event_title": "Ceremonia ceaiului Astral cu Sergey, Maestru de ceremonii"
+        },
+        {
+          "event_time": "15:45 - 17:15",
+          "event_title": "Practică „De la îndoială la acțiune” cu Olga Vlasenko"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor"
+    },
+    {
+      "title": "Zona Copiilor, Creativitate",
+      "events": [
+        {
+          "event_time": "10:00",
+          "event_title": "Masterclass „Shuriken și animale din origami” cu Lev Tomilov"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Training/Masterclass de comunicare pentru adolescenți cu Buzenco Iulia"
+        },
+        {
+          "event_time": "11:00",
+          "event_title": "Masterclass „Meșteșuguri vesele” cu Kirill Nika"
+        },
+        {
+          "event_time": "12:00",
+          "event_title": "Joc „Jocuri de echipă” cu Igor Burdienko"
+        },
+        {
+          "event_time": "13:00",
+          "event_title": "Concert „Magic & IQPuzzles Workshop” cu Liviu Tverdostup"
+        },
+        {
+          "event_time": "14:00",
+          "event_title": "Prelegere „Poveste despre câini” cu Marina Nika"
+        },
+        {
+          "event_time": "15:00",
+          "event_title": "Prelegere „Lecții despre valori morale pentru vârsta școlară mică” cu Natalia Stavnicii (Taly)"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor, Activități",
+      "events": [
+        {
+          "event_time": "9:00 - 12:00",
+          "event_title": "Drumeție cu Anna Voronyuk"
+        },
+        {
+          "event_time": "10:00",
+          "event_title": "Prelegere „Top 10 greșeli ale părinților care întârzie vorbirea copilului” cu Irina Fursa"
+        }
+      ]
+    }
+  ],
+  "tab_thursday": "Joi, 10 Iulie 2025",
+  "tab_friday": "Vineri, 11 Iulie 2025",
+  "tab_saturday": "Sâmbătă, 12 Iulie 2025",
+  "tab_sunday": "Duminică, 13 Iulie 2025",
+  "zones_label": "Numărul total de zone ale festivalului",
+  "zones": "11 zone, incluzând Scena Principală, Scena Mică, Mastergrad, Zona de Yoga, Shambala, Zona de Sport, Casa de Ceai, Mayfair, Cortul Beduin, Galeria de Artă pentru Copii.",
+  "temaskal": "+ Temazcal (saună mexicană cu plante medicinale)",
+  "womens_space": "+ Spațiul Feminității Sacre (pentru femei)",
+  "fantacy_space": "+ Zona de Fantezie (pentru fanii miturilor și lumilor fantastice)",
+  "kitchens": "+ Bucătării vegetarienă, raw vegane și indiene",
+  "changes": "Sunt posibile modificări minore, care vor fi afișate în programul festivalului."
 }
