@@ -61,6 +61,10 @@ const router = createBrowserRouter([
     element: <ProgrammaWithSchedule/>,
   },
   {
+    path: "/schedule",
+    element: <ProgrammaWithSchedule />,
+  },
+  {
     path: "/success",
     element: <Success/>,
   },

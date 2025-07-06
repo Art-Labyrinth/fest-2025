@@ -33,6 +33,7 @@ export default function ProgrammaWithSchedule() {
   // const schedule_saturday = t("schedule_saturday", {returnObjects: true}) as ScheduleSection[];
   // const schedule_sunday = t("schedule_sunday", {returnObjects: true}) as ScheduleSection[];
 
+
   return (
     <>
       <div className="bg-main">
@@ -41,6 +42,7 @@ export default function ProgrammaWithSchedule() {
       <div className="flex align-middle justify-center w-[100%] max-w-[100%] h-[37vw] md:h-[29vw] ml-auto mr-auto bg-cover" style={{backgroundImage: "url(/Programma/banner.jpg)"}}>
         <h1 className="text-[#F4E4C3] self-center text-3xl sm:text-[40px] font-serif uppercase font-bold">{t("programma.header")}</h1>
       </div>
+
       <div className="px-4 w-[1730px] max-w-[100%] mt-[50px] mb-0 ml-auto mr-auto">
         <div className="flex justify-center gap-[18px] mb-[70px] flex-wrap">
           {days.map((day) => (
@@ -90,6 +92,7 @@ export default function ProgrammaWithSchedule() {
           <p className="mb-[30px] text-xl font-evolventa">{t('kitchens')}</p>
           <p className="mb-[30px] text-xl">{t('changes')}</p>
           <img className="width-[692px] max-w-[100%] ml-auto mr-auto" src="/Programma/tree.png" alt=""/>
+
         </div>
       </div>
       <Footer/>
