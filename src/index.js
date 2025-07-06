@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainPage from "./components/Main/MainPage";
 import About from "./components/About";
 import Contacts from "./components/Contacts";
@@ -13,7 +13,7 @@ import Programma from "./components/Programma/Programma";
 import ProgrammaWithSchedule from "./components/ProgrammaWithSchedule/ProgrammaWithSchedule";
 import GettingThere from "./components/GettingThere/GettingThere";
 import NotFound from "./components/NotFound";
-import { fetchCsrfToken } from "./utils";
+import {fetchCsrfToken} from "./utils";
 
 import "./index.css";
 import "./i18n";
@@ -26,61 +26,61 @@ if (fbclid) {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainPage />,
+    element: <MainPage/>,
     index: true,
   },
   {
     path: "/about",
-    element: <About />,
+    element: <About/>,
   },
   {
     path: "/contacts",
-    element: <Contacts />,
+    element: <Contacts/>,
     loader: () => {
       fetchCsrfToken();
     },
   },
   {
     path: "/participants",
-    element: <Participants />,
+    element: <Participants/>,
   },
   {
     path: "/contribute",
-    element: <Contribute />,
+    element: <Contribute/>,
   },
   {
     path: "/gallery",
-    element: <Gallery />,
+    element: <Gallery/>,
   },
   {
     path: "/program",
-    element: <Programma />,
+    element: <Programma/>,
   },
   {
     path: "/schedule",
-    element: <ProgrammaWithSchedule />,
+    element: <ProgrammaWithSchedule/>,
   },
   {
     path: "/success",
-    element: <Success />,
+    element: <Success/>,
   },
   {
     path: "/gettingthere",
-    element: <GettingThere />,
+    element: <GettingThere/>,
   },
   {
     path: "/fail",
-    element: <Fail />,
+    element: <Fail/>,
   },
   {
     path: "*",
-    element: <NotFound />,
+    element: <NotFound/>,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 );
