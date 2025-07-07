@@ -1073,10 +1073,10 @@
       ]
     },
     {
-      "title": "Children's Zone"
+      "title": "Children Zone"
     },
     {
-      "title": "Children's Zone, Creativity",
+      "title": "Children Zone, Creativity",
       "events": [
         {
           "event_time": "9:00",
@@ -1129,7 +1129,7 @@
       ]
     },
     {
-      "title": "Children's Zone, Activities",
+      "title": "Children Zone, Activities",
       "events": [
         {
           "event_time": "10:00",
@@ -1665,7 +1665,7 @@
         },
         {
           "event_time": "18:00 - 19:30",
-          "event_title": "Closing Ceremony (at Mayfair zone) – with Barbarossa and Fire Show by the Fire and Light Performance Theater “Om Ram”"
+          "event_title": "Closing Ceremony (at Main Bonfire zone) – with Barbarossa and Fire Show by the Fire and Light Performance Theater “Om Ram”"
         },
         {
           "event_time": "20:00",
@@ -1907,10 +1907,10 @@
       ]
     },
     {
-      "title": "Children's Zone"
+      "title": "Children Zone"
     },
     {
-      "title": "Children's Zone, Creativity",
+      "title": "Children Zone, Creativity",
       "events": [
         {
           "event_time": "10:00",
@@ -1943,7 +1943,7 @@
       ]
     },
     {
-      "title": "Children's Zone, Activities",
+      "title": "Children Zone, Activities",
       "events": [
         {
           "event_time": "9:00 - 12:00",
@@ -1961,7 +1961,7 @@
   "tab_saturday": "Saturday, July 12, 2025",
   "tab_sunday": "Sunday, July 13, 2025",
   "zones_label": "Total Number of Festival Zones",
-  "zones": "11 zones including Main Stage, Small Stage, Mastergrad, Yoga Zone, Shambala, Sport Zone, Tea House, Mayfair, Bedouin Tent, Children's Art Gallery.",
+  "zones": "11 zones including Main Stage, Small Stage, Mastergrad, Yoga Zone, Shambala, Sport Zone, Tea House, Main Bonfire, Bedouin Tent, Children Zone, Art Gallery.",
   "temaskal": "+ Temazcal (Mexican herbal sauna)",
   "womens_space": "+ Sacred Femininity Space (for women)",
   "fantacy_space": "+ Fantasy Zone (for fans of myths and fairy worlds)",
