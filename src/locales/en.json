@@ -737,7 +737,45 @@
       "events": [
         {
           "event_time": "20:00",
-          "event_title": "Fire show by the Om Ram Fire and Light Performance Theater"
+          "event_title": "Fire show by the Fire and Light Performance Theater 'Om Ram'"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Pavilion",
+      "events": [
+        {
+          "event_time": "16:00 - 18:30",
+          "event_title": "Masterclass on creating Sacred Geometry symbols with Anastasia Sinitsyna"
+        }
+      ]
+    },
+    {
+      "title": "Kids Zone"
+    },
+    {
+      "title": "Kids Zone, Creativity",
+      "events": [
+        {
+          "event_time": "15:00 – 17:00",
+          "event_title": "Mandala drawing with Sofia Koneeva"
+        },
+        {
+          "event_time": "17:00 – 18:30",
+          "event_title": "Magic & IQPuzzles workshop with Liviu Tverdostup"
+        },
+        {
+          "event_time": "18:30 - 20:00",
+          "event_title": "Your Morning Drawing – meditative creativity with Marianna Ivanenko"
+        }
+      ]
+    },
+    {
+      "title": "Kids Zone, Activities",
+      "events": [
+        {
+          "event_time": "18:00",
+          "event_title": "Kids' Quest 'Journey through the Art Fest' with Natalia Slyonkina"
         }
       ]
     }
