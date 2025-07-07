@@ -54,15 +54,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/program",
-    element: <Programma/>,
-  },
-  {
-    path: "/schedule",
     element: <ProgrammaWithSchedule/>,
   },
   {
     path: "/schedule",
     element: <ProgrammaWithSchedule />,
+  },
+  {
+    path: "/old_program",
+    element: <Programma/>,
   },
   {
     path: "/success",
