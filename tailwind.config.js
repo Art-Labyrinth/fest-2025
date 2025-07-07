@@ -295,6 +295,10 @@ module.exports = {
           lineHeight: 1.3,
         },
 
+        '.no-break-inside': {
+          breakInside: 'avoid',
+        },
+
         '.schedule-section': {
           marginBottom: 65,
           breakInside: 'avoid',

@@ -733,7 +733,45 @@
       "events": [
         {
           "event_time": "20:00",
-          "event_title": "Spectacol de foc de la teatrul de performanță cu foc și lumină „Om Ram”"
+          "event_title": "Spectacol de foc al Teatrului de Foc și Lumină „Om Ram”"
+        }
+      ]
+    },
+    {
+      "title": "Mastergrad Foișor",
+      "events": [
+        {
+          "event_time": "16:00 - 18:30",
+          "event_title": "Masterclass de creare a simbolului Geometriei Sacre cu Anastasia Sinitsyna"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor"
+    },
+    {
+      "title": "Zona Copiilor, Creativitate",
+      "events": [
+        {
+          "event_time": "15:00 – 17:00",
+          "event_title": "Desen de mandale cu Sofia Koneeva"
+        },
+        {
+          "event_time": "17:00 – 18:30",
+          "event_title": "Atelier Magic & IQPuzzles cu Liviu Tverdostup"
+        },
+        {
+          "event_time": "18:30 - 20:00",
+          "event_title": "Desenul dimineții tale – creație meditativă cu Marianna Ivanenko"
+        }
+      ]
+    },
+    {
+      "title": "Zona Copiilor, Activități",
+      "events": [
+        {
+          "event_time": "18:00",
+          "event_title": "Quest pentru copii „În călătorie prin Art Fest” cu Natalia Slyonkina"
         }
       ]
     }

@@ -43,12 +43,6 @@ export default function ProgrammaWithSchedule() {
     }
   }, []);
 
-  // const schedule_thursday = t("schedule_thursday", {returnObjects: true}) as ScheduleSection[];
-  // const schedule_friday = t("schedule_friday", {returnObjects: true}) as ScheduleSection[];
-  // const schedule_saturday = t("schedule_saturday", {returnObjects: true}) as ScheduleSection[];
-  // const schedule_sunday = t("schedule_sunday", {returnObjects: true}) as ScheduleSection[];
-
-
   return (
     <>
       <div className="bg-main">
@@ -98,16 +92,17 @@ export default function ProgrammaWithSchedule() {
                 })}
             </div>
           ))}
-          <p className="text-[22px]">
-            <span className="font-bold">{t('zones_label')}</span>:{' '}{t('zones')}
-          </p>
-          <p className="mt-[30px] text-xl font-evolventa">{t('temaskal')}</p>
-          <p className="text-xl font-evolventa">{t('womens_space')}</p>
-          <p className="text-xl font-evolventa">{t('fantacy_space')}</p>
-          <p className="mb-[30px] text-xl font-evolventa">{t('kitchens')}</p>
-          <p className="mb-[30px] text-xl">{t('changes')}</p>
-          <img className="width-[692px] max-w-[100%] ml-auto mr-auto" src="/Programma/tree.png" alt=""/>
-
+          <div className="no-break-inside">
+            <p className="text-[22px]">
+              <span className="font-bold">{t('zones_label')}</span>:{' '}{t('zones')}
+            </p>
+            <p className="mt-[30px] text-xl font-evolventa">{t('temaskal')}</p>
+            <p className="text-xl font-evolventa">{t('womens_space')}</p>
+            <p className="text-xl font-evolventa">{t('fantacy_space')}</p>
+            <p className="mb-[30px] text-xl font-evolventa">{t('kitchens')}</p>
+            <p className="mb-[30px] text-xl">{t('changes')}</p>
+            <img className="width-[692px] max-w-[100%] ml-auto mr-auto" src="/Programma/tree.png" alt=""/>
+          </div>
         </div>
       </div>
       <Footer/>
