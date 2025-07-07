@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Footer from "../Footer/Footer";
 import {Header} from "../Header/Header";
 import {useTranslation} from 'react-i18next';
@@ -27,6 +27,21 @@ export default function ProgrammaWithSchedule() {
   };
 
   const schedule = schedules[selectedDay] || [];
+
+  useEffect(() => {
+    const today = new Date();
+    if (today.getFullYear() === 2025 && today.getMonth() === 6) {
+      if (today.getDate() === 10) {
+        setSelectedDay("thursday");
+      } else if (today.getDate() === 11) {
+        setSelectedDay("friday");
+      } else if (today.getDate() === 12) {
+        setSelectedDay("saturday");
+      } else if (today.getDate() === 13) {
+        setSelectedDay("sunday");
+      }
+    }
+  }, []);
 
   // const schedule_thursday = t("schedule_thursday", {returnObjects: true}) as ScheduleSection[];
   // const schedule_friday = t("schedule_friday", {returnObjects: true}) as ScheduleSection[];
