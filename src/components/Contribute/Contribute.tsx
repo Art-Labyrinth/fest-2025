@@ -520,12 +520,13 @@ function Contribute() {
                                     <p className="text-brown text-lg mb-4 my-auto">
                                         {t("contribute.our_needs.text_4")}
                                     </p>
-                                    <button
-                                        className="md:w-2/5 w-1/2 bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75 disabled:bg-[#F6D8B4] mt-auto"
-                                        disabled
-                                    >
-                                        {t("contribute.our_needs.button")}
-                                    </button>
+                                    <a href="https://docs.google.com/document/d/1hWkqxJShZEWnt9Yl9EZfF3zswS3d9Y_dNqmycmktT9Y" target="_blank" rel="noopener noreferrer">
+                                        <button
+                                            className="md:w-2/5 w-1/2 bg-[#F07B17] text-white px-4 py-2 rounded hover:bg-[#F07B17]/75 disabled:bg-[#F6D8B4] mt-auto"
+                                        >
+                                            {t("contribute.our_needs.button")}
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
