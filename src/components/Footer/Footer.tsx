@@ -52,6 +52,7 @@ export default function Footer({backgroundColor = "bg-main"}) {
         </div>
       </div>
       <div className="flex flex-wrap justify-center max-w-[1452px] mx-auto pb-[30px] px-[5px] gap-[20px]">
+
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.facebook.com/cscirm"><img className="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px]" src="/Footer/coal-sect-cultural.png" alt="Coaliția Sectorului Cultural Independent din Republica Moldova
 "/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.instagram.com/magazin_veda/"><img className="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px]" src="/Footer/veda.png" alt="Magazin Veda"/></a>
