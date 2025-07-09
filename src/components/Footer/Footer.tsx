@@ -52,9 +52,9 @@ export default function Footer({backgroundColor = "bg-main"}) {
         </div>
       </div>
       <div className="flex flex-wrap justify-center max-w-[1452px] mx-auto pb-[30px] px-[5px] gap-[20px]">
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-1.png" alt=""/></a>
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-2.png" alt=""/></a>
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-3.png" alt=""/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-1.png?1" alt=""/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-2.png?1" alt=""/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-3.png?1" alt=""/></a>
 
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://t.me/friends_md"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/friends-md.jpg" alt="friends.md"/></a>
         <a target="_blank" rel="noopener noreferrer" className="bg-[#fff] flex-shrink-0 self-center" href="https://www.danishculture.com/eu4culture/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/dansk-kultur-institut.png" alt="Dansk-kultur-institut"/></a>
