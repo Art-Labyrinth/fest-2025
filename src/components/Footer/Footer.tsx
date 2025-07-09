@@ -52,16 +52,16 @@ export default function Footer({backgroundColor = "bg-main"}) {
         </div>
       </div>
       <div className="flex flex-wrap justify-center max-w-[1452px] mx-auto pb-[30px] px-[5px] gap-[20px]">
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-1.png?1" alt=""/></a>
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-2.png?1" alt=""/></a>
-        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href=""><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/sponsor-3.png?1" alt=""/></a>
-
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.facebook.com/cscirm"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/coal-sect-cultural.png" alt="Coaliția Sectorului Cultural Independent din Republica Moldova
+"/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.instagram.com/magazin_veda/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/veda.png" alt="Magazin Veda"/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://oberliht.org/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/oberliht.png" alt="Oberliht"/></a>
+        <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="http://www.apakangen.md/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/apa-kangen.png" alt="Apa Kangen"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://t.me/friends_md"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/friends-md.jpg" alt="friends.md"/></a>
         <a target="_blank" rel="noopener noreferrer" className="bg-[#fff] flex-shrink-0 self-center" href="https://www.danishculture.com/eu4culture/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/dansk-kultur-institut.png" alt="Dansk-kultur-institut"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.instagram.com/artavivusmd/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/artavivus.jpg" alt="artavivus"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://numina.md/"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/numina.jpg" alt="Numina"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://www.instagram.com/shanti.space.md"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/shanti.png" alt="Shanti"/></a>
-
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://growhills.com"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/growhills.png" alt="Growhills"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://pergament.md"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/pergament.png" alt="Pergament"/></a>
         <a target="_blank" rel="noopener noreferrer" className="flex-shrink-0 self-center" href="https://xstyle.md"><img className="w-[80px] h-[80px] lg:w-[110px] lg:h-[110px]" src="/Footer/x-style.png" alt="X-Style"/></a>
