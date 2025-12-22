@@ -1,5 +1,4 @@
 import React from "react";
-import i18next from 'i18next';
 
 interface RulesModalProps {
   isOpen: boolean;
@@ -43,7 +42,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose, t }) => {
             {t("participants.popups.rules.header_1")}
           </h2>
           <p className="text-brown text-base leading-relaxed mb-6 text-center">
-            {(i18next.t("participants.popups.rules.texts_1", { returnObjects: true, lng: i18next.language }) as string[]).map((item, idx) => (
+            {((t("participants.popups.rules.texts_1") || []) as unknown as string[]).map((item, idx) => (
               <span key={idx} className="block">{item}</span>
             ))}
           </p>
@@ -66,7 +65,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose, t }) => {
               <img src="/Participants/no_rage.png" alt="No_rage" className="w-12 h-13" />
             </div>
             <p className="text-brown text-base leading-relaxed mx-6 text-center">
-              {(i18next.t("participants.popups.rules.texts_2", { returnObjects: true, lng: i18next.language }) as string[]).map((item, idx) => (
+              {((t("participants.popups.rules.texts_2") || []) as unknown as string[]).map((item, idx) => (
                 <span key={idx} className="block">{item}</span>
               ))}
             </p>

@@ -74,11 +74,11 @@ export default function GettingThere() {
 
         {/* Пример цикла по дням */}
         <div className="columns-1 lg:columns-2 gap-[40px] ">
-          {Object.entries(t("gettingthere.our_transport.days", {returnObjects: true})).map(([day, rides]) => (
+          {Object.entries(t("gettingthere.our_transport.days", {returnObjects: true})).map(([day, rides]: [string, unknown]) => (
             <React.Fragment key={day}>
               <h6 className="ride-day">{day}</h6>
               <ul className="ride-list">
-                {rides.map((ride: string, index: number) => (
+                {(rides as string[]).map((ride: string, index: number) => (
                   <li key={index} className="ride-time">{ride}</li>
                 ))}
               </ul>
@@ -149,11 +149,11 @@ export default function GettingThere() {
           {t("gettingthere.tiraspol_transport.subtitle")}
         </h3>
 
-        {Object.entries(t("gettingthere.tiraspol_transport.days", {returnObjects: true})).map(([day, rides]) => (
+        {Object.entries(t("gettingthere.tiraspol_transport.days", {returnObjects: true})).map(([day, rides]: [string, unknown]) => (
           <React.Fragment key={day}>
             <h6 className="ride-day">{day}</h6>
             <ul className="ride-list">
-              {rides.map((ride: string, index: number) => (
+              {(rides as string[]).map((ride: string, index: number) => (
                 <li key={index} className="ride-time">{ride}</li>
               ))}
             </ul>
