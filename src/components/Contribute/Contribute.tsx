@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useTranslation } from 'react-i18next';
-import { API_URL } from "src/config";
-import i18n from "src/i18n";
+import { API_URL } from "@/config";
+import i18n from "@/i18n";
 import { SendFacebookEvent } from "./SendFacebookEvent";
 
 function Contribute() {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { API_URL } from "src/config";
+import { API_URL } from "@/config";
 import { useTranslation } from 'react-i18next';
 
 export default function Contacts() {
@@ -142,7 +142,7 @@ export default function Contacts() {
                                         className="shadow appearance-none bg-[#F4E4C3] border rounded w-full py-2 px-3 leading-tight font-light font-deledda text-sm focus:outline-none focus:shadow-outline"
                                         id="last"
                                         type="text"
-                                        placeholder={t("contacts.form.name")}
+                                        placeholder={String(t("contacts.form.name"))}
                                         value={formData.last}
                                         onChange={(e) => setFormData({ ...formData, last: e.target.value })}
                                     />
@@ -152,7 +152,7 @@ export default function Contacts() {
                                         className="shadow appearance-none bg-[#F4E4C3] border rounded w-full py-2 px-3 leading-tight font-light font-deledda text-sm focus:outline-none focus:shadow-outline"
                                         id="phone"
                                         type="tel"
-                                        placeholder={t("contacts.form.phone")}
+                                        placeholder={String(t("contacts.form.phone"))}
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
@@ -162,7 +162,7 @@ export default function Contacts() {
                                         className="shadow appearance-none bg-[#F4E4C3] border rounded w-full py-2 px-3 leading-tight font-light font-deledda text-sm focus:outline-none focus:shadow-outline"
                                         id="email"
                                         type="email"
-                                        placeholder={t("contacts.form.email")}
+                                        placeholder={String(t("contacts.form.email"))}
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         required

@@ -133,7 +133,7 @@ export default function GettingThere() {
             className="underline hover:no-underline break-all"
             target="_blank"
             rel="noreferrer noopener"
-            href={t("gettingthere.tiraspol_transport.telegramCoordinatorLink")}
+            href={String(t("gettingthere.tiraspol_transport.telegramCoordinatorLink"))}
           >
             {t("gettingthere.tiraspol_transport.telegramCoordinator")}
           </a>
@@ -211,7 +211,7 @@ export default function GettingThere() {
               className="underline hover:no-underline break-all"
               target="_blank"
               rel="noreferrer noopener"
-              href={t("gettingthere.by_car.parking_link_href")}
+              href={String(t("gettingthere.by_car.parking_link_href"))}
             >
               {t("gettingthere.by_car.parking_link_href")}
             </a>
@@ -223,7 +223,7 @@ export default function GettingThere() {
               className="underline hover:no-underline break-all"
               target="_blank"
               rel="noreferrer noopener"
-              href={t("gettingthere.by_car.festival_link_href")}
+              href={String(t("gettingthere.by_car.festival_link_href"))}
             >
               {t("gettingthere.by_car.festival_link_href")}
             </a>
@@ -245,7 +245,7 @@ export default function GettingThere() {
         </h2>
 
         <div className="text-[22px] sm:text-[28px] font-evolventa mb-[20px] sm:mb-[30px]">
-          {t("gettingthere.rideshare.telegram")} <a className="underline hover:no-underline break-all" target="_blank" rel="noreferrer noopener" href={t("gettingthere.rideshare.telegram_href")}>{t("gettingthere.rideshare.telegram_href")}</a>.
+          {t("gettingthere.rideshare.telegram")} <a className="underline hover:no-underline break-all" target="_blank" rel="noreferrer noopener" href={String(t("gettingthere.rideshare.telegram_href"))}>{t("gettingthere.rideshare.telegram_href")}</a>.
         </div>
 
         <div className="text-[22px] sm:text-[28px] font-evolventa mb-[30px] sm:mb-[60px]">
