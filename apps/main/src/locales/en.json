@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "home": {
+    "title": "Art-Labyrinth Summer Festival",
+    "subtitle": "Annual festival of art, music and mindfulness",
+    "editions_title": "Festivals",
+    "upcoming": "Coming soon",
+    "visit": "Visit site"
+  },
+  "about": {
+    "title": "About the Festival",
+    "text_1": "Art-Labyrinth Summer Festival is an annual event founded in 2008. Each year we bring together people ready to unite in the pursuit of inspiration, creativity and mindfulness.",
+    "text_2": "The festival takes place on the scenic banks of the Dniester River in Moldova. It is a space for transformation, exchange of ideas and inspiration, where art, music and nature merge in a single flow.",
+    "text_3": "We bring together artists, musicians, craftspeople, volunteers and dreamers — everyone ready to create something great together."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "org_name": "Art-Labyrinth",
+    "email": "info@art-labyrinth.org",
+    "social": "Social media"
+  },
+  "footer": {
+    "org": "Art-Labyrinth"
+  }
+}

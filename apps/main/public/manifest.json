@@ -1,0 +1,9 @@
+{
+  "short_name": "Art-Labyrinth",
+  "name": "Art-Labyrinth Summer Festival",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#351904",
+  "background_color": "#fffbf5"
+}

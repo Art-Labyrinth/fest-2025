@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "contacts": "Contacte"
+  },
+  "home": {
+    "title": "Art-Labyrinth Summer Festival",
+    "subtitle": "Festival anual de artă, muzică și conștientizare",
+    "editions_title": "Festivaluri",
+    "upcoming": "În curând",
+    "visit": "Vizitați site-ul"
+  },
+  "about": {
+    "title": "Despre festival",
+    "text_1": "Art-Labyrinth Summer Festival este un eveniment anual fondat în 2008. În fiecare an reunim oameni gata să se unească în căutarea inspirației, creativității și conștientizării.",
+    "text_2": "Festivalul se desfășoară pe malurile pitorești ale râului Nistru din Moldova. Este un spațiu de transformare, schimb de idei și inspirație, unde arta, muzica și natura se contopesc.",
+    "text_3": "Reunim artiști, muzicieni, meșteri, voluntari și visători — toți cei pregătiți să creeze ceva măreț împreună."
+  },
+  "contacts": {
+    "title": "Contacte",
+    "org_name": "Art-Labirint",
+    "email": "info@art-labyrinth.org",
+    "social": "Rețele sociale"
+  },
+  "footer": {
+    "org": "Art-Labirint"
+  }
+}
