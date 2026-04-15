@@ -14,10 +14,10 @@
     "web-vitals": "^5.1.0"
   },
   "scripts": {
-    "start": "PORT=3026 PUBLIC_URL=/2026 react-scripts start",
-    "dev": "PORT=3026 PUBLIC_URL=/2026 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "PORT=3026 PUBLIC_URL=/2026 craco start",
+    "dev": "PORT=3026 PUBLIC_URL=/2026 craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

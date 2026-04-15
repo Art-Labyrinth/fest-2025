@@ -4,6 +4,9 @@
         "esModuleInterop": true,
         "strict": true,
         "jsx": "react-jsx",
-        "types": ["node", "react-scripts"]
+        "types": ["node", "react-scripts"],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     }
 }

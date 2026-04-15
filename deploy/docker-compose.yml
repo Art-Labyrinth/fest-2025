@@ -1,3 +1,5 @@
+name: art-lab-fest-web
+
 services:
   art-lab-fest-web:
     build:

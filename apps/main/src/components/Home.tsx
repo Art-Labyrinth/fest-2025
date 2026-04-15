@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { DEV_MODE } from "@/config";
 
 interface Edition {
   year: number;
@@ -10,7 +11,7 @@ interface Edition {
 
 const EDITIONS: Edition[] = [
   { year: 2025, title: "Five Hands, One Rhythm", path: "/2025/", active: true },
-  { year: 2026, title: "Pulse of the Earth", path: "/2026/", active: false },
+  { year: 2026, title: "Pulse of the Earth", path: "/2026/", active: DEV_MODE === true },
 ];
 
 export default function Home() {
