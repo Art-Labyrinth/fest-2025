@@ -15,69 +15,78 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5] border-b border-orange-150">
-      <Link to="/" className="flex items-center gap-3">
-        <img
-          src="https://files.art-labyrinth.org/logo-black.svg"
-          alt="Art-Labyrinth"
-          className="h-10"
-        />
-      </Link>
+    <>
+      <header className="inset-x-0 top-0 z-40 flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5]/15 backdrop-blur-sm border-b border-orange-150/60 shadow-sm">
+        <a href="/" className="flex items-center gap-3">
+          <img
+            src="https://files.art-labyrinth.org/logo-black.svg"
+            alt="Art-Labyrinth"
+            className="h-10"
+          />
+        </a>
 
-      {/* Desktop nav */}
-      <nav className="hidden sm:flex items-center gap-6 font-deledda text-brown">
-        {navLinks.map((l) => (
-          <Link
-            key={l.to}
-            to={l.to}
-            className={`hover:opacity-60 transition-opacity ${location.pathname === l.to ? "font-bold" : ""}`}
-          >
-            {l.label}
-          </Link>
-        ))}
-      </nav>
-
-      {/* Lang switcher */}
-      <div className="hidden sm:flex items-center gap-2 font-deledda text-sm text-brown">
-        {langs.map((lng) => (
-          <button
-            key={lng}
-            onClick={() => i18n.changeLanguage(lng)}
-            className={`uppercase hover:opacity-60 transition-opacity ${i18n.language === lng ? "font-bold underline" : ""}`}
-          >
-            {lng}
-          </button>
-        ))}
-      </div>
-
-      {/* Mobile burger */}
-      <button className="sm:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-        <span className="block w-6 h-0.5 bg-brown mb-1" />
-        <span className="block w-6 h-0.5 bg-brown mb-1" />
-        <span className="block w-6 h-0.5 bg-brown" />
-      </button>
-
-      {menuOpen && (
-        <div className="fixed inset-0 bg-[#fffbf5] z-50 flex flex-col items-center justify-center gap-8 font-deledda text-brown text-2xl">
-          <button className="absolute top-5 right-8 text-4xl" onClick={() => setMenuOpen(false)}>×</button>
+        {/* Desktop nav */}
+        <nav className="hidden sm:flex items-center gap-6 font-deledda text-brown">
           {navLinks.map((l) => (
-            <Link key={l.to} to={l.to} onClick={() => setMenuOpen(false)} className="hover:opacity-60">
+            <Link
+              key={l.to}
+              to={l.to}
+              className={`hover:opacity-60 transition-opacity ${location.pathname === l.to ? "font-bold" : ""}`}
+            >
               {l.label}
             </Link>
           ))}
-          <div className="flex gap-4 text-base mt-4">
-            {langs.map((lng) => (
-              <button
-                key={lng}
-                onClick={() => { i18n.changeLanguage(lng); setMenuOpen(false); }}
-                className={`uppercase hover:opacity-60 ${i18n.language === lng ? "font-bold underline" : ""}`}
+        </nav>
+
+        {/* Lang switcher */}
+        <div className="hidden sm:flex items-center gap-2 font-deledda text-sm text-brown">
+          {langs.map((lng) => (
+            <button
+              key={lng}
+              onClick={() => i18n.changeLanguage(lng)}
+              className={`uppercase hover:opacity-60 transition-opacity ${i18n.language === lng ? "font-bold underline" : ""}`}
+            >
+              {lng}
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile burger */}
+        <button className="sm:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="block w-6 h-0.5 bg-brown mb-1" />
+          <span className="block w-6 h-0.5 bg-brown mb-1" />
+          <span className="block w-6 h-0.5 bg-brown" />
+        </button>
+      </header>
+
+      {menuOpen && (
+        <div className="fixed inset-0 z-[60] overflow-y-auto bg-[#fffbf5]/70 backdrop-blur-md">
+          <button className="absolute top-5 right-8 text-4xl text-brown" onClick={() => setMenuOpen(false)}>×</button>
+          <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 py-20 font-deledda text-brown text-2xl">
+            {navLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setMenuOpen(false)}
+                className="text-center hover:opacity-60"
               >
-                {lng}
-              </button>
+                {l.label}
+              </Link>
             ))}
+            <div className="mt-4 flex flex-wrap justify-center gap-4 text-base">
+              {langs.map((lng) => (
+                <button
+                  key={lng}
+                  onClick={() => { i18n.changeLanguage(lng); setMenuOpen(false); }}
+                  className={`uppercase hover:opacity-60 ${i18n.language === lng ? "font-bold underline" : ""}`}
+                >
+                  {lng}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

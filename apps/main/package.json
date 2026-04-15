@@ -14,10 +14,10 @@
     "web-vitals": "^5.1.0"
   },
   "scripts": {
-    "start": "craco start",
-    "dev": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco start'",
+    "dev": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco start'",
+    "build": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco build'",
+    "test": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco test'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
