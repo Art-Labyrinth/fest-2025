@@ -16,6 +16,7 @@ export function Header() {
   };
 
   const menuItems = [
+    { path: "/", label: t("menu.home") },
     { path: "/participants/", label: t("menu.participation") },
     { path: "/gallery/", label: t("menu.gallery") },
     { path: "/program/", label: t("menu.program") },
@@ -26,7 +27,7 @@ export function Header() {
 
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a href={`${process.env.PUBLIC_URL}/`} className="relative left-[10%] py-5 w-12">
+      <a href="/" className="relative left-[10%] py-5 w-12">
         <img src="https://files.art-labyrinth.org/logo-black.svg" alt="" />
       </a>
 
