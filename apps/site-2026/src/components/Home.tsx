@@ -5,8 +5,8 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-screen px-5 md:px-12 py-16 max-w-5xl mx-auto font-deledda text-brown flex items-center justify-center">
-      <div className="text-center w-full">
+    <main className="min-h-screen bg-main px-5 md:px-12 py-16 font-deledda text-brown flex items-center justify-center">
+      <div className="text-center w-full max-w-5xl rounded-3xl border border-brown/20 bg-orange-150/85 backdrop-blur-sm shadow-lg px-6 py-10 sm:px-10">
         <img
           src="https://files.art-labyrinth.org/logo-black.svg"
           alt="Art-Labyrinth"

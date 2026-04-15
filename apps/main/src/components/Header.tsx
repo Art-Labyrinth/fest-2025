@@ -15,7 +15,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5] border-b border-orange-150">
+    <header className="flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5]/25 border-b border-orange-150">
       <Link to="/" className="flex items-center gap-3">
         <img
           src="https://files.art-labyrinth.org/logo-black.svg"
