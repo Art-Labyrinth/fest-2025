@@ -10,7 +10,7 @@ interface Edition {
 
 const EDITIONS: Edition[] = [
   { year: 2025, title: "Five Hands, One Rhythm", path: "/2025/", active: true },
-  { year: 2026, title: "", path: "/2026/", active: false },
+  { year: 2026, title: "Coming Soon", path: "/2026/", active: true },
 ];
 
 export default function Home() {

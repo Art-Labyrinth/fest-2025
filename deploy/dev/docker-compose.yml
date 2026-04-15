@@ -1,11 +1,11 @@
-name: al-fest-2025-dev
+name: art-lab-fest-dev
 
 services:
-  al-fest-2025-dev:
+  art-lab-fest-web-dev:
     build:
-      context: ../../..
-      dockerfile: apps/site-2025/Dockerfile
-    container_name: al-fest-2025-dev
+      context: ../..
+      dockerfile: deploy/Dockerfile
+    container_name: art-lab-fest-web-dev
     restart: on-failure:5
 
     ports:

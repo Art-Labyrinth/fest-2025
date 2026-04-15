@@ -8,9 +8,11 @@
   ],
   "scripts": {
     "build:2025": "npm run build --workspace=apps/site-2025",
+    "build:2026": "npm run build --workspace=apps/site-2026",
     "build:main": "npm run build --workspace=apps/main",
-    "build:all": "npm run build:main && npm run build:2025",
+    "build:all": "npm run build:main && npm run build:2025 && npm run build:2026",
     "dev:2025": "npm run dev --workspace=apps/site-2025",
+    "dev:2026": "npm run dev --workspace=apps/site-2026",
     "dev:main": "npm run dev --workspace=apps/main"
   },
   "devDependencies": {

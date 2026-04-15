@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "contacts": "Contacte"
+  },
+  "home": {
+    "title": "Art-Labyrinth 2026",
+    "subtitle": "Site-ul festivalului 2026 este în pregătire",
+    "description": "Aici vor apărea programul, participarea, logistica, galeria și toate informațiile actuale pentru festivalul 2026. Până atunci puteți reveni la site-ul principal sau deschide arhiva festivalului 2025.",
+    "back_to_main": "Înapoi la site-ul principal",
+    "open_2025": "Deschide 2025"
+  },
+  "about": {
+    "title": "Despre festival",
+    "text_1": "Art-Labyrinth Summer Festival este un eveniment anual fondat în 2008. În fiecare an reunim oameni gata să se unească în căutarea inspirației, creativității și conștientizării.",
+    "text_2": "Festivalul se desfășoară pe malurile pitorești ale râului Nistru din Moldova. Este un spațiu de transformare, schimb de idei și inspirație, unde arta, muzica și natura se contopesc.",
+    "text_3": "Reunim artiști, muzicieni, meșteri, voluntari și visători — toți cei pregătiți să creeze ceva măreț împreună."
+  },
+  "contacts": {
+    "title": "Contacte",
+    "org_name": "Art-Labirint",
+    "email": "info@art-labyrinth.org",
+    "social": "Rețele sociale"
+  },
+  "footer": {
+    "org": "Art-Labirint"
+  }
+}

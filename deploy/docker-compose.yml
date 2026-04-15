@@ -1,11 +1,11 @@
-name: al-fest-2025
+name: art-lab-fest
 
 services:
-  al-fest-2025:
+  art-lab-fest-web:
     build:
-      context: ../..
-      dockerfile: apps/site-2025/Dockerfile
-    container_name: al-fest-2025
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: art-lab-fest-web
     restart: on-failure:5
 
     ports:
@@ -16,7 +16,7 @@ services:
     # # debug
     # volumes:
     #   - ./build:/usr/share/nginx/html
-    #   - ./nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+    #   - ./deploy/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
 
 networks:
   main:
