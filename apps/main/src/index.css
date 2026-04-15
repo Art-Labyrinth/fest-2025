@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Deledda';
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Light.woff2') format('woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Deledda';
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Deledda';
+  src: url('https://files.art-labyrinth.org/fonts/Deledda/Deledda-Open-Semibold.woff2') format('woff2');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'RocaOne';
+  src: url('https://files.art-labyrinth.org/fonts/RocaOne/roca-one-regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Evolventa';
+  src: url('https://files.art-labyrinth.org/fonts/Evolventa/Evolventa-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  font-family: 'Deledda', sans-serif;
+  color: #351904;
+  background-color: #fffbf5;
+}

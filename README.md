@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Art-Labyrinth Fest Monorepo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the Art-Labyrinth festival websites in a single monorepo.
 
-## Available Scripts
+## Structure
 
-In the project directory, you can run:
+- `apps/main` — base website served at `/`
+- `apps/site-2025` — 2025 festival website served at `/2025/`
+- `apps/site-2026` — 2026 placeholder website served at `/2026/`
+- `packages/shared` — shared modules and utilities
+- `deploy/` — production and dev-server deployment infrastructure used by CI/CD
+- `docker-compose.yml` — local unified development stack for running all apps behind one nginx proxy
 
-### `npm start`
+## Workspace Commands
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run these commands from the repository root:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `npm install` — install dependencies for all workspaces
+- `npm run dev:main` — start the base website locally at http://localhost:3000/
+- `npm run dev:2025` — start the 2025 website locally at http://localhost:3025/2025
+- `npm run dev:2026` — start the 2026 website locally at http://localhost:3026/2026
+- `npm run build:main` — build the base website for production
+- `npm run build:2025` — build the 2025 website for production
+- `npm run build:2026` — build the 2026 website for production
+- `npm run build:all` — build all applications
 
-### `npm test`
+## Deployment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+All deployment-related files live in `deploy/`:
 
-### `npm run build`
+- `deploy/Dockerfile` — single multi-stage Docker build for all sites
+- `deploy/nginx.conf` — nginx routing for `/`, `/2025/`, and `/2026/`
+- `deploy/docker-compose.yml` — production compose configuration
+- `deploy/dev/docker-compose.yml` — development compose configuration
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Production
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+docker compose -f ./deploy/docker-compose.yml up -d --build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+For local unified development with one nginx entrypoint:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+docker compose up -d --build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The local development stack starts all three apps behind one nginx entrypoint, so local routing matches production:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- main site: http://localhost:3000/
+- 2025 site: http://localhost:3000/2025/
+- 2026 site: http://localhost:3000/2026/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can also use:
 
-## Learn More
+- npm run dev:stack
+- npm run dev:stack:down
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## CI/CD
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The GitHub Actions workflow is defined in [.github/workflows/build.yml](.github/workflows/build.yml).
 
-### Code Splitting
+It:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- runs on pushes to `main` and `dev`
+- only triggers when relevant files change: workflow files, `deploy/`, `apps/`, `packages/`, `package.json`, and `package-lock.json`
+- enables `DOCKER_BUILDKIT=1`
+- deploys with `docker compose ... up -d --build --remove-orphans`
 
-### Analyzing the Bundle Size
+## Docker Build Strategy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The Docker build is optimized for layer reuse:
 
-### Making a Progressive Web App
+- package manifests are copied first
+- `npm ci` is cached in a dedicated dependency stage
+- `main`, `2025`, and `2026` are built in separate stages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This means:
 
-### Advanced Configuration
+- dependency installation stays cached when manifests do not change
+- rebuilding one site does not invalidate unrelated application build stages unnecessarily
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Notes
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Local public assets for nested sites should use `process.env.PUBLIC_URL`
+- Translation arrays and objects in `react-i18next` should use `returnObjects: true`

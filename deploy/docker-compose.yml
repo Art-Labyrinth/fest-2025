@@ -1,0 +1,21 @@
+services:
+  art-lab-fest-web:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: art-lab-fest-web
+    restart: on-failure:5
+
+    ports:
+      - 127.0.0.1:3025:80
+    networks:
+      - main
+
+    # # debug
+    # volumes:
+    #   - ./build:/usr/share/nginx/html
+    #   - ./deploy/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+
+networks:
+  main:
+    external: true
