@@ -67,7 +67,7 @@ It:
 - runs on pushes to `main` and `dev`
 - only triggers when relevant files change: workflow files, `deploy/`, `apps/`, `packages/`, `package.json`, and `package-lock.json`
 - enables `DOCKER_BUILDKIT=1`
-- deploys with `docker compose ... up -d --build --remove-orphans`
+- deploys with `docker compose ... up -d --build`
 
 ## Docker Build Strategy
 
