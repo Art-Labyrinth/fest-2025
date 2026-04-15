@@ -1,5 +1,3 @@
-name: art-lab-fest
-
 services:
   art-lab-fest-web:
     build:

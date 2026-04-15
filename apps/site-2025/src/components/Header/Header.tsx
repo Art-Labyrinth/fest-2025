@@ -11,17 +11,6 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    console.log(document.referrer);
-
-    if (document.referrer && new URL(document.referrer).pathname === "/") {
-      navigate(-1);
-    } else {
-      navigate("/");
-    }
-  };
-
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
@@ -37,11 +26,7 @@ export function Header() {
 
   return (
     <header className="flex flex-row px-0 sm:px-5 md:px-8 justify-between items-center text-brown font-deledda relative">
-      <a
-        href="/"
-        onClick={handleBackClick}
-        className="relative left-[10%] py-5 w-12"
-      >
+      <a href={`${process.env.PUBLIC_URL}/`} className="relative left-[10%] py-5 w-12">
         <img src="https://files.art-labyrinth.org/logo-black.svg" alt="" />
       </a>
 

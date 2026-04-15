@@ -1,5 +1,3 @@
-name: art-lab-fest-dev
-
 services:
   art-lab-fest-web-dev:
     build:

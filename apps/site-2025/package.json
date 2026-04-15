@@ -21,8 +21,8 @@
     "web-vitals": "^5.1.0"
   },
   "scripts": {
-    "start": "craco start",
-    "dev": "craco start",
+    "start": "PORT=3025 PUBLIC_URL=/2025 craco start",
+    "dev": "PORT=3025 PUBLIC_URL=/2025 craco start",
     "build": "npm run generate-sitemap && craco build",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "test": "craco test",

@@ -23,6 +23,8 @@ if (fbclid) {
   localStorage.setItem("fbclid", fbclid);
 }
 
+const routerBasename = process.env.PUBLIC_URL || "/";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -80,7 +82,9 @@ const router = createBrowserRouter([
     path: "*",
     element: <NotFound/>,
   },
-]);
+], {
+  basename: routerBasename,
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

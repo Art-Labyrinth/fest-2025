@@ -8,16 +8,17 @@ This repository contains the Art-Labyrinth festival websites in a single monorep
 - `apps/site-2025` — 2025 festival website served at `/2025/`
 - `apps/site-2026` — 2026 placeholder website served at `/2026/`
 - `packages/shared` — shared modules and utilities
-- `deploy/` — deployment infrastructure: Docker, nginx, and compose files
+- `deploy/` — production and dev-server deployment infrastructure used by CI/CD
+- `docker-compose.yml` — local unified development stack for running all apps behind one nginx proxy
 
 ## Workspace Commands
 
 Run these commands from the repository root:
 
 - `npm install` — install dependencies for all workspaces
-- `npm run dev:main` — start the base website locally
-- `npm run dev:2025` — start the 2025 website locally
-- `npm run dev:2026` — start the 2026 website locally
+- `npm run dev:main` — start the base website locally at http://localhost:3000/
+- `npm run dev:2025` — start the 2025 website locally at http://localhost:3025/2025
+- `npm run dev:2026` — start the 2026 website locally at http://localhost:3026/2026
 - `npm run build:main` — build the base website for production
 - `npm run build:2025` — build the 2025 website for production
 - `npm run build:2026` — build the 2026 website for production
@@ -40,9 +41,22 @@ docker compose -f ./deploy/docker-compose.yml up -d --build
 
 ### Development
 
+For local unified development with one nginx entrypoint:
+
 ```bash
-docker compose -f ./deploy/dev/docker-compose.yml up -d --build
+docker compose up -d --build
 ```
+
+The local development stack starts all three apps behind one nginx entrypoint, so local routing matches production:
+
+- main site: http://localhost:3000/
+- 2025 site: http://localhost:3000/2025/
+- 2026 site: http://localhost:3000/2026/
+
+You can also use:
+
+- npm run dev:stack
+- npm run dev:stack:down
 
 ## CI/CD
 

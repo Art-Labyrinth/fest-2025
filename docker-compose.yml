@@ -1,0 +1,84 @@
+services:
+  dev-proxy:
+    image: openresty/openresty:latest
+    container_name: art-lab-fest-local-dev-proxy
+    restart: on-failure:5
+    depends_on:
+      - main-dev
+      - site-2025-dev
+      - site-2026-dev
+    ports:
+      - 127.0.0.1:3000:80
+    volumes:
+      - ./deploy/local/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf:ro
+    networks:
+      - default
+      - main
+
+  main-dev:
+    build:
+      context: .
+      dockerfile: ./deploy/local/Dockerfile
+    container_name: art-lab-main-dev
+    working_dir: /workspace
+    command: npm run dev:main
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+      BROWSER: none
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      WDS_SOCKET_PATH: /ws-main
+      WDS_SOCKET_PORT: "3000"
+    volumes:
+      - ./:/workspace
+      - root_node_modules:/workspace/node_modules
+    expose:
+      - "3000"
+
+  site-2025-dev:
+    build:
+      context: .
+      dockerfile: ./deploy/local/Dockerfile
+    container_name: art-lab-site-2025-dev
+    working_dir: /workspace
+    command: npm run dev:2025
+    environment:
+      HOST: 0.0.0.0
+      BROWSER: none
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      WDS_SOCKET_PATH: /ws-2025
+      WDS_SOCKET_PORT: "3000"
+    volumes:
+      - ./:/workspace
+      - root_node_modules:/workspace/node_modules
+    expose:
+      - "3025"
+
+  site-2026-dev:
+    build:
+      context: .
+      dockerfile: ./deploy/local/Dockerfile
+    container_name: art-lab-site-2026-dev
+    working_dir: /workspace
+    command: npm run dev:2026
+    environment:
+      HOST: 0.0.0.0
+      BROWSER: none
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      WDS_SOCKET_PATH: /ws-2026
+      WDS_SOCKET_PORT: "3000"
+    volumes:
+      - ./:/workspace
+      - root_node_modules:/workspace/node_modules
+    expose:
+      - "3026"
+
+volumes:
+  root_node_modules:
+
+networks:
+  main:
+    external: true
