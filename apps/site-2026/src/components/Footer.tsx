@@ -5,7 +5,7 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="border-t border-orange-150 px-5 md:px-12 py-8 font-deledda text-brown">
+    <footer className="relative z-20 border-t border-orange-150/60 bg-[#fffbf5]/15 backdrop-blur-sm px-5 md:px-12 py-8 font-deledda text-brown shadow-sm">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
           <img src="https://files.art-labyrinth.org/logo.svg" alt="Art-Labyrinth" className="h-10" />

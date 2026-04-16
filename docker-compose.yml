@@ -1,3 +1,5 @@
+name: art-lab-fest-local-dev
+
 services:
   dev-proxy:
     image: openresty/openresty:latest
@@ -22,17 +24,13 @@ services:
     container_name: art-lab-main-dev
     working_dir: /workspace
     command: npm run dev:main
+    env_file:
+      - ./.env
     environment:
-      HOST: 0.0.0.0
-      PORT: 3000
-      BROWSER: none
-      CHOKIDAR_USEPOLLING: "true"
-      WATCHPACK_POLLING: "true"
       WDS_SOCKET_PATH: /ws-main
-      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
-      - root_node_modules:/workspace/node_modules
+      - ./node_modules:/workspace/node_modules
     expose:
       - "3000"
 
@@ -43,16 +41,13 @@ services:
     container_name: art-lab-site-2025-dev
     working_dir: /workspace
     command: npm run dev:2025
+    env_file:
+      - ./.env
     environment:
-      HOST: 0.0.0.0
-      BROWSER: none
-      CHOKIDAR_USEPOLLING: "true"
-      WATCHPACK_POLLING: "true"
       WDS_SOCKET_PATH: /ws-2025
-      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
-      - root_node_modules:/workspace/node_modules
+      - ./node_modules:/workspace/node_modules
     expose:
       - "3025"
 
@@ -63,21 +58,15 @@ services:
     container_name: art-lab-site-2026-dev
     working_dir: /workspace
     command: npm run dev:2026
+    env_file:
+      - ./.env
     environment:
-      HOST: 0.0.0.0
-      BROWSER: none
-      CHOKIDAR_USEPOLLING: "true"
-      WATCHPACK_POLLING: "true"
       WDS_SOCKET_PATH: /ws-2026
-      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
-      - root_node_modules:/workspace/node_modules
+      - ./node_modules:/workspace/node_modules
     expose:
       - "3026"
-
-volumes:
-  root_node_modules:
 
 networks:
   main:

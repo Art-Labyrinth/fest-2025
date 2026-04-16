@@ -21,11 +21,11 @@
     "web-vitals": "^5.1.0"
   },
   "scripts": {
-    "start": "PORT=3025 PUBLIC_URL=/2025 craco start",
-    "dev": "PORT=3025 PUBLIC_URL=/2025 craco start",
-    "build": "npm run generate-sitemap && craco build",
+    "start": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; PORT=3025 PUBLIC_URL=/2025 craco start'",
+    "dev": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; PORT=3025 PUBLIC_URL=/2025 craco start'",
+    "build": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; npm run generate-sitemap && craco build'",
     "generate-sitemap": "node scripts/generate-sitemap.js",
-    "test": "craco test",
+    "test": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco test'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
