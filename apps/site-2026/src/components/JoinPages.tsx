@@ -47,7 +47,7 @@ type SubmitErrorState = {
 
 type DepartmentId = 'admin' | 'promo' | 'art' | 'tech' | 'food';
 type DirectionId = 'concert' | 'workshop' | 'lecture' | 'practice' | 'performance' | 'theatre' | 'lesson' | 'game' | 'other';
-type DateId = 'd1' | 'd2' | 'd3' | 'd4';
+type DateId = 'd18' | 'd19' | 'd20' | 'd21';
 type LangId = 'ru' | 'en' | 'md';
 
 function getOrCreateSessionId(): string {
@@ -565,7 +565,7 @@ export function JoinMasterForm() {
   });
 
   const directions: DirectionId[] = ['concert', 'workshop', 'lecture', 'practice', 'performance', 'theatre', 'lesson', 'game', 'other'];
-  const dates: DateId[] = ['d1', 'd2', 'd3', 'd4'];
+  const dates: DateId[] = ['d18', 'd19', 'd20', 'd21'];
   const langs: LangId[] = ['ru', 'en', 'md'];
 
   useEffect(() => {
