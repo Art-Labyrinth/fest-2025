@@ -102,10 +102,10 @@ export const joinTranslations = {
         dates: {
           title: 'Возможные даты выступления',
           error: 'Выберите хотя бы одну дату.',
-          d1: '18 июня (четверг)',
-          d2: '19 июня (пятница)',
-          d3: '20 июня (суббота)',
-          d4: '21 июня (воскресенье)',
+          d18: '18 июня (четверг)',
+          d19: '19 июня (пятница)',
+          d20: '20 июня (суббота)',
+          d21: '21 июня (воскресенье)',
         },
         langs: {
           title: 'Язык проведения программы',
@@ -328,10 +328,10 @@ export const joinTranslations = {
         dates: {
           title: 'Possible performance dates',
           error: 'Please select at least one date.',
-          d1: 'June 18 (Thursday)',
-          d2: 'June 19 (Friday)',
-          d3: 'June 20 (Saturday)',
-          d4: 'June 21 (Sunday)',
+          d18: 'June 18 (Thursday)',
+          d19: 'June 19 (Friday)',
+          d20: 'June 20 (Saturday)',
+          d21: 'June 21 (Sunday)',
         },
         langs: {
           title: 'Program language',
@@ -554,10 +554,10 @@ export const joinTranslations = {
         dates: {
           title: 'Date posibile pentru prestație',
           error: 'Vă rugăm să selectați cel puțin o dată.',
-          d1: '18 iunie (joi)',
-          d2: '19 iunie (vineri)',
-          d3: '20 iunie (sâmbătă)',
-          d4: '21 iunie (duminică)',
+          d18: '18 iunie (joi)',
+          d19: '19 iunie (vineri)',
+          d20: '20 iunie (sâmbătă)',
+          d21: '21 iunie (duminică)',
         },
         langs: {
           title: 'Limba programului',
