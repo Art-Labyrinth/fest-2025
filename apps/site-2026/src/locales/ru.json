@@ -2,7 +2,8 @@
   "nav": {
     "home": "Главная",
     "about": "О нас",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "tickets": "Билеты"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -25,5 +26,39 @@
   },
   "footer": {
     "org": "Арт-Лабиринт"
+  },
+  "tickets": {
+    "title": "Билеты",
+    "login": "Войти",
+    "register": "Регистрация",
+    "email": "Email",
+    "password": "Пароль",
+    "name": "Имя",
+    "optional": "необязательно",
+    "loading": "Загрузка...",
+    "submit_login": "Войти",
+    "submit_register": "Зарегистрироваться",
+    "logout": "Выйти",
+    "my_orders": "Мои заказы",
+    "new_order": "Новый заказ",
+    "no_orders": "Заказов пока нет",
+    "order_type": "Тип билета",
+    "type_guest": "Гостевой",
+    "type_discounted": "Льготный",
+    "type_family": "Семейный",
+    "quantity": "Количество билетов",
+    "discount_info": "Скидка 10%!",
+    "ticket_n": "Билет {{n}}",
+    "ticket_name": "Имя на билете",
+    "send_email": "Отправить на email",
+    "total": "Итого",
+    "create_order": "Перейти к оплате",
+    "bpay_notice": "После нажатия вы будете перенаправлены на страницу оплаты BPAY",
+    "status_new": "Ожидает оплаты",
+    "status_paid": "Оплачен",
+    "pay": "Оплатить",
+    "download": "Скачать",
+    "print": "Печать",
+    "back": "Назад"
   }
 }

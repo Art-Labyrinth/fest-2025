@@ -12,6 +12,7 @@ export default function Header() {
     { to: "/", label: t("nav.home") },
     { to: "/about", label: t("nav.about") },
     { to: "/contacts", label: t("nav.contacts") },
+    { to: "/tickets", label: t("nav.tickets") },
   ];
 
   return (

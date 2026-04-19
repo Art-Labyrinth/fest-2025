@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import { JoinLanding, JoinMasterForm, JoinVolunteerForm } from "./components/JoinPages";
+import Tickets from "./components/Tickets";
 
 import "./index.css";
 import "./i18n";
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         { path: "join", element: <JoinLanding /> },
         { path: "join/volunteer", element: <JoinVolunteerForm /> },
         { path: "join/master", element: <JoinMasterForm /> },
+        { path: "tickets", element: <Tickets /> },
         { path: "*", element: <NotFound /> },
       ],
     },
