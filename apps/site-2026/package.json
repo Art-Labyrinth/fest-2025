@@ -16,7 +16,7 @@
   "scripts": {
     "start": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; PORT=3026 PUBLIC_URL=/2026 craco start'",
     "dev": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; PORT=3026 PUBLIC_URL=/2026 craco start'",
-    "build": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco build'",
+    "build": "GENERATE_SOURCEMAP=false craco build",
     "test": "sh -ac 'set -a; [ -f ../../.env ] && . ../../.env; set +a; craco test'",
     "eject": "react-scripts eject"
   },
