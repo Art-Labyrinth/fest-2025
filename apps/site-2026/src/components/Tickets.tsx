@@ -58,7 +58,7 @@ export default function Tickets() {
   const [orderLoading, setOrderLoading] = useState(false);
   const [orderError, setOrderError] = useState('');
 
-  const [downloading, setDownloading] = useState<Set<number>>(new Set());
+  const [downloading, setDownloading] = useState<Set<string>>(new Set());
 
   function logout() {
     clearSession();
@@ -160,7 +160,7 @@ export default function Tickets() {
     }
   }
 
-  async function handleDownload(ticketId: number, name: string) {
+  async function handleDownload(ticketId: string, name: string) {
     setDownloading(prev => new Set(prev).add(ticketId));
     try {
       const blob = await customerApi.downloadTicket(ticketId);
@@ -176,14 +176,6 @@ export default function Tickets() {
     setDownloading(prev => { const s = new Set(prev); s.delete(ticketId); return s; });
   }
 
-  async function handlePrint(ticketId: number) {
-    try {
-      const blob = await customerApi.downloadTicket(ticketId);
-      const url = URL.createObjectURL(blob);
-      const win = window.open(url, '_blank');
-      if (win) win.onload = () => { win.focus(); win.print(); };
-    } catch {}
-  }
 
   if (!token) {
     return (
@@ -306,17 +298,10 @@ export default function Tickets() {
                             <button
                               type="button"
                               className={`${btnSecondary} text-xs py-1 px-3`}
-                              disabled={downloading.has(ticket.id)}
-                              onClick={() => handleDownload(ticket.id, ticket.name)}
+                              disabled={downloading.has(ticket.ticket_id)}
+                              onClick={() => handleDownload(ticket.ticket_id, ticket.name)}
                             >
-                              {downloading.has(ticket.id) ? '...' : t('tickets.download')}
-                            </button>
-                            <button
-                              type="button"
-                              className={`${btnSecondary} text-xs py-1 px-3`}
-                              onClick={() => handlePrint(ticket.id)}
-                            >
-                              {t('tickets.print')}
+                              {downloading.has(ticket.ticket_id) ? '...' : t('tickets.download')}
                             </button>
                           </div>
                         )}
@@ -343,17 +328,21 @@ export default function Tickets() {
             <div className="mb-5">
               <label className="block text-sm font-bold mb-2">{t('tickets.order_type')}</label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {(['basic', 'discounted', 'family'] as OrderType[]).map(type => (
-                  <button
-                    key={type}
-                    type="button"
-                    onClick={() => setOrderType(type)}
-                    className={`rounded-xl border p-3 text-left transition-colors cursor-pointer ${orderType === type ? 'border-brown bg-brown/10' : 'border-brown/20 hover:border-brown/50'}`}
-                  >
-                    <span className="block font-bold text-sm">{t(`tickets.type_${type}`)}</span>
-                    <span className="block text-xs text-brown/60 mt-0.5">{PRICES[type]} MDL</span>
-                  </button>
-                ))}
+                {(['basic', 'discounted', 'family'] as OrderType[]).map(type => {
+                  const disabled = type !== 'basic';
+                  return (
+                    <button
+                      key={type}
+                      type="button"
+                      disabled={disabled}
+                      onClick={() => !disabled && setOrderType(type)}
+                      className={`rounded-xl border p-3 text-left transition-colors ${disabled ? 'opacity-40 cursor-not-allowed border-brown/20' : `cursor-pointer ${orderType === type ? 'border-brown bg-brown/10' : 'border-brown/20 hover:border-brown/50'}`}`}
+                    >
+                      <span className="block font-bold text-sm">{t(`tickets.type_${type}`)}</span>
+                      <span className="block text-xs text-brown/60 mt-0.5">{PRICES[type]} MDL</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
