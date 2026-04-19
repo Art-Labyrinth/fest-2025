@@ -11,7 +11,7 @@ import {
   CustomerOrder,
 } from '../api/customerApi';
 
-type OrderType = 'guest' | 'discounted' | 'family';
+type OrderType = 'basic' | 'discounted' | 'family';
 type View = 'orders' | 'newOrder';
 
 interface TicketDraft {
@@ -20,7 +20,7 @@ interface TicketDraft {
   email: string;
 }
 
-const PRICES: Record<OrderType, number> = { guest: 400, discounted: 400, family: 600 };
+const PRICES: Record<OrderType, number> = { basic: 400, discounted: 400, family: 600 };
 
 function langForApi(lang: string): string {
   return lang === 'md' ? 'ro' : lang;
@@ -53,7 +53,7 @@ export default function Tickets() {
   const [orders, setOrders] = useState<CustomerOrder[]>([]);
   const [ordersLoading, setOrdersLoading] = useState(false);
 
-  const [orderType, setOrderType] = useState<OrderType>('guest');
+  const [orderType, setOrderType] = useState<OrderType>('basic');
   const [tickets, setTickets] = useState<TicketDraft[]>([makeDraft('')]);
   const [orderLoading, setOrderLoading] = useState(false);
   const [orderError, setOrderError] = useState('');
@@ -128,7 +128,7 @@ export default function Tickets() {
 
   function calcTotal(): number {
     const base = PRICES[orderType];
-    const discount = orderType === 'guest' && tickets.length >= 6 ? 0.9 : 1;
+    const discount = orderType === 'basic' && tickets.length >= 6 ? 0.9 : 1;
     return Math.round(base * discount * tickets.length);
   }
 
@@ -250,7 +250,7 @@ export default function Tickets() {
               <button
                 type="button"
                 className={btnPrimary}
-                onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('guest'); setTickets([makeDraft(userEmail || '', userName)]); }}
+                onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('basic'); setTickets([makeDraft(userEmail || '', userName)]); }}
               >
                 {t('tickets.new_order')}
               </button>
@@ -343,7 +343,7 @@ export default function Tickets() {
             <div className="mb-5">
               <label className="block text-sm font-bold mb-2">{t('tickets.order_type')}</label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {(['guest', 'discounted', 'family'] as OrderType[]).map(type => (
+                {(['basic', 'discounted', 'family'] as OrderType[]).map(type => (
                   <button
                     key={type}
                     type="button"
@@ -371,7 +371,7 @@ export default function Tickets() {
                   className="w-9 h-9 rounded-full border border-brown/30 text-brown font-bold hover:bg-brown/10 transition-colors cursor-pointer flex items-center justify-center"
                   onClick={() => setTicketCount(tickets.length + 1)}
                 >+</button>
-                {orderType === 'guest' && tickets.length >= 6 && (
+                {orderType === 'basic' && tickets.length >= 6 && (
                   <span className="text-xs text-green-700 font-bold">{t('tickets.discount_info')}</span>
                 )}
               </div>
