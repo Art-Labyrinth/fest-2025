@@ -2,7 +2,8 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "tickets": "Tickets"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -25,5 +26,39 @@
   },
   "footer": {
     "org": "Art-Labyrinth"
+  },
+  "tickets": {
+    "title": "Tickets",
+    "login": "Sign in",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "optional": "optional",
+    "loading": "Loading...",
+    "submit_login": "Sign in",
+    "submit_register": "Create account",
+    "logout": "Log out",
+    "my_orders": "My orders",
+    "new_order": "New order",
+    "no_orders": "No orders yet",
+    "order_type": "Ticket type",
+    "type_guest": "Guest",
+    "type_discounted": "Discounted",
+    "type_family": "Family",
+    "quantity": "Number of tickets",
+    "discount_info": "10% discount!",
+    "ticket_n": "Ticket {{n}}",
+    "ticket_name": "Name on ticket",
+    "send_email": "Send to email",
+    "total": "Total",
+    "create_order": "Proceed to payment",
+    "bpay_notice": "You will be redirected to the BPAY payment page",
+    "status_new": "Pending payment",
+    "status_paid": "Paid",
+    "pay": "Pay",
+    "download": "Download",
+    "print": "Print",
+    "back": "Back"
   }
 }

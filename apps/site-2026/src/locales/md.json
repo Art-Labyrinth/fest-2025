@@ -2,7 +2,8 @@
   "nav": {
     "home": "Acasă",
     "about": "Despre noi",
-    "contacts": "Contacte"
+    "contacts": "Contacte",
+    "tickets": "Bilete"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -25,5 +26,39 @@
   },
   "footer": {
     "org": "Art-Labirint"
+  },
+  "tickets": {
+    "title": "Bilete",
+    "login": "Autentificare",
+    "register": "Înregistrare",
+    "email": "Email",
+    "password": "Parolă",
+    "name": "Nume",
+    "optional": "opțional",
+    "loading": "Se încarcă...",
+    "submit_login": "Autentificare",
+    "submit_register": "Creează cont",
+    "logout": "Ieșire",
+    "my_orders": "Comenzile mele",
+    "new_order": "Comandă nouă",
+    "no_orders": "Nicio comandă încă",
+    "order_type": "Tipul biletului",
+    "type_guest": "Oaspete",
+    "type_discounted": "Redus",
+    "type_family": "Familie",
+    "quantity": "Numărul de bilete",
+    "discount_info": "Reducere 10%!",
+    "ticket_n": "Bilet {{n}}",
+    "ticket_name": "Nume pe bilet",
+    "send_email": "Trimite pe email",
+    "total": "Total",
+    "create_order": "Continuare la plată",
+    "bpay_notice": "Veți fi redirecționat către pagina de plată BPAY",
+    "status_new": "În așteptarea plății",
+    "status_paid": "Plătit",
+    "pay": "Plătește",
+    "download": "Descarcă",
+    "print": "Tipărire",
+    "back": "Înapoi"
   }
 }
