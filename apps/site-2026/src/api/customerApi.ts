@@ -1,18 +1,23 @@
 const BASE = '/customer';
 const TOKEN_KEY = 'cust_token';
 const EMAIL_KEY = 'cust_email';
+const NAME_KEY = 'cust_name';
 
 export function getStoredToken(): string | null { return localStorage.getItem(TOKEN_KEY); }
 export function getStoredEmail(): string | null { return localStorage.getItem(EMAIL_KEY); }
+export function getStoredName(): string | null { return localStorage.getItem(NAME_KEY); }
 
-export function saveSession(token: string, email: string): void {
+export function saveSession(token: string, email: string, name?: string): void {
   localStorage.setItem(TOKEN_KEY, token);
   localStorage.setItem(EMAIL_KEY, email);
+  if (name) localStorage.setItem(NAME_KEY, name);
+  else localStorage.removeItem(NAME_KEY);
 }
 
 export function clearSession(): void {
   localStorage.removeItem(TOKEN_KEY);
   localStorage.removeItem(EMAIL_KEY);
+  localStorage.removeItem(NAME_KEY);
 }
 
 async function apiFetch<T>(method: string, path: string, body?: unknown): Promise<T> {

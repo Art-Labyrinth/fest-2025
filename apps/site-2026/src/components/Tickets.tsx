@@ -6,6 +6,7 @@ import {
   clearSession,
   getStoredToken,
   getStoredEmail,
+  getStoredName,
   CreateOrderBody,
   CustomerOrder,
 } from '../api/customerApi';
@@ -25,8 +26,8 @@ function langForApi(lang: string): string {
   return lang === 'md' ? 'ro' : lang;
 }
 
-function makeDraft(email: string): TicketDraft {
-  return { name: '', send_email: true, email };
+function makeDraft(email: string, name = ''): TicketDraft {
+  return { name, send_email: true, email };
 }
 
 const card = 'w-full max-w-2xl rounded-3xl border border-brown/20 bg-orange-150/85 backdrop-blur-sm shadow-lg px-6 py-8 sm:px-10';
@@ -39,6 +40,7 @@ export default function Tickets() {
 
   const [token, setToken] = useState(getStoredToken);
   const [userEmail, setUserEmail] = useState(getStoredEmail);
+  const [userName, setUserName] = useState<string>(getStoredName() || '');
 
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   const [authEmail, setAuthEmail] = useState('');
@@ -62,6 +64,7 @@ export default function Tickets() {
     clearSession();
     setToken(null);
     setUserEmail(null);
+    setUserName('');
     setOrders([]);
   }
 
@@ -97,10 +100,12 @@ export default function Tickets() {
       const res = authMode === 'login'
         ? await customerApi.login(authEmail, authPassword)
         : await customerApi.register(authEmail, authPassword, langForApi(i18n.language), authName || undefined);
-      saveSession(res.access_token, res.email);
+      const name = res.name || '';
+      saveSession(res.access_token, res.email, name);
       setToken(res.access_token);
       setUserEmail(res.email);
-      setTickets([makeDraft(res.email)]);
+      setUserName(name);
+      setTickets([makeDraft(res.email, name)]);
     } catch (e: any) {
       setAuthError(e.message);
     } finally {
@@ -142,7 +147,13 @@ export default function Tickets() {
         })),
       };
       const res = await customerApi.createOrder(body);
-      window.location.href = res.invoice_url;
+      if (res.invoice_url) {
+        window.location.href = res.invoice_url;
+      } else {
+        setView('orders');
+        setOrderLoading(false);
+        loadOrders();
+      }
     } catch (e: any) {
       setOrderError(e.message);
       setOrderLoading(false);
@@ -239,7 +250,7 @@ export default function Tickets() {
               <button
                 type="button"
                 className={btnPrimary}
-                onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('guest'); setTickets([makeDraft(userEmail || '')]); }}
+                onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('guest'); setTickets([makeDraft(userEmail || '', userName)]); }}
               >
                 {t('tickets.new_order')}
               </button>
@@ -265,15 +276,21 @@ export default function Tickets() {
                         {t(`tickets.status_${order.status}`, { defaultValue: order.status })}
                       </span>
                     </div>
-                    {order.status !== 'paid' && order.invoice_url && (
-                      <a
-                        href={order.invoice_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${btnPrimary} inline-block`}
-                      >
-                        {t('tickets.pay')}
-                      </a>
+                    {order.status !== 'paid' && (
+                      order.invoice_url ? (
+                        <a
+                          href={order.invoice_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`${btnPrimary} inline-block`}
+                        >
+                          {t('tickets.pay')}
+                        </a>
+                      ) : (
+                        <button type="button" disabled className={`${btnPrimary} opacity-40 cursor-not-allowed`}>
+                          {t('tickets.pay')}
+                        </button>
+                      )
                     )}
                   </div>
 
