@@ -43,7 +43,7 @@
     "new_order": "Comandă nouă",
     "no_orders": "Nicio comandă încă",
     "order_type": "Tipul biletului",
-    "type_guest": "Oaspete",
+    "type_basic": "Basic",
     "type_discounted": "Redus",
     "type_family": "Familie",
     "quantity": "Numărul de bilete",

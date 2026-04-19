@@ -43,7 +43,7 @@
     "new_order": "Новый заказ",
     "no_orders": "Заказов пока нет",
     "order_type": "Тип билета",
-    "type_guest": "Гостевой",
+    "type_basic": "Basic",
     "type_discounted": "Льготный",
     "type_family": "Семейный",
     "quantity": "Количество билетов",

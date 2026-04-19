@@ -68,7 +68,7 @@ export interface CustomerOrder {
 }
 
 export interface CreateOrderBody {
-  type_order: 'guest' | 'discounted' | 'family';
+  type_order: 'basic' | 'discounted' | 'family';
   lang: string;
   tickets: Array<{ name: string; send_email: boolean; email?: string }>;
 }
@@ -87,7 +87,7 @@ export const customerApi = {
   login: (email: string, password: string) =>
     apiFetch<AuthResponse>('POST', '/auth', { email, password }),
 
-  getOrders: () => apiFetch<CustomerOrder[]>('GET', '/orders'),
+  getOrders: () => apiFetch<CustomerOrder[]>('GET', '/me/orders'),
 
   createOrder: (body: CreateOrderBody) =>
     apiFetch<CreateOrderResponse>('POST', '/orders', body),
