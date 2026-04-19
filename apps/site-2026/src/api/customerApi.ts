@@ -1,4 +1,6 @@
-const BASE = '/customer';
+import { API_URL } from '../config';
+
+const BASE = `${API_URL}/customer`;
 const TOKEN_KEY = 'cust_token';
 const EMAIL_KEY = 'cust_email';
 const NAME_KEY = 'cust_name';
