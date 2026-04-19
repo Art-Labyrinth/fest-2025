@@ -92,7 +92,7 @@ export const customerApi = {
   createOrder: (body: CreateOrderBody) =>
     apiFetch<CreateOrderResponse>('POST', '/orders', body),
 
-  downloadTicket: async (ticketId: number): Promise<Blob> => {
+  downloadTicket: async (ticketId: string): Promise<Blob> => {
     const headers: Record<string, string> = {};
     const token = getStoredToken();
     if (token) headers['Authorization'] = `Bearer ${token}`;
