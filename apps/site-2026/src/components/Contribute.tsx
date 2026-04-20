@@ -35,7 +35,7 @@ const input = 'w-full border border-brown/30 rounded-lg px-3 py-2 bg-orange-150/
 const btnPrimary = 'bg-brown text-orange-150 text-sm font-bold py-2.5 px-6 rounded-lg hover:opacity-80 transition-opacity disabled:opacity-40 cursor-pointer disabled:cursor-default';
 const btnSecondary = 'border border-brown text-brown text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-brown hover:text-orange-150 transition-colors disabled:opacity-40 cursor-pointer disabled:cursor-default';
 
-export default function Tickets() {
+export default function Contribute() {
   const { t, i18n } = useTranslation();
 
   const [token, setToken] = useState(getStoredToken);
@@ -181,8 +181,8 @@ export default function Tickets() {
     return (
       <main className="min-h-[calc(100vh-130px)] px-5 md:px-12 py-16 font-deledda text-brown flex items-center justify-center">
         <div className={card}>
-          <h1 className="text-2xl sm:text-3xl font-bold font-roca mb-6 text-center">{t('tickets.title')}</h1>
-
+          <h1 className="text-2xl sm:text-3xl font-bold font-roca mb-6 text-center">{t('contribute.title')}</h1>
+          <p className="text-center text-brown/50 mb-6">{t(`contribute.description.no_auth`)}</p>
           <div className="flex rounded-lg overflow-hidden border border-brown/20 mb-6">
             {(['login', 'register'] as const).map(mode => (
               <button
@@ -191,31 +191,31 @@ export default function Tickets() {
                 className={`flex-1 py-2 text-sm font-bold transition-colors cursor-pointer ${authMode === mode ? 'bg-brown text-orange-150' : 'text-brown hover:bg-brown/10'}`}
                 onClick={() => { setAuthMode(mode); setAuthError(''); }}
               >
-                {t(`tickets.${mode}`)}
+                {t(`contribute.${mode}`)}
               </button>
             ))}
           </div>
 
           <form onSubmit={handleAuth} className="space-y-4">
             <div>
-              <label className="block text-sm font-bold mb-1">{t('tickets.email')}</label>
+              <label className="block text-sm font-bold mb-1">{t('contribute.email')}</label>
               <input type="email" required className={input} value={authEmail} onChange={e => setAuthEmail(e.target.value)} />
             </div>
             <div>
-              <label className="block text-sm font-bold mb-1">{t('tickets.password')}</label>
+              <label className="block text-sm font-bold mb-1">{t('contribute.password')}</label>
               <input type="password" required minLength={8} className={input} value={authPassword} onChange={e => setAuthPassword(e.target.value)} />
             </div>
             {authMode === 'register' && (
               <div>
                 <label className="block text-sm font-bold mb-1">
-                  {t('tickets.name')} <span className="font-normal text-brown/50">({t('tickets.optional')})</span>
+                  {t('contribute.name')} <span className="font-normal text-brown/50">({t('contribute.optional')})</span>
                 </label>
                 <input type="text" className={input} value={authName} onChange={e => setAuthName(e.target.value)} />
               </div>
             )}
             {authError && <p className="text-red-600 text-sm">{authError}</p>}
             <button type="submit" className={`${btnPrimary} w-full`} disabled={authLoading}>
-              {authLoading ? t('tickets.loading') : t(`tickets.submit_${authMode}`)}
+              {authLoading ? t('contribute.loading') : t(`contribute.submit_${authMode}`)}
             </button>
           </form>
         </div>
@@ -228,32 +228,32 @@ export default function Tickets() {
       <div className={`${card} w-full`}>
 
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold font-roca">{t('tickets.title')}</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold font-roca">{t('contribute.title')}</h1>
           <div className="flex items-center gap-3">
             <span className="text-sm text-brown/50 hidden sm:block truncate max-w-[200px]">{userEmail}</span>
-            <button type="button" className={btnSecondary} onClick={logout}>{t('tickets.logout')}</button>
+            <button type="button" className={btnSecondary} onClick={logout}>{t('contribute.logout')}</button>
           </div>
         </div>
 
         {view === 'orders' ? (
           <>
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">{t('tickets.my_orders')}</h2>
+              <h2 className="text-lg font-bold">{t('contribute.my_orders')}</h2>
               <button
                 type="button"
                 className={btnPrimary}
                 onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('basic'); setTickets([makeDraft(userEmail || '', userName)]); }}
               >
-                {t('tickets.new_order')}
+                {t('contribute.new_order')}
               </button>
             </div>
 
             {ordersLoading && (
-              <p className="text-center text-brown/50 py-10">{t('tickets.loading')}</p>
+              <p className="text-center text-brown/50 py-10">{t('contribute.loading')}</p>
             )}
 
             {!ordersLoading && orders.length === 0 && (
-              <p className="text-center text-brown/50 py-10">{t('tickets.no_orders')}</p>
+              <p className="text-center text-brown/50 py-10">{t('contribute.no_orders')}</p>
             )}
 
             <div className="space-y-3">
@@ -265,7 +265,7 @@ export default function Tickets() {
                         {new Date(order.created_at).toLocaleDateString()} · {order.amount} MDL
                       </span>
                       <span className={`text-sm font-bold ${order.status === 'paid' ? 'text-green-700' : 'text-orange-600'}`}>
-                        {t(`tickets.status_${order.status}`, { defaultValue: order.status })}
+                        {t(`contribute.status_${order.status}`, { defaultValue: order.status })}
                       </span>
                     </div>
                     {order.status !== 'paid' && (
@@ -276,11 +276,11 @@ export default function Tickets() {
                           rel="noopener noreferrer"
                           className={`${btnPrimary} inline-block`}
                         >
-                          {t('tickets.pay')}
+                          {t('contribute.pay')}
                         </a>
                       ) : (
                         <button type="button" disabled className={`${btnPrimary} opacity-40 cursor-not-allowed`}>
-                          {t('tickets.pay')}
+                          {t('contribute.pay')}
                         </button>
                       )
                     )}
@@ -301,7 +301,7 @@ export default function Tickets() {
                               disabled={downloading.has(ticket.ticket_id)}
                               onClick={() => handleDownload(ticket.ticket_id, ticket.name)}
                             >
-                              {downloading.has(ticket.ticket_id) ? '...' : t('tickets.download')}
+                              {downloading.has(ticket.ticket_id) ? '...' : t('contribute.download')}
                             </button>
                           </div>
                         )}
@@ -320,13 +320,13 @@ export default function Tickets() {
                 className="text-brown/60 hover:text-brown transition-colors text-sm cursor-pointer"
                 onClick={() => { setView('orders'); setOrderError(''); }}
               >
-                ← {t('tickets.back')}
+                ← {t('contribute.back')}
               </button>
-              <h2 className="text-lg font-bold">{t('tickets.new_order')}</h2>
+              <h2 className="text-lg font-bold">{t('contribute.new_order')}</h2>
             </div>
 
             <div className="mb-5">
-              <label className="block text-sm font-bold mb-2">{t('tickets.order_type')}</label>
+              <label className="block text-sm font-bold mb-2">{t('contribute.order_type')}</label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 {(['basic', 'discounted', 'family'] as OrderType[]).map(type => {
                   const disabled = type !== 'basic';
@@ -338,7 +338,7 @@ export default function Tickets() {
                       onClick={() => !disabled && setOrderType(type)}
                       className={`rounded-xl border p-3 text-left transition-colors ${disabled ? 'opacity-40 cursor-not-allowed border-brown/20' : `cursor-pointer ${orderType === type ? 'border-brown bg-brown/10' : 'border-brown/20 hover:border-brown/50'}`}`}
                     >
-                      <span className="block font-bold text-sm">{t(`tickets.type_${type}`)}</span>
+                      <span className="block font-bold text-sm">{t(`contribute.type_${type}`)}</span>
                       <span className="block text-xs text-brown/60 mt-0.5">{PRICES[type]} MDL</span>
                     </button>
                   );
@@ -347,7 +347,7 @@ export default function Tickets() {
             </div>
 
             <div className="mb-5">
-              <label className="block text-sm font-bold mb-2">{t('tickets.quantity')}</label>
+              <label className="block text-sm font-bold mb-2">{t('contribute.quantity')}</label>
               <div className="flex items-center gap-3">
                 <button
                   type="button"
@@ -361,7 +361,7 @@ export default function Tickets() {
                   onClick={() => setTicketCount(tickets.length + 1)}
                 >+</button>
                 {orderType === 'basic' && tickets.length >= 6 && (
-                  <span className="text-xs text-green-700 font-bold">{t('tickets.discount_info')}</span>
+                  <span className="text-xs text-green-700 font-bold">{t('contribute.discount_info')}</span>
                 )}
               </div>
             </div>
@@ -369,9 +369,9 @@ export default function Tickets() {
             <div className="space-y-3 mb-5">
               {tickets.map((ticket, i) => (
                 <div key={i} className="border border-brown/20 rounded-xl p-4">
-                  <p className="text-xs font-bold text-brown/50 mb-3">{t('tickets.ticket_n', { n: i + 1 })}</p>
+                  <p className="text-xs font-bold text-brown/50 mb-3">{t('contribute.ticket_n', { n: i + 1 })}</p>
                   <div className="mb-3">
-                    <label className="block text-sm font-bold mb-1">{t('tickets.ticket_name')}</label>
+                    <label className="block text-sm font-bold mb-1">{t('contribute.ticket_name')}</label>
                     <input
                       type="text"
                       required
@@ -388,7 +388,7 @@ export default function Tickets() {
                         onChange={e => updateTicket(i, { send_email: e.target.checked })}
                         className="accent-brown w-4 h-4"
                       />
-                      <span className="text-sm font-bold">{t('tickets.send_email')}</span>
+                      <span className="text-sm font-bold">{t('contribute.send_email')}</span>
                     </label>
                     {ticket.send_email && (
                       <input
@@ -405,16 +405,16 @@ export default function Tickets() {
             </div>
 
             <div className="flex justify-between items-center py-3 border-t border-brown/20 mb-5">
-              <span className="font-bold">{t('tickets.total')}</span>
+              <span className="font-bold">{t('contribute.total')}</span>
               <span className="text-xl font-bold">{calcTotal()} MDL</span>
             </div>
 
             {orderError && <p className="text-red-600 text-sm mb-4">{orderError}</p>}
 
             <button type="submit" className={`${btnPrimary} w-full`} disabled={orderLoading}>
-              {orderLoading ? t('tickets.loading') : t('tickets.create_order')}
+              {orderLoading ? t('contribute.loading') : t('contribute.create_order')}
             </button>
-            <p className="text-xs text-brown/50 text-center mt-3">{t('tickets.bpay_notice')}</p>
+            <p className="text-xs text-brown/50 text-center mt-3">{t('contribute.bpay_notice')}</p>
           </form>
         )}
       </div>

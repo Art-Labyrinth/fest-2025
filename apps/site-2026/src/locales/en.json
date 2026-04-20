@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About",
     "contacts": "Contacts",
-    "tickets": "Tickets"
+    "tickets": "Tickets",
+    "contribute": "Contribute"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -27,8 +28,12 @@
   "footer": {
     "org": "Art-Labyrinth"
   },
-  "tickets": {
-    "title": "Tickets",
+  "contribute": {
+    "title": "Contribute",
+    "description": {
+      "auth": "Here you can purchase tickets for the 2026 festival. Choose the ticket type, specify the quantity and place the order. After payment, you will receive the ticket by email.",
+      "no_auth": "Please sign in to purchase tickets for the 2026 festival."
+    },
     "login": "Sign in",
     "register": "Register",
     "email": "Email",

@@ -3,7 +3,8 @@
     "home": "Acasă",
     "about": "Despre noi",
     "contacts": "Contacte",
-    "tickets": "Bilete"
+    "tickets": "Bilete",
+    "contribute": "Contribuie"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -27,8 +28,12 @@
   "footer": {
     "org": "Art-Labirint"
   },
-  "tickets": {
-    "title": "Bilete",
+  "contribute": {
+    "title": "Contribuie",
+    "description": {
+      "auth": "Aici puteți achiziționa bilete pentru festivalul din 2026. Alegeți tipul biletului, specificați cantitatea și plasați comanda. După plată, veți primi biletul pe email.",
+      "no_auth": "Vă rugăm să vă autentificați pentru a achiziționa bilete pentru festivalul din 2026."
+    },
     "login": "Autentificare",
     "register": "Înregistrare",
     "email": "Email",
