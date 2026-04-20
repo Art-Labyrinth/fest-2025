@@ -10,9 +10,9 @@ export default function Header() {
   const langs = ["ru", "en", "md"];
   const navLinks = [
     { to: "/", label: t("nav.home") },
+    { to: "/contribute", label: t("nav.contribute") },
     { to: "/about", label: t("nav.about") },
     { to: "/contacts", label: t("nav.contacts") },
-    { to: "/tickets", label: t("nav.tickets") },
   ];
 
   return (

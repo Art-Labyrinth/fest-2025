@@ -1,0 +1,4 @@
+export const card = 'w-full max-w-2xl rounded-3xl border border-brown/20 bg-orange-150/85 backdrop-blur-sm shadow-lg px-6 py-8 sm:px-10';
+export const input = 'w-full border border-brown/30 rounded-lg px-3 py-2 bg-orange-150/50 text-brown placeholder-brown/40 focus:outline-none focus:border-brown/60 text-sm';
+export const btnPrimary = 'bg-brown text-orange-150 text-sm font-bold py-2.5 px-6 rounded-lg hover:opacity-80 transition-opacity disabled:opacity-40 cursor-pointer disabled:cursor-default';
+export const btnSecondary = 'border border-brown text-brown text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-brown hover:text-orange-150 transition-colors disabled:opacity-40 cursor-pointer disabled:cursor-default';

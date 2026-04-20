@@ -3,7 +3,8 @@
     "home": "Acasă",
     "about": "Despre noi",
     "contacts": "Contacte",
-    "tickets": "Bilete"
+    "tickets": "Bilete",
+    "contribute": "Contribuie"
   },
   "home": {
     "title": "Art-Labyrinth 2026",
@@ -27,8 +28,12 @@
   "footer": {
     "org": "Art-Labirint"
   },
-  "tickets": {
-    "title": "Bilete",
+  "contribute": {
+    "title": "Contribuie",
+    "description": {
+      "auth": "Aici puteți achiziționa bilete pentru festivalul din 2026. Alegeți tipul biletului, specificați cantitatea și plasați comanda. După plată, veți primi biletul pe email.",
+      "no_auth": "Vă rugăm să vă autentificați pentru a achiziționa bilete pentru festivalul din 2026."
+    },
     "login": "Autentificare",
     "register": "Înregistrare",
     "email": "Email",
@@ -41,15 +46,22 @@
     "logout": "Ieșire",
     "my_orders": "Comenzile mele",
     "new_order": "Comandă nouă",
+    "sales_closed": "Vânzările sunt închise",
+    "sales_closed_notice": "În iulie vânzările sunt închise. Crearea comenzilor noi este indisponibilă acum.",
     "no_orders": "Nicio comandă încă",
     "order_type": "Tipul biletului",
-    "type_basic": "Гостевой",
+    "current_month_prices": "Prețurile actuale pentru {{month}}",
+    "month_april": "Aprilie",
+    "month_june": "Iunie",
+    "month_july": "Iulie",
+    "type_basic": "Invitat",
     "type_discounted": "Redus",
     "type_family": "Familie",
     "quantity": "Numărul de bilete",
     "discount_info": "Reducere 10%!",
     "ticket_n": "Bilet {{n}}",
-    "ticket_name": "Nume pe bilet",
+    "ticket_name": "Nume",
+    "ticket_name_hint": "Opțional. Va fi afișat pe bilet, maximum 18 caractere.",
     "send_email": "Trimite pe email",
     "total": "Total",
     "create_order": "Continuare la plată",

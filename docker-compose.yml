@@ -28,6 +28,7 @@ services:
       - ./.env
     environment:
       WDS_SOCKET_PATH: /ws-main
+      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
       - ./node_modules:/workspace/node_modules
@@ -45,6 +46,7 @@ services:
       - ./.env
     environment:
       WDS_SOCKET_PATH: /ws-2025
+      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
       - ./node_modules:/workspace/node_modules
@@ -62,6 +64,7 @@ services:
       - ./.env
     environment:
       WDS_SOCKET_PATH: /ws-2026
+      WDS_SOCKET_PORT: "3000"
     volumes:
       - ./:/workspace
       - ./node_modules:/workspace/node_modules
