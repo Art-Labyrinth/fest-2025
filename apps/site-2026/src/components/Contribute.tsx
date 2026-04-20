@@ -10,33 +10,23 @@ import {
   CreateOrderBody,
   CustomerOrder,
 } from '../api/customerApi';
-
-type OrderType = 'basic' | 'discounted' | 'family';
-type View = 'orders' | 'newOrder';
-
-interface TicketDraft {
-  name: string;
-  send_email: boolean;
-  email: string;
-}
-
-const PRICES: Record<OrderType, number> = { basic: 400, discounted: 400, family: 600 };
-
-function langForApi(lang: string): string {
-  return lang === 'md' ? 'ro' : lang;
-}
-
-function makeDraft(email: string, name = ''): TicketDraft {
-  return { name, send_email: true, email };
-}
-
-const card = 'w-full max-w-2xl rounded-3xl border border-brown/20 bg-orange-150/85 backdrop-blur-sm shadow-lg px-6 py-8 sm:px-10';
-const input = 'w-full border border-brown/30 rounded-lg px-3 py-2 bg-orange-150/50 text-brown placeholder-brown/40 focus:outline-none focus:border-brown/60 text-sm';
-const btnPrimary = 'bg-brown text-orange-150 text-sm font-bold py-2.5 px-6 rounded-lg hover:opacity-80 transition-opacity disabled:opacity-40 cursor-pointer disabled:cursor-default';
-const btnSecondary = 'border border-brown text-brown text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-brown hover:text-orange-150 transition-colors disabled:opacity-40 cursor-pointer disabled:cursor-default';
+import AuthCard from './contribute/AuthCard';
+import OrdersView from './contribute/OrdersView';
+import NewOrderForm from './contribute/NewOrderForm';
+import {
+  getCurrentPriceStage,
+  langForApi,
+  makeDraft,
+  PRICES_BY_STAGE,
+} from './contribute/model';
+import type { OrderType, TicketDraft, View } from './contribute/model';
+import { card } from './contribute/styles';
 
 export default function Contribute() {
   const { t, i18n } = useTranslation();
+  const currentPriceStage = getCurrentPriceStage();
+  const salesClosed = currentPriceStage === 'july';
+  const currentPrices = salesClosed ? null : PRICES_BY_STAGE[currentPriceStage];
 
   const [token, setToken] = useState(getStoredToken);
   const [userEmail, setUserEmail] = useState(getStoredEmail);
@@ -127,13 +117,19 @@ export default function Contribute() {
   }
 
   function calcTotal(): number {
-    const base = PRICES[orderType];
+    if (!currentPrices) return 0;
+
+    const base = currentPrices[orderType];
     const discount = orderType === 'basic' && tickets.length >= 6 ? 0.9 : 1;
     return Math.round(base * discount * tickets.length);
   }
 
   async function handleCreateOrder(e: React.FormEvent) {
     e.preventDefault();
+    if (salesClosed) {
+      setOrderError(String(t('contribute.sales_closed_notice')));
+      return;
+    }
     setOrderError('');
     setOrderLoading(true);
     try {
@@ -179,243 +175,59 @@ export default function Contribute() {
 
   if (!token) {
     return (
-      <main className="min-h-[calc(100vh-130px)] px-5 md:px-12 py-16 font-deledda text-brown flex items-center justify-center">
-        <div className={card}>
-          <h1 className="text-2xl sm:text-3xl font-bold font-roca mb-6 text-center">{t('contribute.title')}</h1>
-          <p className="text-center text-brown/50 mb-6">{t(`contribute.description.no_auth`)}</p>
-          <div className="flex rounded-lg overflow-hidden border border-brown/20 mb-6">
-            {(['login', 'register'] as const).map(mode => (
-              <button
-                key={mode}
-                type="button"
-                className={`flex-1 py-2 text-sm font-bold transition-colors cursor-pointer ${authMode === mode ? 'bg-brown text-orange-150' : 'text-brown hover:bg-brown/10'}`}
-                onClick={() => { setAuthMode(mode); setAuthError(''); }}
-              >
-                {t(`contribute.${mode}`)}
-              </button>
-            ))}
-          </div>
-
-          <form onSubmit={handleAuth} className="space-y-4">
-            <div>
-              <label className="block text-sm font-bold mb-1">{t('contribute.email')}</label>
-              <input type="email" required className={input} value={authEmail} onChange={e => setAuthEmail(e.target.value)} />
-            </div>
-            <div>
-              <label className="block text-sm font-bold mb-1">{t('contribute.password')}</label>
-              <input type="password" required minLength={8} className={input} value={authPassword} onChange={e => setAuthPassword(e.target.value)} />
-            </div>
-            {authMode === 'register' && (
-              <div>
-                <label className="block text-sm font-bold mb-1">
-                  {t('contribute.name')} <span className="font-normal text-brown/50">({t('contribute.optional')})</span>
-                </label>
-                <input type="text" className={input} value={authName} onChange={e => setAuthName(e.target.value)} />
-              </div>
-            )}
-            {authError && <p className="text-red-600 text-sm">{authError}</p>}
-            <button type="submit" className={`${btnPrimary} w-full`} disabled={authLoading}>
-              {authLoading ? t('contribute.loading') : t(`contribute.submit_${authMode}`)}
-            </button>
-          </form>
-        </div>
-      </main>
+      <AuthCard
+        authMode={authMode}
+        authEmail={authEmail}
+        authPassword={authPassword}
+        authName={authName}
+        authError={authError}
+        authLoading={authLoading}
+        onAuthModeChange={mode => { setAuthMode(mode); setAuthError(''); }}
+        onAuthEmailChange={setAuthEmail}
+        onAuthPasswordChange={setAuthPassword}
+        onAuthNameChange={setAuthName}
+        onSubmit={handleAuth}
+      />
     );
   }
 
   return (
     <main className="min-h-[calc(100vh-130px)] px-5 md:px-12 py-10 font-deledda text-brown flex flex-col items-center">
       <div className={`${card} w-full`}>
-
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold font-roca">{t('contribute.title')}</h1>
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-brown/50 hidden sm:block truncate max-w-[200px]">{userEmail}</span>
-            <button type="button" className={btnSecondary} onClick={logout}>{t('contribute.logout')}</button>
-          </div>
-        </div>
-
         {view === 'orders' ? (
-          <>
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold">{t('contribute.my_orders')}</h2>
-              <button
-                type="button"
-                className={btnPrimary}
-                onClick={() => { setView('newOrder'); setOrderError(''); setOrderType('basic'); setTickets([makeDraft(userEmail || '', userName)]); }}
-              >
-                {t('contribute.new_order')}
-              </button>
-            </div>
-
-            {ordersLoading && (
-              <p className="text-center text-brown/50 py-10">{t('contribute.loading')}</p>
-            )}
-
-            {!ordersLoading && orders.length === 0 && (
-              <p className="text-center text-brown/50 py-10">{t('contribute.no_orders')}</p>
-            )}
-
-            <div className="space-y-3">
-              {orders.map(order => (
-                <div key={order.id} className="border border-brown/20 rounded-2xl p-4">
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
-                    <div>
-                      <span className="text-xs text-brown/50 block">
-                        {new Date(order.created_at).toLocaleDateString()} · {order.amount} MDL
-                      </span>
-                      <span className={`text-sm font-bold ${order.status === 'paid' ? 'text-green-700' : 'text-orange-600'}`}>
-                        {t(`contribute.status_${order.status}`, { defaultValue: order.status })}
-                      </span>
-                    </div>
-                    {order.status !== 'paid' && (
-                      order.invoice_url ? (
-                        <a
-                          href={order.invoice_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`${btnPrimary} inline-block`}
-                        >
-                          {t('contribute.pay')}
-                        </a>
-                      ) : (
-                        <button type="button" disabled className={`${btnPrimary} opacity-40 cursor-not-allowed`}>
-                          {t('contribute.pay')}
-                        </button>
-                      )
-                    )}
-                  </div>
-
-                  <div className="space-y-2">
-                    {order.tickets.map(ticket => (
-                      <div key={ticket.id} className="flex flex-wrap items-center gap-2 pt-2 border-t border-brown/10">
-                        <div className="flex-1 min-w-0">
-                          <span className="text-xs text-brown/40 block">{ticket.ticket_id}</span>
-                          <span className="text-sm font-bold truncate block">{ticket.name}</span>
-                        </div>
-                        {ticket.is_sold && (
-                          <div className="flex gap-2 shrink-0">
-                            <button
-                              type="button"
-                              className={`${btnSecondary} text-xs py-1 px-3`}
-                              disabled={downloading.has(ticket.ticket_id)}
-                              onClick={() => handleDownload(ticket.ticket_id, ticket.name)}
-                            >
-                              {downloading.has(ticket.ticket_id) ? '...' : t('contribute.download')}
-                            </button>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </>
+          <OrdersView
+            orders={orders}
+            ordersLoading={ordersLoading}
+            salesClosed={salesClosed}
+            downloading={downloading}
+            onLogout={logout}
+            onStartNewOrder={() => {
+              if (salesClosed) return;
+              setView('newOrder');
+              setOrderError('');
+              setOrderType('basic');
+              setTickets([makeDraft(userEmail || '', userName)]);
+            }}
+            onDownload={handleDownload}
+            userEmail={userEmail}
+          />
         ) : (
-          <form onSubmit={handleCreateOrder}>
-            <div className="flex items-center gap-3 mb-6">
-              <button
-                type="button"
-                className="text-brown/60 hover:text-brown transition-colors text-sm cursor-pointer"
-                onClick={() => { setView('orders'); setOrderError(''); }}
-              >
-                ← {t('contribute.back')}
-              </button>
-              <h2 className="text-lg font-bold">{t('contribute.new_order')}</h2>
-            </div>
-
-            <div className="mb-5">
-              <label className="block text-sm font-bold mb-2">{t('contribute.order_type')}</label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                {(['basic', 'discounted', 'family'] as OrderType[]).map(type => {
-                  const disabled = type !== 'basic';
-                  return (
-                    <button
-                      key={type}
-                      type="button"
-                      disabled={disabled}
-                      onClick={() => !disabled && setOrderType(type)}
-                      className={`rounded-xl border p-3 text-left transition-colors ${disabled ? 'opacity-40 cursor-not-allowed border-brown/20' : `cursor-pointer ${orderType === type ? 'border-brown bg-brown/10' : 'border-brown/20 hover:border-brown/50'}`}`}
-                    >
-                      <span className="block font-bold text-sm">{t(`contribute.type_${type}`)}</span>
-                      <span className="block text-xs text-brown/60 mt-0.5">{PRICES[type]} MDL</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            <div className="mb-5">
-              <label className="block text-sm font-bold mb-2">{t('contribute.quantity')}</label>
-              <div className="flex items-center gap-3">
-                <button
-                  type="button"
-                  className="w-9 h-9 rounded-full border border-brown/30 text-brown font-bold hover:bg-brown/10 transition-colors cursor-pointer flex items-center justify-center"
-                  onClick={() => setTicketCount(tickets.length - 1)}
-                >−</button>
-                <span className="text-lg font-bold w-6 text-center">{tickets.length}</span>
-                <button
-                  type="button"
-                  className="w-9 h-9 rounded-full border border-brown/30 text-brown font-bold hover:bg-brown/10 transition-colors cursor-pointer flex items-center justify-center"
-                  onClick={() => setTicketCount(tickets.length + 1)}
-                >+</button>
-                {orderType === 'basic' && tickets.length >= 6 && (
-                  <span className="text-xs text-green-700 font-bold">{t('contribute.discount_info')}</span>
-                )}
-              </div>
-            </div>
-
-            <div className="space-y-3 mb-5">
-              {tickets.map((ticket, i) => (
-                <div key={i} className="border border-brown/20 rounded-xl p-4">
-                  <p className="text-xs font-bold text-brown/50 mb-3">{t('contribute.ticket_n', { n: i + 1 })}</p>
-                  <div className="mb-3">
-                    <label className="block text-sm font-bold mb-1">{t('contribute.ticket_name')}</label>
-                    <input
-                      type="text"
-                      required
-                      className={input}
-                      value={ticket.name}
-                      onChange={e => updateTicket(i, { name: e.target.value })}
-                    />
-                  </div>
-                  <div>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={ticket.send_email}
-                        onChange={e => updateTicket(i, { send_email: e.target.checked })}
-                        className="accent-brown w-4 h-4"
-                      />
-                      <span className="text-sm font-bold">{t('contribute.send_email')}</span>
-                    </label>
-                    {ticket.send_email && (
-                      <input
-                        type="email"
-                        className={`${input} mt-2`}
-                        placeholder={userEmail || ''}
-                        value={ticket.email}
-                        onChange={e => updateTicket(i, { email: e.target.value })}
-                      />
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex justify-between items-center py-3 border-t border-brown/20 mb-5">
-              <span className="font-bold">{t('contribute.total')}</span>
-              <span className="text-xl font-bold">{calcTotal()} MDL</span>
-            </div>
-
-            {orderError && <p className="text-red-600 text-sm mb-4">{orderError}</p>}
-
-            <button type="submit" className={`${btnPrimary} w-full`} disabled={orderLoading}>
-              {orderLoading ? t('contribute.loading') : t('contribute.create_order')}
-            </button>
-            <p className="text-xs text-brown/50 text-center mt-3">{t('contribute.bpay_notice')}</p>
-          </form>
+          <NewOrderForm
+            currentPriceStage={currentPriceStage}
+            currentPrices={currentPrices}
+            orderError={orderError}
+            orderLoading={orderLoading}
+            orderType={orderType}
+            salesClosed={salesClosed}
+            tickets={tickets}
+            total={calcTotal()}
+            userEmail={userEmail}
+            onBack={() => { setView('orders'); setOrderError(''); }}
+            onOrderTypeChange={setOrderType}
+            onSubmit={handleCreateOrder}
+            onTicketCountChange={setTicketCount}
+            onTicketUpdate={updateTicket}
+          />
         )}
       </div>
     </main>
