@@ -5,6 +5,8 @@ const TOKEN_KEY = 'cust_token';
 const EMAIL_KEY = 'cust_email';
 const NAME_KEY = 'cust_name';
 
+export const CUSTOMER_UNAUTHORIZED_EVENT = 'customer:unauthorized';
+
 export function getStoredToken(): string | null { return localStorage.getItem(TOKEN_KEY); }
 export function getStoredEmail(): string | null { return localStorage.getItem(EMAIL_KEY); }
 export function getStoredName(): string | null { return localStorage.getItem(NAME_KEY); }
@@ -22,6 +24,25 @@ export function clearSession(): void {
   localStorage.removeItem(NAME_KEY);
 }
 
+function handleUnauthorized(): void {
+  clearSession();
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new Event(CUSTOMER_UNAUTHORIZED_EVENT));
+  }
+}
+
+async function binaryFetch(path: string): Promise<Blob> {
+  const headers: Record<string, string> = {};
+  const token = getStoredToken();
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+
+  const res = await fetch(BASE + path, { headers });
+  if (res.status === 401) handleUnauthorized();
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.blob();
+}
+
 async function apiFetch<T>(method: string, path: string, body?: unknown): Promise<T> {
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
   const token = getStoredToken();
@@ -31,6 +52,7 @@ async function apiFetch<T>(method: string, path: string, body?: unknown): Promis
     headers,
     body: body !== undefined ? JSON.stringify(body) : undefined,
   });
+  if (res.status === 401) handleUnauthorized();
   if (!res.ok) {
     let detail = `HTTP ${res.status}`;
     try { detail = (await res.json()).detail || detail; } catch {}
@@ -64,7 +86,7 @@ export interface CustomerOrder {
   language: string;
   invoice_url: string;
   created_at: string;
-  tickets: TicketItem[];
+  tickets?: TicketItem[];
 }
 
 export interface CreateOrderBody {
@@ -89,15 +111,14 @@ export const customerApi = {
 
   getOrders: () => apiFetch<CustomerOrder[]>('GET', '/me/orders'),
 
+  getOrder: (orderId: number) => apiFetch<CustomerOrder>('GET', `/me/order/${orderId}`),
+
+  getTickets: () => apiFetch<TicketItem[]>('GET', '/me/tickets'),
+
   createOrder: (body: CreateOrderBody) =>
     apiFetch<CreateOrderResponse>('POST', '/orders', body),
 
-  downloadTicket: async (ticketId: string): Promise<Blob> => {
-    const headers: Record<string, string> = {};
-    const token = getStoredToken();
-    if (token) headers['Authorization'] = `Bearer ${token}`;
-    const res = await fetch(`${BASE}/tickets/${ticketId}/download`, { headers });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.blob();
-  },
+  downloadOrderPrint: (orderId: number) => binaryFetch(`/orders/${orderId}/download`),
+
+  downloadTicket: (ticketId: string) => binaryFetch(`/tickets/${ticketId}/download`),
 };

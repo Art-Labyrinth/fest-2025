@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 import { JoinLanding, JoinMasterForm, JoinVolunteerForm } from "./components/JoinPages";
 import Contribute from "./components/Contribute";
+import OrderPage from "./components/contribute/OrderPage";
+import TicketsPage from "./components/contribute/TicketsPage";
 
 import "./index.css";
 import "./i18n";
@@ -41,6 +43,9 @@ const router = createBrowserRouter(
         { path: "join/volunteer", element: <JoinVolunteerForm /> },
         { path: "join/master", element: <JoinMasterForm /> },
         { path: "contribute", element: <Contribute /> },
+        { path: "contribute/orders", element: <Contribute autoOpenTickets={false} /> },
+        { path: "contribute/orders/:orderId", element: <OrderPage /> },
+        { path: "contribute/tickets", element: <TicketsPage /> },
         { path: "*", element: <NotFound /> },
       ],
     },

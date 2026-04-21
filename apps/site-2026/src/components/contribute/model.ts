@@ -4,8 +4,6 @@ export type PriceStageKey = 'april' | 'may' | 'june' | 'july';
 
 export interface TicketDraft {
   name: string;
-  send_email: boolean;
-  email: string;
 }
 
 export const PRICES_BY_STAGE: Record<Exclude<PriceStageKey, 'july'>, Record<OrderType, number>> = {
@@ -27,6 +25,6 @@ export function langForApi(lang: string): string {
   return lang === 'md' ? 'ro' : lang;
 }
 
-export function makeDraft(email: string, name = ''): TicketDraft {
-  return { name, send_email: true, email };
+export function makeDraft(name = ''): TicketDraft {
+  return { name };
 }
