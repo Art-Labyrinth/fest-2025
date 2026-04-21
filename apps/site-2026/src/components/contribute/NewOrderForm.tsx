@@ -7,13 +7,17 @@ interface NewOrderFormProps {
   currentPriceStage: PriceStageKey;
   currentPrices: Record<OrderType, number> | null;
   orderError: string;
+  orderEmail: string;
   orderLoading: boolean;
+  orderSendEmail: boolean;
   orderType: OrderType;
   salesClosed: boolean;
   tickets: TicketDraft[];
   total: number;
   userEmail: string | null;
   onBack: () => void;
+  onOrderEmailChange: (value: string) => void;
+  onOrderSendEmailChange: (value: boolean) => void;
   onOrderTypeChange: (value: OrderType) => void;
   onSubmit: (event: React.FormEvent) => void;
   onTicketCountChange: (count: number) => void;
@@ -24,13 +28,17 @@ export default function NewOrderForm({
   currentPriceStage,
   currentPrices,
   orderError,
+  orderEmail,
   orderLoading,
+  orderSendEmail,
   orderType,
   salesClosed,
   tickets,
   total,
   userEmail,
   onBack,
+  onOrderEmailChange,
+  onOrderSendEmailChange,
   onOrderTypeChange,
   onSubmit,
   onTicketCountChange,
@@ -117,28 +125,29 @@ export default function NewOrderForm({
                 onChange={event => onTicketUpdate(index, { name: event.target.value })}
               />
             </div>
-            <div>
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={ticket.send_email}
-                  onChange={event => onTicketUpdate(index, { send_email: event.target.checked })}
-                  className="accent-brown w-4 h-4"
-                />
-                <span className="text-sm font-bold">{t('contribute.send_email')}</span>
-              </label>
-              {ticket.send_email && (
-                <input
-                  type="email"
-                  className={`${input} mt-2`}
-                  placeholder={userEmail || ''}
-                  value={ticket.email}
-                  onChange={event => onTicketUpdate(index, { email: event.target.value })}
-                />
-              )}
-            </div>
           </div>
         ))}
+      </div>
+
+      <div className="border border-brown/20 rounded-xl p-4 mb-5">
+        <label className="flex items-center gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={orderSendEmail}
+            onChange={event => onOrderSendEmailChange(event.target.checked)}
+            className="accent-brown w-4 h-4"
+          />
+          <span className="text-sm font-bold">{t('contribute.send_email')}</span>
+        </label>
+        {orderSendEmail && (
+          <input
+            type="email"
+            className={`${input} mt-2`}
+            placeholder={userEmail || ''}
+            value={orderEmail}
+            onChange={event => onOrderEmailChange(event.target.value)}
+          />
+        )}
       </div>
 
       <div className="flex justify-between items-center py-3 border-t border-brown/20 mb-5">
