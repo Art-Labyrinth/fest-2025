@@ -216,6 +216,7 @@ function ThanksCard() {
 
 function SubmissionErrors({ state }: { state: SubmitErrorState }) {
   const { t } = useTranslation();
+  const hasError = state.csrf || state.tooLarge || state.unknown;
 
   return (
     <div className="space-y-3">
@@ -236,6 +237,29 @@ function SubmissionErrors({ state }: { state: SubmitErrorState }) {
           title={String(t('join.forms.error.unknown.title'))}
           description={state.message || String(t('join.forms.error.unknown.description'))}
         />
+      )}
+      {hasError && (
+        <div className="rounded-2xl border border-brown/15 bg-white/85 px-4 py-3 text-sm text-brown">
+          <div className="font-semibold">{String(t('join.forms.error.contact.title'))}</div>
+          <div className="mt-2 flex flex-col gap-1">
+            <a
+              href="https://t.me//psorion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-customOrange underline underline-offset-2 hover:opacity-80"
+            >
+              Telegram: @psorion
+            </a>
+            <a
+              href="https://www.facebook.com/natarov"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-customOrange underline underline-offset-2 hover:opacity-80"
+            >
+              Facebook: natarov
+            </a>
+          </div>
+        </div>
       )}
     </div>
   );

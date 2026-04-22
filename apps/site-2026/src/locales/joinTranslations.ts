@@ -37,6 +37,9 @@ export const joinTranslations = {
             title: 'Файл слишком большой',
             description: 'Пожалуйста, выберите файл меньшего размера и попробуйте снова.',
           },
+          contact: {
+            title: 'Если проблема сохраняется, свяжитесь с нами:',
+          },
         },
       },
       volunteer: {
@@ -263,6 +266,9 @@ export const joinTranslations = {
             title: 'File too large',
             description: 'Please select a smaller file and try again.',
           },
+          contact: {
+            title: 'If the problem persists, contact us:',
+          },
         },
       },
       volunteer: {
@@ -488,6 +494,9 @@ export const joinTranslations = {
           contentTooLarge: {
             title: 'Fișier prea mare',
             description: 'Vă rugăm să alegeți un fișier mai mic și să încercați din nou.',
+          },
+          contact: {
+            title: 'Dacă problema persistă, contactați-ne:',
           },
         },
       },
