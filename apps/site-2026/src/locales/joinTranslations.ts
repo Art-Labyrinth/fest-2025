@@ -25,13 +25,25 @@ export const joinTranslations = {
       forms: {
         submitting: 'Отправка формы...',
         error: {
-          csrf: {
-            title: 'Ошибка CSRF',
-            description: 'Пожалуйста, обновите страницу и попробуйте снова.',
-          },
           unknown: {
             title: 'Неизвестная ошибка',
             description: 'Что-то пошло не так. Пожалуйста, попробуйте позже.',
+          },
+          request: {
+            title: 'Ошибка отправки формы',
+            description: 'Сервер отклонил запрос. Проверьте заполненные поля и попробуйте снова.',
+          },
+          server: {
+            title: 'Ошибка сервера',
+            description: 'Сервер временно недоступен. Попробуйте отправить форму позже.',
+          },
+          timeout: {
+            title: 'Превышено время ожидания',
+            description: 'Сервер слишком долго обрабатывал форму. Попробуйте ещё раз позже.',
+          },
+          network: {
+            title: 'Ошибка сети',
+            description: 'Не удалось отправить форму из-за проблемы с сетью. Проверьте соединение и повторите попытку.',
           },
           contentTooLarge: {
             title: 'Файл слишком большой',
@@ -254,13 +266,25 @@ export const joinTranslations = {
       forms: {
         submitting: 'Submitting form...',
         error: {
-          csrf: {
-            title: 'CSRF error',
-            description: 'Please refresh the page and try again.',
-          },
           unknown: {
             title: 'Unknown error',
             description: 'Something went wrong. Please try again later.',
+          },
+          request: {
+            title: 'Form submission error',
+            description: 'The server rejected the request. Check the form fields and try again.',
+          },
+          server: {
+            title: 'Server error',
+            description: 'The server is temporarily unavailable. Please try again later.',
+          },
+          timeout: {
+            title: 'Request timed out',
+            description: 'The server took too long to process the form. Please try again later.',
+          },
+          network: {
+            title: 'Network error',
+            description: 'The form could not be sent because of a network issue. Check your connection and try again.',
           },
           contentTooLarge: {
             title: 'File too large',
@@ -483,13 +507,25 @@ export const joinTranslations = {
       forms: {
         submitting: 'Formularul se trimite...',
         error: {
-          csrf: {
-            title: 'Eroare CSRF',
-            description: 'Vă rugăm să reîmprospătați pagina și să încercați din nou.',
-          },
           unknown: {
             title: 'Eroare necunoscută',
             description: 'Ceva nu a mers bine. Vă rugăm să încercați mai târziu.',
+          },
+          request: {
+            title: 'Eroare la trimiterea formularului',
+            description: 'Serverul a respins cererea. Verificați câmpurile formularului și încercați din nou.',
+          },
+          server: {
+            title: 'Eroare de server',
+            description: 'Serverul este temporar indisponibil. Vă rugăm să încercați mai târziu.',
+          },
+          timeout: {
+            title: 'Timp de așteptare depășit',
+            description: 'Serverul a procesat formularul prea mult timp. Încercați din nou mai târziu.',
+          },
+          network: {
+            title: 'Eroare de rețea',
+            description: 'Formularul nu a putut fi trimis din cauza unei probleme de rețea. Verificați conexiunea și încercați din nou.',
           },
           contentTooLarge: {
             title: 'Fișier prea mare',

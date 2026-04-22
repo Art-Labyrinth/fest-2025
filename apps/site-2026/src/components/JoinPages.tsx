@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { API_URL } from '../config';
@@ -39,8 +39,7 @@ type MasterFormData = {
 };
 
 type SubmitErrorState = {
-  csrf: boolean;
-  tooLarge: boolean;
+  kind: 'none' | 'tooLarge' | 'timeout' | 'network' | 'server' | 'request' | 'unknown';
   unknown: boolean;
   message: string;
 };
@@ -59,28 +58,32 @@ function getOrCreateSessionId(): string {
   return sessionId;
 }
 
-async function fetchCsrfToken() {
-  const sessionId = getOrCreateSessionId();
+const emptySubmitErrorState: SubmitErrorState = {
+  kind: 'none',
+  unknown: false,
+  message: '',
+};
 
-  try {
-    const response = await fetch(`${API_URL}/form/csrf-token`, {
-      method: 'GET',
-      headers: {
-        'X-Session-ID': sessionId,
-      },
-    });
+async function toSubmitErrorState(response: Response): Promise<SubmitErrorState> {
+  const message = (await response.text()).trim();
 
-    if (!response.ok) {
-      return;
-    }
-
-    const data = (await response.json()) as { csrf_token?: string };
-    if (data.csrf_token) {
-      localStorage.setItem('csrfToken', data.csrf_token);
-    }
-  } catch (error) {
-    console.error('Failed to fetch CSRF token', error);
+  if (response.status === 413) {
+    return { kind: 'tooLarge', unknown: false, message };
   }
+
+  if (response.status === 408 || response.status === 504) {
+    return { kind: 'timeout', unknown: false, message };
+  }
+
+  if (response.status >= 500) {
+    return { kind: 'server', unknown: false, message };
+  }
+
+  if (response.status >= 400) {
+    return { kind: 'request', unknown: false, message };
+  }
+
+  return { kind: 'unknown', unknown: true, message };
 }
 
 function TextField({
@@ -216,23 +219,41 @@ function ThanksCard() {
 
 function SubmissionErrors({ state }: { state: SubmitErrorState }) {
   const { t } = useTranslation();
-  const hasError = state.csrf || state.tooLarge || state.unknown;
+  const hasError = state.kind !== 'none';
 
   return (
     <div className="space-y-3">
-      {state.csrf && (
-        <ErrorNotice
-          title={String(t('join.forms.error.csrf.title'))}
-          description={String(t('join.forms.error.csrf.description'))}
-        />
-      )}
-      {state.tooLarge && (
+      {state.kind === 'tooLarge' && (
         <ErrorNotice
           title={String(t('join.forms.error.contentTooLarge.title'))}
           description={String(t('join.forms.error.contentTooLarge.description'))}
         />
       )}
-      {state.unknown && (
+      {state.kind === 'timeout' && (
+        <ErrorNotice
+          title={String(t('join.forms.error.timeout.title'))}
+          description={state.message || String(t('join.forms.error.timeout.description'))}
+        />
+      )}
+      {state.kind === 'network' && (
+        <ErrorNotice
+          title={String(t('join.forms.error.network.title'))}
+          description={state.message || String(t('join.forms.error.network.description'))}
+        />
+      )}
+      {state.kind === 'server' && (
+        <ErrorNotice
+          title={String(t('join.forms.error.server.title'))}
+          description={state.message || String(t('join.forms.error.server.description'))}
+        />
+      )}
+      {state.kind === 'request' && (
+        <ErrorNotice
+          title={String(t('join.forms.error.request.title'))}
+          description={state.message || String(t('join.forms.error.request.description'))}
+        />
+      )}
+      {state.kind === 'unknown' && (
         <ErrorNotice
           title={String(t('join.forms.error.unknown.title'))}
           description={state.message || String(t('join.forms.error.unknown.description'))}
@@ -395,8 +416,6 @@ export function JoinVolunteerForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [deptError, setDeptError] = useState(false);
-  const [errors, setErrors] = useState<SubmitErrorState>({ csrf: false, tooLarge: false, unknown: false, message: '' });
-
   const departments = useMemo(
     () => [
       { id: 'admin' as const, label: String(t('join.volunteer.dept.admin')) },
@@ -407,12 +426,7 @@ export function JoinVolunteerForm() {
     ],
     [t]
   );
-
-  useEffect(() => {
-    if (!isSubmitted) {
-      void fetchCsrfToken();
-    }
-  }, [isSubmitted]);
+  const [errors, setErrors] = useState<SubmitErrorState>(emptySubmitErrorState);
 
   const handleDepartment = (id: DepartmentId, checked: boolean) => {
     setDeptError(false);
@@ -425,7 +439,7 @@ export function JoinVolunteerForm() {
     e.preventDefault();
     if (isSubmitting) return;
 
-    setErrors({ csrf: false, tooLarge: false, unknown: false, message: '' });
+    setErrors(emptySubmitErrorState);
 
     if (selectedDepartments.length === 0) {
       setDeptError(true);
@@ -436,7 +450,6 @@ export function JoinVolunteerForm() {
 
     const payload = new FormData();
     payload.append('form_type', 'volunteer');
-    payload.append('csrf_token', localStorage.getItem('csrfToken') || '');
     payload.append(
       'data',
       JSON.stringify({
@@ -456,16 +469,13 @@ export function JoinVolunteerForm() {
 
       if (response.ok) {
         setIsSubmitted(true);
-      } else if (response.status === 403) {
-        setErrors((prev) => ({ ...prev, csrf: true }));
-      } else if (response.status === 413) {
-        setErrors((prev) => ({ ...prev, tooLarge: true }));
       } else {
-        setErrors({ csrf: false, tooLarge: false, unknown: true, message: await response.text() });
+        setErrors(await toSubmitErrorState(response));
       }
     } catch (error) {
       console.error('Volunteer form submit failed', error);
-      setErrors({ csrf: false, tooLarge: false, unknown: true, message: '' });
+      const message = error instanceof Error ? error.message : '';
+      setErrors({ kind: 'network', unknown: false, message });
     } finally {
       setIsSubmitting(false);
     }
@@ -567,7 +577,7 @@ export function JoinMasterForm() {
   const [directionError, setDirectionError] = useState(false);
   const [dateError, setDateError] = useState(false);
   const [langError, setLangError] = useState(false);
-  const [errors, setErrors] = useState<SubmitErrorState>({ csrf: false, tooLarge: false, unknown: false, message: '' });
+  const [errors, setErrors] = useState<SubmitErrorState>(emptySubmitErrorState);
 
   const [formData, setFormData] = useState<MasterFormData>({
     name: '',
@@ -592,12 +602,6 @@ export function JoinMasterForm() {
   const dates: DateId[] = ['d18', 'd19', 'd20', 'd21'];
   const langs: LangId[] = ['ru', 'en', 'md'];
 
-  useEffect(() => {
-    if (!isSubmitted) {
-      void fetchCsrfToken();
-    }
-  }, [isSubmitted]);
-
   const toggleValue = <T extends string,>(value: T, checked: boolean, setter: React.Dispatch<React.SetStateAction<T[]>>) => {
     setter((prev) => (checked ? [...prev, value] : prev.filter((item) => item !== value)));
   };
@@ -606,7 +610,7 @@ export function JoinMasterForm() {
     e.preventDefault();
     if (isSubmitting) return;
 
-    setErrors({ csrf: false, tooLarge: false, unknown: false, message: '' });
+    setErrors(emptySubmitErrorState);
 
     if (selectedDirections.length === 0) {
       setDirectionError(true);
@@ -627,7 +631,6 @@ export function JoinMasterForm() {
 
     const payload = new FormData();
     payload.append('form_type', 'master');
-    payload.append('csrf_token', localStorage.getItem('csrfToken') || '');
     payload.append(
       'data',
       JSON.stringify({
@@ -652,16 +655,13 @@ export function JoinMasterForm() {
 
       if (response.ok) {
         setIsSubmitted(true);
-      } else if (response.status === 403) {
-        setErrors((prev) => ({ ...prev, csrf: true }));
-      } else if (response.status === 413) {
-        setErrors((prev) => ({ ...prev, tooLarge: true }));
       } else {
-        setErrors({ csrf: false, tooLarge: false, unknown: true, message: await response.text() });
+        setErrors(await toSubmitErrorState(response));
       }
     } catch (error) {
       console.error('Master form submit failed', error);
-      setErrors({ csrf: false, tooLarge: false, unknown: true, message: '' });
+      const message = error instanceof Error ? error.message : '';
+      setErrors({ kind: 'network', unknown: false, message });
     } finally {
       setIsSubmitting(false);
     }

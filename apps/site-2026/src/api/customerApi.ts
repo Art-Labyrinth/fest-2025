@@ -102,6 +102,11 @@ export interface CreateOrderResponse {
   invoice_url: string;
 }
 
+export interface SendTicketsEmailBody {
+  email: string;
+  ticket_ids: string[];
+}
+
 export const customerApi = {
   register: (email: string, password: string, lang: string, name?: string) =>
     apiFetch<AuthResponse>('POST', '/register', { email, password, lang, ...(name ? { name } : {}) }),
@@ -117,6 +122,9 @@ export const customerApi = {
 
   createOrder: (body: CreateOrderBody) =>
     apiFetch<CreateOrderResponse>('POST', '/orders', body),
+
+  sendTicketsEmail: (body: SendTicketsEmailBody) =>
+    apiFetch<unknown>('POST', '/tickets/send-email', body),
 
   downloadOrderPrint: (orderId: number) => binaryFetch(`/orders/${orderId}/download`),
 
