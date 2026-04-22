@@ -11,6 +11,7 @@ export default function TicketsPage() {
   const [token, setToken] = useState(getStoredToken);
   const [tickets, setTickets] = useState<TicketItem[]>([]);
   const [ticketImages, setTicketImages] = useState<TicketImageMap>({});
+  const [selectedTicketId, setSelectedTicketId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
@@ -83,9 +84,14 @@ export default function TicketsPage() {
     return <Navigate to="/contribute" replace />;
   }
 
+  const selectedTicket = selectedTicketId
+    ? tickets.find(ticket => ticket.ticket_id === selectedTicketId) || null
+    : null;
+  const selectedTicketImage = selectedTicketId ? ticketImages[selectedTicketId] : null;
+
   return (
     <main className="min-h-[calc(100vh-130px)] px-5 md:px-12 py-10 font-deledda text-brown flex flex-col items-center">
-      <div className={`${card} w-full max-w-5xl`}>
+      <div className={`${card} max-w-7xl`}>
         <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold font-roca">{t('contribute.my_tickets')}</h1>
           <Link to="/contribute/orders" className={`${btnSecondary} inline-flex items-center`}>
@@ -98,9 +104,14 @@ export default function TicketsPage() {
         {!loading && !error && tickets.length === 0 ? <p className="text-center text-brown/50 py-16">{t('contribute.no_paid_tickets')}</p> : null}
 
         {!loading && !error && tickets.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {tickets.map(ticket => (
-              <div key={ticket.id} className="rounded-3xl overflow-hidden border border-brown/15 bg-orange-150/50">
+              <button
+                key={ticket.id}
+                type="button"
+                className="rounded-3xl overflow-hidden border border-brown/15 bg-orange-150/50 cursor-zoom-in transition-transform hover:-translate-y-0.5"
+                onClick={() => setSelectedTicketId(ticket.ticket_id)}
+              >
                 {ticketImages[ticket.ticket_id] ? (
                   <img
                     src={ticketImages[ticket.ticket_id]}
@@ -112,11 +123,34 @@ export default function TicketsPage() {
                     {t('contribute.ticket_loading_error')}
                   </div>
                 )}
-              </div>
+              </button>
             ))}
           </div>
         ) : null}
       </div>
+
+      {selectedTicket && selectedTicketImage ? (
+        <div
+          className="fixed inset-0 z-50 bg-brown/80 backdrop-blur-sm px-4 py-6 flex items-center justify-center"
+          onClick={() => setSelectedTicketId(null)}
+        >
+          <div className="relative max-w-6xl max-h-full" onClick={event => event.stopPropagation()}>
+            <button
+              type="button"
+              className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-orange-150 text-brown font-bold shadow-lg cursor-pointer"
+              onClick={() => setSelectedTicketId(null)}
+              aria-label={String(t('contribute.close_ticket_preview', { defaultValue: 'Close preview' }))}
+            >
+              ×
+            </button>
+            <img
+              src={selectedTicketImage}
+              alt={String(t('contribute.ticket_preview_alt', { name: selectedTicket.name || selectedTicket.ticket_id }))}
+              className="block max-w-full max-h-[85vh] w-auto h-auto rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
+      ) : null}
     </main>
   );
 }

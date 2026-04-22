@@ -4,15 +4,6 @@ import { Link, Navigate, useParams } from 'react-router-dom';
 import { CUSTOMER_UNAUTHORIZED_EVENT, customerApi, getStoredEmail, getStoredToken, type CustomerOrder } from '../../api/customerApi';
 import { btnPrimary, btnSecondary, card, input } from './styles';
 
-function sanitizeFileName(value: string): string {
-    const normalized = value
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-+|-+$/g, '');
-
-    return normalized || 'ticket';
-}
-
 function copyText(value: string): Promise<void> {
     if (!navigator.clipboard?.writeText) {
         return Promise.resolve();
@@ -45,13 +36,18 @@ export default function OrderPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [ticketImages, setTicketImages] = useState<Record<string, string>>({});
-    const [ticketBlobs, setTicketBlobs] = useState<Record<string, Blob>>({});
-    const [ticketEmails, setTicketEmails] = useState<Record<string, string>>({});
-    const [ticketNotices, setTicketNotices] = useState<Record<string, string>>({});
-    const [busyTicketId, setBusyTicketId] = useState<string | null>(null);
     const [printLoading, setPrintLoading] = useState(false);
+    const [emailModalOpen, setEmailModalOpen] = useState(false);
+    const [emailValue, setEmailValue] = useState(getStoredEmail() || '');
+    const [selectedTicketIds, setSelectedTicketIds] = useState<string[]>([]);
+    const [sendEmailLoading, setSendEmailLoading] = useState(false);
+    const [emailNotice, setEmailNotice] = useState('');
 
     const numericOrderId = useMemo(() => Number(orderId), [orderId]);
+    const sendableTickets = useMemo(
+        () => (order?.tickets || []).filter(ticket => ticket.is_sold && ticket.active),
+        [order]
+    );
 
     useEffect(() => {
         const handleUnauthorized = () => {
@@ -90,21 +86,16 @@ export default function OrderPage() {
                 }
 
                 setOrder(nextOrder);
-
-                const nextEmails = (nextOrder.tickets || []).reduce<Record<string, string>>((acc, ticket) => {
-                    acc[ticket.ticket_id] = getStoredEmail() || '';
-                    return acc;
-                }, {});
-                setTicketEmails(nextEmails);
-                setTicketNotices({});
+                setEmailValue(getStoredEmail() || '');
+                setEmailNotice('');
 
                 const soldTickets = (nextOrder.tickets || []).filter(ticket => ticket.is_sold && ticket.active);
+                setSelectedTicketIds(soldTickets.map(ticket => ticket.ticket_id));
                 const entries = await Promise.all(
                     soldTickets.map(async ticket => {
                         const blob = await customerApi.downloadTicket(ticket.ticket_id);
                         return {
                             ticketId: ticket.ticket_id,
-                            blob,
                             url: URL.createObjectURL(blob),
                         };
                     })
@@ -122,11 +113,6 @@ export default function OrderPage() {
                         return acc;
                     }, {});
                 });
-
-                setTicketBlobs(entries.reduce<Record<string, Blob>>((acc, entry) => {
-                    acc[entry.ticketId] = entry.blob;
-                    return acc;
-                }, {}));
             })
             .catch(() => {
                 if (!isActive) return;
@@ -145,35 +131,49 @@ export default function OrderPage() {
         return <Navigate to="/contribute/orders" replace />;
     }
 
-    function updateTicketEmail(ticketId: string, value: string) {
-        setTicketEmails(prev => ({ ...prev, [ticketId]: value }));
+    function openEmailModal() {
+        setSelectedTicketIds(sendableTickets.map(ticket => ticket.ticket_id));
+        setEmailValue(getStoredEmail() || '');
+        setEmailNotice('');
+        setEmailModalOpen(true);
     }
 
-    async function handleTicketEmail(ticketId: string, ticketName: string) {
-        const blob = ticketBlobs[ticketId];
-        if (!blob) return;
+    function toggleTicketSelection(ticketId: string, checked: boolean) {
+        setSelectedTicketIds(prev => {
+            if (checked) {
+                return prev.includes(ticketId) ? prev : [...prev, ticketId];
+            }
 
-        const email = (ticketEmails[ticketId] || '').trim();
+            return prev.filter(id => id !== ticketId);
+        });
+    }
+
+    async function handleSendEmail() {
+        const email = emailValue.trim();
         if (!email) {
-            setTicketNotices(prev => ({ ...prev, [ticketId]: String(t('contribute.ticket_email_required')) }));
+            setEmailNotice(String(t('contribute.ticket_email_required')));
             return;
         }
 
-        setBusyTicketId(ticketId);
-        setTicketNotices(prev => ({ ...prev, [ticketId]: '' }));
+        if (selectedTicketIds.length === 0) {
+            setEmailNotice(String(t('contribute.ticket_email_selection_required')));
+            return;
+        }
+
+        setSendEmailLoading(true);
+        setEmailNotice('');
 
         try {
-            const safeName = sanitizeFileName(ticketName || ticketId);
-            downloadBlob(blob, `${safeName}-${ticketId}.png`);
-
-            const subject = encodeURIComponent(String(t('contribute.ticket_email_subject', { name: ticketName || ticketId })));
-            const body = encodeURIComponent(String(t('contribute.ticket_email_fallback_body', { name: ticketName || ticketId })));
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-            setTicketNotices(prev => ({ ...prev, [ticketId]: String(t('contribute.ticket_email_fallback')) }));
-        } catch {
-            setTicketNotices(prev => ({ ...prev, [ticketId]: String(t('contribute.ticket_email_error')) }));
+            await customerApi.sendTicketsEmail({
+                email,
+                ticket_ids: selectedTicketIds,
+            });
+            setEmailNotice(String(t('contribute.ticket_email_success')));
+            setEmailModalOpen(false);
+        } catch (sendError: any) {
+            setEmailNotice(sendError?.message || String(t('contribute.ticket_email_error')));
         } finally {
-            setBusyTicketId(null);
+            setSendEmailLoading(false);
         }
     }
 
@@ -202,17 +202,38 @@ export default function OrderPage() {
                         </Link>
                     </div>
 
-                    {order && order.status !== 'paid' ? (
-                        order.invoice_url ? (
-                            <a href={order.invoice_url} target="_blank" rel="noopener noreferrer" className={`${btnPrimary} inline-flex items-center`}>
-                                {t('contribute.pay')}
-                            </a>
-                        ) : (
-                            <button type="button" disabled className={`${btnPrimary} opacity-40 cursor-not-allowed`}>
-                                {t('contribute.pay')}
+                    <div className="flex flex-wrap items-center gap-3">
+                        {sendableTickets.length > 0 ? (
+                            <button
+                                type="button"
+                                className={`${btnSecondary} inline-flex items-center`}
+                                onClick={openEmailModal}
+                            >
+                                {t('contribute.send_email')}
                             </button>
-                        )
-                    ) : null}
+                        ) : null}
+                        {sendableTickets.length > 0 ? (
+                            <button
+                                type="button"
+                                className={`${btnPrimary} inline-flex items-center`}
+                                disabled={printLoading}
+                                onClick={handlePrintAll}
+                            >
+                                {printLoading ? t('contribute.loading') : t('contribute.print')}
+                            </button>
+                        ) : null}
+                        {order && order.status !== 'paid' ? (
+                            order.invoice_url ? (
+                                <a href={order.invoice_url} target="_blank" rel="noopener noreferrer" className={`${btnPrimary} inline-flex items-center`}>
+                                    {t('contribute.pay')}
+                                </a>
+                            ) : (
+                                <button type="button" disabled className={`${btnPrimary} opacity-40 cursor-not-allowed`}>
+                                    {t('contribute.pay')}
+                                </button>
+                            )
+                        ) : null}
+                    </div>
                 </div>
 
                 {loading ? <p className="text-center text-brown/50 py-16">{t('contribute.loading')}</p> : null}
@@ -271,59 +292,94 @@ export default function OrderPage() {
                                     </div>
 
                                     {ticket.active && ticket.is_sold && ticketImages[ticket.ticket_id] ? (
-                                        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px] items-start">
-                                            <div className="rounded-3xl border border-brown/15 bg-white/90 shadow-inner p-3 sm:p-5">
-                                                <img
-                                                    src={ticketImages[ticket.ticket_id]}
-                                                    alt={String(t('contribute.ticket_preview_alt', { name: ticket.name || ticket.ticket_id }))}
-                                                    className="w-full h-auto rounded-2xl"
-                                                />
-                                            </div>
-
-                                            <div className="space-y-3 rounded-3xl border border-brown/15 bg-orange-150/40 p-4">
-                                                <label className="block">
-                                                    <span className="text-xs text-brown/50 block mb-2">{t('contribute.email')}</span>
-                                                    <input
-                                                        type="email"
-                                                        className={input}
-                                                        value={ticketEmails[ticket.ticket_id] || ''}
-                                                        onChange={event => updateTicketEmail(ticket.ticket_id, event.target.value)}
-                                                        placeholder={getStoredEmail() || ''}
-                                                    />
-                                                </label>
-                                                <button
-                                                    type="button"
-                                                    className={`${btnSecondary} w-full`}
-                                                    disabled={busyTicketId === ticket.ticket_id}
-                                                    onClick={() => handleTicketEmail(ticket.ticket_id, ticket.name)}
-                                                >
-                                                    {busyTicketId === ticket.ticket_id ? t('contribute.loading') : t('contribute.send_email')}
-                                                </button>
-                                                {ticketNotices[ticket.ticket_id] ? (
-                                                    <p className="text-xs text-brown/70 leading-relaxed">{ticketNotices[ticket.ticket_id]}</p>
-                                                ) : null}
-                                            </div>
+                                        <div className="rounded-3xl border border-brown/15 bg-white/90 shadow-inner p-3 sm:p-5">
+                                            <img
+                                                src={ticketImages[ticket.ticket_id]}
+                                                alt={String(t('contribute.ticket_preview_alt', { name: ticket.name || ticket.ticket_id }))}
+                                                className="w-full h-auto rounded-2xl"
+                                            />
                                         </div>
                                     ) : null}
                                 </div>
                             ))}
                         </div>
-
-                        {(order.tickets || []).some(ticket => ticket.is_sold && ticket.active) ? (
-                            <div className="mt-6 flex justify-end">
-                                <button
-                                    type="button"
-                                    className={`${btnPrimary} inline-flex items-center`}
-                                    disabled={printLoading}
-                                    onClick={handlePrintAll}
-                                >
-                                    {printLoading ? t('contribute.loading') : t('contribute.print')}
-                                </button>
-                            </div>
-                        ) : null}
                     </>
                 ) : null}
             </div>
+
+            {emailModalOpen ? (
+                <div
+                    className="fixed inset-0 z-50 bg-brown/70 backdrop-blur-sm flex items-center justify-center px-4 py-6"
+                    onClick={() => setEmailModalOpen(false)}
+                >
+                    <div
+                        className="w-full max-w-xl rounded-3xl border border-brown/15 bg-orange-150 p-6 shadow-2xl"
+                        onClick={event => event.stopPropagation()}
+                    >
+                        <div className="flex items-start justify-between gap-3 mb-5">
+                            <div>
+                                <h2 className="text-xl font-bold font-roca">{t('contribute.send_email_modal_title')}</h2>
+                                <p className="text-sm text-brown/70 mt-1">{t('contribute.send_email_modal_description')}</p>
+                            </div>
+                            <button
+                                type="button"
+                                className="w-10 h-10 rounded-full border border-brown/20 text-brown cursor-pointer"
+                                onClick={() => setEmailModalOpen(false)}
+                                aria-label={String(t('contribute.close_ticket_preview', { defaultValue: 'Close' }))}
+                            >
+                                ×
+                            </button>
+                        </div>
+
+                        <label className="block mb-4">
+                            <span className="text-sm text-brown/70 block mb-2">{t('contribute.email')}</span>
+                            <input
+                                type="email"
+                                className={input}
+                                value={emailValue}
+                                onChange={event => setEmailValue(event.target.value)}
+                                placeholder={getStoredEmail() || ''}
+                            />
+                        </label>
+
+                        <div className="space-y-2 max-h-72 overflow-auto rounded-2xl border border-brown/15 bg-white/60 p-3">
+                            {sendableTickets.map(ticket => (
+                                <label key={ticket.ticket_id} className="flex items-center gap-3 rounded-xl px-3 py-2 hover:bg-orange-150/70 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        className="accent-brown w-4 h-4"
+                                        checked={selectedTicketIds.includes(ticket.ticket_id)}
+                                        onChange={event => toggleTicketSelection(ticket.ticket_id, event.target.checked)}
+                                    />
+                                    <span className="text-sm font-medium text-brown">{ticket.ticket_id}</span>
+                                </label>
+                            ))}
+                        </div>
+
+                        {emailNotice ? (
+                            <p className="mt-4 text-sm text-brown/80">{emailNotice}</p>
+                        ) : null}
+
+                        <div className="mt-5 flex flex-wrap justify-end gap-3">
+                            <button
+                                type="button"
+                                className={`${btnSecondary} inline-flex items-center`}
+                                onClick={() => setEmailModalOpen(false)}
+                            >
+                                {t('contribute.back')}
+                            </button>
+                            <button
+                                type="button"
+                                className={`${btnPrimary} inline-flex items-center`}
+                                disabled={sendEmailLoading}
+                                onClick={handleSendEmail}
+                            >
+                                {sendEmailLoading ? t('contribute.loading') : t('contribute.send_email')}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            ) : null}
         </main>
     );
 }

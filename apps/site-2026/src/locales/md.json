@@ -104,6 +104,11 @@
     "ticket_email_fallback_body": "Biletul \"{{name}}\" a fost salvat pe dispozitiv. Atașați fișierul descărcat la emailul din clientul de poștă deschis.",
     "ticket_email_error": "Trimiterea prin email nu a putut fi pregătită. Încercați din nou.",
     "ticket_email_required": "Introduceți o adresă de email pentru trimiterea biletului.",
+    "ticket_email_selection_required": "Selectați cel puțin un bilet pentru trimitere.",
+    "ticket_email_success": "Biletele au fost trimise la adresa de email indicată.",
+    "send_email_modal_title": "Trimite biletele pe email",
+    "send_email_modal_description": "Selectați biletele și introduceți adresa de email la care trebuie trimise.",
+    "close_ticket_preview": "Închide",
     "no_paid_tickets": "Nu aveți încă bilete plătite."
   }
 }

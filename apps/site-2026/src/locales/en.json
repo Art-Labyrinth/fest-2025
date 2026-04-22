@@ -104,6 +104,11 @@
     "ticket_email_fallback_body": "Your ticket \"{{name}}\" was saved to your device. Attach the downloaded file to the email in the opened mail client.",
     "ticket_email_error": "Unable to prepare email sending. Please try again.",
     "ticket_email_required": "Enter an email address to send the ticket.",
+    "ticket_email_selection_required": "Select at least one ticket to send.",
+    "ticket_email_success": "Tickets were sent to the specified email.",
+    "send_email_modal_title": "Send tickets by email",
+    "send_email_modal_description": "Select the tickets and enter the email address to send them to.",
+    "close_ticket_preview": "Close",
     "no_paid_tickets": "You do not have any paid tickets yet."
   }
 }
