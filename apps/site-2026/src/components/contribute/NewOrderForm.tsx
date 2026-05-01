@@ -103,9 +103,6 @@ export default function NewOrderForm({
             className="w-9 h-9 rounded-full border border-brown/30 text-brown font-bold hover:bg-brown/10 transition-colors cursor-pointer flex items-center justify-center"
             onClick={() => onTicketCountChange(tickets.length + 1)}
           >+</button>
-          {orderType === 'basic' && tickets.length >= 6 && (
-            <span className="text-xs text-green-700 font-bold">{t('contribute.discount_info')}</span>
-          )}
         </div>
       </div>
 
