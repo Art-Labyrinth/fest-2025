@@ -182,8 +182,7 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     if (!currentPrices) return 0;
 
     const base = currentPrices[orderType];
-    const discount = orderType === 'basic' && tickets.length >= 6 ? 0.9 : 1;
-    return Math.round(base * discount * tickets.length);
+    return Math.round(base * tickets.length);
   }
 
   async function handleCreateOrder(e: React.FormEvent) {
