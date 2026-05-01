@@ -14,10 +14,13 @@ export const PRICES_BY_STAGE: Record<Exclude<PriceStageKey, 'july'>, Record<Orde
 
 export function getCurrentPriceStage(date = new Date()): PriceStageKey {
   const month = date.getMonth();
+  const day = date.getDate();
 
-  if (month <= 4) return 'april';
-  if (month === 5) return 'may';
-  if (month > 5) return 'june';
+  console.log('Current month:', month, 'day:', day);
+
+  if (month === 3 && day < 15) return 'april';
+  if (month === 3 || month === 4) return 'may';
+  if (month === 5) return 'june';
   return 'july';
 }
 
