@@ -18,9 +18,9 @@ export function getCurrentPriceStage(date = new Date()): PriceStageKey {
 
   console.log('Current month:', month, 'day:', day);
 
-  if (month === 3 && day < 15) return 'april';
-  if (month === 3 || month === 4) return 'may';
-  if (month === 5) return 'june';
+  if (month === 3) return 'april';
+  if (month === 4 && day < 15) return 'may';
+  if (month === 4 || (month === 5 && day < 15)) return 'june';
   return 'july';
 }
 
