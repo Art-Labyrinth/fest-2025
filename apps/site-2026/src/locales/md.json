@@ -7,17 +7,39 @@
     "contribute": "Contribuie"
   },
   "home": {
-    "title": "Art-Labyrinth 2026",
-    "subtitle": "Site-ul festivalului 2026 este în pregătire",
-    "description": "Aici vor apărea programul, participarea, logistica, galeria și toate informațiile actuale pentru festivalul 2026. Până atunci puteți reveni la site-ul principal sau deschide arhiva festivalului 2025.",
+    "title": "Art-Labyrinth",
+    "subtitle": "Summer Festival 2026",
+    "festival_number": "Festivalul 15",
+    "theme": "Pulse of the Earth",
+    "dates": "18–21 Iunie 2026",
+    "location": "Sokola, Șoldănești",
+    "phone": "+37367496787",
+    "website": "fest.art-labyrinth.org",
+    "hashtags": "#ecologie #vegetarianism #culturăalternativă #creativitate #exprimaredesine #muzică #conștientizare #comunitate #viațăsănătoasă #nonviolență #respect",
     "back_to_main": "Înapoi la site-ul principal",
     "open_2025": "Deschide 2025"
   },
   "about": {
     "title": "Despre festival",
-    "text_1": "Art-Labyrinth Summer Festival este un eveniment anual fondat în 2008. În fiecare an reunim oameni gata să se unească în căutarea inspirației, creativității și conștientizării.",
-    "text_2": "Festivalul se desfășoară pe malurile pitorești ale râului Nistru din Moldova. Este un spațiu de transformare, schimb de idei și inspirație, unde arta, muzica și natura se contopesc.",
-    "text_3": "Reunim artiști, muzicieni, meșteri, voluntari și visători — toți cei pregătiți să creeze ceva măreț împreună."
+    "text_1": "Art Labyrinth Summer Festival este un eveniment anual fondat în 2008 care a devenit de atunci un reper important în viața culturală a Moldovei. În fiecare an alegem o nouă locație pentru a crea o atmosferă unică și a conecta oamenii prin artă și muzică.",
+    "text_2": "Credem că un festival este mai mult decât o adunare de oameni. Este un spațiu de transformare, schimb de idei și inspirație. La Art Labyrinth, fiecare poate să-și deblocheze potențialul, să devină parte dintr-o comunitate, să contribuie la un scop comun și să devină un creator.",
+    "text_3": "Festivalul nostru reunește oameni diferiți — artiști, muzicieni, meșteri, voluntari, visători — toți cei gata să lucreze în unison și să creeze.",
+    "theme_label": "Tema acestui an:",
+    "theme_name": "Pulse of the Earth",
+    "theme_text_1": "Pulse of the Earth este despre sentimentul că pământul are propriul său ritm, care este prezent constant în jurul nostru — în viața de zi cu zi abia îl observăm din cauza zgomotului, grăbii și sarcinilor nesfârșite.",
+    "theme_text_2": "Acest ritm poate fi simțit în lucruri simple — în mișcarea vântului, în sunetele pădurii, în căldura pământului sub picioare, în liniște.",
+    "theme_text_3": "Când îți acorzi timp să te oprești, începți treptat să prinți această stare — ca și cum te-ai sincroniza cu ceva mai mare și viu. La festival, această senzație se amplifică: prin muzică, prin mișcare, prin oamenii de lângă tine, prin momentele trăite aici și acum.",
+    "theme_text_4": "Pulse of the Earth este despre revenirea la această senzație, despre conexiunea cu natura, cu spațiul înconjurător și cu tine însuți — despre posibilitatea de a încetini puțin și de a-ți simți propriul ritm.",
+    "features_title": "Ce vă așteaptă?",
+    "features": [
+      "Muzică live și spectacole ale artiștilor locali și internaționali",
+      "Spectacole de teatru și foc",
+      "Land art și instalații",
+      "Ateliere și masterclass-uri creative",
+      "Inițiative ecologice și viață în armonie cu natura",
+      "Practici conștiente și meditații"
+    ],
+    "closing": "Art Labyrinth este un spațiu pentru creație, inspirație și exprimare de sine. Alăturați-vă nouă, deveniți parte dintr-un festival unde fiecare pas este plin de conștientizare, fiecare moment de armonie, și fiecare persoană contează."
   },
   "contacts": {
     "title": "Contacte",

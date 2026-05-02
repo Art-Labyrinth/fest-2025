@@ -44,6 +44,12 @@ export default function Home() {
           <p className="text-base sm:text-lg text-brown/75 mt-2">
             {t("home.announcement_location")}
           </p>
+          <a
+            href="/2026/contribute"
+            className="mt-6 inline-block bg-brown text-orange-150 text-sm font-bold py-3 px-8 rounded-lg hover:opacity-80 transition-opacity"
+          >
+            {t("home.contribute")}
+          </a>
         </section>
 
         <h2 className="text-2xl font-bold mb-8 text-center">{t("home.editions_title")}</h2>
