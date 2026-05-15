@@ -55,7 +55,7 @@ export default function NewOrderForm({
         <h2 className="text-lg font-bold">{t('contribute.new_order')}</h2>
       </div>
 
-      <div className="mb-5 hidden">
+      <div className="mb-5">
         <label className="block text-sm font-bold mb-2">{t('contribute.order_type')}</label>
         {!salesClosed && (
           <p className="text-sm text-brown/60 mb-3">
@@ -63,7 +63,7 @@ export default function NewOrderForm({
           </p>
         )}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-          {(['basic', 'discounted', 'family'] as OrderType[]).map(type => {
+          {(['basic', 'family', 'discounted'] as OrderType[]).map(type => {
             const disabled = salesClosed;
 
             return (
@@ -86,6 +86,9 @@ export default function NewOrderForm({
             );
           })}
         </div>
+        {!salesClosed && (
+          <p className="text-sm text-brown/70 mt-3 leading-snug">{t(`contribute.type_${orderType}_desc`)}</p>
+        )}
         {salesClosed && <p className="text-sm text-red-600 mt-3">{t('contribute.sales_closed_notice')}</p>}
       </div>
 
