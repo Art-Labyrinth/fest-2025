@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   CUSTOMER_UNAUTHORIZED_EVENT,
@@ -13,6 +13,7 @@ import {
   CustomerOrder,
 } from '../api/customerApi';
 import AuthCard from './contribute/AuthCard';
+import PasswordResetCard from './contribute/PasswordResetCard';
 import OrdersView from './contribute/OrdersView';
 import NewOrderForm from './contribute/NewOrderForm';
 import {
@@ -28,9 +29,28 @@ interface ContributeProps {
   autoOpenTickets?: boolean;
 }
 
+function isWrongPasswordError(message: string): boolean {
+  const normalized = message.toLowerCase();
+  return /password|парол|credential/.test(normalized);
+}
+
+function getPasswordResetFrontendBaseUrl(): string {
+  if (typeof window === 'undefined') {
+    return '/contribute/password-reset';
+  }
+
+  const publicUrl = process.env.PUBLIC_URL || '';
+  const normalizedPublicUrl = publicUrl.endsWith('/') ? publicUrl.slice(0, -1) : publicUrl;
+  return `${window.location.origin}${normalizedPublicUrl}/contribute/password-reset`;
+}
+
 export default function Contribute({ autoOpenTickets = true }: ContributeProps) {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const resetToken = params.get('token');
+  const isPasswordResetPath = /\/contribute\/password-reset\/?$/.test(location.pathname);
   const currentPriceStage = getCurrentPriceStage();
   const salesClosed = currentPriceStage === 'july';
   const currentPrices = salesClosed ? null : PRICES_BY_STAGE[currentPriceStage];
@@ -45,6 +65,22 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
   const [authName, setAuthName] = useState('');
   const [authError, setAuthError] = useState('');
   const [authLoading, setAuthLoading] = useState(false);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
+
+  const [resetEmail, setResetEmail] = useState('');
+  const [resetRequestLoading, setResetRequestLoading] = useState(false);
+  const [resetRequestError, setResetRequestError] = useState('');
+  const [resetRequestSuccess, setResetRequestSuccess] = useState('');
+
+  const [resetTokenValidationLoading, setResetTokenValidationLoading] = useState(false);
+  const [resetTokenValidationError, setResetTokenValidationError] = useState('');
+  const [resetTokenValid, setResetTokenValid] = useState(false);
+
+  const [resetNewPassword, setResetNewPassword] = useState('');
+  const [resetRepeatPassword, setResetRepeatPassword] = useState('');
+  const [resetConfirmLoading, setResetConfirmLoading] = useState(false);
+  const [resetConfirmError, setResetConfirmError] = useState('');
+  const [resetConfirmSuccess, setResetConfirmSuccess] = useState('');
 
   const [view, setView] = useState<View>('orders');
   const [orders, setOrders] = useState<CustomerOrder[]>([]);
@@ -57,6 +93,9 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
   const [orderEmail, setOrderEmail] = useState(getStoredEmail() || '');
   const [orderLoading, setOrderLoading] = useState(false);
   const [orderError, setOrderError] = useState('');
+
+  const shouldShowResetConfirm = Boolean(resetToken && !token && isPasswordResetPath);
+  const shouldShowResetRequest = Boolean(!token && isPasswordResetPath && !resetToken);
 
   function logout() {
     clearSession();
@@ -142,9 +181,113 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     setOrderEmail(userEmail || '');
   }, [userEmail]);
 
+  useEffect(() => {
+    if (!resetEmail && authEmail) {
+      setResetEmail(authEmail);
+    }
+  }, [authEmail, resetEmail]);
+
+  useEffect(() => {
+    if (!shouldShowResetConfirm || !resetToken) {
+      setResetTokenValidationLoading(false);
+      setResetTokenValidationError('');
+      setResetTokenValid(false);
+      return;
+    }
+
+    let isActive = true;
+    setResetTokenValidationLoading(true);
+    setResetTokenValidationError('');
+
+    customerApi.verifyPasswordResetToken({ token: resetToken })
+      .then(result => {
+        if (!isActive) return;
+        setResetTokenValid(Boolean(result.valid));
+      })
+      .catch((e: any) => {
+        if (!isActive) return;
+        setResetTokenValidationError(e?.message || String(t('contribute.reset_password_token_invalid')));
+      })
+      .finally(() => {
+        if (!isActive) return;
+        setResetTokenValidationLoading(false);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [resetToken, shouldShowResetConfirm, t]);
+
+  function resetPasswordScreenState() {
+    setResetRequestError('');
+    setResetRequestSuccess('');
+    setResetConfirmError('');
+    setResetConfirmSuccess('');
+    setResetNewPassword('');
+    setResetRepeatPassword('');
+  }
+
+  function openRequestPasswordReset() {
+    navigate('/contribute/password-reset');
+    setResetEmail(authEmail || '');
+    setShowForgotPassword(false);
+    resetPasswordScreenState();
+  }
+
+  function backToLogin() {
+    setAuthError('');
+    setShowForgotPassword(false);
+    resetPasswordScreenState();
+    navigate('/contribute', { replace: true });
+  }
+
+  async function handlePasswordResetRequest(e: React.FormEvent) {
+    e.preventDefault();
+    setResetRequestError('');
+    setResetRequestSuccess('');
+    setResetRequestLoading(true);
+
+    try {
+      await customerApi.requestPasswordReset({
+        email: resetEmail,
+        lang: langForApi(i18n.language),
+        frontend_base_url: getPasswordResetFrontendBaseUrl(),
+      });
+      setResetRequestSuccess(String(t('contribute.reset_password_request_sent')));
+    } catch (e: any) {
+      setResetRequestError(e?.message || String(t('contribute.reset_password_request_failed')));
+    } finally {
+      setResetRequestLoading(false);
+    }
+  }
+
+  async function handlePasswordResetConfirm(e: React.FormEvent) {
+    e.preventDefault();
+    if (!resetToken) return;
+
+    setResetConfirmError('');
+    setResetConfirmSuccess('');
+
+    if (resetNewPassword !== resetRepeatPassword) {
+      setResetConfirmError(String(t('contribute.reset_password_mismatch')));
+      return;
+    }
+
+    setResetConfirmLoading(true);
+    try {
+      await customerApi.confirmPasswordReset({ token: resetToken, new_password: resetNewPassword });
+      setResetConfirmSuccess(String(t('contribute.reset_password_success')));
+    } catch (e: any) {
+      setResetConfirmError(e?.message || String(t('contribute.reset_password_confirm_failed')));
+    } finally {
+      setResetConfirmLoading(false);
+    }
+  }
+
   async function handleAuth(e: React.FormEvent) {
     e.preventDefault();
     setAuthError('');
+    setShowForgotPassword(false);
     setAuthLoading(true);
     try {
       const res = authMode === 'login'
@@ -159,7 +302,9 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
       setOrderSendEmail(true);
       setOrderEmail(res.email);
     } catch (e: any) {
-      setAuthError(e.message);
+      const message = e?.message || String(t('contribute.auth_failed'));
+      setAuthError(message);
+      setShowForgotPassword(authMode === 'login' && isWrongPasswordError(message));
     } finally {
       setAuthLoading(false);
     }
@@ -219,6 +364,32 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
 
 
   if (!token) {
+    if (shouldShowResetConfirm || shouldShowResetRequest) {
+      return (
+        <PasswordResetCard
+          mode={shouldShowResetConfirm ? 'confirm' : 'request'}
+          email={resetEmail}
+          requestLoading={resetRequestLoading}
+          requestError={resetRequestError}
+          requestSuccess={resetRequestSuccess}
+          onEmailChange={setResetEmail}
+          onRequestSubmit={handlePasswordResetRequest}
+          tokenValidationLoading={resetTokenValidationLoading}
+          tokenValid={resetTokenValid}
+          tokenValidationError={resetTokenValidationError}
+          newPassword={resetNewPassword}
+          confirmPassword={resetRepeatPassword}
+          confirmLoading={resetConfirmLoading}
+          confirmError={resetConfirmError}
+          confirmSuccess={resetConfirmSuccess}
+          onNewPasswordChange={setResetNewPassword}
+          onConfirmPasswordChange={setResetRepeatPassword}
+          onConfirmSubmit={handlePasswordResetConfirm}
+          onBackToLogin={backToLogin}
+        />
+      );
+    }
+
     return (
       <AuthCard
         authMode={authMode}
@@ -232,6 +403,8 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
         onAuthPasswordChange={setAuthPassword}
         onAuthNameChange={setAuthName}
         onSubmit={handleAuth}
+        showForgotPassword={showForgotPassword}
+        onForgotPasswordClick={openRequestPasswordReset}
       />
     );
   }

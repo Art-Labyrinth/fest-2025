@@ -43,6 +43,7 @@ const router = createBrowserRouter(
         { path: "join/volunteer", element: <JoinVolunteerForm /> },
         { path: "join/master", element: <JoinMasterForm /> },
         { path: "contribute", element: <Contribute /> },
+        { path: "contribute/password-reset", element: <Contribute autoOpenTickets={false} /> },
         { path: "contribute/orders", element: <Contribute autoOpenTickets={false} /> },
         { path: "contribute/orders/:orderId", element: <OrderPage /> },
         { path: "contribute/tickets", element: <TicketsPage /> },
