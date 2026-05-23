@@ -107,6 +107,21 @@ export interface SendTicketsEmailBody {
   ticket_ids: string[];
 }
 
+export interface PasswordResetRequestBody {
+  email: string;
+  lang: string;
+  frontend_base_url: string;
+}
+
+export interface PasswordResetVerifyBody {
+  token: string;
+}
+
+export interface PasswordResetConfirmBody {
+  token: string;
+  new_password: string;
+}
+
 export const customerApi = {
   register: (email: string, password: string, lang: string, name?: string) =>
     apiFetch<AuthResponse>('POST', '/register', { email, password, lang, ...(name ? { name } : {}) }),
@@ -125,6 +140,15 @@ export const customerApi = {
 
   sendTicketsEmail: (body: SendTicketsEmailBody) =>
     apiFetch<unknown>('POST', '/tickets/send-email', body),
+
+  requestPasswordReset: (body: PasswordResetRequestBody) =>
+    apiFetch<unknown>('POST', '/password-reset/request', body),
+
+  verifyPasswordResetToken: (body: PasswordResetVerifyBody) =>
+    apiFetch<{ valid: boolean }>('POST', '/password-reset/verify', body),
+
+  confirmPasswordReset: (body: PasswordResetConfirmBody) =>
+    apiFetch<unknown>('POST', '/password-reset/confirm', body),
 
   downloadOrderPrint: (orderId: number) => binaryFetch(`/orders/${orderId}/download`),
 

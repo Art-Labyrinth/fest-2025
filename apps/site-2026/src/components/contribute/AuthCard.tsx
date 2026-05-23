@@ -14,6 +14,8 @@ interface AuthCardProps {
   onAuthPasswordChange: (value: string) => void;
   onAuthNameChange: (value: string) => void;
   onSubmit: (event: React.FormEvent) => void;
+  showForgotPassword: boolean;
+  onForgotPasswordClick: () => void;
 }
 
 export default function AuthCard({
@@ -28,6 +30,8 @@ export default function AuthCard({
   onAuthPasswordChange,
   onAuthNameChange,
   onSubmit,
+  showForgotPassword,
+  onForgotPasswordClick,
 }: AuthCardProps) {
   const { t } = useTranslation();
 
@@ -67,6 +71,15 @@ export default function AuthCard({
             </div>
           )}
           {authError && <p className="text-red-600 text-sm">{authError}</p>}
+          {showForgotPassword && authMode === 'login' && (
+            <button
+              type="button"
+              onClick={onForgotPasswordClick}
+              className="text-sm text-brown underline underline-offset-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              {t('contribute.forgot_password')}
+            </button>
+          )}
           <button type="submit" className={`${btnPrimary} w-full`} disabled={authLoading}>
             {authLoading ? t('contribute.loading') : t(`contribute.submit_${authMode}`)}
           </button>
