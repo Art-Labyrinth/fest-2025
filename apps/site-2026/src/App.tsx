@@ -10,6 +10,7 @@ import { JoinLanding, JoinMasterForm, JoinVolunteerForm } from "./components/Joi
 import Contribute from "./components/Contribute";
 import OrderPage from "./components/contribute/OrderPage";
 import TicketsPage from "./components/contribute/TicketsPage";
+import GTMLoader from "./components/GTMLoader";
 
 import "./index.css";
 import "./i18n";
@@ -17,6 +18,7 @@ import "./i18n";
 function Layout() {
   return (
     <div className="min-h-screen bg-main">
+      <GTMLoader />
       <div className="relative min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 pt-20">
