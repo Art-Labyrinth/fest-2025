@@ -16,6 +16,7 @@ import AuthCard from './contribute/AuthCard';
 import PasswordResetCard from './contribute/PasswordResetCard';
 import OrdersView from './contribute/OrdersView';
 import NewOrderForm from './contribute/NewOrderForm';
+import { getFbTrackingData } from '../utils/fbTracking';
 import {
   getCurrentPriceStage,
   langForApi,
@@ -339,6 +340,7 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     setOrderError('');
     setOrderLoading(true);
     try {
+      const { fbp, fbc, fbclid } = getFbTrackingData();
       const body: CreateOrderBody = {
         type_order: orderType,
         lang: langForApi(i18n.language),
@@ -347,6 +349,9 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
           send_email: orderSendEmail,
           ...(orderSendEmail && orderEmail && orderEmail !== userEmail ? { email: orderEmail } : {}),
         })),
+        ...(fbp ? { fbp } : {}),
+        ...(fbc ? { fbc } : {}),
+        ...(fbclid ? { fbclid } : {}),
       };
       const res = await customerApi.createOrder(body);
       if (res.invoice_url) {
