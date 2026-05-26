@@ -3,7 +3,6 @@ export const META_PIXEL_ID = '1549796436578301'; // Graffex
 
 const FBCLID_KEY = 'fb_clid';
 
-/** Сохраняет fbclid в localStorage. Пустое значение игнорируется. */
 export function saveFbclid(value: string): void {
   if (value) {
     localStorage.setItem(FBCLID_KEY, value);
@@ -26,18 +25,17 @@ export interface FbTrackingData {
   fbp?: string;
   fbc?: string;
   fbclid?: string;
-  /** Только для тестирования через Meta Events Manager. Не использовать в продакшн. */
   test_event_code?: string;
 }
 
 /**
- * Собирает данные для Meta CAPI:
- * - pixel_id — идентификатор пикселя
- * - fbp — из cookie _fbp (устанавливается браузерным пикселем)
- * - fbc — из cookie _fbc (устанавливается при переходе с рекламы Meta)
- * - fbclid — сохранённый из URL при первом визите
- * - test_event_code — из REACT_APP_META_TEST_EVENT_CODE (только для тестов)
- */
+  * Collects data for Meta CAPI:
+  * - pixel_id — pixel ID
+  * - fbp — from the _fbp cookie (set by the browser pixel)
+  * - fbc — from the _fbc cookie (set when clicking through from a Meta ad)
+  * - fbclid — saved from the URL during the first visit
+  * - test_event_code — from REACT_APP_META_TEST_EVENT_CODE (for tests only)
+  */
 export function getFbTrackingData(): FbTrackingData {
   const testEventCode = process.env.REACT_APP_META_TEST_EVENT_CODE;
   return {
