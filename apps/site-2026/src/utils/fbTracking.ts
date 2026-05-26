@@ -1,5 +1,5 @@
-export const META_PIXEL_ID = '1220572229100482'; // Stratulat
-// const META_PIXEL_ID = '1549796436578301'; // Graffex
+// export const META_PIXEL_ID = '1220572229100482'; // Stratulat
+export const META_PIXEL_ID = '1549796436578301'; // Graffex
 
 const FBCLID_KEY = 'fb_clid';
 
