@@ -4,7 +4,6 @@ import { saveFbclid } from '../utils/fbTracking';
 
 const GTM_ID = 'GTM-WGJVLZWW';
 // const META_PIXEL_ID = '1549796436578301';
-
 const META_PIXEL_ID = '1220572229100482'; // Stratulat
 
 /** GTM does not load on all pages /contribute* */
