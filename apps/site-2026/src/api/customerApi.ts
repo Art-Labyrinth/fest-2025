@@ -93,6 +93,9 @@ export interface CreateOrderBody {
   type_order: 'basic' | 'discounted' | 'family';
   lang: string;
   tickets: Array<{ name: string; send_email: boolean; email?: string }>;
+  fbp?: string;
+  fbc?: string;
+  fbclid?: string;
 }
 
 export interface CreateOrderResponse {

@@ -1,15 +1,16 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { saveFbclid } from '../utils/fbTracking';
 
 const GTM_ID = 'GTM-WGJVLZWW';
 const META_PIXEL_ID = '1549796436578301';
 
-/** GTM не загружается на всех страницах /contribute* */
+/** GTM does not load on all pages /contribute* */
 function isGtmBlocked(pathname: string): boolean {
   return pathname === '/contribute' || pathname.startsWith('/contribute/');
 }
 
-/** Meta Pixel не загружается только на странице сброса пароля */
+/** Meta Pixel does not load only on the password reset page */
 function isPixelBlocked(pathname: string): boolean {
   return pathname === '/contribute/password-reset' || pathname.startsWith('/contribute/password-reset/');
 }
@@ -18,13 +19,17 @@ let gtmLoaded = false;
 let metaPixelLoaded = false;
 
 /**
- * Динамически загружает GTM и Meta Pixel, отслеживает SPA-навигацию.
- * GTM заблокирован на всех /contribute*, Meta Pixel — только на /contribute/password-reset.
+ * Dynamically loads GTM and Meta Pixel, monitors SPA navigation.
+ * GTM is blocked on all /contribute*, Meta Pixel - only on /contribute/password-reset.
  */
 export default function AnalyticsLoader() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
+    // Save fbclid from URL if present (only overwrite with non-empty value)
+    const fbclid = new URLSearchParams(search).get('fbclid');
+    if (fbclid) saveFbclid(fbclid);
+
     // --- Google Tag Manager ---
     if (!isGtmBlocked(pathname)) {
       if (!gtmLoaded) {
@@ -75,7 +80,7 @@ export default function AnalyticsLoader() {
         fbScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
         document.head.appendChild(fbScript);
 
-        // Резервный пиксель для браузеров без JS
+        // Backup pixel for browsers without JS
         const fbNoscript = document.createElement('noscript');
         const fbImg = document.createElement('img');
         fbImg.height = 1;
@@ -90,7 +95,7 @@ export default function AnalyticsLoader() {
 
       (window as any).fbq?.('track', 'PageView');
     }
-  }, [pathname]);
+  }, [pathname, search]);
 
   return null;
 }
