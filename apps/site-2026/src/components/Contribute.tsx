@@ -11,6 +11,7 @@ import {
   getStoredName,
   CreateOrderBody,
   CustomerOrder,
+  FbData,
 } from '../api/customerApi';
 import AuthCard from './contribute/AuthCard';
 import PasswordResetCard from './contribute/PasswordResetCard';
@@ -340,7 +341,14 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     setOrderError('');
     setOrderLoading(true);
     try {
-      const { fbp, fbc, fbclid } = getFbTrackingData();
+      const { pixel_id, fbp, fbc, fbclid, test_event_code } = getFbTrackingData();
+      const fb: FbData = {
+        pixel_id,
+        ...(fbp ? { fbp } : {}),
+        ...(fbc ? { fbc } : {}),
+        ...(fbclid ? { fbclid } : {}),
+        ...(test_event_code ? { test_event_code } : {}),
+      };
       const body: CreateOrderBody = {
         type_order: orderType,
         lang: langForApi(i18n.language),
@@ -349,9 +357,7 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
           send_email: orderSendEmail,
           ...(orderSendEmail && orderEmail && orderEmail !== userEmail ? { email: orderEmail } : {}),
         })),
-        ...(fbp ? { fbp } : {}),
-        ...(fbc ? { fbc } : {}),
-        ...(fbclid ? { fbclid } : {}),
+        fb,
       };
       const res = await customerApi.createOrder(body);
       if (res.invoice_url) {

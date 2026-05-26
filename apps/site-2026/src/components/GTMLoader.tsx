@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { saveFbclid } from '../utils/fbTracking';
+import { saveFbclid, META_PIXEL_ID } from '../utils/fbTracking';
 
 const GTM_ID = 'GTM-WGJVLZWW';
-// const META_PIXEL_ID = '1549796436578301';
-const META_PIXEL_ID = '1220572229100482'; // Stratulat
 
 /** GTM does not load on all pages /contribute* */
 function isGtmBlocked(pathname: string): boolean {

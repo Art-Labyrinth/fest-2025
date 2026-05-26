@@ -89,13 +89,19 @@ export interface CustomerOrder {
   tickets?: TicketItem[];
 }
 
+export interface FbData {
+  pixel_id: string;
+  fbp?: string;
+  fbc?: string;
+  fbclid?: string;
+  test_event_code?: string;
+}
+
 export interface CreateOrderBody {
   type_order: 'basic' | 'discounted' | 'family';
   lang: string;
   tickets: Array<{ name: string; send_email: boolean; email?: string }>;
-  fbp?: string;
-  fbc?: string;
-  fbclid?: string;
+  fb?: FbData;
 }
 
 export interface CreateOrderResponse {
