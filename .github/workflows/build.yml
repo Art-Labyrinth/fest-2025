@@ -18,10 +18,6 @@ concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
-# env:
-#   DOCKER_BUILDKIT: 1
-#   COMPOSE_DOCKER_CLI_BUILD: 1
-
 jobs:
   deploy-production:
     if: github.ref == 'refs/heads/main'
