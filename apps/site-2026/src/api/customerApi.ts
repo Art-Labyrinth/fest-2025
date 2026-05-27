@@ -94,7 +94,14 @@ export interface FbData {
   fbp?: string;
   fbc?: string;
   fbclid?: string;
-  test_event_code?: string;
+}
+
+export interface RegisterFbParams {
+  fb_pixel_id?: string;
+  event_source_url?: string;
+  fbp?: string;
+  fbc?: string;
+  fbclid?: string;
 }
 
 export interface CreateOrderBody {
@@ -132,8 +139,9 @@ export interface PasswordResetConfirmBody {
 }
 
 export const customerApi = {
-  register: (email: string, password: string, lang: string, name?: string) =>
-    apiFetch<AuthResponse>('POST', '/register', { email, password, lang, ...(name ? { name } : {}) }),
+  register: (email: string, password: string, lang: string, name?: string, fb?: RegisterFbParams) =>
+    apiFetch<AuthResponse>('POST', '/register', { email, password, lang, ...(name ? { name } : {}), ...fb }),
+
 
   login: (email: string, password: string) =>
     apiFetch<AuthResponse>('POST', '/auth', { email, password }),

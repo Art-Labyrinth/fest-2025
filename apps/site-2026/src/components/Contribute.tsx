@@ -12,6 +12,7 @@ import {
   CreateOrderBody,
   CustomerOrder,
   FbData,
+  RegisterFbParams,
 } from '../api/customerApi';
 import AuthCard from './contribute/AuthCard';
 import PasswordResetCard from './contribute/PasswordResetCard';
@@ -292,9 +293,20 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     setShowForgotPassword(false);
     setAuthLoading(true);
     try {
-      const res = authMode === 'login'
-        ? await customerApi.login(authEmail, authPassword)
-        : await customerApi.register(authEmail, authPassword, langForApi(i18n.language), authName || undefined);
+      let res;
+      if (authMode === 'login') {
+        res = await customerApi.login(authEmail, authPassword);
+      } else {
+        const { pixel_id, fbp, fbc, fbclid } = getFbTrackingData();
+        const fb: RegisterFbParams = {
+          fb_pixel_id: pixel_id,
+          event_source_url: window.location.href,
+          ...(fbp ? { fbp } : {}),
+          ...(fbc ? { fbc } : {}),
+          ...(fbclid ? { fbclid } : {}),
+        };
+        res = await customerApi.register(authEmail, authPassword, langForApi(i18n.language), authName || undefined, fb);
+      }
       const name = res.name || '';
       saveSession(res.access_token, res.email, name);
       setToken(res.access_token);
@@ -341,13 +353,12 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
     setOrderError('');
     setOrderLoading(true);
     try {
-      const { pixel_id, fbp, fbc, fbclid, test_event_code } = getFbTrackingData();
+      const { pixel_id, fbp, fbc, fbclid } = getFbTrackingData();
       const fb: FbData = {
         pixel_id,
         ...(fbp ? { fbp } : {}),
         ...(fbc ? { fbc } : {}),
         ...(fbclid ? { fbclid } : {}),
-        ...(test_event_code ? { test_event_code } : {}),
       };
       const body: CreateOrderBody = {
         type_order: orderType,
