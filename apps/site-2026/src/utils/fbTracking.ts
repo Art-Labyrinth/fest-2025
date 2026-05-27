@@ -37,12 +37,10 @@ export interface FbTrackingData {
   * - test_event_code — from REACT_APP_META_TEST_EVENT_CODE (for tests only)
   */
 export function getFbTrackingData(): FbTrackingData {
-  const testEventCode = process.env.REACT_APP_META_TEST_EVENT_CODE;
   return {
     pixel_id: META_PIXEL_ID,
     fbp: getCookie('_fbp') || undefined,
     fbc: getCookie('_fbc') || undefined,
     fbclid: getStoredFbclid() || undefined,
-    ...(testEventCode ? { test_event_code: testEventCode } : {}),
   };
 }
