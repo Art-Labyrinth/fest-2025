@@ -10,6 +10,8 @@ import { JoinLanding, JoinMasterForm, JoinVolunteerForm } from "./components/Joi
 import Contribute from "./components/Contribute";
 import OrderPage from "./components/contribute/OrderPage";
 import TicketsPage from "./components/contribute/TicketsPage";
+import Participants from "./components/Participants/Participants";
+import Gallery from "./components/Gallery/Gallery";
 import AnalyticsLoader from "./components/GTMLoader";
 
 import "./index.css";
@@ -21,7 +23,7 @@ function Layout() {
       <AnalyticsLoader />
       <div className="relative min-h-screen flex flex-col">
         <Header />
-        <div className="flex-1 pt-20">
+        <div className="flex-1">
           <Outlet />
         </div>
         <Footer />
@@ -51,6 +53,14 @@ const router = createBrowserRouter(
         { path: "contribute/tickets", element: <TicketsPage /> },
         { path: "*", element: <NotFound /> },
       ],
+    },
+    {
+      path: "/participants",
+      element: <Participants />,
+    },
+    {
+      path: "/gallery",
+      element: <Gallery />,
     },
   ],
   { basename: routerBasename }
