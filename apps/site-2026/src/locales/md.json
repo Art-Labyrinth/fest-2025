@@ -224,6 +224,98 @@
     "org": "Art-Labirint"
   },
   "contribute": {
+    "hero_1": {
+      "header": "Fa o contributie",
+      "text_1": "Împreună creăm o minune.",
+      "text_2": "Festivalul există datorită sprijinului reciproc. Aici vei găsi toate modalitățile de a contribui."
+    },
+    "hero_2": {
+      "text": "Festivalul nu este un produs, ci o creație comună. Fiecare participare a ta este parte dintr-o mozaică vie. Îți mulțumim pentru sprijin."
+    },
+    "pricing": {
+      "header": "CONTRIBUȚIA LA PARTICIPARE",
+      "motto": "Fac o contribuție și devin parte din creație",
+      "text": "Contribuția este o investiție în realitatea comună. Nu vindem bilete - susținem spațiul pe care îl creăm împreună. Contribuția ta poate fi făcută în numerar la festival sau online cu cardul.",
+      "button": "FAC O CONTRIBUȚIE",
+      "warnings": [
+        "De la 1 iulie, contribuția poate fi făcută doar la intrarea în festival — 800 lei."
+      ],
+      "tiraspol": [
+        "Locuitorii din Transnistria: Loznîskaia Liubov Viktorovna",
+        "Serviciul de transfer APB \"Clover\": +373(778)18-505",
+        "Numărul cardului: 9104 0160 4700 4918",
+        "În comentariul transferului — indică numele și emailul tău (sau trimite aceste date Liubei în Telegram)"
+      ],
+      "guest": "Vizitator",
+      "note": "Alege mai jos tipul de contribuție care ți se potrivește. Dacă nu îți permiți să contribui, alege opțiunea „Situație complexă” și descrie pe scurt situația ta în formular.",
+      "column_1": {
+        "title": "Merg la festival",
+        "text": "Intrare gratuită pentru copii sub 14 ani"
+      },
+      "column_2": {
+        "title": "Reducere",
+        "text": "-50% contribuție pentru pensionari."
+      },
+      "column_3": {
+        "title": "Familie",
+        "text": "-25% contribuție pentru familii, minimum 1 părinte + copil până la 18 ani (copiii sub 14 ani intră gratuit)."
+      },
+      "column_4": {
+        "title": "Situație complexă",
+        "text": "Dacă ai un caz special și dorești să contribui mai puțin - descrie pe scurt și clar situația ta.",
+        "button": "CONTACTEAZĂ-NE"
+      }
+    },
+    "form": {
+      "name": "Numele și prenumele tău",
+      "lastname": "Prenumele și numele de familie",
+      "tickets": "Selectează numărul de bilete",
+      "count": "Număr",
+      "email": "Email",
+      "total": "Total de plată",
+      "submit": "Fă o contribuție",
+      "phone": "Număr de telefon",
+      "telegram": "Telegram",
+      "message": "Descrie pe scurt și clar situația ta.",
+      "special_submit": "Trimite cererea"
+    },
+    "post_form": {
+      "thank_you": "Mulțumim pentru contribuția ta!",
+      "grateful": "Suntem recunoscători pentru sprijinul tău și participarea la crearea festivalului.",
+      "number": "Numărul tău unic:",
+      "link_text": "Pentru a plăti online, folosește linkul de mai jos:",
+      "terminal": "Sau plătește în numerar prin orice terminal",
+      "detail": "Ți-am trimis un email cu ID-ul comenzii tale și instrucțiuni pentru plata în numerar prin terminalele Bpay.",
+      "spam": "Dacă emailul nu a ajuns — verifică folderul „Spam” sau contactează-ne.",
+      "special_text": "Mulțumim pentru încredere. Înțelegem că fiecare poate avea circumstanțe speciale. Cererea ta a fost primită și în curând te vom contacta pentru a discuta posibilele modalități de participare."
+    },
+    "help_us": {
+      "header": "SUSȚINE CA PATRON / DONATOR",
+      "text_1": "Vrei ca astfel de evenimente să continue? Poți face pur și simplu o contribuție. Vom fi recunoscători pentru orice sprijin.",
+      "text_2": "De asemenea, poți contacta coordonatorul festivalului pentru o întâlnire personală sau sprijin financiar.",
+      "button": "COPIAZĂ",
+      "copied": "Copiat!"
+    },
+    "our_needs": {
+      "header_1": "AVEM NEVOIE DE…",
+      "header_2": "Pentru sponsori și parteneri",
+      "header_3": "Ce ne trebuie în special acum",
+      "text_1": "Ce avem nevoie în special acum:",
+      "text_2": "Căutăm parteneri gata să susțină festivalul cu resurse, bunuri, publicitate sau participare. Oferim transparență, recunoaștere și un format creativ de promovare.",
+      "text_3": "Dacă poți oferi ceva — scrie-ne, vom fi foarte recunoscători!",
+      "text_4": "Întotdeauna deschiși la parteneriate și colaborări",
+      "button": "PENTRU SPONSORI",
+      "list": [
+        "Materiale pentru decor, perne, panglici, vopsele",
+        "Echipament acustic",
+        "Oale mari, cratițe",
+        "Unelte: ferăstraie, topoare, scări, lopeți, greble",
+        "Echipamente electrice",
+        "Generatoare de 5 kW și 3 kW",
+        "Plăci de lemn, OSB. Paleți"
+      ]
+    },
+    "contact_button": "CONTACTEAZĂ-NE",
     "title": "Contribuie",
     "description": {
       "auth": "Aici puteți achiziționa bilete pentru festivalul din 2026. Alegeți tipul biletului, specificați cantitatea și plasați comanda. După plată, veți primi biletul pe email.",
