@@ -34,9 +34,6 @@ export default function Home() {
         </div>
 
         <section className="max-w-2xl mx-auto mb-16 rounded-3xl border border-brown/20 bg-orange-150/85 backdrop-blur-sm shadow-lg px-6 py-7 sm:px-8 sm:py-8 text-center">
-          <div className="text-xs sm:text-sm uppercase tracking-[0.3em] text-brown/60 mb-3">
-            {t("home.announcement_tag")}
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold font-roca mb-3">
             {t("home.announcement_title")}
           </h2>
@@ -44,12 +41,33 @@ export default function Home() {
           <p className="text-base sm:text-lg text-brown/75 mt-2">
             {t("home.announcement_location")}
           </p>
-          <a
-            href="/2026/contribute"
-            className="mt-6 inline-block bg-brown text-orange-150 text-sm font-bold py-3 px-8 rounded-lg hover:opacity-80 transition-opacity"
-          >
-            {t("home.contribute")}
-          </a>
+          <div className="flex flex-wrap justify-center gap-2 my-4">
+            {(t("home.announcement_hashtags", { returnObjects: true }) as string[]).map((hashtag: string, index: number) => (
+              <span key={index} className="text-sm text-brown/80">
+                {hashtag}
+              </span>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-5">
+            <a
+              href="/2026/"
+              className="mt-6 inline-block bg-brown text-orange-150 text-sm font-bold py-3 px-8 rounded-lg hover:opacity-80 transition-opacity"
+            >
+              {t("home.more")}
+            </a>
+            <a
+              href="/2026/participants/"
+              className="mt-6 inline-block bg-brown text-orange-150 text-sm font-bold py-3 px-8 rounded-lg hover:opacity-80 transition-opacity"
+            >
+              {t("home.participants")}
+            </a>
+            <a
+              href="/2026/contribute/"
+              className="mt-6 inline-block bg-brown text-orange-150 text-sm font-bold py-3 px-8 rounded-lg hover:opacity-80 transition-opacity"
+            >
+              {t("home.contribute")}
+            </a>
+          </div>
         </section>
 
         <h2 className="text-2xl font-bold mb-8 text-center">{t("home.editions_title")}</h2>

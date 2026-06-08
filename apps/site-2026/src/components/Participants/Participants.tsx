@@ -75,11 +75,11 @@ function Participants() {
             2xl:bg-[url('https://files.art-labyrinth.org/fest2025/participants/2xl_hero_bg.webp')]"
         >
           <div className="flex flex-col relative container mx-auto px-4 text-center z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-brown font-deledda mb-4 text-[#F4E4C3]">
+            <h1 className="text-4xl md:text-5xl font-bold text-brown font-deledda mb-4 text-orange-150">
               {t("participants.hero.header")}
             </h1>
             <div className="sm:w-full sm:max-w-[50%] mx-auto p-6 text-justify">
-              <p className="text-brown text-lg text-[#F4E4C3]">
+              <p className="text-brown text-lg text-orange-150">
                 {t("participants.hero.text")}
               </p>
             </div>
