@@ -15,18 +15,14 @@ function copyText(value: string): Promise<void> {
 interface OrdersViewProps {
   orders: CustomerOrder[];
   ordersLoading: boolean;
-  salesClosed: boolean;
   onLogout: () => void;
-  onStartNewOrder: () => void;
   userEmail: string | null;
 }
 
 export default function OrdersView({
   orders,
   ordersLoading,
-  salesClosed,
   onLogout,
-  onStartNewOrder,
   userEmail,
 }: OrdersViewProps) {
   const { t } = useTranslation();
@@ -47,17 +43,7 @@ export default function OrdersView({
 
       <div className="text-center text-brown/50 mb-10">{t('contribute.description.auth')}</div>
 
-      <div className="flex flex-wrap justify-between items-center gap-3 mb-4">
-        <h2 className="text-lg font-bold">{t('contribute.my_orders')}</h2>
-        <div className="flex flex-wrap items-center gap-2">
-          <Link to="/contribute/tickets" className={`${btnSecondary} inline-flex items-center`}>
-            {t('contribute.my_tickets')}
-          </Link>
-          <button type="button" className={btnPrimary} disabled={salesClosed} onClick={onStartNewOrder}>
-            {salesClosed ? t('contribute.sales_closed') : t('contribute.new_order')}
-          </button>
-        </div>
-      </div>
+      <h2 className="text-lg font-bold mb-4">{t('contribute.my_orders')}</h2>
 
       {ordersLoading && <p className="text-center text-brown/50 py-10">{t('contribute.loading')}</p>}
 

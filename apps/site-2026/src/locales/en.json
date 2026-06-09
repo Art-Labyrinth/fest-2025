@@ -224,10 +224,102 @@
     "org": "Art-Labyrinth"
   },
   "contribute": {
+    "hero_1": {
+      "header": "MAKE A CONTRIBUTION",
+      "text_1": "Together we create a miracle.",
+      "text_2": "The festival exists thanks to mutual support. Here you will find all the ways to do it."
+    },
+    "hero_2": {
+      "text": "The festival is not a product, but a joint creation. Every participation of yours is part of a living mosaic. Thank you for your support."
+    },
+    "pricing": {
+      "header": "PARTICIPATION CONTRIBUTION",
+      "motto": "I make a contribution and become part of the creation",
+      "text": "The contribution is an investment in the common reality. We do not sell tickets - we support the space we create together. Your contribution can be made in cash at the festival or online by card.",
+      "button": "MAKE A CONTRIBUTION",
+      "warnings": [
+        "From July 1, the contribution can only be made at the festival entrance — 800 lei."
+      ],
+      "tiraspol": [
+        "Residents of Transnistria: Loznîskaia Liubov Viktorovna",
+        "Transfer service APB \"Clover\": +373(778)18-505",
+        "Card number: 9104 0160 4700 4918",
+        "In the transfer comment — indicate your name and email (or send this information to Liuba in Telegram)"
+      ],
+      "guest": "Guest",
+      "note": "Select the type of contribution that suits you below. If you cannot afford the contribution, choose the 'Complex situation' option and briefly describe your situation in the form.",
+      "column_1": {
+        "title": "I go to the festival",
+        "text": "Free entry for children under 14 years old"
+      },
+      "column_2": {
+        "title": "Discounted",
+        "text": "-50% contribution for pensioners."
+      },
+      "column_3": {
+        "title": "Family",
+        "text": "Families (minimum 1 parent and child up to 18 years old) receive a 25% discount on the contribution. Children under 14 years old enter for free."
+      },
+      "column_4": {
+        "title": "Complex situation",
+        "text": "If you have a special case and would like to contribute less - briefly and clearly state your situation.",
+        "button": "CONTACT US"
+      }
+    },
+    "form": {
+      "name": "Your name",
+      "lastname": "Last name (Please provide your family's real last name)",
+      "tickets": "Select the number of tickets",
+      "count": "Quantity",
+      "email": "Email",
+      "total": "Total to pay",
+      "submit": "Make a contribution",
+      "phone": "Phone number",
+      "telegram": "Telegram",
+      "message": "Briefly and clearly describe your situation.",
+      "special_submit": "Send request"
+    },
+    "post_form": {
+      "thank_you": "Thank you for your contribution!",
+      "grateful": "We are grateful for your support and participation in creating the festival.",
+      "number": "Your unique number:",
+      "link_text": "To pay online, use the link below:",
+      "terminal": "Or pay in cash through any Bpay terminal",
+      "detail": "An email has been sent to you with your order ID and instructions for cash payment through Bpay terminals.",
+      "spam": "If the email did not arrive — check your 'Spam' folder or contact us.",
+      "special_text": "Thank you for your trust. We understand that everyone may have special circumstances. Your application has been received, and we will contact you soon to discuss possible ways to participate."
+    },
+    "help_us": {
+      "header": "SUPPORT AS A PATRON / DONOR",
+      "text_1": "Want such events to continue? You can simply make a contribution. We will be grateful for any support.",
+      "text_2": "You can also contact the festival coordinator for a personal meeting or cash support.",
+      "button": "COPY",
+      "copied": "Copied!"
+    },
+    "our_needs": {
+      "header_1": "WE NEED…",
+      "header_2": "For sponsors and partners",
+      "header_3": "What we especially need right now",
+      "text_1": "What we especially need right now:",
+      "text_2": "We are looking for partners ready to support the festival with resources, goods, advertising, or participation. We offer transparency, recognition, and a creative promotion format.",
+      "text_3": "If you can share something — write to us, we will be very grateful!",
+      "text_4": "Always open to partnership and collaboration",
+      "button": "FOR SPONSORS",
+      "list": [
+        "Fabrics for decoration, cushions, ribbons, paints",
+        "Acoustic equipment",
+        "Large cauldrons, pots",
+        "Tools: saws, axes, ladders, shovels, rakes",
+        "Electricity supplies",
+        "Generators (5 kW and 3 kW)",
+        "Boards, OSB sheets, pallets"
+      ]
+    },
+    "contact_button": "CONTACT US",
     "title": "Contribute",
     "description": {
-      "auth": "Here you can purchase tickets for the 2026 festival. Choose the ticket type, specify the quantity and place the order. After payment, you will receive the ticket by email.",
-      "no_auth": "Please sign in to purchase tickets for the 2026 festival."
+      "auth": "Here you can make a contribution for the 2026 festival. Choose the type of ticket and indicate the quantity.",
+      "no_auth": "Please sign in to make a contribution for the 2026 festival."
     },
     "login": "Sign in",
     "register": "Register",
@@ -254,6 +346,7 @@
     "loading": "Loading...",
     "submit_login": "Sign in",
     "submit_register": "Create account",
+    "login_to_buy": "Sign in",
     "logout": "Log out",
     "my_tickets": "My tickets",
     "my_orders": "My orders",
