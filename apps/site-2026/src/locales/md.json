@@ -318,8 +318,8 @@
     "contact_button": "CONTACTEAZĂ-NE",
     "title": "Contribuie",
     "description": {
-      "auth": "Aici puteți achiziționa bilete pentru festivalul din 2026. Alegeți tipul biletului, specificați cantitatea și plasați comanda. După plată, veți primi biletul pe email.",
-      "no_auth": "Vă rugăm să vă autentificați pentru a achiziționa bilete pentru festivalul din 2026."
+      "auth": "Aici poți face o contribuție pentru festivalul din 2026. Alege tipul biletului și indică cantitatea.",
+      "no_auth": "Te rugăm să te autentifici pentru a face o contribuție."
     },
     "login": "Autentificare",
     "register": "Înregistrare",
@@ -346,6 +346,7 @@
     "loading": "Se încarcă...",
     "submit_login": "Autentificare",
     "submit_register": "Creează cont",
+    "login_to_buy": "Autentifică-te",
     "logout": "Ieșire",
     "my_tickets": "Biletele mele",
     "my_orders": "Comenzile mele",

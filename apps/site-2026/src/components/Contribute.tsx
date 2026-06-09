@@ -17,7 +17,6 @@ import {
 import AuthCard from './contribute/AuthCard';
 import PasswordResetCard from './contribute/PasswordResetCard';
 import OrdersView from './contribute/OrdersView';
-import NewOrderForm from './contribute/NewOrderForm';
 import TicketsModal from './contribute/TicketsModal';
 import { getFbTrackingData } from '../utils/fbTracking';
 import {
@@ -26,8 +25,8 @@ import {
   makeDraft,
   PRICES_BY_STAGE,
 } from './contribute/model';
-import type { OrderType, TicketDraft, View } from './contribute/model';
-import { card } from './contribute/styles';
+import type { OrderType, TicketDraft } from './contribute/model';
+import { card, input } from './contribute/styles';
 
 interface ContributeProps {
   autoOpenTickets?: boolean;
@@ -86,11 +85,12 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
   const [resetConfirmError, setResetConfirmError] = useState('');
   const [resetConfirmSuccess, setResetConfirmSuccess] = useState('');
 
-  const [view, setView] = useState<View>('orders');
+  const showOrdersModal = /\/contribute\/orders\/?$/.test(location.pathname);
+  const showTicketsModal = /\/contribute\/tickets\/?$/.test(location.pathname);
   const [orders, setOrders] = useState<CustomerOrder[]>([]);
   const [ordersLoading, setOrdersLoading] = useState(false);
   const [landingChecked, setLandingChecked] = useState(false);
-  const [showTicketsModal, setShowTicketsModal] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const [availableTickets, setAvailableTickets] = useState<any[]>([]);
 
   const [orderType, setOrderType] = useState<OrderType>('basic');
@@ -190,20 +190,6 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
       setResetEmail(authEmail);
     }
   }, [authEmail, resetEmail]);
-
-  // Manage tickets modal URL
-  useEffect(() => {
-    const isTicketsPath = /\/contribute\/tickets\/?$/.test(location.pathname);
-    setShowTicketsModal(isTicketsPath);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    if (showTicketsModal && !location.pathname.includes('/tickets')) {
-      navigate('/contribute/tickets');
-    } else if (!showTicketsModal && location.pathname.includes('/tickets')) {
-      navigate('/contribute', { replace: true });
-    }
-  }, [showTicketsModal, location.pathname, navigate]);
 
   useEffect(() => {
     if (!shouldShowResetConfirm || !resetToken) {
@@ -389,9 +375,9 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
       if (res.invoice_url) {
         window.location.href = res.invoice_url;
       } else {
-        setView('orders');
         setOrderLoading(false);
         loadOrders();
+        navigate('/contribute/orders');
       }
     } catch (e: any) {
       setOrderError(e.message);
@@ -467,16 +453,6 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
               <p className="text-brown md:w-2/5">
                 {t("contribute.pricing.text")}
               </p>
-              <div className="text-brown bg-[#F6D8B4] border-l-4 border-[#F07B17] p-4 my-4 font-semibold shadow-md rounded">
-                {(t("contribute.pricing.warnings", { returnObjects: true }) as String[]).map((warning, index) => (
-                  <p key={index}>{warning}</p>
-                ))}
-              </div>
-              <div className="text-brown p-4 my-4 font-semibold shadow-md rounded">
-                {(t("contribute.pricing.tiraspol", { returnObjects: true }) as String[]).map((warning, index) => (
-                  <p key={index}>{warning}</p>
-                ))}
-              </div>
             </div>
 
             {/* Ticket Types Grid */}
@@ -518,8 +494,8 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
             <div className="my-8 h-0.5 bg-[#4A6218] opacity-40 rounded w-full" />
 
             {/* Quantity Selection */}
-            <div className="max-w-2xl mx-auto">
-              <div className="text-brown font-semibold mb-4 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-brown font-semibold mb-4 text-center w-full">
                 <label className="text-lg">
                   {t("contribute.form.tickets")}
                 </label>
@@ -536,38 +512,28 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
                 </div>
               </div>
 
-              {/* Total Price */}
-              <div className="flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 shadow-lg">
-                <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
-                <span className="text-3xl font-bold text-[#4A6218] mb-4">
-                  {calcTotal().toLocaleString()} MDL
-                </span>
-                <p className="text-brown text-sm text-center">
-                  {t("contribute.pricing.note")}
-                </p>
+              {/* Total Price + Login Button */}
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <div className="flex-4 flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 shadow-lg w-full">
+                  <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
+                  <span className="text-3xl font-bold text-[#4A6218] mb-4">
+                    {calcTotal().toLocaleString()} MDL
+                  </span>
+                  <p className="text-brown text-sm text-center">
+                    {t("contribute.pricing.note")}
+                  </p>
+                </div>
+                <div className="flex-2 flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 shadow-lg ">
+                  <p className="text-brown/50 text-sm text-center">{t('contribute.description.no_auth')}</p>
+                  <button
+                    onClick={() => setShowAuthModal(true)}
+                    className="sm:self-center bg-[#4A6218] text-white px-8 py-4 rounded-lg hover:bg-[#4A6218]/75 transition-colors font-bold text-lg whitespace-nowrap shadow-lg"
+                  >
+                    {t("contribute.login_to_buy")}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Auth Section */}
-        <section className="bg-orange-150 py-12">
-          <div className="container px-4 max-w-6xl mx-auto">
-            <AuthCard
-              authMode={authMode}
-              authEmail={authEmail}
-              authPassword={authPassword}
-              authName={authName}
-              authError={authError}
-              authLoading={authLoading}
-              onAuthModeChange={mode => { setAuthMode(mode); setAuthError(''); }}
-              onAuthEmailChange={setAuthEmail}
-              onAuthPasswordChange={setAuthPassword}
-              onAuthNameChange={setAuthName}
-              onSubmit={handleAuth}
-              showForgotPassword={showForgotPassword}
-              onForgotPasswordClick={openRequestPasswordReset}
-            />
           </div>
         </section>
 
@@ -710,6 +676,43 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
           </div>
           <div className="absolute inset-0 bg-[#35190499] bg-opacity-60"></div>
         </section>
+
+        {/* Auth Modal */}
+        {showAuthModal && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/50 z-40"
+              onClick={() => setShowAuthModal(false)}
+            />
+            <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+              <div className="relative w-full max-w-md">
+                <button
+                  type="button"
+                  onClick={() => setShowAuthModal(false)}
+                  className="absolute -top-3 -right-3 z-10 w-8 h-8 rounded-full bg-orange-150 text-brown font-bold shadow-lg flex items-center justify-center text-xl leading-none"
+                  aria-label="Close"
+                >
+                  ×
+                </button>
+                <AuthCard
+                  authMode={authMode}
+                  authEmail={authEmail}
+                  authPassword={authPassword}
+                  authName={authName}
+                  authError={authError}
+                  authLoading={authLoading}
+                  onAuthModeChange={mode => { setAuthMode(mode); setAuthError(''); }}
+                  onAuthEmailChange={setAuthEmail}
+                  onAuthPasswordChange={setAuthPassword}
+                  onAuthNameChange={setAuthName}
+                  onSubmit={handleAuth}
+                  showForgotPassword={showForgotPassword}
+                  onForgotPasswordClick={openRequestPasswordReset}
+                />
+              </div>
+            </div>
+          </>
+        )}
       </main>
     );
   }
@@ -726,74 +729,164 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
 
   return (
     <main>
-      {/* Content based on view */}
-      {view === 'orders' ? (
-        <section className="bg-orange-150 py-12">
+      <section className="bg-orange-150 py-12">
+        <form onSubmit={handleCreateOrder}>
           <div className="container px-4 max-w-6xl mx-auto">
-            <OrdersView
-              orders={orders}
-              ordersLoading={ordersLoading}
-              salesClosed={salesClosed}
-              onLogout={logout}
-              onStartNewOrder={() => {
-                if (salesClosed) return;
-                setView('newOrder');
-                setOrderError('');
-                setOrderType('basic');
-                setTickets([makeDraft(userName)]);
-                setOrderSendEmail(true);
-                setOrderEmail(userEmail || '');
-              }}
-              userEmail={userEmail}
-            />
-          </div>
-        </section>
-      ) : (
-        <>
-          {/* Pricing Section */}
-          <section className="bg-orange-150 py-12">
-            <div className="container px-4 max-w-6xl mx-auto">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
-                <div className="flex-1">
+
+            {/* Top row: orders + tickets buttons */}
+            <div className="flex justify-end items-center gap-3 mb-12">
+              <button
+                type="button"
+                onClick={() => navigate('/contribute/orders')}
+                className="px-6 py-3 bg-[#4A6218] text-white rounded hover:bg-[#4A6218]/75 transition-colors font-semibold whitespace-nowrap"
+              >
+                {t('contribute.my_orders')}{orders.length > 0 ? ` (${orders.length})` : ''}
+              </button>
+              {availableTickets.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => navigate('/contribute/tickets')}
+                  className="px-6 py-3 bg-[#4A6218] text-white rounded hover:bg-[#4A6218]/75 transition-colors font-semibold whitespace-nowrap"
+                >
+                  {t("contribute.my_tickets")} ({availableTickets.length})
+                </button>
+              )}
+            </div>
+
+                {/* Header */}
+                <div className="text-left mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-brown font-deledda mb-4">
                     {t("contribute.pricing.header")}
                   </h2>
+                  <p className="text-lg italic text-brown mb-4">
+                    "{t("contribute.pricing.motto")}"
+                  </p>
+                  <p className="text-brown md:w-2/5">
+                    {t("contribute.pricing.text")}
+                  </p>
                 </div>
-                {availableTickets.length > 0 && (
-                  <button
-                    onClick={() => setShowTicketsModal(true)}
-                    className="px-6 py-3 bg-[#4A6218] text-white rounded hover:bg-[#4A6218]/75 transition-colors font-semibold whitespace-nowrap"
-                  >
-                    {t("contribute.my_tickets") || "Мои билеты"} ({availableTickets.length})
-                  </button>
-                )}
-              </div>
 
-              {/* New Order Form */}
-              <NewOrderForm
-                currentPriceStage={currentPriceStage}
-                currentPrices={currentPrices}
-                orderError={orderError}
-                orderEmail={orderEmail}
-                orderLoading={orderLoading}
-                orderSendEmail={orderSendEmail}
-                orderType={orderType}
-                salesClosed={salesClosed}
-                tickets={tickets}
-                total={calcTotal()}
-                userEmail={userEmail}
-                onBack={() => { setView('orders'); setOrderError(''); }}
-                onOrderEmailChange={setOrderEmail}
-                onOrderSendEmailChange={setOrderSendEmail}
-                onOrderTypeChange={setOrderType}
-                onSubmit={handleCreateOrder}
-                onTicketCountChange={setTicketCount}
-                onTicketUpdate={updateTicket}
-              />
-            </div>
+                {/* Ticket type cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:h-full">
+                  {[
+                    {
+                      key: 'basic',
+                      title: t("contribute.pricing.column_1.title"),
+                      price: currentPrices?.basic || 0,
+                      text: t("contribute.pricing.column_1.text"),
+                    },
+                    {
+                      key: 'discounted',
+                      title: t("contribute.pricing.column_2.title"),
+                      price: currentPrices?.discounted || 0,
+                      text: t("contribute.pricing.column_2.text"),
+                    },
+                    {
+                      key: 'family',
+                      title: t("contribute.pricing.column_3.title"),
+                      price: currentPrices?.family || 0,
+                      text: t("contribute.pricing.column_3.text"),
+                    },
+                  ].map(type => (
+                    <div
+                      key={type.key}
+                      className={`p-5 md:flex flex-col text-left cursor-pointer border-2 transition-all ${
+                        orderType === type.key ? "border-[#2B390E] rounded-xl bg-[#F6D8B4]/60" : "border-transparent shadow-lg"
+                      }`}
+                      onClick={() => setOrderType(type.key as OrderType)}
+                    >
+                      <h3 className="text-xl font-bold text-brown mb-2">{type.title}</h3>
+                      <p className="text-2xl font-semibold text-[#4A6218] mb-2">{type.price} mdl</p>
+                      <p className="text-brown mb-4">{type.text}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="my-8 h-0.5 bg-[#4A6218] opacity-40 rounded w-full" />
+
+                <div className="max-w-4xl mx-auto">
+                  {/* Quantity slider */}
+                  <div className="text-brown font-semibold mb-6 text-center w-full">
+                    <label className="text-lg">{t("contribute.form.tickets")}</label>
+                    <div className="flex flex-col gap-2 mt-2">
+                      <input
+                        type="range"
+                        min={1}
+                        max={10}
+                        value={tickets.length}
+                        onChange={e => setTicketCount(Number(e.target.value))}
+                        className="w-full accent-[#4A6218]"
+                      />
+                      <span className="text-brown text-center">{t("contribute.form.count")}: <b>{tickets.length || 1}</b></span>
+                    </div>
+                  </div>
+
+                  {/* Ticket name fields */}
+                  <div className="space-y-3 mb-6">
+                    {tickets.map((ticket, index) => (
+                      <div key={index} className="border border-brown/20 rounded-xl p-4">
+                        <p className="text-xs font-bold text-brown/50 mb-2">{t('contribute.ticket_n', { n: index + 1 })}</p>
+                        <label className="block text-sm font-bold mb-1">
+                          {t('contribute.ticket_name')} <span className="text-xs text-brown/50">({t('contribute.ticket_name_hint')})</span>
+                        </label>
+                        <input
+                          type="text"
+                          className={input}
+                          value={ticket.name}
+                          maxLength={18}
+                          onChange={e => updateTicket(index, { name: e.target.value })}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Email option */}
+                  <div className="border border-brown/20 rounded-xl p-4 mb-6">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={orderSendEmail}
+                        onChange={e => setOrderSendEmail(e.target.checked)}
+                        className="accent-brown w-4 h-4"
+                      />
+                      <span className="text-sm font-bold">{t('contribute.send_email')}</span>
+                    </label>
+                    {orderSendEmail && (
+                      <input
+                        type="email"
+                        className={`${input} mt-2`}
+                        placeholder={userEmail || ''}
+                        value={orderEmail}
+                        onChange={e => setOrderEmail(e.target.value)}
+                      />
+                    )}
+                  </div>
+
+                  {/* Total + Submit */}
+                  <div className="flex flex-col sm:flex-row items-center gap-6">
+                    <div className="flex-4 flex flex-col items-center justify-center bg-[#F6D8B4] rounded-lg p-6 shadow-lg w-full">
+                      <span className="text-brown text-lg mb-2">{t("contribute.form.total")}</span>
+                      <span className="text-3xl font-bold text-[#4A6218] mb-4">
+                        {calcTotal().toLocaleString()} MDL
+                      </span>
+                      <p className="text-brown text-sm text-center">{t("contribute.pricing.note")}</p>
+                    </div>
+                    <button
+                      type="submit"
+                      className="sm:self-center bg-[#4A6218] text-white px-8 py-4 rounded-lg hover:bg-[#4A6218]/75 transition-colors font-bold text-lg whitespace-nowrap shadow-lg disabled:opacity-50"
+                      disabled={orderLoading || salesClosed}
+                    >
+                      {orderLoading ? t('contribute.loading') : t('contribute.create_order')}
+                    </button>
+                  </div>
+
+                  {salesClosed && <p className="text-sm text-red-600 mt-4">{t('contribute.sales_closed_notice')}</p>}
+                  {orderError && <p className="text-red-600 text-sm mt-4">{orderError}</p>}
+                  <p className="text-xs text-brown/50 text-center mt-3">{t('contribute.bpay_notice')}</p>
+                </div>
+              </div>
+            </form>
           </section>
-        </>
-      )}
 
       {/* Help Us and Our Needs sections (visible for authenticated users) */}
       <section className="bg-main py-12">
@@ -849,10 +942,36 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
 
       <TicketsModal
         isOpen={showTicketsModal}
-        onClose={() => setShowTicketsModal(false)}
-        tickets={availableTickets}
-        loading={ordersLoading}
+        onClose={() => navigate('/contribute', { replace: true })}
       />
+
+      {/* Orders Modal */}
+      {showOrdersModal && (
+        <>
+          <div
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={() => navigate('/contribute', { replace: true })}
+          />
+          <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+            <div className="relative w-full max-w-3xl bg-orange-150 rounded-3xl border border-brown/20 shadow-lg px-6 py-8 sm:px-10">
+              <button
+                type="button"
+                onClick={() => navigate('/contribute', { replace: true })}
+                className="absolute -top-3 -right-3 z-10 w-8 h-8 rounded-full bg-orange-150 text-brown font-bold shadow-lg flex items-center justify-center text-xl leading-none"
+                aria-label="Close"
+              >
+                ×
+              </button>
+              <OrdersView
+                orders={orders}
+                ordersLoading={ordersLoading}
+                onLogout={logout}
+                userEmail={userEmail}
+              />
+            </div>
+          </div>
+        </>
+      )}
 
     </main>
   );

@@ -36,11 +36,9 @@ export default function AuthCard({
   const { t } = useTranslation();
 
   return (
-    <main className="min-h-[calc(100vh-130px)] px-5 md:px-12 py-16 font-deledda text-brown flex items-center justify-center">
+    <div className="max-w-md mx-auto">
       <div className={card}>
-        <h1 className="text-2xl sm:text-3xl font-bold font-roca mb-6 text-center">{t('contribute.title')}</h1>
-        <p className="text-center text-brown/50 mb-6">{t('contribute.description.no_auth')}</p>
-        <div className="flex rounded-lg overflow-hidden border border-brown/20 mb-6">
+        <div className="flex rounded-lg overflow-hidden border border-brown/20 mb-4">
           {(['login', 'register'] as const).map(mode => (
             <button
               key={mode}
@@ -53,7 +51,7 @@ export default function AuthCard({
           ))}
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form onSubmit={onSubmit} className="space-y-3">
           <div>
             <label className="block text-sm font-bold mb-1">{t('contribute.email')}</label>
             <input type="email" required className={input} value={authEmail} onChange={event => onAuthEmailChange(event.target.value)} />
@@ -85,6 +83,6 @@ export default function AuthCard({
           </button>
         </form>
       </div>
-    </main>
+    </div>
   );
 }
