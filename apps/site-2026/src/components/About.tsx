@@ -6,40 +6,63 @@ export default function About() {
     return (
         <div className="flex flex-col">
             <div className="relative w-full">
-                <div className="absolute inset-0 bg-about-md-header bg-cover bg-[0_30%]"></div>
-                <div className="flex flex-col bg-[#35190499]/60 relative p-10 items-center text-orange-150 w-full">
-                    <h1 className="text-3xl sm:text-4xl mb-4 uppercase text-center font-roca">{t("about.title")}</h1>
-                    <p className="sm:text-lg max-w-2xl text-center font-deledda font-light mb-10">
+                <picture>
+                    <source media="(min-width: 1536px)" srcSet={`${process.env.PUBLIC_URL}/Home/block2/2xl_background.webp`} />
+                    <source media="(min-width: 1280px)" srcSet={`${process.env.PUBLIC_URL}/Home/block2/xl_background.webp`} />
+                    <source media="(min-width: 1024px)" srcSet={`${process.env.PUBLIC_URL}/Home/block2/lg_background.webp`} />
+                    <source media="(min-width: 768px)" srcSet={`${process.env.PUBLIC_URL}/Home/block2/md_background.webp`} />
+                    <img
+                        src={`${process.env.PUBLIC_URL}/Home/block2/sm_background.webp`}
+                        alt=""
+                        className="absolute inset-0 w-full h-full object-cover object-center"
+                    />
+                </picture>
+                <div className="flex flex-col bg-[#35190499]/60 relative px-5 py-16 sm:py-24 items-center text-center text-orange-150 w-full font-roca">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/Home/block2/location.svg`}
+                        alt=""
+                        className="h-14 sm:h-20 mb-6"
+                    />
+                    <h1 className="text-3xl sm:text-5xl mb-6 uppercase leading-tight">{t("about.title")}</h1>
+                    <p className="sm:text-lg max-w-3xl leading-relaxed">
                         {t("about.text_1")}
                     </p>
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-stretch sm:px-20 pt-5 sm:pt-20 pb-0 sm:pb-20 bg-[#FFF9EC] sm:bg-[#F4E4C3]">
-                <div className="flex-1 px-2 sm:px-5 py-5">
-                    <div className="flex flex-col sm:flex-row items-center ">
-                        <h1 className="text-3xl font-roca mb-4 uppercase text-center sm:text-left">{t("about.theme_label")} <br /> {t("about.theme_name")}</h1>
-                        <div className="relative w-32">
-                            <img src="https://files.art-labyrinth.org/fest2025/svg/five-hands.svg" alt="" />
-                        </div>
+            <div className="flex flex-col md:flex-row items-start gap-8 sm:gap-12 bg-[#FFF9EC] sm:bg-[#F4E4C3] text-brown px-6 sm:px-28 py-16 sm:py-24">
+                {/* Left: theme text */}
+                <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-5">
+                        <h1 className="text-3xl sm:text-4xl font-roca uppercase leading-tight text-center sm:text-left">
+                            {t("about.theme_label")} <br /> {t("about.theme_name")}
+                        </h1>
+                        <img
+                            src={`${process.env.PUBLIC_URL}/Home/block3/vector-spiral.svg`}
+                            alt=""
+                            className="w-32 sm:w-40 shrink-0"
+                        />
                     </div>
-                    <div className="pr-5 max-w-lg px-5 sm:px-0">
-                        <p className="my-5">
-                        {t("about.text_2")}
-                        </p>
-                        <p className="my-5">
-                        {t("about.text_3")}
-                        </p>
+                    <div className="mt-6 font-deledda space-y-4">
+                        <p>{t("about.text_2")}</p>
+                        <p>{t("about.text_3")}</p>
+                        <p>{t("about.text_4")}</p>
                     </div>
                 </div>
-                <div className="flex-1 flex flex-col items-center justify-center sm:px-5 sm:py-5">
-                    <div className="hidden sm:flex items-center w-24 max-w-[30%] transform -rotate-90 h-0">
-                        <img src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
-                    </div>
-
-                    <div className="bg-about-md-tema-goda bg-cover bg-[0_20%] w-full sm:w-11/12 mt-14 mx-auto">
-                        <div className="bg-[#F19C5533]/20 w-full h-full min-h-96"></div>
-                    </div>
+                {/* Right: fox + photo (pulled up so it nearly touches the block above).
+                    Photo fills the column width and crops to a fixed height on desktop
+                    (like block 4) so wide monitors don't leave an empty centre. */}
+                <div className="flex-1 w-full flex flex-col items-center gap-1 md:-mt-24">
+                    <img
+                        src={`${process.env.PUBLIC_URL}/Home/block3/fox.svg`}
+                        alt=""
+                        className="w-[70%] max-w-md"
+                    />
+                    <img
+                        src={`${process.env.PUBLIC_URL}/Home/block3/photo-tema-goda.webp`}
+                        alt=""
+                        className="w-full lg:h-96 lg:object-cover lg:object-center"
+                    />
                 </div>
             </div>
 
