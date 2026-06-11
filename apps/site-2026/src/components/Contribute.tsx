@@ -582,8 +582,8 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
                   <a href="tel:+37367496787" className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] w-fit">
                     +373 67 496 787
                   </a>
-                  <a href={`mailto:${t("contacts.hero.email_text")}`} className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] w-fit">
-                    {t("contacts.hero.email_text")}
+                  <a href={`mailto:${t("contacts.email")}`} className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 disabled:bg-[#99a67d] w-fit">
+                    {t("contacts.email")}
                   </a>
                 </p>
               </div>
@@ -621,8 +621,8 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
                     <a href="tel:+37367496787" className="bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto w-fit">
                       +373 67 496 787
                     </a>
-                    <a href={`mailto:${t("contacts.hero.email_text")}`} className="bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto w-fit">
-                      {t("contacts.hero.email_text")}
+                    <a href={`mailto:${t("contacts.email")}`} className="bg-transparent text-white border border-white px-4 py-2 md:mx-4 rounded hover:bg-[#434937] disabled:bg-[#99a67d] mt-auto w-fit">
+                      {t("contacts.email")}
                     </a>
                   </p>
                 </div>
@@ -912,8 +912,8 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
                 <a href="tel:+37367496787" className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 w-fit">
                   +373 67 496 787
                 </a>
-                <a href={`mailto:${t("contacts.hero.email_text")}`} className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 w-fit">
-                  {t("contacts.hero.email_text")}
+                <a href={`mailto:${t("contacts.email")}`} className="bg-[#4A6218] text-white px-4 py-2 rounded hover:bg-[#4A6218]/75 w-fit">
+                  {t("contacts.email")}
                 </a>
               </p>
             </div>

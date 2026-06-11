@@ -1,89 +1,98 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import About from "./About";
+
+const asset = (name: string) => `${process.env.PUBLIC_URL}/Home/${name}`;
+
+const INSTAGRAM_URL = "https://instagram.com/artlabsummerfestival";
+const MAP_URL = "https://maps.app.goo.gl/UHU4Y3xLASGE1T6RA";
 
 export default function Home() {
   const { t } = useTranslation();
-  const [isMobile, setIsMobile] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const hashtags = t("home.hashtags", { returnObjects: true }) as string[];
+  const locationLines = String(t("home.location"))
+    .split(",")
+    .map((line) => line.trim());
 
   return (
     <>
-      <div className="h-screen bg-main">
-        {!isMobile && (
-          <>
-            <img className="absolute left-[10%] top-[15%] w-44 max-w-[25%]" src="https://files.art-labyrinth.org/fest2025/svg/sun.svg" alt="" />
+      <section className="relative flex min-h-screen flex-col items-center pt-10 font-roca text-brown sm:pt-16">
+        {/* Dates + festival line */}
+        <div className="flex flex-col items-center gap-2 px-4 text-center">
+          <p className="text-2xl font-black uppercase sm:text-4xl">{t("home.dates")}</p>
+          <p className="text-xl text-[#373f27] sm:text-3xl">{t("home.festival_line")}</p>
+        </div>
 
-            <img className="absolute left-[5%] bottom-[3%] w-56 max-w-[30%]" src="https://files.art-labyrinth.org/fest2025/svg/arrow.svg" alt="" />
-            <img className="absolute left-[14%] top-[17%] w-56 max-w-[30%] transform rotate-180" src="https://files.art-labyrinth.org/fest2025/svg/arrow.svg" alt="" />
+        {/* Festival logo */}
+        <img
+          src={asset("festival-logo.png")}
+          alt={String(t("home.theme"))}
+          className="mt-6 w-52 sm:mt-8 sm:w-72 md:w-80"
+        />
 
-            <img className="absolute right-[17%] top-[18%] w-44 max-w-[25%]" src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
-            <img className="absolute right-[6%] top-[22%] w-44 max-w-[25%] transform rotate-180" src="https://files.art-labyrinth.org/fest2025/svg/moon.svg" alt="" />
+        {/* Hashtags */}
+        <div className="mt-8 flex max-w-5xl flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4 text-[#373f27] sm:mt-10">
+          {hashtags.map((tag, index) => (
+            <span key={index} className="px-3 py-1.5 text-base sm:text-2xl">
+              {tag}
+            </span>
+          ))}
+        </div>
 
-            <img className="absolute right-[10%] top-[18%] w-32 max-w-[20%]" src="https://files.art-labyrinth.org/fest2025/svg/up-stars.svg" alt="" />
-            <img className="absolute right-[8%] top-[26%] w-36 max-w-[20%]" src="https://files.art-labyrinth.org/fest2025/svg/down-stars.svg" alt="" />
-          </>
-        )}
-
-        <img className="h-[20%] sm:h-auto sm:w-[80%] sm:left-[10%] absolute bottom-0" src="https://files.art-labyrinth.org/fest2025/svg/mountains.svg" alt="" />
-
-        <div className="h-full">
-          <div className="flex justify-center items-center text-2xl sm:text-3xl font-bold h-[7%]">{t("home.dates")}</div>
-          <div className="flex flex-wrap justify-center items-center text-2xl sm:text-3xl text-center h-[10%] max-w-[90%] mx-auto gap-1">
-            <span>{t("home.festival_number")}</span>
-            <span>{t("home.subtitle")}</span>
-          </div>
-          <div className="h-[18%]"></div>
-          <div className="flex justify-center items-center text-center text-5xl sm:text-6xl font-roca font-black leading-none pb-10">{t("home.title")}<br />{t("home.theme")}</div>
-          <div className="flex justify-center items-center text-sm sm:text-lg font-bold leading-none h-[15%] px-5">
-            <div className="flex flex-wrap justify-center gap-2 max-w-[80%]">
-              {(t("home.hashtags", { returnObjects: true }) as string[]).map((item: string, index: number) => (
-                <span key={index} className="px-3">{item}</span>
+        {/* Contacts */}
+        <div className="mt-10 flex flex-col items-center justify-center gap-6 px-4 sm:flex-row sm:gap-8">
+          <a
+            href={MAP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 transition-opacity hover:opacity-70"
+          >
+            <img src={asset("map.svg")} alt="" className="h-10 w-10 sm:h-12 sm:w-12" />
+            <span className="text-left text-2xl font-black leading-tight sm:text-3xl">
+              {locationLines.map((line, index) => (
+                <span key={index} className="block">
+                  {line}
+                </span>
               ))}
-            </div>
-          </div>
-          <div className="flex flex-row justify-center items-center text-sm sm:text-2xl font-black gap-5 sm:gap-10 leading-none h-[10%] px-4">
+            </span>
+          </a>
+
+          <img src={asset("divider.svg")} alt="" className="hidden h-16 w-auto sm:block" />
+
+          <div className="flex flex-col items-center gap-2 sm:items-start">
             <a
-              href="https://maps.app.goo.gl/1vBPMhBe9KXDNgNb9"
+              href={`tel:${t("home.phone")}`}
+              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+            >
+              <img src={asset("phone.svg")} alt="" className="h-7 w-7" />
+              <span className="text-2xl font-black sm:text-3xl">{t("home.phone")}</span>
+            </a>
+            <a
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="flex items-center gap-2 transition-opacity hover:opacity-70"
             >
-              <div className="flex items-center gap-3 sm:pl-16 hover:contrast-50">
-                <div className="w-10">
-                  <img src="https://files.art-labyrinth.org/fest2025/svg/map.svg" alt="" />
-                </div>
-                <div className="text-center sm:text-left">{t("home.location")}</div>
-              </div>
+              <img src={asset("instagram.svg")} alt="Instagram" className="h-8 w-8" />
+              <span className="text-2xl font-black text-black sm:text-3xl">
+                {t("home.instagram_handle")}
+              </span>
             </a>
-            <div className="hidden sm:block w-1">
-              <img src="https://files.art-labyrinth.org/fest2025/svg/divider.svg" alt="" />
-            </div>
-            <div className="text-center sm:text-left hover:contrast-50">
-              <a href={`tel:${t("home.phone")}`}>{t("home.phone")}</a>
-              <br />
-              {t("home.website")}
-            </div>
-          </div>
-          <div className="flex justify-center items-center h-[5%]">
-            <div className="w-8 sm:w-10 opacity-60">
-              <img src="https://files.art-labyrinth.org/fest2025/svg/arrows.svg" alt="" />
-            </div>
           </div>
         </div>
-      </div>
+
+        {/* CTA band */}
+        <div className="relative mt-12 w-full sm:mt-16">
+          <div className="h-28 w-full bg-brown sm:h-32" />
+          <Link
+            to="/contribute"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-xl bg-[#F07B17] px-6 py-4 font-deledda text-base font-bold uppercase text-orange-150 shadow-lg transition-colors hover:bg-[#F07B17]/85 sm:px-9 sm:py-5 sm:text-2xl"
+          >
+            {t("home.join_festival")}
+          </Link>
+        </div>
+      </section>
 
       <About />
     </>

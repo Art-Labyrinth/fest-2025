@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Home",
+    "home": "About the festival",
     "join": "Participants",
     "gallery": "Gallery",
     "contribute": "Contribute",
@@ -16,6 +16,9 @@
     "location": "Sokola, Șoldănești",
     "phone": "+37367496787",
     "website": "fest.art-labyrinth.org",
+    "festival_line": "15th Art-Labyrinth festival",
+    "instagram_handle": "@artlabsummerfestival",
+    "join_festival": "Join the festival",
     "hashtags": [
       "#ecology",
       "#vegetarianism",
@@ -33,16 +36,17 @@
     "open_2025": "Open 2025"
   },
   "about": {
-    "title": "About the Festival",
-    "text_1": "Art Labyrinth Summer Festival is an annual event founded in 2008 that has since become a significant landmark in Moldova’s cultural life. Each year we choose a new location to create a unique atmosphere and connect people through art and music.",
-    "text_2": "We believe a festival is more than just a gathering of people. It is a space for transformation, exchange of ideas and inspiration. At Art Labyrinth, everyone can unlock their potential, become part of a community, contribute to a shared purpose and become a creator.",
-    "text_3": "Our festival brings together diverse people — artists, musicians, craftspeople, volunteers, dreamers — everyone ready to work in unison and create.",
+    "title": "Art Labyrinth Summer Festival 2026",
+    "text_1": "Every year, Art Labyrinth Summer Festival brings together people ready to unite in the search for inspiration, creativity and mindfulness. In 2026 the festival takes place from June 18 to 21 on the picturesque banks of the Dniester River in the village of Sokola, Moldova — our most beloved and sunniest place. We return here to once again create a space where art, music and nature merge into a single flow.",
+    "text_2": "Pulse of the Earth is about the feeling that the earth has its own rhythm, constantly present all around us. In everyday life we barely notice it because of the noise, the rush and endless tasks. This rhythm can be felt in simple things — in the movement of the wind, in the sounds of the forest, in the warmth of the earth beneath your feet, in the silence.",
+    "text_3": "When you give yourself time to stop, you gradually begin to catch this state — as if syncing with something larger and alive. At the festival this feeling grows stronger: through music, through movement, through the people around you, through moments lived here and now.",
+    "text_4": "Pulse of the Earth is about returning to this feeling — about connection with nature, with the space around you and with yourself, about the chance to slow down a little and feel your own rhythm.",
     "theme_label": "This year’s theme:",
     "theme_name": "Pulse of the Earth",
-    "theme_text_1": "Pulse of the Earth is about the feeling that the earth has its own rhythm that is constantly present around us — in everyday life we barely notice it amid the noise, rush and endless tasks.",
-    "theme_text_2": "This rhythm can be felt in simple things — in the movement of the wind, in the sounds of the forest, in the warmth of the earth beneath your feet, in the silence.",
-    "theme_text_3": "When you give yourself time to stop, you gradually begin to catch this state — as if synchronising with something larger and alive. At the festival this feeling is amplified: through music, through movement, through the people around you, through moments lived here and now.",
-    "theme_text_4": "Pulse of the Earth is about returning to this feeling, about connection with nature, with the surrounding space and with yourself — about the opportunity to slow down a little and feel your own rhythm.",
+    "heading": "About the festival",
+    "theme_text_1": "Art Labyrinth Summer Festival is an annual event founded in 2008 that has since become a significant landmark in Moldova's cultural life. Each year we choose a new location to create a unique atmosphere and connect people through art and music. But our place — Poiana, on the bank of the Dniester — has become our special corner, a place of power where nature and creativity meet.",
+    "theme_text_2": "We believe a festival is more than just a gathering of people. It is a space for transformation, exchange of ideas and inspiration. At Art Labyrinth, everyone can unlock their potential, become part of a community, contribute to a shared purpose and become a creator.",
+    "theme_text_3": "Our festival brings together different people — artists, musicians, craftspeople, volunteers, dreamers — everyone ready to work in one rhythm and create something great. We invite you on a journey where every step is filled with mindfulness, every moment with harmony, and every person matters.",
     "features_title": "What awaits you?",
     "features": [
       "Live music and performances by local and international artists",
@@ -52,7 +56,8 @@
       "Ecological initiatives and life in harmony with nature",
       "Mindful practices and meditations"
     ],
-    "closing": "Art Labyrinth is a space for creation, inspiration and self-expression. Join us, become part of a festival where every step is filled with mindfulness, every moment with harmony, and every person matters."
+    "closing": "Art Labyrinth is a space for creation, inspiration and self-expression.",
+    "closing_2": "Join us, become part of the festival, and discover the rhythm of unity and creativity that will resonate in each of us."
   },
   "contacts": {
     "title": "Contacts",
