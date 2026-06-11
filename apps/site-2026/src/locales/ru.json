@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Главная",
+    "home": "О фестивале",
     "join": "Участникам",
     "gallery": "Галерея",
     "contribute": "Сделать взнос",
@@ -16,6 +16,9 @@
     "location": "Сокола, Шолданешты",
     "phone": "+37367496787",
     "website": "fest.art-labyrinth.org",
+    "festival_line": "15-ый фестиваль Art Labyrinth",
+    "instagram_handle": "@artlabsummerfestival",
+    "join_festival": "Присоединиться к фестивалю",
     "hashtags": [
       "#экологичность",
       "#вегетарианство",

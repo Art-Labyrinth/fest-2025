@@ -59,8 +59,15 @@
     },
     "hero": {
       "tel_title": "Telefon",
-      "social_title": "Rețele Sociale"
+      "tel_text": "",
+      "email_title": "Email",
+      "email_text": "fest@art-labyrinth.org",
+      "social_title": "Rețele Sociale",
+      "social_tg": "TG",
+      "social_fb": "FB",
+      "social_ig": "IG"
     },
+
     "form": {
       "header_1": "Să scriem împreună povestea festivalului!",
       "header_2": "Puteți să ne puneți o întrebare sau să lăsați o sugestie",

@@ -13,7 +13,6 @@ export default function Header() {
     { to: "/participants", label: t("nav.join") },
     { to: "/gallery", label: t("nav.gallery") },
     { to: "/contribute", label: t("nav.contribute") },
-    { to: "/about", label: t("nav.about") },
     { to: "/contacts", label: t("nav.contacts") },
   ];
 
@@ -29,7 +28,7 @@ export default function Header() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden sm:flex items-center gap-6 font-deledda text-brown">
+        <nav className="hidden sm:flex items-center gap-6 font-deledda uppercase text-brown">
           {navLinks.map((l) => (
             <Link
               key={l.to}
@@ -65,7 +64,7 @@ export default function Header() {
       {menuOpen && (
         <div className="fixed inset-0 z-[60] overflow-y-auto bg-[#fffbf5]/70 backdrop-blur-md">
           <button className="absolute top-5 right-8 text-4xl text-brown" onClick={() => setMenuOpen(false)}>×</button>
-          <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 py-20 font-deledda text-brown text-2xl">
+          <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 py-20 font-deledda uppercase text-brown text-2xl">
             {navLinks.map((l) => (
               <Link
                 key={l.to}

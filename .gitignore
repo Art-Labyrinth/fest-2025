@@ -166,3 +166,4 @@ dist
 sitemap.xml
 /scripts/source/*
 /scripts/result/*
+/.*

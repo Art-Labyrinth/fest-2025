@@ -1,6 +1,6 @@
 {
   "nav": {
-    "home": "Home",
+    "home": "About the festival",
     "join": "Participants",
     "gallery": "Gallery",
     "contribute": "Contribute",
@@ -16,6 +16,9 @@
     "location": "Sokola, Șoldănești",
     "phone": "+37367496787",
     "website": "fest.art-labyrinth.org",
+    "festival_line": "15th Art-Labyrinth festival",
+    "instagram_handle": "@artlabsummerfestival",
+    "join_festival": "Join the festival",
     "hashtags": [
       "#ecology",
       "#vegetarianism",

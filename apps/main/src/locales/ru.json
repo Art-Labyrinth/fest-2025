@@ -11,6 +11,7 @@
     "announcement_title": "Art-Labyrinth Pulse of the Earth",
     "announcement_dates": "18–21 июня 2026",
     "announcement_location": "Сокола, Шолданешты",
+    "announcement_phone": "+37367496787",
     "announcement_hashtags": [
       "#экологичность",
       "#вегетарианство",
@@ -29,7 +30,9 @@
     "visit": "Перейти на сайт",
     "contribute": "Сделать взнос",
     "more": "Подробнее",
-    "participants": "Как стать участником"
+    "participants": "Как стать участником",
+    "festival_line": "15-ый фестиваль Art Labyrinth",
+    "join_festival": "Присоединиться к фестивалю"
   },
   "about": {
     "title": "О фестивале",

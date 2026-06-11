@@ -11,6 +11,7 @@
     "announcement_title": "Art-Labyrinth Pulse of the Earth",
     "announcement_dates": "June 18–21, 2026",
     "announcement_location": "Sokola, Șoldănești",
+    "announcement_phone": "+37367496787",
     "announcement_hashtags": [
       "#ecology",
       "#vegetarianism",
@@ -29,7 +30,9 @@
     "visit": "Visit site",
     "contribute": "Contribute",
     "more": "More",
-    "participants": "How to become a participant"
+    "participants": "How to become a participant",
+    "festival_line": "15th Art-Labyrinth festival",
+    "join_festival": "Join the festival"
   },
   "about": {
     "title": "About the Festival",
