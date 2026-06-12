@@ -431,7 +431,10 @@
     "tab_saturday": "Saturday, June 20, 2026",
     "tab_sunday": "Sunday, June 21, 2026",
     "coming_soon": "Coming soon",
-    "loading": "Loading…"
+    "loading": "Loading…",
+    "view_zones": "By venue",
+    "view_timeline": "By time",
+    "now_badge": "Now"
   },
   "gettingthere": {
     "header": "Transport",
