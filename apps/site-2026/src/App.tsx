@@ -11,6 +11,8 @@ import Contribute from "./components/Contribute";
 import OrderPage from "./components/contribute/OrderPage";
 import Participants from "./components/Participants/Participants";
 import Gallery from "./components/Gallery/Gallery";
+import Program from "./components/Program";
+import GettingThere from "./components/GettingThere";
 import AnalyticsLoader from "./components/GTMLoader";
 
 import "./index.css";
@@ -45,6 +47,8 @@ const router = createBrowserRouter(
         { path: "join", element: <JoinLanding /> },
         { path: "join/volunteer", element: <JoinVolunteerForm /> },
         { path: "join/master", element: <JoinMasterForm /> },
+        { path: "program", element: <Program /> },
+        { path: "getting-there", element: <GettingThere /> },
         { path: "contribute", element: <Contribute /> },
         { path: "contribute/password-reset", element: <Contribute autoOpenTickets={false} /> },
         { path: "contribute/orders", element: <Contribute autoOpenTickets={false} /> },

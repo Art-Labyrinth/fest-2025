@@ -31,7 +31,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row items-start gap-8 sm:gap-12 bg-[#FFF9EC] sm:bg-[#F4E4C3] text-brown px-6 sm:px-28 py-16 sm:py-24">
+            <div className="flex flex-col md:flex-row items-start gap-8 sm:gap-12 bg-[#F4E4C3] sm:bg-[#F4E4C3] text-brown px-6 sm:px-28 py-16 sm:py-24">
                 {/* Left: theme text */}
                 <div className="flex-1">
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-5">
