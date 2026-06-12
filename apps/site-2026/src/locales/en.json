@@ -5,7 +5,9 @@
     "gallery": "Gallery",
     "contribute": "Contribute",
     "about": "About",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "program": "Programme",
+    "gettingthere": "Getting There"
   },
   "home": {
     "title": "Art-Labyrinth",
@@ -422,5 +424,108 @@
     "send_email_modal_description": "Select the tickets and enter the email address to send them to.",
     "close_ticket_preview": "Close",
     "no_paid_tickets": "You do not have any paid tickets yet."
+  },
+  "program": {
+    "tab_thursday": "Thursday, June 18, 2026",
+    "tab_friday": "Friday, June 19, 2026",
+    "tab_saturday": "Saturday, June 20, 2026",
+    "tab_sunday": "Sunday, June 21, 2026",
+    "coming_soon": "Coming soon"
+  },
+  "gettingthere": {
+    "header": "Transport",
+    "subheader": "June 18–21, 2026 · Șoldănești, Socola",
+    "nav": {
+      "org": "Organized transport",
+      "org_sub": "Chișinău ↔ Festival",
+      "pmr": "Transport from Transnistria",
+      "pmr_sub": "Tiraspol · Bender · Dubăsari",
+      "public": "Minibus",
+      "public_sub": "Northern bus station",
+      "car": "By private car",
+      "car_sub": "Your car & parking"
+    },
+    "org": {
+      "title": "Art-Labyrinth organized transport",
+      "subtitle": "Chișinău ↔ Festival",
+      "days": {
+        "Chișinău → Festival": [
+          "June 17 (Wed) — 18:00",
+          "June 18 (Thu) — 15:00",
+          "June 19 (Fri) — 18:00"
+        ],
+        "Festival → Chișinău": [
+          "June 21 (Sun) — 13:00 and 18:00"
+        ]
+      },
+      "price": "200 lei one way.",
+      "registration": "Sign up by June 15 inclusive:",
+      "registration_link": "https://forms.gle/N75HizUwxEbaNW1u5",
+      "payment_note": "Registration is confirmed only after payment via MIA:",
+      "payment_phone": "+373 60 545 898",
+      "payment_phone_tel": "+37360545898",
+      "contact_label": "Contact:",
+      "contact_name": "Inna",
+      "contact_phone": "+373 60 545 898",
+      "contact_phone_tel": "+37360545898",
+      "contact_telegram": "@TropInka4thWay",
+      "contact_telegram_link": "https://t.me/TropInka4thWay",
+      "contact_hours": "Transport inquiries: daily from 19:00 to 21:00."
+    },
+    "pmr": {
+      "title": "Transport from Transnistria",
+      "days": {
+        "June 18 (Thu)": [
+          "Tiraspol — 14:00",
+          "Bender — 14:20",
+          "Dubăsari — 15:10"
+        ],
+        "June 19 (Fri)": [
+          "Tiraspol — 17:00",
+          "Bender — 17:20",
+          "Dubăsari — 18:10"
+        ],
+        "Return (June 21, Sun)": [
+          "13:00 and 18:00"
+        ]
+      },
+      "price": "250 rubles one way.",
+      "registration": "Sign up by June 15.",
+      "booking_label": "Booking and information:",
+      "booking_phone_1": "077400004",
+      "booking_phone_1_tel": "077400004",
+      "booking_phone_2": "077772548",
+      "booking_phone_2_tel": "077772548",
+      "booking_telegram": "@lubov_danilenko",
+      "booking_telegram_link": "https://t.me/lubov_danilenko",
+      "warning": "Organized transport may be cancelled if there are not enough passengers. In that case the payment will be fully refunded."
+    },
+    "public": {
+      "title": "Minibus",
+      "subtitle": "Northern bus station",
+      "daily_label": "Daily:",
+      "rides": [
+        "Chișinău → Socola — 14:00",
+        "Socola → Chișinău — 05:55"
+      ],
+      "driver_label": "Driver Nikolai:",
+      "driver_phone": "060 036 066",
+      "driver_phone_tel": "060036066"
+    },
+    "car": {
+      "title": "By private car",
+      "intro": "You can come to the festival by your own car.",
+      "parking_intro": "Guarded parking is available for guests. The cost is:",
+      "prices": [
+        "100 lei — for 4 days",
+        "80 lei — for 3 days",
+        "70 lei — for 2 days",
+        "50 lei — for 1 day"
+      ],
+      "outro": "We look forward to seeing you and wish you a safe trip.",
+      "parking_label": "Parking:",
+      "parking_link": "https://maps.app.goo.gl/UHU4Y3xLASGE1T6RA",
+      "warning": "Driving and parking cars within the festival grounds is prohibited. All cars must be left in the parking lot."
+    }
   }
 }

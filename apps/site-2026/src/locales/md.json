@@ -5,7 +5,9 @@
     "gallery": "Galerie",
     "contribute": "Contribuie",
     "about": "Despre noi",
-    "contacts": "Contacte"
+    "contacts": "Contacte",
+    "program": "Program",
+    "gettingthere": "Cum să ajungi"
   },
   "home": {
     "title": "Art-Labyrinth",
@@ -422,5 +424,108 @@
     "send_email_modal_description": "Selectați biletele și introduceți adresa de email la care trebuie trimise.",
     "close_ticket_preview": "Închide",
     "no_paid_tickets": "Nu aveți încă bilete plătite."
+  },
+  "program": {
+    "tab_thursday": "Joi, 18 iunie 2026",
+    "tab_friday": "Vineri, 19 iunie 2026",
+    "tab_saturday": "Sâmbătă, 20 iunie 2026",
+    "tab_sunday": "Duminică, 21 iunie 2026",
+    "coming_soon": "În curând"
+  },
+  "gettingthere": {
+    "header": "Transport",
+    "subheader": "18–21 iunie 2026 · Șoldănești, Socola",
+    "nav": {
+      "org": "Transport organizat",
+      "org_sub": "Chișinău ↔ Festival",
+      "pmr": "Transport din Transnistria",
+      "pmr_sub": "Tiraspol · Bender · Dubăsari",
+      "public": "Microbuz",
+      "public_sub": "Autogara de Nord",
+      "car": "Cu mașina personală",
+      "car_sub": "Mașina ta și parcarea"
+    },
+    "org": {
+      "title": "Transport organizat Art-Labyrinth",
+      "subtitle": "Chișinău ↔ Festival",
+      "days": {
+        "Chișinău → Festival": [
+          "17 iunie (mie) — 18:00",
+          "18 iunie (joi) — 15:00",
+          "19 iunie (vin) — 18:00"
+        ],
+        "Festival → Chișinău": [
+          "21 iunie (dum) — 13:00 și 18:00"
+        ]
+      },
+      "price": "200 lei într-o direcție.",
+      "registration": "Înscriere până pe 15 iunie inclusiv:",
+      "registration_link": "https://forms.gle/N75HizUwxEbaNW1u5",
+      "payment_note": "Înregistrarea se confirmă doar după plata prin MIA:",
+      "payment_phone": "+373 60 545 898",
+      "payment_phone_tel": "+37360545898",
+      "contact_label": "Contact:",
+      "contact_name": "Inna",
+      "contact_phone": "+373 60 545 898",
+      "contact_phone_tel": "+37360545898",
+      "contact_telegram": "@TropInka4thWay",
+      "contact_telegram_link": "https://t.me/TropInka4thWay",
+      "contact_hours": "Pentru întrebări despre transport: zilnic între 19:00 și 21:00."
+    },
+    "pmr": {
+      "title": "Transport din Transnistria",
+      "days": {
+        "18 iunie (joi)": [
+          "Tiraspol — 14:00",
+          "Bender — 14:20",
+          "Dubăsari — 15:10"
+        ],
+        "19 iunie (vin)": [
+          "Tiraspol — 17:00",
+          "Bender — 17:20",
+          "Dubăsari — 18:10"
+        ],
+        "Retur (21 iunie, dum)": [
+          "13:00 și 18:00"
+        ]
+      },
+      "price": "250 ruble într-o direcție.",
+      "registration": "Înscriere până pe 15 iunie.",
+      "booking_label": "Rezervare și informații:",
+      "booking_phone_1": "077400004",
+      "booking_phone_1_tel": "077400004",
+      "booking_phone_2": "077772548",
+      "booking_phone_2_tel": "077772548",
+      "booking_telegram": "@lubov_danilenko",
+      "booking_telegram_link": "https://t.me/lubov_danilenko",
+      "warning": "Transportul organizat poate fi anulat dacă nu sunt suficienți pasageri. În acest caz, plata va fi rambursată integral."
+    },
+    "public": {
+      "title": "Microbuz",
+      "subtitle": "Autogara de Nord",
+      "daily_label": "Zilnic:",
+      "rides": [
+        "Chișinău → Socola — 14:00",
+        "Socola → Chișinău — 05:55"
+      ],
+      "driver_label": "Șoferul Nicolai:",
+      "driver_phone": "060 036 066",
+      "driver_phone_tel": "060036066"
+    },
+    "car": {
+      "title": "Cu mașina personală",
+      "intro": "Poți veni la festival cu propria mașină.",
+      "parking_intro": "Pentru oaspeți este disponibilă o parcare păzită. Costul acesteia este:",
+      "prices": [
+        "100 lei — pentru 4 zile",
+        "80 lei — pentru 3 zile",
+        "70 lei — pentru 2 zile",
+        "50 lei — pentru 1 zi"
+      ],
+      "outro": "Vă așteptăm cu drag și vă dorim drum bun.",
+      "parking_label": "Parcare:",
+      "parking_link": "https://maps.app.goo.gl/UHU4Y3xLASGE1T6RA",
+      "warning": "Circulația și parcarea mașinilor pe teritoriul festivalului sunt interzise. Toate mașinile trebuie lăsate în parcare."
+    }
   }
 }
