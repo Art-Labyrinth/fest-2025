@@ -430,7 +430,8 @@
     "tab_friday": "Friday, June 19, 2026",
     "tab_saturday": "Saturday, June 20, 2026",
     "tab_sunday": "Sunday, June 21, 2026",
-    "coming_soon": "Coming soon"
+    "coming_soon": "Coming soon",
+    "loading": "Loading…"
   },
   "gettingthere": {
     "header": "Transport",

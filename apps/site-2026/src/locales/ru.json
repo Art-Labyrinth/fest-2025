@@ -448,7 +448,8 @@
     "tab_friday": "Пятница, 19 июня 2026",
     "tab_saturday": "Суббота, 20 июня 2026",
     "tab_sunday": "Воскресенье, 21 июня 2026",
-    "coming_soon": "Скоро"
+    "coming_soon": "Скоро",
+    "loading": "Загрузка…"
   },
   "gettingthere": {
     "header": "Транспорт",
