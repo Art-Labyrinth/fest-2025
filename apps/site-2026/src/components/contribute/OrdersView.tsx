@@ -17,6 +17,7 @@ interface OrdersViewProps {
   ordersLoading: boolean;
   onLogout: () => void;
   userEmail: string | null;
+  salesClosed: boolean;
 }
 
 export default function OrdersView({
@@ -24,6 +25,7 @@ export default function OrdersView({
   ordersLoading,
   onLogout,
   userEmail,
+  salesClosed,
 }: OrdersViewProps) {
   const { t } = useTranslation();
 
@@ -91,7 +93,7 @@ export default function OrdersView({
                   >
                     {t('contribute.open_order')}
                   </Link>
-                ) : order.invoice_url ? (
+                ) : order.invoice_url && !salesClosed ? (
                   <a href={order.invoice_url} target="_blank" rel="noopener noreferrer" className={`${btnPrimary} inline-flex items-center`}>
                     {t('contribute.pay')}
                   </a>

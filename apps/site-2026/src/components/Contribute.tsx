@@ -55,7 +55,7 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
   const resetToken = params.get('token');
   const isPasswordResetPath = /\/contribute\/password-reset\/?$/.test(location.pathname);
   const currentPriceStage = getCurrentPriceStage();
-  const salesClosed = currentPriceStage === 'july';
+  const salesClosed = currentPriceStage === 'closed' || currentPriceStage === 'july';
   const currentPrices = salesClosed ? null : PRICES_BY_STAGE[currentPriceStage];
 
   const [token, setToken] = useState(getStoredToken);
@@ -967,6 +967,7 @@ export default function Contribute({ autoOpenTickets = true }: ContributeProps) 
                 ordersLoading={ordersLoading}
                 onLogout={logout}
                 userEmail={userEmail}
+                salesClosed={salesClosed}
               />
             </div>
           </div>
