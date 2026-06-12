@@ -46,39 +46,41 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5]/15 backdrop-blur-sm border-b border-orange-150">
-      <Link to="/" className="flex items-center gap-3">
-        <img
-          src="https://files.art-labyrinth.org/logo-black.svg"
-          alt="Art-Labyrinth"
-          className="h-10"
-        />
-      </Link>
+    <>
+      <header className="flex items-center justify-between px-5 md:px-12 py-4 bg-[#fffbf5]/15 backdrop-blur-sm border-b border-orange-150">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="https://files.art-labyrinth.org/logo-black.svg"
+            alt="Art-Labyrinth"
+            className="h-10"
+          />
+        </Link>
 
-      {/* Desktop nav */}
-      <nav className="hidden sm:flex items-center gap-6 font-deledda text-brown">
-        {renderNavItems("desktop")}
-      </nav>
+        {/* Desktop nav */}
+        <nav className="hidden sm:flex items-center gap-6 font-deledda text-brown">
+          {renderNavItems("desktop")}
+        </nav>
 
-      {/* Lang switcher */}
-      <div className="hidden sm:flex items-center gap-2 font-deledda text-sm text-brown">
-        {langs.map((lng) => (
-          <button
-            key={lng}
-            onClick={() => i18n.changeLanguage(lng)}
-            className={`uppercase hover:opacity-60 transition-opacity ${i18n.language === lng ? "font-bold underline" : ""}`}
-          >
-            {lng}
-          </button>
-        ))}
-      </div>
+        {/* Lang switcher */}
+        <div className="hidden sm:flex items-center gap-2 font-deledda text-sm text-brown">
+          {langs.map((lng) => (
+            <button
+              key={lng}
+              onClick={() => i18n.changeLanguage(lng)}
+              className={`uppercase hover:opacity-60 transition-opacity ${i18n.language === lng ? "font-bold underline" : ""}`}
+            >
+              {lng}
+            </button>
+          ))}
+        </div>
 
-      {/* Mobile burger */}
-      <button className="sm:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-        <span className="block w-6 h-0.5 bg-brown mb-1" />
-        <span className="block w-6 h-0.5 bg-brown mb-1" />
-        <span className="block w-6 h-0.5 bg-brown" />
-      </button>
+        {/* Mobile burger */}
+        <button className="sm:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="block w-6 h-0.5 bg-brown mb-1" />
+          <span className="block w-6 h-0.5 bg-brown mb-1" />
+          <span className="block w-6 h-0.5 bg-brown" />
+        </button>
+      </header>
 
       {menuOpen && (
         <div className="fixed inset-0 bg-[#fffbf5] z-50 flex flex-col items-center justify-center gap-8 font-deledda text-brown text-2xl">
@@ -97,6 +99,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
