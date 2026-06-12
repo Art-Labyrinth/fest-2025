@@ -431,7 +431,10 @@
     "tab_saturday": "Sâmbătă, 20 iunie 2026",
     "tab_sunday": "Duminică, 21 iunie 2026",
     "coming_soon": "În curând",
-    "loading": "Se încarcă…"
+    "loading": "Se încarcă…",
+    "view_zones": "După locație",
+    "view_timeline": "După timp",
+    "now_badge": "Acum"
   },
   "gettingthere": {
     "header": "Transport",

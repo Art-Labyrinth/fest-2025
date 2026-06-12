@@ -14,6 +14,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Program from "./components/Program";
 import GettingThere from "./components/GettingThere";
 import AnalyticsLoader from "./components/GTMLoader";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 import "./index.css";
 import "./i18n";
@@ -70,5 +71,10 @@ const router = createBrowserRouter(
 );
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <ScrollToTopButton />
+    </>
+  );
 }
