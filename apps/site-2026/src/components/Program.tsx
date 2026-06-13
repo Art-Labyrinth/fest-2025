@@ -26,6 +26,22 @@ function timeSortKey(time: string | null): number {
   return timeToMin(time);
 }
 
+// End-time sort key: events without an end sink below same-start ones; an end
+// at/before the start is treated as crossing midnight (e.g. 23:30–0:00).
+function endSortKey(e: ProgramEvent): number {
+  if (!e.start_time || !e.end_time) return Number.POSITIVE_INFINITY;
+  const start = timeToMin(e.start_time);
+  const end = timeToMin(e.end_time);
+  return end <= start ? end + 24 * 60 : end;
+}
+
+// Chronological order: by start time, then by end time for events that start
+// together (so "16:00–17:00" comes before "16:00–17:30").
+function compareByTime(a: ProgramEvent, b: ProgramEvent): number {
+  const byStart = timeSortKey(a.start_time) - timeSortKey(b.start_time);
+  return byStart !== 0 ? byStart : endSortKey(a) - endSortKey(b);
+}
+
 function fmtMin(min: number): string {
   const h = Math.floor(min / 60);
   const m = min % 60;
@@ -70,7 +86,7 @@ function EventRow({
 
   return (
     <div id={id} className={`flex gap-4 rounded-md px-3 py-2 transition-colors ${tone}`}>
-      <div className="shrink-0 w-24 sm:w-28 text-base sm:text-lg font-bold tabular-nums pt-0.5">
+      <div className="shrink-0 w-24 sm:w-32 text-base sm:text-lg font-bold tabular-nums pt-0.5">
         {formatTimeRange(event)}
       </div>
       <div className="min-w-0">
@@ -170,7 +186,7 @@ export default function Program() {
   const timelineEvents = selectedDay
     ? selectedDay.objects
         .flatMap((o) => o.events.filter((e) => e.start_time).map((e) => ({ event: e, zone: o.name })))
-        .sort((a, b) => timeSortKey(a.event.start_time) - timeSortKey(b.event.start_time))
+        .sort((a, b) => compareByTime(a.event, b.event))
     : [];
 
   // Autoscroll to the current/next event — once, on the first load after a page
@@ -285,7 +301,7 @@ export default function Program() {
               // Events without a start time are a backend glitch — drop them.
               const events = obj.events
                 .filter((e) => e.start_time)
-                .sort((a, b) => timeSortKey(a.start_time) - timeSortKey(b.start_time));
+                .sort(compareByTime);
               if (events.length === 0) return null; // hide now-empty zones
 
               return (
